@@ -6,6 +6,6 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "eattaewon_back_kimminki"
+rootProject.name = "eataewon_front"
 // rootProject.name = "Login"
 include ':app'
