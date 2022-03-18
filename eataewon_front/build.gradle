@@ -1,5 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+
     repositories {
         google()
         mavenCentral()
@@ -12,6 +13,17 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+/*
+alprojects {
+    repositories {
+        google()
+
+    }
+
+}
+maven { lurl 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+*/
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

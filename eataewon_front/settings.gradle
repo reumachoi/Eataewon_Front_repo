@@ -7,4 +7,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "eattaewon_back_kimminki"
+// rootProject.name = "Login"
 include ':app'

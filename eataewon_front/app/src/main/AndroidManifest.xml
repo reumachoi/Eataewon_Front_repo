@@ -12,6 +12,11 @@
     <!--정확한 위치 확보(네트워크 위치 + GPS 위치)-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
+          package="com.example.login">
+      <!--인터넷 사용 권한 설정 -->
+
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
             android:allowBackup="true"
@@ -39,6 +44,10 @@
                 android:label="@string/title_activity_maps"/>
         <activity
                 android:name=".SearchActivity2"
+            android:theme="@style/Theme.Login"
+            android:usesCleartextTraffic="true">
+        <activity
+                android:name=".SignActivity"
                 android:exported="true"/>
         <activity
                 android:name=".MainActivity"
@@ -49,6 +58,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
+                <data android:host="oauth"
+                      android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>
