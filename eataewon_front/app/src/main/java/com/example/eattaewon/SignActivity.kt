@@ -7,10 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
-import com.example.eattaewon_back_kimminki.connect.MemberDao
-import com.example.eattaewon_back_kimminki.connect.MemberDto
+
 
 
 class SignActivity : AppCompatActivity() {
@@ -28,7 +26,7 @@ class SignActivity : AppCompatActivity() {
 
         val signupBtn = findViewById<Button>(R.id.signUP_btn)
 
-        signupID.doAfterTextChanged {
+        /*signupID.doAfterTextChanged {
             val id = signupID.text.toString()
             val dto = MemberDto(0,"",id,"","","","",0,"")
             val idcheck = MemberDao.getInstance().getId(dto)
@@ -56,7 +54,7 @@ class SignActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this,"회원가입 실패",Toast.LENGTH_SHORT).show()
             }
-        }
+        }*/
 
 
 

@@ -1,13 +1,12 @@
-package com.example.eattaewon
+package com.example.eattaewon.connect
 
 import retrofit2.Call
 import retrofit2.http.GET
 
-interface RetrofitBbs {
+interface BbsDao {
 
         @GET("/getBbsList")
         fun getBbsList(): Call<List<BbsDto>>
 
-        @GET("/test")
-        fun test():Call<String>
+
 }

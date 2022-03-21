@@ -1,13 +1,18 @@
 package com.example.eattaewon
 
 import com.example.eattaewon.connect.MemberDto
+import com.example.eattaewon.connect.RetrofitClient
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
-import retrofit2.http.Field
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface MemberService{
+
+    //백엔드 통신 확인용
+    @POST("/test")
+    fun test():Call<String>
 
     /// 3. object 를 보내고 받기
     @POST("/login")
@@ -35,11 +40,20 @@ class MemberDao {
         }
     }
 
+    //백엔드 통신 확인용
+    fun test(): String? {
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(MemberService::class.java)
+        val call = service?.test()
+        var response = call?.execute()
+        return response?.body()
+    }
+
     fun login(dto: MemberDto): MemberDto? {
         var response: Response<MemberDto>?
         println("ID:${dto.id}")
         try {
-            val retrofit = RetrofitClient.getIntance()
+            val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
             val call = service?.login(dto)
             response = call?.execute()
@@ -55,7 +69,7 @@ class MemberDao {
         var response: Response<String>?
         println("ID:${dto.id}")
         try {
-            val retrofit = RetrofitClient.getIntance()
+            val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
             val call = service?.signup(dto)
             response = call?.execute()
@@ -70,7 +84,7 @@ class MemberDao {
         var response: Response<String>?
         println("name:${dto.name}")
         try {
-            val retrofit = RetrofitClient.getIntance()
+            val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
             val call = service?.signup(dto)
             response = call?.execute()

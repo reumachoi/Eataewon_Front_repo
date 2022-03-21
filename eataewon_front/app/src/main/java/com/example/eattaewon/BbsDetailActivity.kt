@@ -4,6 +4,8 @@ import android.content.Intent
 import android.location.Geocoder
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.eattaewon.connect.BbsDao
+import com.example.eattaewon.connect.RetrofitClient
 import com.example.eattaewon.databinding.ActivityBbsDetailBinding
 
 class BbsDetailActivity : AppCompatActivity() {
@@ -14,10 +16,10 @@ class BbsDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val retrofit = RetrofitClient.getInstance()
-        val service: RetrofitBbs? = retrofit?.create(RetrofitBbs::class.java)   // 레트로핏 인터페이스 객체 구현
+        /*val retrofit = RetrofitClient.getInstance()
+        val service: BbsDao? = retrofit?.create(BbsDao::class.java)   // 레트로핏 인터페이스 객체 구현
 
-        /*val call = service?.test()
+        val call = service?.test()
         val resp = call?.execute()
         binding.bbsList.text = resp?.body()*/
 
