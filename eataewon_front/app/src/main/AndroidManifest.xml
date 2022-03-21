@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.eattaewon_back_kimminki" >
+          package="com.example.eattaewon_back_kimminki">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
+    <!-- queries에 카카오톡 패키지 추가 -->
+    <queries>
+        <package android:name="com.kakao.talk"/>
+    </queries>
+
+    <!-- 인터넷 사용 권한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- 도시 블록 내에서의 정확한 위치(네트워크 위치) -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 정확한 위치 확보(네트워크 위치 + GPS 위치) -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 인터넷 사용 권한 설정 -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- 추가 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 정확한 위치 확보(네트워크 위치 + GPS 위치) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 인터넷 사용 권한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Eattaewon_back_kimminki" >
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.Eattaewon_back_kimminki"
+            android:usesCleartextTraffic="true">
 
+        <activity
+                android:name=".BbsDetailActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+
+            </intent-filter>
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -29,10 +51,12 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
 
-        <!--<activity
+
+        <!--
+<activity
             android:name=".MapsFragment"
             android:exported="true"
             android:label="@string/title_activity_maps" />
@@ -43,6 +67,7 @@
         <activity
             android:name=".SignActivity"
             android:exported="true" />
+
         <!--
   <activity
                 android:name=".HomeActivity"
@@ -73,19 +98,24 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
 
-
-
-               <!-- <action android:name="android.intent.action.VIEW" />
+                <!--
+<action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
 &lt;!&ndash;                Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ &ndash;&gt;&ndash;&gt;
                 <data android:host="oauth"
-                      android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />-->
+                      android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />
+                -->
             </intent-filter>
-
         </activity>
 
+        <meta-data
+                android:name="com.naver.maps.map.CLIENT_ID"
+                android:value="a668kaxlrz" />
+
     </application>
+
+
 
 </manifest>
