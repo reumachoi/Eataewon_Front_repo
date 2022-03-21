@@ -1,4 +1,4 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eattaewon_back_kimminki.connect
 
 import android.os.StrictMode
 import com.google.gson.GsonBuilder
@@ -22,7 +22,7 @@ class RetrofitClient {
                     .create()
 
                 instantce = Retrofit.Builder()
-                    .baseUrl("http://61.98.39.123:3010/")//연결
+                    .baseUrl("http://61.98.39.123:3010/") //연결 안도현
                     .addConverterFactory(GsonConverterFactory.create(gson))     // object, integer
                     .addConverterFactory(ScalarsConverterFactory.create())      // 문자열 리턴받는 경우
                     .build()

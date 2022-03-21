@@ -111,13 +111,13 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/signUp_Btn"
-        app:layout_constraintEnd_toStartOf="@+id/signUp_Btn"
-        app:layout_constraintTop_toTopOf="@+id/signUp_Btn"
+        app:layout_constraintBottom_toBottomOf="@+id/signUpAtivity_Btn"
+        app:layout_constraintEnd_toStartOf="@+id/signUpAtivity_Btn"
+        app:layout_constraintTop_toTopOf="@+id/signUpAtivity_Btn"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/signUp_Btn"
+        android:id="@+id/signUpAtivity_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
