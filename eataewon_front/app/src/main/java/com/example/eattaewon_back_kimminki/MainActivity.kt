@@ -7,6 +7,8 @@ import android.os.StrictMode
 import android.widget.Button
 import com.example.eattaewon_back_kimminki.R
 import com.example.eattaewon_back_kimminki.SignActivity
+import com.example.eattaewon_back_kimminki.databinding.ActivityBbsDetailBinding
+import com.example.eattaewon_back_kimminki.databinding.ActivityMainBinding
 import com.google.gson.GsonBuilder
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -30,11 +32,17 @@ fun base(): Call<String>
 
 
 class MainActivity : AppCompatActivity() {
- 
+
+    val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
+        binding.Login.setOnClickListener {
+            val intent = Intent(this, BbsDetailActivity::class.java)
+            startActivity(intent)
+        }
       /*  // Network 처리에 추가한다  == HttpURLConnection
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
