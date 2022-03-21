@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val loginBtn = findViewById<Button>(R.id.login_Btn)
-        val signUpBtn = findViewById<Button>(R.id.signUp_Btn)
+        val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
         val googleBtn = findViewById<Button>(R.id.google_Btn)
         val naverBtn = findViewById<Button>(R.id.naver_Btn)
 
@@ -67,35 +67,6 @@ class MainActivity : AppCompatActivity() {
         // 1. 문자열 받기
         //val call = service.base()
 
-
-        // 2. 문자열 보내고 받기
-        val call = service.connParamGet("제목입니다")
-
-
-        val response = call.execute()
-        if (response.isSuccessful) {
-
-            if (response.code() == 200) {
-
-                // 1.
-                //val base: String? = response.body()
-                //println("~~~base:$base")
-
-                // 2.
-                val str: String? = response.body()
-                println("~~~str:$str")
-
-                //회원 가입 이동
-                val sign = findViewById<Button>(R.id.sign)
-
-                sign.setOnClickListener {
-                    val intent= Intent(this, SignActivity::class.java)
-                    startActivity(intent)
-
-
-                }
-            }
-        }*/
     }
 
     override fun onClick(view: View?) {
@@ -107,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             R.id.login_Btn -> {
                 val id = loginID.text.toString()
                 val pw = loginPW.text.toString()
-                val dto = MemberDto(id, pw, "", "", "", "", 0)
+                val dto = MemberDto(0,"", id, pw, "", "", "", 0,"")
                 val checkLogin = MemberDao.getInstance().login(dto)
                 if (checkLogin != null) {
                     Toast.makeText(this, "환영합니다. ${checkLogin.id}님", Toast.LENGTH_SHORT).show()
@@ -117,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            R.id.signUp_Btn -> startActivity(Intent(this, SignActivity::class.java))
+            R.id.signUpAtivity_Btn -> startActivity(Intent(this, SignActivity::class.java))
 
 
             R.id.google_Btn -> {

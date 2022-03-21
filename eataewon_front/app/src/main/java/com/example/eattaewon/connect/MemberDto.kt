@@ -1,10 +1,12 @@
 package com.example.eattaewon.connect
 
 class MemberDto(
+    var seq:Int,
+    val name:String?,
     var id:String?,
     val pwd:String?,
-    val name:String?,
     val email:String?,
     val nickname:String?,
-    val profilpic:String?,
-    val likepoint:Int )
+    val profilPic:String?,
+    val likepoint:Int,
+    val profilMsg:String?)

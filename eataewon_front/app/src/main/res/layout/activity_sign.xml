@@ -8,7 +8,7 @@
     tools:context=".SignActivity">
 
     <TextView
-        android:id="@+id/singUp_title"
+        android:id="@+id/signUp_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -18,24 +18,25 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
-        android:text="ID"
+        android:text=" ID"
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/singUp_ID"
-        app:layout_constraintEnd_toStartOf="@+id/singUp_ID"
-        app:layout_constraintTop_toTopOf="@+id/singUp_ID"
+        app:layout_constraintBottom_toBottomOf="@+id/signUp_Id"
+        app:layout_constraintEnd_toStartOf="@+id/signUp_Id"
+        app:layout_constraintTop_toTopOf="@+id/signUp_Id"
         app:layout_constraintVertical_bias="0.523" />
 
     <EditText
-        android:id="@+id/singUp_ID"
+        android:id="@+id/signUp_Id"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="50dp"
@@ -45,15 +46,15 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/singUp_title"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_title"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/singUp_Idchek"
+        android:id="@+id/signUp_Idchek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/singUp_ID"
-        app:layout_constraintTop_toBottomOf="@+id/singUp_ID" />
+        app:layout_constraintStart_toStartOf="@+id/signUp_Id"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_Id" />
 
     <TextView
         android:id="@+id/textView3"
@@ -64,13 +65,14 @@
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/singUp_Pw"
-        app:layout_constraintEnd_toStartOf="@+id/singUp_Pw"
-        app:layout_constraintTop_toTopOf="@+id/singUp_Pw"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/signUp_Pw"
+        app:layout_constraintEnd_toStartOf="@+id/signUp_Pw"
+        app:layout_constraintTop_toTopOf="@+id/signUp_Pw"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/singUp_Pw"
+        android:id="@+id/signUp_Pw"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="40dp"
@@ -78,10 +80,39 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/singUp_ID"
+        app:layout_constraintEnd_toEndOf="@+id/signUp_Id"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/singUp_ID"
-        app:layout_constraintTop_toBottomOf="@+id/singUp_ID"
+        app:layout_constraintStart_toStartOf="@+id/signUp_Id"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_Id"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="이름"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/signUp_name"
+        app:layout_constraintEnd_toStartOf="@+id/signUp_name"
+        app:layout_constraintTop_toTopOf="@+id/signUp_name"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/signUp_name"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/style_edittext"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/signUp_Pw"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/signUp_Pw"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_Pw"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
@@ -92,13 +123,14 @@
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/singUp_email"
-        app:layout_constraintEnd_toStartOf="@+id/singUp_email"
-        app:layout_constraintTop_toTopOf="@+id/singUp_email"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/signUp_email"
+        app:layout_constraintEnd_toStartOf="@+id/signUp_email"
+        app:layout_constraintTop_toTopOf="@+id/signUp_email"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/singUp_email"
+        android:id="@+id/signUp_email"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
@@ -106,10 +138,10 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/singUp_Pw"
+        app:layout_constraintEnd_toEndOf="@+id/signUp_Pw"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/singUp_Pw"
-        app:layout_constraintTop_toBottomOf="@+id/singUp_Pw"
+        app:layout_constraintStart_toStartOf="@+id/signUp_Pw"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_name"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
@@ -121,13 +153,14 @@
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/singUp_nickname"
-        app:layout_constraintEnd_toStartOf="@+id/singUp_nickname"
-        app:layout_constraintTop_toTopOf="@+id/singUp_nickname"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/signUp_nickname"
+        app:layout_constraintEnd_toStartOf="@+id/signUp_nickname"
+        app:layout_constraintTop_toTopOf="@+id/signUp_nickname"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/singUp_nickname"
+        android:id="@+id/signUp_nickname"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
@@ -135,10 +168,10 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/singUp_email"
+        app:layout_constraintEnd_toEndOf="@+id/signUp_email"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/singUp_email"
-        app:layout_constraintTop_toBottomOf="@+id/singUp_email"
+        app:layout_constraintStart_toStartOf="@+id/signUp_email"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_email"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
@@ -149,13 +182,14 @@
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/singUp_profil"
-        app:layout_constraintEnd_toStartOf="@+id/singUp_profil"
-        app:layout_constraintTop_toTopOf="@+id/singUp_profil"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/signUp_profilmsg"
+        app:layout_constraintEnd_toStartOf="@+id/signUp_profilmsg"
+        app:layout_constraintTop_toTopOf="@+id/signUp_profilmsg"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/singUp_profil"
+        android:id="@+id/signUp_profilmsg"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
@@ -163,10 +197,10 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/singUp_nickname"
+        app:layout_constraintEnd_toEndOf="@+id/signUp_nickname"
         app:layout_constraintHorizontal_bias="0.78"
-        app:layout_constraintStart_toStartOf="@+id/singUp_nickname"
-        app:layout_constraintTop_toBottomOf="@+id/singUp_nickname"
+        app:layout_constraintStart_toStartOf="@+id/signUp_nickname"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_nickname"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
@@ -179,7 +213,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -190,23 +225,26 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="236dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="236dp"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/singUp_profil"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toBottomOf="@+id/signUp_nickname"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <Button
+        android:id="@+id/signUP_btn"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_marginTop="70dp"
@@ -217,6 +255,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

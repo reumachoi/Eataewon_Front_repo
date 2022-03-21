@@ -27,6 +27,7 @@
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/activity_sign.xml" value="0.5" />
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/activity_sign_up.xml" value="0.1921875" />
+        <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/activity_signup.xml" value="0.1921875" />
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/drop_out.xml" value="0.16094771241830066" />
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_bookmark.xml" value="0.16094771241830066" />
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_home.xml" value="0.16094771241830066" />
@@ -74,6 +75,11 @@
         <entry key="app/src/main/res/layout/fragment_write.xml" value="0.4036458333333333" />
       </map>
     </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="retrofit2.http.POST" />
+    </list>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
