@@ -1,4 +1,4 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eattaewon
 
 import retrofit2.Call
 import retrofit2.http.GET

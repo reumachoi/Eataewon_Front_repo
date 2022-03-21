@@ -1,4 +1,4 @@
-package com.example.eattaewon_back_kimminki;
+package com.example.eattaewon;
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,13 +7,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.example.eattaewon_back_kimminki.connect.MemberDto
+import com.example.eattaewon.connect.MemberDto
 
-import com.example.eattaewon_back_kimminki.R
-import com.example.eattaewon_back_kimminki.SignActivity
-import com.example.eattaewon_back_kimminki.databinding.ActivityBbsDetailBinding
-import com.example.eattaewon_back_kimminki.databinding.ActivityMainBinding
-import com.google.gson.GsonBuilder
+import com.example.eattaewon.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -1,4 +1,4 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eattaewon
 
 import android.Manifest
 import android.app.Activity
@@ -15,11 +15,9 @@ import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.location.*
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
 
 class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback {

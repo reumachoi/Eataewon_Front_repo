@@ -1,4 +1,4 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eattaewon
 
 import android.os.Parcel
 import android.os.Parcelable

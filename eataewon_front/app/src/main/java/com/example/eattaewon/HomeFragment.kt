@@ -1,4 +1,4 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eattaewon
 
 import androidx.fragment.app.Fragment
 

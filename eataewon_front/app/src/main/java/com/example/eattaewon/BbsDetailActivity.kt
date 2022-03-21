@@ -1,13 +1,10 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eattaewon
 
 import android.content.Intent
-import android.location.Address
 import android.location.Geocoder
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.eattaewon_back_kimminki.databinding.ActivityBbsDetailBinding
+import com.example.eattaewon.databinding.ActivityBbsDetailBinding
 
 class BbsDetailActivity : AppCompatActivity() {
 

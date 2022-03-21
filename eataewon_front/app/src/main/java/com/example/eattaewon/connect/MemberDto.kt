@@ -1,7 +1,4 @@
-package com.example.eattaewon_back_kimminki.connect
-
-import android.os.Parcel
-import android.os.Parcelable
+package com.example.eattaewon.connect
 
 class MemberDto(
     var id:String?,

@@ -1,6 +1,6 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eattaewon
 
-import com.example.eattaewon_back_kimminki.connect.MemberDto
+import com.example.eattaewon.connect.MemberDto
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
