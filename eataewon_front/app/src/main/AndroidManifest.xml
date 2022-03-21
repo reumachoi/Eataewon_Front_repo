@@ -39,10 +39,10 @@
         <activity
             android:name=".SearchActivity2"
             android:theme="@style/Theme.Login"
-            android:usesCleartextTraffic="true" />
+            android:usesCleartextTraffic="true" />-->
         <activity
             android:name=".SignActivity"
-            android:exported="true" />-->
+            android:exported="true" />
         <!--
   <activity
                 android:name=".HomeActivity"

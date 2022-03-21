@@ -3,15 +3,13 @@ package com.example.eattaewon_back_kimminki;
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.StrictMode
+import android.view.View
 import android.widget.Button
-import com.example.eattaewon_back_kimminki.R
-import com.example.eattaewon_back_kimminki.SignActivity
-import com.google.gson.GsonBuilder
+import android.widget.TextView
+import android.widget.Toast
+import com.example.eattaewon_back_kimminki.connect.MemberDto
+
 import retrofit2.Call
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -29,13 +27,22 @@ fun base(): Call<String>
 
 
 
-class MainActivity : AppCompatActivity() {
- 
+class MainActivity : AppCompatActivity(), View.OnClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-      /*  // Network 처리에 추가한다  == HttpURLConnection
+        val loginBtn = findViewById<Button>(R.id.login_Btn)
+        val signUpBtn = findViewById<Button>(R.id.signUp_Btn)
+        val googleBtn = findViewById<Button>(R.id.google_Btn)
+        val naverBtn = findViewById<Button>(R.id.naver_Btn)
+
+        loginBtn.setOnClickListener(this)
+        signUpBtn.setOnClickListener(this)
+        googleBtn.setOnClickListener(this)
+        naverBtn.setOnClickListener(this)
+        /*  // Network 처리에 추가한다  == HttpURLConnection
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
 
@@ -85,8 +92,39 @@ class MainActivity : AppCompatActivity() {
             }
         }*/
     }
-}
 
+    override fun onClick(view: View?) {
+        val loginID = findViewById<TextView>(R.id.loginID)
+        val loginPW = findViewById<TextView>(R.id.loginPw)
+
+        when (view?.id) {
+
+            R.id.login_Btn -> {
+                val id = loginID.text.toString()
+                val pw = loginPW.text.toString()
+                val dto = MemberDto(id, pw, "", "", "", "", 0)
+                val checkLogin = MemberDao.getInstance().login(dto)
+                if (checkLogin != null) {
+                    Toast.makeText(this, "환영합니다. ${checkLogin.id}님", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeActivity::class.java))
+                } else {
+                    Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            R.id.signUp_Btn -> startActivity(Intent(this, SignActivity::class.java))
+
+
+            R.id.google_Btn -> {
+
+            }
+
+            R.id.naver_Btn -> {
+
+            }
+        }
+    }
+}
 
 
 
