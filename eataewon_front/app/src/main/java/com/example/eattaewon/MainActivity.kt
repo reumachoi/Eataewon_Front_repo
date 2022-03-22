@@ -8,11 +8,9 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.eattaewon.connect.MemberDto
-import com.example.eattaewon.connect.RetrofitClient
 
 import com.example.eattaewon.databinding.ActivityMainBinding
-
-class MainActivity : AppCompatActivity(),View.OnClickListener{
+class MainActivity : AppCompatActivity()/*, View.OnClickListener*/{
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
 
@@ -20,11 +18,17 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        //백엔드 통신 확인용
+        //디테일 테스트 버튼 (최아름)
+        binding.testBtn.setOnClickListener {
+            val i = Intent(this, BbsDetailActivity::class.java)
+            startActivity(i)
+        }
+
+        /*//백엔드 통신 확인용
         var result = MemberDao.getInstance().test()
         binding.loginID.setText(result.toString())
 
-       val loginBtn = findViewById<Button>(R.id.login_Btn)
+        val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
         val googleBtn = findViewById<Button>(R.id.google_Btn)
         val naverBtn = findViewById<Button>(R.id.naver_Btn)
@@ -65,7 +69,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             R.id.naver_Btn -> {
 
             }
-        }
+        }*/
     }
 }
 

@@ -71,8 +71,11 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_naver_maps.xml" value="0.40260416666666665" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_write.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/kakao_map.xml" value="0.40260416666666665" />
+        <entry key="app/src/main/res/layout/map_fragment_activity.xml" value="0.28888888888888886" />
       </map>
     </option>
   </component>

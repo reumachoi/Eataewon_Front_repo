@@ -160,5 +160,10 @@
         app:layout_constraintTop_toTopOf="@+id/google_Btn"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck" />
+    <Button
+            android:text="디테일 테스트"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/testBtn" tools:layout_editor_absoluteY="9dp"
+            tools:layout_editor_absoluteX="263dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

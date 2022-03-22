@@ -3,11 +3,12 @@ package com.example.eattaewon.connect
 import android.os.Parcel
 import android.os.Parcelable
 
-class BbsDto(var id:String?,var seq:Int, var title:String?,  var content:String?, var hashtag:String?, var wdate:String?,
+class BbsDto(var id:String?,var seq:Int, var title:String?,  var content:String?, var picture:String?, var hashtag:String?, var wdate:String?,
              var shopname:String?, var address:String?, var latitude:Double, var longitude:Double, var readcnt:Int, var likecnt:Int):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -26,6 +27,7 @@ class BbsDto(var id:String?,var seq:Int, var title:String?,  var content:String?
         parcel.writeInt(seq)
         parcel.writeString(title)
         parcel.writeString(content)
+        parcel.writeString(picture)
         parcel.writeString(hashtag)
         parcel.writeString(wdate)
         parcel.writeString(shopname)
@@ -40,10 +42,6 @@ class BbsDto(var id:String?,var seq:Int, var title:String?,  var content:String?
         return 0
     }
 
-    override fun toString(): String {
-        return "BbsDto(id=$id, seq=$seq, title=$title, content=$content, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt)"
-    }
-
     companion object CREATOR : Parcelable.Creator<BbsDto> {
         override fun createFromParcel(parcel: Parcel): BbsDto {
             return BbsDto(parcel)
@@ -53,6 +51,5 @@ class BbsDto(var id:String?,var seq:Int, var title:String?,  var content:String?
             return arrayOfNulls(size)
         }
     }
-
 
 }
