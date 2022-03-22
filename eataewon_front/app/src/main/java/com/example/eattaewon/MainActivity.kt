@@ -1,4 +1,4 @@
-package com.example.eattaewon_back_kimminki;
+package com.example.eattaewon;
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,17 +7,24 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.example.eattaewon_back_kimminki.connect.MemberDao
-import com.example.eattaewon_back_kimminki.connect.MemberDto
+import com.example.eattaewon.connect.MemberDto
+import com.example.eattaewon.connect.RetrofitClient
 
+import com.example.eattaewon.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity(),View.OnClickListener{
+
+    val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-        val loginBtn = findViewById<Button>(R.id.login_Btn)
+        //백엔드 통신 확인용
+        var result = MemberDao.getInstance().test()
+        binding.loginID.setText(result.toString())
+
+       val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
         val googleBtn = findViewById<Button>(R.id.google_Btn)
         val naverBtn = findViewById<Button>(R.id.naver_Btn)
@@ -61,8 +68,4 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 }
-
-
-
-
 

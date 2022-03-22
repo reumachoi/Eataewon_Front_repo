@@ -1,4 +1,4 @@
-package com.example.eattaewon_back_kimminki.connect
+package com.example.eattaewon.connect
 
 import android.os.StrictMode
 import com.google.gson.GsonBuilder
@@ -8,11 +8,10 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 
 class RetrofitClient {
     companion object{
-        private var instantce : Retrofit? = null
+        private var instance: Retrofit? = null
 
-        fun getIntance():Retrofit?{
-            if (instantce == null){
-                // Network 처리에 추가한다  == HttpURLConnection
+        fun getInstance(): Retrofit?{
+            if(instance == null) {
                 val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
                 StrictMode.setThreadPolicy(policy)
 
@@ -21,14 +20,14 @@ class RetrofitClient {
                     .setLenient()
                     .create()
 
-                instantce = Retrofit.Builder()
-                    .baseUrl("http://61.98.39.123:3010/") //연결 안도현
-                    .addConverterFactory(GsonConverterFactory.create(gson))     // object, integer
+                instance = Retrofit.Builder()
+                    .baseUrl("http://61.98.39.123:3010/")//최아름 ip(172.30.1.17:3000), 연결 안도현(61.98.39.123:3010)
+                    //.addConverterFactory(GsonConverterFactory.create(gson))     // object, integer
                     .addConverterFactory(ScalarsConverterFactory.create())      // 문자열 리턴받는 경우
                     .build()
             }
 
-            return instantce
+            return instance
         }
     }
 }

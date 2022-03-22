@@ -1,11 +1,9 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eattaewon
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_search.*
-import kotlinx.android.synthetic.main.fragment_search.view.*
 
 class SearchFragment: Fragment(R.layout.fragment_search) {
 
@@ -21,7 +19,7 @@ class SearchFragment: Fragment(R.layout.fragment_search) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val mapsFragment = MapsFragment()
+        //val mapsFragment = MapsFragment()
 
         mapBtn.setOnClickListener {
 

@@ -13,16 +13,7 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-/*
-alprojects {
-    repositories {
-        google()
 
-    }
-
-}
-maven { lurl 'https://devrepo.kakao.com/nexus/content/groups/public/' }
-*/
 
 
 task clean(type: Delete) {

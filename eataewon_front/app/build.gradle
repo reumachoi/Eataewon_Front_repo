@@ -42,6 +42,15 @@ android {
 
 dependencies {
 
+    implementation("com.naver.maps:map-sdk:3.14.0")// 네이버 지도 SDK
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+
+    implementation('com.naver.maps:map-sdk:3.14.0') {
+        exclude group: 'com.android.support'
+    }
+
+    //implementation "com.kakao.sdk:v2-talk:2.9.0" // 친구, 메시지(카카오톡)
+
     implementation 'com.google.android.gms:play-services-location:17.0.0'   // google map 추가
     implementation 'com.google.android.gms:play-services-maps:17.0.0'       // google map 추가
     implementation 'com.google.android.material:material:1.2.0'             // bottom navi 추가
@@ -55,6 +64,7 @@ dependencies {
     //recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -71,7 +81,7 @@ dependencies {
 
 
     //Java 8 사용 설정이 안되어있다면 추가
-   /* android {
+    android {
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_8
             targetCompatibility JavaVersion.VERSION_1_8
@@ -80,7 +90,7 @@ dependencies {
         kotlinOptions {
             jvmTarget = "1.8"
         }
-    }*/
+    }
 
 
 }
