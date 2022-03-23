@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         var result = MemberDao.getInstance().test()
         binding.loginID.setText(result.toString())
 
-       val loginBtn = findViewById<Button>(R.id.login_Btn)
+        val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
         val googleBtn = findViewById<Button>(R.id.google_Btn)
         val naverBtn = findViewById<Button>(R.id.naver_Btn)

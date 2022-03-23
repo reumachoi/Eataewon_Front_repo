@@ -70,10 +70,9 @@
             android:name="com.example.eattaewon.SignActivity"
             android:exported="true" />
 
-        <!--
-  <activity
-                android:name=".HomeActivity"
-                android:exported="true">
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -85,14 +84,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                &lt;!&ndash; Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ &ndash;&gt;
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
                 <data android:host="oauth"
                       android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />
             </intent-filter>
 
         </activity>
-        -->
-        <activity
+
+        <!--<activity
                 android:name="com.example.eattaewon.MainActivity"
                 android:exported="true">
             <intent-filter>
@@ -100,7 +99,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
 
-                <!--
+                &lt;!&ndash;
 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -108,9 +107,9 @@
 &lt;!&ndash;                Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ &ndash;&gt;&ndash;&gt;
                 <data android:host="oauth"
                       android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />
-                -->
+                &ndash;&gt;
             </intent-filter>
-        </activity>
+        </activity>-->
 
         <meta-data
                 android:name="com.naver.maps.map.CLIENT_ID"
