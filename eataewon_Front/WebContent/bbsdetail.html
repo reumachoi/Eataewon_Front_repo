@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bbsdetail</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+th{
+	background-color: #007bff;
+	color: white;
+}
+pre { /* 자동줄바꿈 설정 */
+  	white-space: pre-wrap;
+    word-break: break-all;
+    overflow: auto;
+}
+</style>
+
+
+</head>
+<body>
+
+<h5>상세 페이지</h5>
+
+<div id="app" class="container">
+
+<table class="table table-striped">
+<col width="150"><col width="500">
+<tr>
+	<th>작성자</th><td id="id"></td>
+</tr>
+
+<tr>
+	<th>작성일</th><td id="wdate"></td>
+</tr>
+
+<tr>
+	<th>조회수</th><td id="readcount"></td>
+</tr>
+<tr>
+	<th>이글을 좋아하는 사람들의 수</th><td id="likecnt"></td>
+</tr>
+
+
+<tr>
+	<!-- <th>제목</th> -->
+	<td colspan="2" id="title" style="font-size: 22px; font-weight:bold;"></td>
+</tr>
+
+<tr>
+	<!-- <th>내용</th> -->
+	<td colspan="2" style="background-color: white;">
+		<pre id="content" style="font-size: 20px; 
+			font-family: 고딕,arial;background-color: white;"></pre>
+	</td>	
+</tr>
+<tr>
+
+
+</tr>
+
+
+</table>
+
+
+<table>
+<col width="1500px"><col width="150">
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">picture</td>
+</tr>
+<tr>
+	<td colspan="2" id="picture" style="font-size: 20px;"></td>
+</tr>
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">hashtag</td>
+</tr>
+<tr>
+	<td colspan="2" id="hashtag" style="font-size: 20px;"></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">매장이름</td>
+</tr>
+<tr>
+	<td colspan="2" id="shopname" style="font-size: 20px;"></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">주소</td>
+</tr>
+<tr>
+	<td colspan="2" id="address" style="font-size: 20px;"></td>
+</tr>
+</table>
+<br><br>
+
+<br><br>
+
+
+<button type="button" id="btnLike" class="btn btn-primary">좋아요</button>
+<button type="button" id="btnScrap" class="btn btn-primary">스크랩</button>
+<button type="button" id="bbsupdate" class="btn btn-primary">수정</button>
+<button type="button" id="bbsdelete" class="btn btn-primary">삭제</button>
+
+
+<br><br>
+
+
+<table class="table">
+	<col width="500"><col width="500">
+	<tbody id="tbody">
+	</tbody>
+</table>
+
+
+</div>
+
+<br><br><br><br><br><br>
+
+<script type="text/javascript">
+let str = sessionStorage.getItem("login");	
+let json = JSON.parse(str);
+let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
+
+
+const url = new URL(location.href);
+const urlParams = url.searchParams;
+let seq = urlParams.get("seq");
+
+//주소창에 있는 seq 값 가져오기
+
+
+
+//alert(id);
+
+$.ajax({
+	url:"http://localhost:3000/bbsdetail",
+	type:"get",
+	data:{ "seq":seq },
+	success:function(bbs){
+		
+		$("#id").text(bbs.id);
+		$("#title").text(bbs.title);
+		$("#wdate").text(bbs.wdate);
+		$("#readcount").text(bbs.readcnt);
+		$("#content").text(bbs.content);
+		$("#picture").text(bbs.picture);
+		$("#hashtag").text(bbs.hashtag);
+		$("#shopname").text(bbs.shopname);
+		$("#address").text(bbs.address);
+		$("#likecnt").text(bbs.likecnt);
+		
+		
+		
+		let login = JSON.parse(sessionStorage.getItem("login"));
+		if(bbs.id != login.id){
+			$("#bbsupdate").hide();
+			$("#bbsdelete").hide();
+		}
+		
+	},
+	error:function(){
+		alert('error');
+	}
+	
+});
+
+
+$("#bbsupdate").click(function () {	
+	location.href = "bbsupdate.html?seq=" + seq;
+});
+
+$("#bbsdelete").click(function () {	
+	$.ajax({
+		url:"http://localhost:3000/bbsdelete",
+		type:"get",
+		data:{ "seq":seq },
+		success:function(msg){
+			if(msg == "OK"){
+				alert("삭제되었습니다");
+				location.href = "bbslist.html";
+			}else{
+				alert("삭제되지 않았습니다");
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+	})
+});
+
+
+$("#btnScrap").click(function(){
+	$.ajax({
+		url:"http://localhost:3000/bbsScrap",
+		type:"get",
+		data:{ "id":id, "bbs_seq":seq},
+		success:function(msg){
+			if(msg=="YES"){
+				alert("스크랩 되었습니다. 스크랩 게시판에서 확인 가능합니다.");
+				location.href="bbsscraplist.html";
+			}else if(msg=="DUP"){
+				alert("이미 스크랩한 게시물입니다.")			
+			}else{
+				alert("좋아요 오류")
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+			
+		})
+	});
+	
+$("#btnLike").click(function(){
+	//alert("seq"+seq);
+	$.ajax({
+		url:"http://localhost:3000/likeBbs",
+		type:"get",
+		data:{ "id":id, "bbsseq":seq},
+		success:function(msg){
+			if(msg=="YES"){
+				alert("좋아요 완료. 좋아요된 게시물은 좋아요 게시판에서 확인 가능합니다.");
+				location.href="bbslikelist.html";
+			}else if(msg=="DUP"){
+				alert("이미 좋아요한 게시물입니다.")			
+			}else{
+				alert("좋아요 오류")
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+			
+		})
+
+		
+	});
+	
+	
+	
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
