@@ -95,4 +95,10 @@
     </string>
     <string name="action_settings">Settings</string>
 
+    <!-- 카카오 로그인-->
+     <!-- kakao_native_app_key는 네이티브 앱키가 '12345'라면 'kakao12345'로 설정 -->
+    <string name="kakao_native_app_key" translatable="false">kakaoa05f68a3850359a6d8c92e79cdc0d8cb</string>
+    <!-- 얘는 그냥 네이티브 앱키 그대로 입력하면 된다 -->
+    <string name="kakao_app_key" translatable="false">a05f68a3850359a6d8c92e79cdc0d8cb</string>
+
 </resources>

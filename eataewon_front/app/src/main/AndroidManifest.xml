@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.eattaewon">
+          xmlns:tools="http://schemas.android.com/tools" package="com.example.eattaewon">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -9,38 +9,52 @@
     <!-- queries에 카카오톡 패키지 추가 -->
     <queries>
         <package android:name="com.kakao.talk"/>
-    </queries>
 
-    <!-- 인터넷 사용 권한 설정 -->
+    </queries> <!-- 인터넷 사용 권한 설정 -->
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <!-- 도시 블록 내에서의 정확한 위치(네트워크 위치) -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <!-- 정확한 위치 확보(네트워크 위치 + GPS 위치) -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <!-- 인터넷 사용 권한 설정 -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <!-- 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- 정확한 위치 확보(네트워크 위치 + GPS 위치) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- 추가 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
+
+            android:name=".GlobalApplication"
             android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.Eattaewon_back_kimminki"
             android:usesCleartextTraffic="true">
+        <activity android:name=".SecondActivity">
+        </activity>
+
+        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:host="oauth"
+                        android:scheme="kakaoa05f68a3850359a6d8c92e79cdc0d8cb" />
+            </intent-filter>
+        </activity>
+
 
         <activity
                 android:name="com.example.eattaewon.BbsDetailActivity"
                 android:exported="true">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
 
 
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -53,42 +67,12 @@
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key" />
-        <!--
-<activity
-            android:name=".MapsFragment"
-            android:exported="true"
-            android:label="@string/title_activity_maps" />
+
         <activity
-            android:name=".SearchActivity2"
-            android:theme="@style/Theme.Login"
-            android:usesCleartextTraffic="true" />
-        -->
-        <activity
-            android:name="com.example.eattaewon.SignActivity"
-            android:exported="true" />
-
-        <!--
-  <activity
-                android:name=".HomeActivity"
-                android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
+                android:name="com.example.eattaewon.SignActivity"
+                android:exported="true" />
 
 
-
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                &lt;!&ndash; Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ &ndash;&gt;
-                <data android:host="oauth"
-                      android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />
-            </intent-filter>
-
-        </activity>
-        -->
         <activity
                 android:name="com.example.eattaewon.MainActivity"
                 android:exported="true">
@@ -97,23 +81,31 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
 
-                <!--
-<action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
 
-&lt;!&ndash;                Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ &ndash;&gt;&ndash;&gt;
-                <data android:host="oauth"
-                      android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />
-                -->
             </intent-filter>
         </activity>
 
-        <meta-data
-                android:name="com.naver.maps.map.CLIENT_ID"
-                android:value="a668kaxlrz" />
 
-    </application>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+
+        <!-- 카카오 로그인 앱키-->
+       <meta-data
+               android:name="com.kakao.sdk.AppKey"
+               android:value="@string/kakao_app_key" />
+
+        <!-- 네이버 지도-->
+       <meta-data
+               android:name="com.naver.maps.map.CLIENT_ID"
+               android:value="a668kaxlrz" />
+
+   </application>
 
 
 

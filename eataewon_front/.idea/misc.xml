@@ -3,6 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/activity_bbs_detail.xml" value="0.10054347826086957" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.20260416666666667" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/activity_kakao.xml" value="0.1" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/activity_result.xml" value="0.22" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/activity_second.xml" value="0.12563323201621074" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/activity_sign.xml" value="0.16" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/drop_out.xml" value="0.25" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/fragment_bookmark.xml" value="0.20260416666666667" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/fragment_home.xml" value="0.20260416666666667" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/fragment_maps.xml" value="0.20260416666666667" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/fragment_mypage.xml" value="0.15896739130434784" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/fragment_search.xml" value="0.20260416666666667" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/fragment_write.xml" value="0.20260416666666667" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/layout/google_login.xml" value="0.15" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.2171875" />
+        <entry key="..\:/Final_Front3/eataewon_front/app/src/main/res/menu/menu_bbs_details.xml" value="0.2171875" />
         <entry key="..\:/GitHub_FinalBack/Login/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/GitHub_FinalBack/eataewon_back/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/GitHub_FinalBack/login/app/src/main/res/layout/activity_main.xml" value="0.33" />

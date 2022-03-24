@@ -11,7 +11,7 @@ import retrofit2.http.POST
 interface MemberService{
 
     //백엔드 통신 확인용
-    @POST("/test")
+    @GET("/test")
     fun test():Call<String>
 
     /// 3. object 를 보내고 받기

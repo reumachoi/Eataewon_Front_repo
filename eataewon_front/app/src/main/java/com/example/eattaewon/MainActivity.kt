@@ -20,19 +20,22 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
+
+
         //백엔드 통신 확인용
         var result = MemberDao.getInstance().test()
         binding.loginID.setText(result.toString())
 
-       val loginBtn = findViewById<Button>(R.id.login_Btn)
+        val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
-        val googleBtn = findViewById<Button>(R.id.google_Btn)
-        val naverBtn = findViewById<Button>(R.id.naver_Btn)
+
 
         loginBtn.setOnClickListener(this)
         signUpBtn.setOnClickListener(this)
-        googleBtn.setOnClickListener(this)
-        naverBtn.setOnClickListener(this)
+
+
+
 
     }
 
@@ -58,14 +61,15 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             R.id.signUpAtivity_Btn -> startActivity(Intent(this, SignActivity::class.java))
 
 
-            R.id.google_Btn -> {
 
-            }
-
-            R.id.naver_Btn -> {
-
-            }
         }
     }
+
+
+
+
 }
+
+
+
 
