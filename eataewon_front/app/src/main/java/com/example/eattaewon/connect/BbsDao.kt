@@ -22,6 +22,9 @@ interface BbsService {
     @GET("/bbsdetail")
     fun getBbsDetail(@Query("seq") seq:Int) : Call<BbsDto>
 
+     @GET("/getBbsList")
+        fun getBbsList(): Call<List<BbsDto>>
+
 }
 
 class BbsDao {

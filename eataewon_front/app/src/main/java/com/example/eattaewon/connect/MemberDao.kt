@@ -62,6 +62,7 @@ class MemberDao {
             val service = retrofit?.create(MemberService::class.java)
             val call = service?.login(dto)
             response = call?.execute()
+            println("dto : ${response.toString()}")
         }catch(e:Exception){
             response = null
         }
@@ -76,7 +77,7 @@ class MemberDao {
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.signup(dto)
+            val call = service?.getId(dto)
             response = call?.execute()
         }catch(e:Exception){
             response = null
@@ -87,7 +88,7 @@ class MemberDao {
 
     fun signup(dto: MemberDto) : String?{
         var response: Response<String>?
-        println("name:${dto.name}")
+        println(dto.toString())
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)

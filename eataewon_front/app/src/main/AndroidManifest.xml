@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools" package="com.example.eattaewon">
+      
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -9,8 +10,9 @@
     <!-- queries에 카카오톡 패키지 추가 -->
     <queries>
         <package android:name="com.kakao.talk"/>
+    </queries> 
 
-    </queries> <!-- 인터넷 사용 권한 설정 -->
+    <!-- 인터넷 사용 권한 설정 -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- 도시 블록 내에서의 정확한 위치(네트워크 위치) -->
@@ -18,12 +20,19 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- 추가 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-    <application
+    <!-- 저장소 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-            android:name=".GlobalApplication"
+ 
+    <application
+        android:name=".GlobalApplication"
             android:allowBackup="true"
             android:label="@string/app_name"
             android:icon="@mipmap/ic_launcher"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.Eattaewon_back_kimminki"
@@ -48,13 +57,13 @@
         <activity
                 android:name="com.example.eattaewon.BbsDetailActivity"
                 android:exported="true">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
 
 
-            </intent-filter>-->
+            </intent-filter>
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -67,7 +76,11 @@
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key" />
-
+       
+<activity
+            android:name=".MapsFragment"
+            android:exported="true"
+            android:label="@string/title_activity_maps" />
         <activity
                 android:name="com.example.eattaewon.SignActivity"
                 android:exported="true" />
@@ -87,8 +100,15 @@
         <activity
                 android:name=".MainActivity"
                 android:exported="true">
+            android:name="com.example.eattaewon.SignActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+
+              <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
@@ -100,6 +120,17 @@
                 <action android:name="android.intent.action.VIEW"/>
 
 
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+
+
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
+                <data android:host="oauth"
+                      android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />
             </intent-filter>
         </activity>
 
@@ -131,8 +162,32 @@
                 <data
                         android:host="kakaolink"
                         android:scheme="803510af840ec6fd9c1aefe41148b4e5"/>
+        <activity
+                android:name="com.example.eattaewon.MainActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+
+<!--<action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“
+                <data android:host="oauth"
+                      android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />-->
+
             </intent-filter>
         </activity>
+
+        <meta-data
+                android:name="com.naver.maps.map.CLIENT_ID"
+                android:value="a668kaxlrz" />
+
     </application>
+
+
 
 </manifest>
