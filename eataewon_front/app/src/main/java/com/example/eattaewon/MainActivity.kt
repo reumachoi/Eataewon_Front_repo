@@ -8,11 +8,9 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.eattaewon.connect.MemberDto
-import com.example.eattaewon.connect.RetrofitClient
 
 import com.example.eattaewon.databinding.ActivityMainBinding
-
-class MainActivity : AppCompatActivity(),View.OnClickListener{
+class MainActivity : AppCompatActivity(), View.OnClickListener{
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
 
@@ -20,12 +18,15 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
-
+        /*//디테일 테스트 버튼 (최아름)
+        binding.testBtn.setOnClickListener {
+            val i = Intent(this, BbsDetailActivity::class.java)
+            startActivity(i)
+        }*/
 
         //백엔드 통신 확인용
-        var result = MemberDao.getInstance().test()
-        binding.loginID.setText(result.toString())
+        /*var result = MemberDao.getInstance().test()
+        binding.loginID.setText(result.toString())*/
 
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             R.id.login_Btn -> {
                 val id = loginID.text.toString()
                 val pw = loginPW.text.toString()
-                val dto = MemberDto(0,"", id, pw, "", "", "", 0,"")
+                val dto = MemberDto(id, "", pw, "", "",0, 0,"")
                 val checkLogin = MemberDao.getInstance().login(dto)
                 if (checkLogin != null) {
                     Toast.makeText(this, "환영합니다. ${checkLogin.id}님", Toast.LENGTH_SHORT).show()
