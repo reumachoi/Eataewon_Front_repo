@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">eattaewon_back_kimminki</string>
+    <string name="app_name">eattaewon_front_kimminki</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+    <string-array name="Test">
+        <item>가나다</item>
+        <item>마바사</item>
+        <item>아자카</item>
+        <item>타파하</item>
+        <item>abc</item>
+        <item>def</item>
+    </string-array>
 </resources>
