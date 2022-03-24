@@ -13,6 +13,9 @@ import com.kakao.sdk.link.WebSharerClient
 import com.kakao.sdk.template.model.*
 
 class BbsDetailActivity : AppCompatActivity() {
+
+    val binding by lazy { ActivityBbsDetailBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -30,15 +33,6 @@ class BbsDetailActivity : AppCompatActivity() {
 
         binding.shareBtn.setOnClickListener {
 
-            /*//기본 공유방법
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.setType("text/plain")
-            val sendMessage = binding.bbsList.text
-            intent.putExtra(Intent.EXTRA_TEXT, sendMessage)
-            val shareIntent = Intent.createChooser(intent, "share")
-            startActivity(shareIntent)*/
-
-
         // 피드 메시지 보내기
             val defaultText = TextTemplate(
                 text = """
@@ -54,6 +48,7 @@ class BbsDetailActivity : AppCompatActivity() {
                     mobileWebUrl = "https://developers.kakao.com"
                 )
             )
+
         // 사용자 정의 메시지 ID
         //  * 만들기 가이드: https://developers.kakao.com/docs/latest/ko/message/message-template
         //val templateId = templateIds["ID 73529"] as Long

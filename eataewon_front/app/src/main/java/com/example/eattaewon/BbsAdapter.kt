@@ -11,6 +11,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eattaewon.BbsDetailActivity
+import com.example.eattaewon.R
 import java.io.File
 
 class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsVO>) :

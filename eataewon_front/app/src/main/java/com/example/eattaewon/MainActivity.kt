@@ -20,15 +20,15 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        /*//디테일 테스트 버튼 (최아름)
+        //디테일 테스트 버튼 (최아름)
         binding.testBtn.setOnClickListener {
             val i = Intent(this, BbsDetailActivity::class.java)
             startActivity(i)
-        }*/
+        }
 
         //백엔드 통신 확인용
-        /*var result = MemberDao.getInstance().test()
-        binding.loginID.setText(result.toString())*/
+        var result = MemberDao.getInstance().test()
+        binding.loginID.setText(result.toString())
 
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)

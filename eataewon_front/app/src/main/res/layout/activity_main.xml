@@ -164,6 +164,7 @@
             android:text="디테일 테스트"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/testBtn" tools:layout_editor_absoluteY="9dp"
-            tools:layout_editor_absoluteX="263dp"/>
+            tools:layout_editor_absoluteX="263dp" tools:ignore="MissingConstraints"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -9,7 +9,7 @@ import retrofit2.http.*
 interface MemberService{
 
     //백엔드 통신 확인용
-    @FormUrlEncoded //서버에서 인풋값 인코딩을 위함용
+    //@FormUrlEncoded 서버에서 인풋값 인코딩을 위함용 (post에서만 사용 + @Field)
     @GET("/test")
     fun test(
         //인풋 정의
