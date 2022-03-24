@@ -6,11 +6,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.eattaewon.MapActivity
 import com.example.eattaewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
 import com.kakao.sdk.link.WebSharerClient
 import com.kakao.sdk.template.model.*
+import com.naver.maps.map.MapFragment
 
 class BbsDetailActivity : AppCompatActivity() {
 
@@ -20,9 +22,9 @@ class BbsDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
         binding.seeMapBtn.setOnClickListener {
-            val i = Intent(this,MapFragmentActivity::class.java)
+
+            val i = Intent(this, MapActivity::class.java)
             startActivity(i)
         }
 
