@@ -7,8 +7,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.eattaewon.connect.MemberDao
 import com.example.eattaewon.connect.MemberDto
-import com.example.eattaewon.connect.RetrofitClient
 
 import com.example.eattaewon.databinding.ActivityMainBinding
 

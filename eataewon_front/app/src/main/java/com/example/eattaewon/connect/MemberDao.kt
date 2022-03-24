@@ -1,7 +1,5 @@
-package com.example.eattaewon
+package com.example.eattaewon.connect
 
-import com.example.eattaewon.connect.MemberDto
-import com.example.eattaewon.connect.RetrofitClient
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
@@ -18,7 +16,7 @@ interface MemberService{
     @POST("/login")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
-    @POST("/getId")
+    @GET("/getId")
     fun getId(@Body dto:MemberDto): Call<String>
 
     @POST("/addmember")
@@ -28,7 +26,7 @@ interface MemberService{
 class MemberDao {
 
     companion object{
-        private var memberDao: MemberDao? = null
+        var memberDao: MemberDao? = null
 
         fun getInstance(): MemberDao {
 

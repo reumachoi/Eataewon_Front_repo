@@ -67,7 +67,6 @@ class MypageFragment: Fragment(R.layout.fragment_mypage),View.OnClickListener{
             //버튼 클릭 이벤트
             logoutBtn.setOnClickListener(this)
             deleteBtn.setOnClickListener(this)
-            
             cancleBtn.setOnClickListener(this)
             
             //사진
