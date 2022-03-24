@@ -1,5 +1,7 @@
-package com.example.eattaewon.connect
+package com.example.eattaewon
 
+import com.example.eattaewon.connect.MemberDto
+import com.example.eattaewon.connect.RetrofitClient
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
@@ -16,7 +18,7 @@ interface MemberService{
     @POST("/login")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
-    @GET("/getId")
+    @POST("/getId")
     fun getId(@Body dto:MemberDto): Call<String>
 
     @POST("/addmember")
@@ -26,7 +28,7 @@ interface MemberService{
 class MemberDao {
 
     companion object{
-        var memberDao: MemberDao? = null
+        private var memberDao: MemberDao? = null
 
         fun getInstance(): MemberDao {
 
@@ -55,6 +57,7 @@ class MemberDao {
             val service = retrofit?.create(MemberService::class.java)
             val call = service?.login(dto)
             response = call?.execute()
+            println("dto : ${response.toString()}")
         }catch(e:Exception){
             response = null
         }
@@ -80,7 +83,7 @@ class MemberDao {
 
     fun signup(dto: MemberDto) : String?{
         var response: Response<String>?
-        println("name:${dto.name}")
+        println(dto.toString())
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)

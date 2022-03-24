@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
-import com.example.eattaewon.connect.MemberDao
 import com.example.eattaewon.connect.MemberDto
 
 // storage 권한
@@ -37,13 +36,14 @@ class SignActivity : AppCompatActivity() {
         val signupNickname = findViewById<TextView>(R.id.signUp_nickname)
         val signupProfilmsg = findViewById<TextView>(R.id.signUp_profilmsg)
         val singupProfilpic = findViewById<TextView>(R.id.signUp_profilpic_uri)
+        val imageView = findViewById<ImageView>(R.id.signUp_profilpic)
 
         val imageBtn = findViewById<Button>(R.id.signUp_imageBtn)
         val signupBtn = findViewById<Button>(R.id.signUP_btn)
 
         signupID.doAfterTextChanged {
             val id = signupID.text.toString()
-            val dto = MemberDto(0,"",id,"","","","",0,"")
+            val dto = MemberDto("",id,"","","",0,0,"")
             val idcheck = MemberDao.getInstance().getId(dto)
             if(idcheck=="NO"){
                 signupidcheck.text = "이미 존재하는 아이디 입니다"
@@ -61,13 +61,18 @@ class SignActivity : AppCompatActivity() {
             val email = signupEmail.text.toString()
             val nickname = signupNickname.text.toString()
             val profilmsg = signupProfilmsg.text.toString()
-            val profilpic = singupProfilpic.text.toString()
 
-            val dto = MemberDto(0,name,id,pwd,email,nickname,profilpic,0,profilmsg)
+            //안도현(임시 숫자값)
+            val profilpic = 11
+
+            val dto = MemberDto(name,id,pwd,email,nickname,profilpic,0,profilmsg)
             val checksignup = MemberDao.getInstance().signup(dto)
 
             if(checksignup=="yes"){
+
                 Toast.makeText(this,"${dto.id} 회원가입 완료",Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, MainActivity::class.java))
+
             }else{
                 Toast.makeText(this,"회원가입 실패",Toast.LENGTH_SHORT).show()
             }

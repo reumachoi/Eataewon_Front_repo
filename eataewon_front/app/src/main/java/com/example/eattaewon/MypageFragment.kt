@@ -36,7 +36,8 @@ class MypageFragment: Fragment(R.layout.fragment_mypage),View.OnClickListener{
         val v = inflater.inflate(R.layout.fragment_mypage, container, false)
 
             //임시 테스트
-            val user = MemberDto(0,"","","","","","",0,"")
+            val user = arguments?.getParcelable<MemberDto>("user")
+
 
             //텍스트뷰
             val mypageLikepoint = v.findViewById<TextView>(R.id.mypage_likepoint)
@@ -57,16 +58,19 @@ class MypageFragment: Fragment(R.layout.fragment_mypage),View.OnClickListener{
             val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
 
             //텍스트뷰에 값 입력
-            mypageLikepoint.text = user.likepoint.toString()
-            mypageName.text = user.name
-            mypageEmail.text = user.email
-            mypageNickname.text = user.nickname
-            mypageProfilmsg.text = user.profilMsg
-            mypageProfilpic.setImageURI(user.profilPic?.toUri())
+            mypageLikepoint.text = user?.likepoint.toString()
+            mypageName.text = user?.name
+            mypageEmail.text = user?.email
+            mypageNickname.text = user?.nickName
+            mypageProfilmsg.text = user?.profilMsg
+
+            //임시
+            //mypageProfilpic.setImageURI(user?.profilPic?.toUri())
             
             //버튼 클릭 이벤트
             logoutBtn.setOnClickListener(this)
             deleteBtn.setOnClickListener(this)
+            
             cancleBtn.setOnClickListener(this)
             
             //사진
