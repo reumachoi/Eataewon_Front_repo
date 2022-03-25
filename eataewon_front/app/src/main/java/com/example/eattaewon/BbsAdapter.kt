@@ -13,9 +13,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eattaewon.BbsDetailActivity
 import com.example.eattaewon.R
+import com.example.eattaewon.connect.BbsDto
 import java.io.File
 
-class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsVO>) :
+class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
         RecyclerView.Adapter<BbsAdapter.ItemViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BbsAdapter.ItemViewHolder {
@@ -37,7 +38,7 @@ class BbsAdapter (private val context: Context, private val dataList: ArrayList<
         private val address = itemView.findViewById<TextView>(R.id.addressView)
         private val hashtag = itemView.findViewById<TextView>(R.id.hashtagView)
 
-        fun bind(bbsVO: BbsVO, context: Context) {
+        fun bind(bbsVO: BbsDto, context: Context) {
 
             /*if (bbsVO.picture != "") {
                 val resourceId =
