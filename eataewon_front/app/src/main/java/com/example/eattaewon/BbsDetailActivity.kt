@@ -48,7 +48,6 @@ class BbsDetailActivity : AppCompatActivity() {
                     mobileWebUrl = "https://developers.kakao.com"
                 )
             )
-
         // 사용자 정의 메시지 ID
         //  * 만들기 가이드: https://developers.kakao.com/docs/latest/ko/message/message-template
         //val templateId = templateIds["ID 73529"] as Long

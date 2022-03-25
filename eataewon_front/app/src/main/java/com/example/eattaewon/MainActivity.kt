@@ -27,18 +27,18 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         }
 
         //백엔드 통신 확인용
-        var result = MemberDao.getInstance().test()
-        binding.loginID.setText(result.toString())
-
+        /*var result = MemberDao.getInstance().test()
+        binding.loginID.setText(result.toString())*/
+/*
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
-
+        val googleBtn = findViewById<Button>(R.id.google_Btn)
+        val naverBtn = findViewById<Button>(R.id.naver_Btn)
 
         loginBtn.setOnClickListener(this)
         signUpBtn.setOnClickListener(this)
-
-
-
+        googleBtn.setOnClickListener(this)
+        naverBtn.setOnClickListener(this)
 
     }
 
@@ -52,6 +52,14 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 val id = loginID.text.toString()
                 val pw = loginPW.text.toString()
                 val dto = MemberDto(id, "", pw, "", "",0, 0,"")
+
+                /*val checkLogin = MemberDao.getInstance().login(dto)
+                if (checkLogin != null) {
+                    Toast.makeText(this, "환영합니다. ${checkLogin.id}님", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeActivity::class.java))
+                } else {
+                    Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
+                }*/
 
                 //백엔드 접속후 id pw값을 찾아 login값에 dto값 넣기
                 val login = MemberDao.getInstance().login(dto)
@@ -67,19 +75,17 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 }
             }
 
-            //안도현(회원가입 창 호출)
             R.id.signUpAtivity_Btn -> startActivity(Intent(this, SignActivity::class.java))
 
 
+            R.id.google_Btn -> {
 
-        }
+            }
+
+            R.id.naver_Btn -> {
+
+            }
+        }*/
     }
-
-
-
-
 }
-
-
-
 
