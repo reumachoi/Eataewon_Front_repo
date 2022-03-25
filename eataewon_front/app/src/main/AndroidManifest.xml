@@ -24,7 +24,11 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
- 
+    <!--
+        안드로이드 타이틀 없애기
+        android:theme="@style/Theme.Eattaewon_back_kimminki   에서
+        android:theme="@style/Theme.AppCompat.NoActionBar"    로 변경
+    -->
     <application
         android:name=".GlobalApplication"
             android:allowBackup="true"
@@ -32,7 +36,7 @@
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.Eattaewon_back_kimminki"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:usesCleartextTraffic="true">
 
 
