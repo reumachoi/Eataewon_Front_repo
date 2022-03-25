@@ -49,14 +49,6 @@
                 android:name="com.kakao.sdk.AppKey"
                 android:value="@string/kakao_app_key" />
 
-        <!-- 네이버 지도-->
-<!--에러로 잠시 주석처리함 (아름)-->
-        <!--<meta-data
-                android:name="com.naver.maps.map.CLIENT_ID"
-                android:value="a668kaxlrz" />-->
-
-
-
         <activity
                 android:name=".MainActivity"
                 android:exported="true">
@@ -93,24 +85,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <!--<activity
-                android:name=".BbsDetailActivity"
-                android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                &lt;!&ndash; Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ &ndash;&gt;
-                <data android:host="oauth"
-                      android:scheme="kakao	82bd382bbc54c10e4c9879e7b95326d5" />
-            </intent-filter>
-        </activity>-->
 
         <activity
                 android:name=".BbsDetailActivity"

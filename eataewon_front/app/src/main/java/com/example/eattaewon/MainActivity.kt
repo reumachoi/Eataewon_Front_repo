@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         //백엔드 통신 확인용
         /*var result = MemberDao.getInstance().test()
         binding.loginID.setText(result.toString())*/
-/*
+
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
         val googleBtn = findViewById<Button>(R.id.google_Btn)
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             R.id.naver_Btn -> {
 
             }
-        }*/
+        }
     }
 }
 
