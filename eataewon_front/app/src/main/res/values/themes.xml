@@ -19,6 +19,8 @@
     <style name="Theme.Eattaewon_back_kimminki.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <!--마이페이지 상단 툴바 스타일 추가-->
+        <item name="android:actionMenuTextColor">@color/black</item>
     </style>
     <style name="Theme.Eattaewon_back_kimminki.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="Theme.Eattaewon_back_kimminki.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
