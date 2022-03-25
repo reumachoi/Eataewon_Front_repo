@@ -2,17 +2,15 @@ package com.example.eattaewon
 
 import android.content.ActivityNotFoundException
 import android.content.ContentValues.TAG
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.eattaewon.MapActivity
+import com.example.eattaewon.connect.BbsDao
 import com.example.eattaewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
 import com.kakao.sdk.link.WebSharerClient
 import com.kakao.sdk.template.model.*
-import com.naver.maps.map.MapFragment
 
 class BbsDetailActivity : AppCompatActivity() {
 
@@ -22,22 +20,18 @@ class BbsDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        var seq = 1
+        //var result = BbsDao.getInstance().getBbsDetail(seq)
+
         binding.seeMapBtn.setOnClickListener {
 
-            val i = Intent(this, MapActivity::class.java)
-            startActivity(i)
+          val naverMapFragment = NaverMapFragment()
+            supportFragmentManager.beginTransaction()
+                .add(R.id.mapContent, naverMapFragment).commit()
+
         }
 
         binding.shareBtn.setOnClickListener {
-
-            /*//기본 공유방법
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.setType("text/plain")
-            val sendMessage = binding.bbsList.text
-            intent.putExtra(Intent.EXTRA_TEXT, sendMessage)
-            val shareIntent = Intent.createChooser(intent, "share")
-            startActivity(shareIntent)*/
-
 
         // 피드 메시지 보내기
             val defaultText = TextTemplate(

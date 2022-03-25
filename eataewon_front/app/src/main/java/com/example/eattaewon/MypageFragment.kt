@@ -10,7 +10,6 @@ import android.database.Cursor
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.*
@@ -21,13 +20,12 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 
-class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListener  {
+class MypageFragment:Fragment(R.layout.fragment_mypage),View.OnClickListener  {
 
-/*
+
 
     val STORAGE = arrayOf(
         Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -46,9 +44,10 @@ class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListene
         Cancel.setOnClickListener(this)
         correct.setOnClickListener(this)
         return view
+// 메뉴바 사용에 쓰임
 
-
-
+        setHasOptionsMenu(true);
+return inflater.inflate(R.layout.fragment_home, container, false)
 
 
 
@@ -65,9 +64,9 @@ class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListene
  ///  수정 이나 삭제 필요
     fun getPath(uri: Uri?): String {
         val projection = arrayOf<String>(MediaStore.Images.Media.DATA)
-        val cursor: Cursor = managedQuery(uri, projection, null, null, null)
-        startManagingCursor(cursor)
-        val columnIndex: Int = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        val cursor: Cursor? = getActivity()?.getContentResolver()?.query(uri!!, projection, null, null, null)
+     getActivity()?.startManagingCursor(cursor)
+        val columnIndex: Int = cursor!!.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
         cursor.moveToFirst()
         return cursor.getString(columnIndex)
     }
@@ -123,9 +122,9 @@ class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListene
         }
 
         // MediaStore 에 사진 저장 할수 있는 함수
-        val uri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, CV)
+        val uri = getActivity()?.contentResolver?.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, CV)
         if(uri != null){
-            var scriptor = contentResolver.openFileDescriptor(uri, "w") // contentResolver를 통해서 현제 경로는 uri 로 잡고 모드는 w 로 한다.
+            var scriptor = getActivity()?.contentResolver?.openFileDescriptor(uri, "w") // contentResolver를 통해서 현제 경로는 uri 로 잡고 모드는 w 로 한다.
 
             val fos = FileOutputStream(scriptor?.fileDescriptor)  // 비트맵을 저장 할수 있게 해준다.
 
@@ -136,7 +135,7 @@ class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListene
                 CV.clear()
                 // IS_PENDING 을 초기화
                 CV.put(MediaStore.Images.Media.IS_PENDING, 0)
-                contentResolver.update(uri, CV, null, null)
+                getActivity()?.contentResolver?.update(uri, CV, null, null)
             }
         }
         return uri
@@ -183,15 +182,16 @@ class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListene
 
 
     // 액션바 생성을 위한 함수
-    @Override
-    private fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_main, menu)
 
 
-        return super.onCreateOptionsMenu(menu)
+        return super.onCreateOptionsMenu(menu, inflater)
         //  return false
+
+
     }
-    // 회원 탈퇴 부분
+    // 회원 탈퇴 부분 , 메뉴 이벤트 부분
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         //   val deleteText: TextView =findViewById<TextView>(R.id.deleteText)
@@ -230,7 +230,6 @@ class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListene
 
     }
 
-*/
 
 }
 

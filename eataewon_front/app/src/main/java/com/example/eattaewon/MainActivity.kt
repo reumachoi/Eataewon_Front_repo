@@ -8,9 +8,11 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.eattaewon.connect.MemberDto
+import com.example.eattaewon.connect.RetrofitClient
 
 import com.example.eattaewon.databinding.ActivityMainBinding
-class MainActivity : AppCompatActivity()/*, View.OnClickListener*/{
+
+class MainActivity : AppCompatActivity(),View.OnClickListener{
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
 
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/{
         //백엔드 통신 확인용
         /*var result = MemberDao.getInstance().test()
         binding.loginID.setText(result.toString())*/
-/*
+
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
         val googleBtn = findViewById<Button>(R.id.google_Btn)
@@ -49,11 +51,25 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/{
             R.id.login_Btn -> {
                 val id = loginID.text.toString()
                 val pw = loginPW.text.toString()
-                val dto = MemberDto(0,"", id, pw, "", "", "", 0,"")
-                val checkLogin = MemberDao.getInstance().login(dto)
+                val dto = MemberDto(id, "", pw, "", "",0, 0,"")
+
+                /*val checkLogin = MemberDao.getInstance().login(dto)
                 if (checkLogin != null) {
                     Toast.makeText(this, "환영합니다. ${checkLogin.id}님", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, HomeActivity::class.java))
+                } else {
+                    Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
+                }*/
+
+                //백엔드 접속후 id pw값을 찾아 login값에 dto값 넣기
+                val login = MemberDao.getInstance().login(dto)
+                if (login != null) {
+                    Toast.makeText(this, "환영합니다. ${login.id}님", Toast.LENGTH_SHORT).show()
+
+                    //안도현(로그인 후 홈엑티비티로 넘어가면서 intent.put으로 login값 넘기기)
+                    val intent = Intent(this,HomeActivity::class.java)
+                    intent.putExtra("user",login)
+                    startActivity(intent)
                 } else {
                     Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
                 }
@@ -69,7 +85,7 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/{
             R.id.naver_Btn -> {
 
             }
-        }*/
+        }
     }
 }
 

@@ -3,14 +3,27 @@ package com.example.eattaewon.connect
 import android.os.Parcel
 import android.os.Parcelable
 
-class BbsDto(var id:String?,var seq:Int, var title:String?,  var content:String?, var picture:String?, var hashtag:String?, var wdate:String?,
-             var shopname:String?, var address:String?, var latitude:Double, var longitude:Double, var readcnt:Int, var likecnt:Int):Parcelable {
+class BbsDto(
+    var id:String?,
+    var seq:Int,
+    var title:String?,
+    var content:String?,
+    var picture:Int,
+    var hashtag:String?,
+    var wdate:String?,
+    var shopname:String?,
+    var address:String?,
+    var latitude:Double,
+    var longitude:Double,
+    var readcnt:Int,
+    var likecnt:Int
+    ):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readString(),
+        parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -27,7 +40,7 @@ class BbsDto(var id:String?,var seq:Int, var title:String?,  var content:String?
         parcel.writeInt(seq)
         parcel.writeString(title)
         parcel.writeString(content)
-        parcel.writeString(picture)
+        parcel.writeInt(picture)
         parcel.writeString(hashtag)
         parcel.writeString(wdate)
         parcel.writeString(shopname)

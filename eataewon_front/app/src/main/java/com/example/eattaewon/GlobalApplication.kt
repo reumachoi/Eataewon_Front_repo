@@ -8,7 +8,10 @@ class GlobalApplication:Application() {
     override fun onCreate() {
         super.onCreate()
 
-        // Kakao SDK 초기화
+        //카카오 로그인 초기화
+        KakaoSdk.init(this, "a05f68a3850359a6d8c92e79cdc0d8cb") 
+
+        // Kakao sns SDK 초기화
         KakaoSdk.init(this, "803510af840ec6fd9c1aefe41148b4e5")
 
         // NaverMap SDK
