@@ -55,6 +55,7 @@
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="아이디"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,6 +79,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:textColor="@color/black"
         android:background="@drawable/style_edittext"
         android:ems="10"
         android:gravity="center"
@@ -160,20 +162,5 @@
         app:layout_constraintTop_toTopOf="@+id/google_Btn"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck" />
-    <Button
-            android:text="디테일 테스트"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/testBtn"
-            app:layout_constraintTop_toTopOf="@+id/Mypage" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="60dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"/>
-    <Button
-            android:text="임시 마이페이지이동 버튼"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/Mypage"
-            app:layout_constraintEnd_toStartOf="@+id/testBtn" android:layout_marginEnd="64dp"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.357"
-            app:layout_constraintVertical_bias="0.017"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
