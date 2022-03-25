@@ -77,54 +77,7 @@ $(document).ready(function () {
 	});
 	
 	
-	$(document).on("click", "#likeDel", function(){		
-		//alert('likeDel')
-		
-		if($("input[name=seq]:checkbox").length > 0){
-			
-		}
-		
-		let seqs = new Array($("input[name=seq]:checkbox").length);
-		let count = 0;
-		
-		for(i = 0;i < $("input[name=seq]:checkbox").length; i++){
-			if($("input[name=seq]:checkbox")[i].checked == true){
-				alert($("input[name=seq]:checkbox")[i].value);
-				seqs[i] = $("input[name=seq]:checkbox")[i].value			
-				count++;
-			}
-		}
-		
-		let json = "["
-		for(i = 0;i < count; i++){
-			json += "{ seq: " + seqs[i] + "}, ";	
-		}		
-		json = json.substr(0,  json.length-2)
-		json += "]"	
-		
-		// json -> JSON으로 변
-		alert(json)
-		
-			
-/* 		$.ajax({
-			url:"http://localhost:3000/deleteLike",
-			type:"get",
-			data:json,
-			success:function(msg){
-				if(msg == "OK"){
-					alert("삭제되었습니다");
-					location.href = "bbslikelist.html";
-				}else{
-					alert("삭제되지 않았습니다");
-				}
-			},
-			error:function(){
-				alert('error');
-			}
-		}) */
-		
-		
-	});
+	
 	
 
 	$("#tbody").html(""); // 테이블 초기화
@@ -138,7 +91,7 @@ $(document).ready(function () {
 			$.each(list, function (i, item) {
 				
 				let str = "<tr>"
-							+ "<th>" + "<input type='checkbox' class='seq' name='seq' value='"+item.seq+"'/>" + "</th>";
+							+ "<th>" + "<input type='checkbox' class='seq' name='bbsseq' value='"+item.seq+"'/>" + "</th>";
 				str	+= "<th>" + (i + 1) + "</th>"	
 				str +=	  "<td>"+ "&nbsp;&nbsp;<a href='bbsdetail.html?seq=" + item.seq + "'>" + item.title + "</a></td>"		
 				//	str +=	  "<td>" + item.title + "</td>"
@@ -163,24 +116,54 @@ $(document).ready(function () {
 		
 	});
 	
-	/* $(document).on("click", ".seq", function(){
-		alert('getCheckboxValue');
-		
-		
-		
-	}) */
 	
-	function getCheckboxValue()  {
-		alert('getCheckboxValue');
-		  let seq = '';
-		  /* if(event.target.checked)  {
-			  seq  = event.target.value;
-		  }else {
-			  seq  = '';
-		  } */
-		  
-		  //document.getElementById('seq').innerText = seq;
-	}
+	$(document).on("click", "#likeDel", function(){		
+		if($("input[name=bbsseq]:checkbox").length > 0){
+			
+			let count = 0;
+			
+			for(i = 0;i < $("input[name=bbsseq]:checkbox").length; i++){
+				if($("input[name=bbsseq]:checkbox")[i].checked == true){
+					count++;
+				}
+			}
+			
+			let seqs = new Array(count);
+			let n = 0;
+			for(i = 0;i < $("input[name=bbsseq]:checkbox").length; i++){
+				if($("input[name=bbsseq]:checkbox")[i].checked == true){
+					seqs[n] = $("input[name=bbsseq]:checkbox")[i].value;
+					n++;
+				}
+			}
+			
+			 
+		$.ajax({
+				url:"http://localhost:3000/deleteLike",
+				type:"get",
+				data:{"json":seqs},
+				success:function(msg){
+					if(msg == "OK"){
+						alert("삭제되었습니다");
+						location.href = "bbslikelist.html";
+					}else{
+						alert("삭제되지 않았습니다");
+						location.href = "bbslikelist.html";
+					}
+				},
+				error:function(){
+					alert('error');
+				}
+			}) 
+			
+		}
+		
+	
+		
+		
+	}); // 함수 끝
+
+	
 	
 	
 	

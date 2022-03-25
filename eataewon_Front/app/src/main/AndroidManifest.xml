@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="com.example.eattaewon">
+      
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <!-- queries에 카카오톡 패키지 추가 -->
+    <queries>
+        <package android:name="com.kakao.talk"/>
+    </queries> 
+
+    <!-- 인터넷 사용 권한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- 도시 블록 내에서의 정확한 위치(네트워크 위치) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- 정확한 위치 확보(네트워크 위치 + GPS 위치) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- 저장소 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+ 
+    <application
+        android:name=".GlobalApplication"
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.Eattaewon_back_kimminki"
+            android:usesCleartextTraffic="true">
+
+
+        <!--  최아름 카카오 sns, 네이버 map    -->
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
+        <meta-data
+                android:name="com.naver.maps.map.CLIENT_ID"
+                android:value="1o2hhvg6b8"/>
+
+        <!-- 카카오 로그인 앱키-->
+        <meta-data
+                android:name="com.kakao.sdk.AppKey"
+                android:value="@string/kakao_app_key" />
+
+        <activity
+                android:name=".MainActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:host="oauth"
+                        android:scheme="kakaoa05f68a3850359a6d8c92e79cdc0d8cb" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".SignActivity"
+                android:exported="true" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
+            <intent-filter>
+
+              <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".BbsDetailActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <!-- "kakao${YOUR_NATIVE_APP_KEY}://kakaolink" 형식의 앱 실행 스킴을 설정하는데 사용 -->
+                <data
+                        android:host="kakaolink"
+                        android:scheme="803510af840ec6fd9c1aefe41148b4e5"/>
+            </intent-filter>
+        </activity>
+
+
+    </application>
+</manifest>
