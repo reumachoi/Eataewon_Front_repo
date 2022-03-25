@@ -1,38 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+
+
+    <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".BbsDetailActivity"
+                tools:layout_editor_absoluteY="1dp"
+                tools:layout_editor_absoluteX="1dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="443dp">
+                    <LinearLayout
+                            android:id="@+id/picLinear"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:layout_width="583dp"
+                                android:layout_height="466dp" app:srcCompat="@drawable/cafe1"
+                                android:id="@+id/imageView4" android:layout_weight="1"/>
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" app:srcCompat="@drawable/cafe2"
+                                android:id="@+id/imageView5" android:layout_weight="1"/>
+                        <ImageView
+                                android:layout_width="359dp"
+                                android:layout_height="443dp" app:srcCompat="@drawable/cafe5"
+                                android:id="@+id/imageView6" android:layout_weight="1"/>
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" app:srcCompat="@drawable/cafe4"
+                                android:id="@+id/imageView8" android:layout_weight="1"/>
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" app:srcCompat="@drawable/cafe3"
+                                android:id="@+id/imageView7" android:layout_weight="1"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                        android:text="큐레이션 제목"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp" android:id="@+id/DeTitle"/>
+                <TextView
+                        android:text="큐레이션 내용"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp" android:id="@+id/DeContent"/>
+                <Button
+                        android:text="공유하기"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/shareBtn"
+                        tools:layout_editor_absoluteY="597dp"
+                        tools:layout_editor_absoluteX="180dp"/>
+                <Button
+                        android:text="지도보기"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/seeMapBtn"/>
+                <FrameLayout
+                        android:id="@+id/mapContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="337dp"
+                        app:layout_constraintTop_toBottomOf="@+id/detailDateText" android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent">
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".BbsDetailActivity"
-            tools:layout_editor_absoluteY="1dp"
-            tools:layout_editor_absoluteX="1dp">
-
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical">
-
-            <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
-                    android:id="@+id/imageView2"/>
-            <Button
-                    android:text="공유하기"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/shareBtn"
-                    tools:layout_editor_absoluteY="597dp"
-                    tools:layout_editor_absoluteX="180dp"/>
-            <Button
-                    android:text="지도보기"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/seeMapBtn"/>
-            <FrameLayout
-                    android:id="@+id/mapContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="337dp"
-                    app:layout_constraintTop_toBottomOf="@+id/detailDateText" android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent">
-            </FrameLayout>
-
-        </LinearLayout>
-    </ScrollView>
+            android:layout_height="wrap_content"
+            android:clickable="true" app:srcCompat="@drawable/ic_navi_bookmark"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/floBtn1"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true" app:srcCompat="@android:drawable/ic_menu_share"
+            android:layout_below="@+id/floBtn1"
+            android:layout_alignRight="@+id/floBtn1"
+            android:id="@+id/floBtn2"/>
+</RelativeLayout>

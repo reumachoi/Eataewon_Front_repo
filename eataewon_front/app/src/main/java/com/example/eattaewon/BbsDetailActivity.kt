@@ -23,6 +23,7 @@ class BbsDetailActivity : AppCompatActivity() {
         var seq = 1
         //var result = BbsDao.getInstance().getBbsDetail(seq)
 
+
         binding.seeMapBtn.setOnClickListener {
 
           val naverMapFragment = NaverMapFragment()
