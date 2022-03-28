@@ -1,6 +1,5 @@
 package com.example.eattaewon
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.UiThread
 import androidx.fragment.app.FragmentActivity
@@ -12,7 +11,7 @@ class MapActivity : FragmentActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_map2)
+        setContentView(R.layout.fragment_naver_map)
 
         val fm = supportFragmentManager
         val mapFragment = fm.findFragmentById(R.id.map) as MapFragment?

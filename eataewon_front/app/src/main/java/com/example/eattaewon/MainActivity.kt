@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.eattaewon.connect.MemberDao
 import com.example.eattaewon.connect.MemberDto
 import com.example.eattaewon.connect.RetrofitClient
 
@@ -25,10 +26,17 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             val i = Intent(this, BbsDetailActivity::class.java)
             startActivity(i)
         }
+        //글작성 테스트 버튼 (최아름)
+        binding.button3.setOnClickListener {
+            val i = Intent(this, KakaoActivity::class.java)
+            startActivity(i)
+        }
 
-        //백엔드 통신 확인용
-        /*var result = MemberDao.getInstance().test()
-        binding.loginID.setText(result.toString())*/
+     /*   //백엔드 통신 확인용
+        var result = MemberDao.getInstance().test()
+        binding.loginID.setText(result.toString())
+        binding.textView9.text = result.toString()
+        println(result.toString()+"test 확인")*/
 
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
@@ -50,12 +58,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
 
             R.id.login_Btn -> {
                 val id = loginID.text.toString()
-                val pw = loginPW.text.toString()
-                val dto = MemberDto(id, "", pw, "", "",0, 0,"")
+                val pwd = loginPW.text.toString()
+                val dto = MemberDto(id, "", pwd, "", "",0, 0,"")
 
                 //백엔드 접속후 id pw값을 찾아 login값에 dto값 넣기
                 val login = MemberDao.getInstance().login(dto)
-                println("메인액티비티 로그인 넘어온값 " + login.toString())
 
                 if (login != null) {
                     Toast.makeText(this, "환영합니다. ${login.id}님", Toast.LENGTH_SHORT).show()

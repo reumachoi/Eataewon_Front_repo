@@ -1,6 +1,12 @@
 package com.example.eattaewon
 
+import android.os.Bundle
 import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 
-class WriteFragment: Fragment(R.layout.fragment_write) {
+
+class WriteFragment : Fragment() {
+
 }

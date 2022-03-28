@@ -28,6 +28,11 @@ class BbsDetailActivity : AppCompatActivity() {
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
         val data = intent.getParcelableExtra<BbsDto>("data")
 
+        binding.DeTitle.text = data?.title
+        binding.DeContent.text = data?.content
+        binding.DeHashtag.text = data?.hashtag
+        binding.DeLocation.text = data?.address
+
         //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
 
@@ -35,8 +40,8 @@ class BbsDetailActivity : AppCompatActivity() {
 
         //var testData = listOf<BbsDto>("id",10,"title","content","picture")
 
+//      좋아요 버튼 클릭효과
         binding.HeartBtn.setOnClickListener {
-
             if(binding.HeartBtn.isSelected != true){
                 binding.HeartBtn.isSelected = true  //좋아요 누르기
                 //+이태원라이크 테이블에 유저값 넣어주기
@@ -47,9 +52,8 @@ class BbsDetailActivity : AppCompatActivity() {
             }
 
         }
-
+//      스크랩 버튼 클릭효과
         binding.ScrapBtn.setOnClickListener {
-
             if(binding.ScrapBtn.isSelected != true){
                 binding.ScrapBtn.isSelected = true  //스크랩 누르기
                 //+이태원스크랩 테이블에 유저값 넣어주기
@@ -68,27 +72,31 @@ class BbsDetailActivity : AppCompatActivity() {
 
         }
 
-        binding.shareBtn.setOnClickListener {
 
-        // 피드 메시지 보내기
-            val defaultText = TextTemplate(
-                text = """
-        카카오링크는 카카오 플랫폼 서비스의 대표 기능으로써 사용자의 모바일 기기에 설치된 카카오 플랫폼과 연동하여 다양한 기능을 실행할 수 있습니다.
-        현재 이용할 수 있는 카카오링크는 다음과 같습니다.
-        카카오톡링크
-        카카오톡을 실행하여 사용자가 선택한 채팅방으로 메시지를 전송합니다.
-        카카오스토리링크
-        카카오스토리 글쓰기 화면으로 연결합니다.
-    """.trimIndent(),
-                link = Link(
-                    webUrl = "https://developers.kakao.com",
-                    mobileWebUrl = "https://developers.kakao.com"
+//      카톡 글 공유하기
+        binding.floShareBtn.setOnClickListener {
+
+            // 피드 메시지 보내기
+            val defaultText = LocationTemplate(
+                address = data?.address!!,
+                addressTitle = data?.shopname!!,
+                content = Content(
+                    title = data?.title!!,
+                    description = data?.content!!.substring(0,20),
+                    imageUrl = "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220301_56%2F1646125809470g3mRx_JPEG%2Fupload_8734af74cb52984491186a224aa2a66e.jpeg",
+                    link = Link(
+//                        webUrl = "https://developers.com",
+                        mobileWebUrl = "https://developers.kakao.com"
+                    )
+                ),
+                social = Social(
+                    likeCount = 286,
+                    commentCount = 45,
+                    sharedCount = 845
                 )
             )
         // 사용자 정의 메시지 ID
         //  * 만들기 가이드: https://developers.kakao.com/docs/latest/ko/message/message-template
-        //val templateId = templateIds["ID 73529"] as Long
-        val url = "https://developers.kakao.com"
 
         // 카카오톡 설치여부 확인
         if (LinkClient.instance.isKakaoLinkAvailable(this)) {

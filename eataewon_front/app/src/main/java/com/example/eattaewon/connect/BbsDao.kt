@@ -1,27 +1,19 @@
 package com.example.eattaewon.connect
 
-import com.example.eattaewon.MemberDao
-import com.example.eattaewon.MemberService
+
+import android.content.ContentValues.TAG
+import android.util.Log
+import com.example.eattaewon.KakaoSearchDto
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.*
 
 interface BbsService {
 
-        /*//post 보내고 받기
-        @POST("/bbswrite")
-        fun bbswrite(@Body dto:BbsDto) : Call<String>
-
-        //get 보내고 받기
-        @GET("/bbswrite")
-        fun bbswrite(@Query("test") dto:BbsDto) : Call<String>*/
-
-
-
-     @GET("/getBbsList")
+        @GET("/getBbsList")
         fun getBbsList(): Call<List<BbsDto>>
 
         @POST("/bbsScrap")
@@ -33,7 +25,14 @@ interface BbsService {
         @POST("/bbsdetail")
         fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
 
+        @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
+        fun getSearchKeyword(
+            @Header("Authorization") key: String,     // 카카오 API 인증키 [필수]
+            @Query("query") query: String             // 검색을 원하는 질의어 [필수]
+            // 매개변수 추가 가능
+            // @Query("category_group_code") category: String
 
+        ): Call<KakaoSearchDto>
 }
 
 class BbsDao {
@@ -94,4 +93,6 @@ class BbsDao {
 
         return response?.body()
     }
+
+
 }

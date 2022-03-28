@@ -1,21 +1,21 @@
-package com.example.eattaewon
+package com.example.eattaewon.connect
 
 
-import com.example.eattaewon.connect.MemberDto
-import com.example.eattaewon.connect.RetrofitClient
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.*
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
 
 interface MemberService{
 
-    //백엔드 통신 확인용
     //@FormUrlEncoded 서버에서 인풋값 인코딩을 위함용 (post에서만 사용 + @Field)
     @GET("/test")
     fun test(
         //인풋 정의
         //@Field("userid") id:String
-    ):Call<String>  //아웃풋 정의
+    ):Call<String>  //아웃풋 정의 //백엔드 통신 확인용
+
 
 
     @POST("/login")
