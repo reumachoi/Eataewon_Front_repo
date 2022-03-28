@@ -11,7 +11,7 @@ import com.naver.maps.map.*
 import com.naver.maps.map.overlay.Marker
 
 
-class NaverMapFragment : Fragment(), OnMapReadyCallback {
+class  xxNaverMapFragment : Fragment(), OnMapReadyCallback {
 
     //지도 객체 변수
     private lateinit var mapView: MapView

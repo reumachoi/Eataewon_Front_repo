@@ -3,9 +3,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven{url "https://naver.jfrog.io/artifactory/maven/"}
+        maven { url "https://naver.jfrog.io/artifactory/maven/"}
         maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
     }
 }
-rootProject.name = "eataewon_front"
+rootProject.name = "eattaewon_back_kimminki"
 include ':app'

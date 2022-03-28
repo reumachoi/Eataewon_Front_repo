@@ -1,23 +1,23 @@
-package com.example.eattaewon
+package com.example.eattaewon.connect
 
-import com.example.eattaewon.connect.MemberDto
-import com.example.eattaewon.connect.RetrofitClient
+
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.*
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
 
 interface MemberService{
 
-    //백엔드 통신 확인용
     //@FormUrlEncoded 서버에서 인풋값 인코딩을 위함용 (post에서만 사용 + @Field)
     @GET("/test")
     fun test(
         //인풋 정의
         //@Field("userid") id:String
-    ):Call<String>  //아웃풋 정의
+    ):Call<String>  //아웃풋 정의 //백엔드 통신 확인용
 
 
-    /// 3. object 를 보내고 받기
+
     @POST("/login")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
@@ -26,6 +26,7 @@ interface MemberService{
 
     @POST("/addmember")
     fun signup(@Body dto:MemberDto): Call<String>
+
 
 
 }
@@ -56,7 +57,7 @@ class MemberDao {
 
     fun login(dto: MemberDto): MemberDto? {
         var response: Response<MemberDto>?
-        println("ID:${dto.id}")
+        println("ID:${dto.id} PWD:${dto.pwd}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
@@ -100,5 +101,7 @@ class MemberDao {
 
         return response?.body()
     }
+
+
 
 }
