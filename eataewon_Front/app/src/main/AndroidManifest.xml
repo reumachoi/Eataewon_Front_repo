@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 <<<<<<< Updated upstream
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.example.eataewon">
+          package="com.example.eattaewon">
 
 =======
           xmlns:tools="http://schemas.android.com/tools" package="com.example.eattaewon">
@@ -32,11 +32,15 @@
 
  
     <application
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             android:name="com.example.eataewon.GlobalApplication"
 =======
         android:name=".GlobalApplication"
 >>>>>>> Stashed changes
+=======
+            android:name=".GlobalApplication"
+>>>>>>> parent of 2c66f7a (0328 18:17 (프로젝트,패키지명 변경))
             android:allowBackup="true"
             android:label="@string/app_name"
             android:icon="@mipmap/ic_launcher"
@@ -60,6 +64,7 @@
                 android:value="@string/kakao_app_key" />
 
         <activity
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                 android:name="com.example.eataewon.SecondActivity"
                 android:exported="true"
@@ -69,6 +74,13 @@
 =======
                 android:name=".MainActivity"
 >>>>>>> Stashed changes
+=======
+                android:name=".SecondActivity"
+                android:exported="true"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name="com.example.eattaewon.HomeActivity"
+>>>>>>> parent of 2c66f7a (0328 18:17 (프로젝트,패키지명 변경))
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -76,8 +88,12 @@
             </intent-filter>
         </activity>
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         <activity android:name="com.example.eataewon.KakaoActivity"
+=======
+        <activity android:name=".KakaoActivity"
+>>>>>>> parent of 2c66f7a (0328 18:17 (프로젝트,패키지명 변경))
                   android:exported="true"/>
 
 =======
@@ -96,12 +112,16 @@
         </activity>
 
         <activity
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                 android:name="com.example.eataewon.SignActivity"
+=======
+                android:name=".SignActivity"
+>>>>>>> parent of 2c66f7a (0328 18:17 (프로젝트,패키지명 변경))
                 android:exported="true"/>
 
         <activity
-                android:name="com.example.eataewon.HomeActivity"
+                android:name=".HomeActivity"
                 android:exported="true">
 =======
                 android:name=".SignActivity"
@@ -120,7 +140,7 @@
         </activity>
 
         <activity
-                android:name="com.example.eataewon.BbsDetailActivity"
+                android:name=".BbsDetailActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>

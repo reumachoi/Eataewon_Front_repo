@@ -99,9 +99,12 @@
         <entry key="app/src/main/res/layout/fragment_write.xml" value="0.4036458333333333" />
 <<<<<<< Updated upstream
         <entry key="app/src/main/res/layout/map_list_view_layout.xml" value="0.4953125" />
+<<<<<<< HEAD
         <entry key="app/src/main/res/menu/menu_bbs_details.xml" value="0.34921875" />
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 2c66f7a (0328 18:17 (프로젝트,패키지명 변경))
       </map>
     </option>
   </component>
