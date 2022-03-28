@@ -51,15 +51,15 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             R.id.login_Btn -> {
                 val id = loginID.text.toString()
                 val pw = loginPW.text.toString()
-                val dto = MemberDto(id, "", pw, "", "",0, 0,"")
+                val dto = MemberDto(0,id, "", pw, "", "",0, 0,"")
 
-                /*val checkLogin = MemberDao.getInstance().login(dto)
+                val checkLogin = MemberDao.getInstance().login(dto)
                 if (checkLogin != null) {
                     Toast.makeText(this, "환영합니다. ${checkLogin.id}님", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, HomeActivity::class.java))
                 } else {
                     Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
-                }*/
+                }
 
                 //백엔드 접속후 id pw값을 찾아 login값에 dto값 넣기
                 val login = MemberDao.getInstance().login(dto)

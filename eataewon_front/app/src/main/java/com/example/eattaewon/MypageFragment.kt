@@ -1,93 +1,150 @@
 package com.example.eattaewon
 
-
 import android.Manifest
 import android.app.Activity
-import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.database.Cursor
-import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.*
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
-import java.io.FileOutputStream
-import java.text.SimpleDateFormat
+import com.example.eattaewon.connect.MemberDto
 
-class MypageFragment:Fragment(R.layout.fragment_mypage),View.OnClickListener  {
-
-
+class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.fragment_mypage),View.OnClickListener{
+    // storage 권한
 
     val STORAGE = arrayOf(
         Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.WRITE_EXTERNAL_STORAGE
-    )
-    val CAMERA_CODE = 98
+        Manifest.permission.WRITE_EXTERNAL_STORAGE)
+
     val STORAGE_CODE = 99
 
+    lateinit var mypageProfilpicuri:TextView
+    lateinit var mypageProfilpic:ImageView
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val v = inflater.inflate(R.layout.fragment_mypage, container, false)
 
-        val view = inflater.inflate(R.layout.fragment_mypage, container, false)
-
-        val correct = view.findViewById<Button>(R.id.correct)
-        val Cancel = view.findViewById<Button>(R.id.Cancel)    // 미 연결 상태 추후에 연결
-
-        Cancel.setOnClickListener(this)
-        correct.setOnClickListener(this)
-        return view
-// 메뉴바 사용에 쓰임
-
+      // 상단바 제작 에 사용
         setHasOptionsMenu(true);
-return inflater.inflate(R.layout.fragment_home, container, false)
+
+        //임시 테스트
+     //   val user = MemberDto(0,"","","","","","",0,"")
+
+        //텍스트뷰
+        val mypageLikepoint = v.findViewById<TextView>(R.id.mypage_likepoint)
+        val mypageName = v.findViewById<TextView>(R.id.mypage_name)
+        val mypageEmail = v.findViewById<TextView>(R.id.mypage_email)
+        val mypageNickname = v.findViewById<TextView>(R.id.mypage_nickname)
+        val mypageProfilmsg = v.findViewById<TextView>(R.id.mypage_profilmsg)
+
+        //이미지
+        mypageProfilpic = v.findViewById(R.id.mypage_profil_image)
+        mypageProfilpicuri = v.findViewById(R.id.mypage_profilpic_uri)
+
+        //버튼
+        val cancleBtn = v.findViewById<Button>(R.id.mypage_cancleBtn)
+        val updateBtn = v.findViewById<Button>(R.id.mypage_updateBtn)
+
+        val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
+
+
+/*
+        //텍스트뷰에 값 입력
+        mypageLikepoint.text = user.likepoint.toString()
+        mypageName.text = user.name
+        mypageEmail.text = user.email
+        mypageNickname.text = user.nickname
+        mypageProfilmsg.text = user.profilMsg
+        mypageProfilpic.setImageURI(user.profilPic?.toUri())
+*/
+
+        //버튼 클릭 이벤트
+
+
+        cancleBtn.setOnClickListener(this)
+
+        //사진
+        imageBtn.setOnClickListener { GetAlbum() }
+
+        //수정 버튼 이벤트
+        updateBtn.setOnClickListener{
+
+        }
+        return v
+
+
+    }
+ // 상단바 부분
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_main, menu)
+
+
+        return super.onCreateOptionsMenu(menu, inflater)
+    }
+  // 상단바 이동
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+
+      val intent = Intent(homeActivity,DeleteActivity::class.java)
+      startActivity(intent)
+
+
+        when(item?.itemId){
 
 
 
 
-        // 사진 저장
-        val picture = view.findViewById<Button>(R.id.Imagebtn)
-        picture.setOnClickListener {
-            GetAlbum()
+            //        R.id.withdraw -> logout.text = "셋팅 클릭" // 추후 추가 // 로그인 이전화면으로 뷰 전환만 해준다.
         }
 
-
-    }
-
- ///  수정 이나 삭제 필요
-    fun getPath(uri: Uri?): String {
-        val projection = arrayOf<String>(MediaStore.Images.Media.DATA)
-        val cursor: Cursor? = getActivity()?.getContentResolver()?.query(uri!!, projection, null, null, null)
-     getActivity()?.startManagingCursor(cursor)
-        val columnIndex: Int = cursor!!.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
-        cursor.moveToFirst()
-        return cursor.getString(columnIndex)
+        return super.onOptionsItemSelected(item)
     }
 
 
 
 
-    // 요청 권한을 주는 함수 이다.  // 카메라 권한, 저장소 권한 관련 된 내용용
-    override fun onRequestPermissionsResult(requestCode: Int,   // 맴버 재정의 로 호출
-                                            permissions: Array<out String>, grantResults: IntArray) {   // requestCode는 int로 잡고 ,grantResults는 IntArray(배열)로 잡는다.
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)  // 맴버 호출시 같이 나옴
+    //버튼 클릭 이벤트 내용
+    override fun onClick(view: View?) {
+        when(view?.id){
 
-        when(requestCode){  // 카메라 권한 허가를 요청 하는 부분 이다.
 
-            STORAGE_CODE -> {  // 저장소 권한 허가를 요청 하는 부분 이다.
-                for(grant in grantResults){
-                    if(grant != PackageManager.PERMISSION_GRANTED){
-                        Toast.makeText(getContext(), "저장소 권한을 승인해 주세요", Toast.LENGTH_LONG).show()
-                    }
+            R.id.mypage_cancleBtn->{
+
+            }
+        }
+    }
+
+    // uri와 이미지뷰에 저장
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(resultCode == Activity.RESULT_OK){
+            when(requestCode){
+                STORAGE_CODE -> {
+                    val uri = data?.data
+                    mypageProfilpicuri.text = uri.toString()
+                    mypageProfilpic.setImageURI(uri)
                 }
             }
+        }
+    }
+
+    // 갤러리 취득
+    fun GetAlbum(){
+        if(checkPermission(STORAGE, STORAGE_CODE)){
+            val itt = Intent(Intent.ACTION_PICK)
+            itt.type = MediaStore.Images.Media.CONTENT_TYPE
+            startActivityForResult(itt, STORAGE_CODE)
         }
     }
 
@@ -98,7 +155,7 @@ return inflater.inflate(R.layout.fragment_home, container, false)
                 if(ContextCompat.checkSelfPermission(requireActivity(), permission)
                     != PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(requireActivity(), permissions, type)
-                    return false     // 만약에 권한 승인이 처리 되지 않았을때 false로 리턴 해준다.
+                    return false
                 }
             }
         }
@@ -106,134 +163,18 @@ return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
 
-
-    // 사진 저장
-    fun saveFile(fileName:String, mimeType:String, bitmap: Bitmap): Uri?{  //mimeType: 클라이언트 에게 전송된 문서 관련된 다양성을 알려주는 함수??
-
-        var CV = ContentValues()
-
-        // MediaStore 에 파일명, mimeType 을 지정
-        CV.put(MediaStore.Images.Media.DISPLAY_NAME, fileName)
-        CV.put(MediaStore.Images.Media.MIME_TYPE, mimeType)
-
-        // 안정성 검사
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q){
-            CV.put(MediaStore.Images.Media.IS_PENDING, 1)
-        }
-
-        // MediaStore 에 사진 저장 할수 있는 함수
-        val uri = getActivity()?.contentResolver?.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, CV)
-        if(uri != null){
-            var scriptor = getActivity()?.contentResolver?.openFileDescriptor(uri, "w") // contentResolver를 통해서 현제 경로는 uri 로 잡고 모드는 w 로 한다.
-
-            val fos = FileOutputStream(scriptor?.fileDescriptor)  // 비트맵을 저장 할수 있게 해준다.
-
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos)  // JPEG 파일 형태로 품질은 100 으로 잡았다.
-            fos.close()
-
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q){  // 뒤처리 부분 이다.
-                CV.clear()
-                // IS_PENDING 을 초기화
-                CV.put(MediaStore.Images.Media.IS_PENDING, 0)
-                getActivity()?.contentResolver?.update(uri, CV, null, null)
-            }
-        }
-        return uri
-    }
-
-    // 결과
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {  // 맴버 재정의로 호출 해 준다.
-        super.onActivityResult(requestCode, resultCode, data)
-
-        val imageView = view!!.findViewById<ImageView>(R.id.imageView2)  //imageView  선언 및 연결
-
-        if(resultCode == Activity.RESULT_OK){
-            when(requestCode){
-                CAMERA_CODE -> {
-                    if(data?.extras?.get("data") != null){
-                        val img = data?.extras?.get("data") as Bitmap
-                        val uri = saveFile(RandomFileName(), "image/JPEG", img)
-                        imageView.setImageURI(uri)
-                        println("실제이미지 경로:"+ getPath(uri))
+    //권한 승인
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            STORAGE_CODE -> {
+                for(grant in grantResults){
+                    if(grant != PackageManager.PERMISSION_GRANTED){
+                        Toast.makeText(context, "저장소 권한을 승인해 주세요", Toast.LENGTH_LONG).show()
                     }
                 }
-                STORAGE_CODE -> {
-                    val uri = data?.data
-                    imageView.setImageURI(uri)
-                }
             }
         }
     }
-
-    // 파일명을 날짜로 저장 한다.
-    fun RandomFileName() : String{   // 리턴값은 String
-        val fileName = SimpleDateFormat("yyyyMMddHHmmss").format(System.currentTimeMillis())  // currentTimeMillis : 현제 시간으로 한다.
-        return fileName
-    }
-
-    // 갤러리 취득
-    fun GetAlbum(){
-        if(checkPermission(STORAGE, STORAGE_CODE)){   // 위에 설정한 checkPermission 가  참이였을때.
-            val itt = Intent(Intent.ACTION_PICK)
-            itt.type = MediaStore.Images.Media.CONTENT_TYPE
-            startActivityForResult(itt, STORAGE_CODE)
-        }
-    }
-
-
-    // 액션바 생성을 위한 함수
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_main, menu)
-
-
-        return super.onCreateOptionsMenu(menu, inflater)
-        //  return false
-
-
-    }
-    // 회원 탈퇴 부분 , 메뉴 이벤트 부분
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        //   val deleteText: TextView =findViewById<TextView>(R.id.deleteText)
-
-        when(item?.itemId){
-
-
-     //       R.id.withdraw -> startActivity(Intent(this,delete::class.java))
-
-            //        R.id.withdraw -> logout.text = "셋팅 클릭" // 추후 추가 // 로그인 이전화면으로 뷰 전환만 해준다.
-        }
-
-        return super.onOptionsItemSelected(item)
-    }
-// 회원 가입 DB 입력
-
-   override fun onClick(view: View?) {
-        val NickCh = view!!.findViewById<EditText>(R.id.NickCh)
-        val IntroCh = view!!.findViewById<EditText>(R.id.IntroCh)
-//
-
-        when (view?.id) {
-            R.id.correct -> {
-                val NICKNAME = NickCh.text.toString()
-                val PROFLMSG = IntroCh.text.toString()
-
-
-       //         var member = Member(0,NICKNAME,PROFLMSG)
-       //         DBHelper.getInstance(this,"Member.db").add(member)
-
-      //          Toast.makeText(this,"title : ${member.NICKNAME} / 추가되었습니다.", Toast.LENGTH_SHORT).show()
-
-            }
-        }
-
-
-    }
-
-
 }
-
-
-
-
 
