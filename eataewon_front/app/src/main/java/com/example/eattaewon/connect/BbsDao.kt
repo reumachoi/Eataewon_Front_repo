@@ -19,11 +19,20 @@ interface BbsService {
         @GET("/bbswrite")
         fun bbswrite(@Query("test") dto:BbsDto) : Call<String>*/
 
-    @GET("/bbsdetail")
-    fun getBbsDetail(@Query("seq") seq:Int) : Call<BbsDto>
+
 
      @GET("/getBbsList")
         fun getBbsList(): Call<List<BbsDto>>
+
+        @POST("/bbsScrap")
+        fun plusBbsScrap(@Body dto:BbsDto): Call<String>
+
+        @POST("/likeBbs")
+        fun plusBbsLike(@Body dto:BbsDto) : Call<String>
+
+        @POST("/bbsdetail")
+        fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
+
 
 }
 
@@ -49,6 +58,35 @@ class BbsDao {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
             val call = service?.getBbsDetail(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
+
+
+    fun plusBbsLike(dto:BbsDto) : String?{
+        var response: Response<String>?
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.plusBbsLike(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
+
+    fun plusBbsScrap(dto:BbsDto) : String?{
+        var response: Response<String>?
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.plusBbsScrap(dto)
             response = call?.execute()
         }catch(e:Exception){
             response = null

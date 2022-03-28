@@ -83,7 +83,11 @@
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag4.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag5.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.13916666666666666" />
-        <entry key="app/src/main/res/layout/activity_bbs_detail.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/click_bookmarkbtn.xml" value="0.49921875" />
+        <entry key="app/src/main/res/drawable/click_likebtn.xml" value="0.49921875" />
+        <entry key="app/src/main/res/drawable/click_scrapbtn.xml" value="0.4390625" />
+        <entry key="app/src/main/res/drawable/like_btn.xml" value="0.49765625" />
+        <entry key="app/src/main/res/layout/activity_bbs_detail.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_bbs_details.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18588531821045998" />

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.eattaewon.connect.BbsDao
+import com.example.eattaewon.connect.BbsDto
 import com.example.eattaewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
@@ -21,8 +22,43 @@ class BbsDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         var seq = 1
-        //var result = BbsDao.getInstance().getBbsDetail(seq)
 
+        //var data = BbsDao.getInstance().getBbsDetail(seq)
+
+        //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
+        val data = intent.getParcelableExtra<BbsDto>("data")
+
+        //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
+        //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
+
+//        var plusScrap = BbsDao.getInstance().plusBbsScrap(data!!)
+
+        //var testData = listOf<BbsDto>("id",10,"title","content","picture")
+
+        binding.HeartBtn.setOnClickListener {
+
+            if(binding.HeartBtn.isSelected != true){
+                binding.HeartBtn.isSelected = true  //좋아요 누르기
+                //+이태원라이크 테이블에 유저값 넣어주기
+                // var plusLike = BbsDao.getInstance().plusBbsLike(data!!)
+            }else{
+                binding.HeartBtn.isSelected = false //좋아요 누른거 취소
+                //+이태원라이크 테이블에 유저값 삭제하기
+            }
+
+        }
+
+        binding.ScrapBtn.setOnClickListener {
+
+            if(binding.ScrapBtn.isSelected != true){
+                binding.ScrapBtn.isSelected = true  //스크랩 누르기
+                //+이태원스크랩 테이블에 유저값 넣어주기
+                //  var plusScrap = BbsDao.getInstance().plusBbsScrap()   //스크랩누르면
+            }else{
+                binding.ScrapBtn.isSelected = false //스크랩 누른거 취소
+                //+이태원스크랩 테이블에 유저값 삭제하기
+            }
+        }
 
         binding.seeMapBtn.setOnClickListener {
 

@@ -72,6 +72,10 @@ class BbsAdapter (private val context: Context, private val dataList: ArrayList<
             itemView.setOnClickListener {
                 Intent(context, BbsDetailActivity::class.java).apply {
 
+                    // 짐싸!
+                    putExtra("data", data)
+
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }.run { context.startActivity(this) }
             }
         }

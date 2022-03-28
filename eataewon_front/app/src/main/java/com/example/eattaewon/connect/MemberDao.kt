@@ -1,5 +1,6 @@
 package com.example.eattaewon
 
+
 import com.example.eattaewon.connect.MemberDto
 import com.example.eattaewon.connect.RetrofitClient
 import retrofit2.Call
@@ -17,7 +18,6 @@ interface MemberService{
     ):Call<String>  //아웃풋 정의
 
 
-    /// 3. object 를 보내고 받기
     @POST("/login")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
@@ -26,6 +26,7 @@ interface MemberService{
 
     @POST("/addmember")
     fun signup(@Body dto:MemberDto): Call<String>
+
 
 
 }
@@ -56,7 +57,7 @@ class MemberDao {
 
     fun login(dto: MemberDto): MemberDto? {
         var response: Response<MemberDto>?
-        println("ID:${dto.id}")
+        println("ID:${dto.id} PWD:${dto.pwd}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
@@ -100,5 +101,7 @@ class MemberDao {
 
         return response?.body()
     }
+
+
 
 }

@@ -73,22 +73,31 @@
                         app:layout_constraintTop_toBottomOf="@+id/detailDateText" android:layout_marginTop="16dp"
                         app:layout_constraintStart_toStartOf="parent">
                 </FrameLayout>
-
-
             </LinearLayout>
         </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true" app:srcCompat="@drawable/ic_navi_bookmark"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:id="@+id/floBtn1"/>
+            android:clickable="true"
+            android:layout_below="@+id/HeartBtn"
+            android:layout_alignRight="@+id/HeartBtn"
+            android:src="@drawable/click_scrapbtn"
+            android:id="@+id/ScrapBtn"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true" app:srcCompat="@android:drawable/ic_menu_share"
-            android:layout_below="@+id/floBtn1"
-            android:layout_alignRight="@+id/floBtn1"
-            android:id="@+id/floBtn2"/>
+            android:layout_below="@+id/ScrapBtn"
+            android:layout_alignRight="@+id/ScrapBtn"
+            android:id="@+id/floShareBtn"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/click_likebtn"
+            android:id="@+id/HeartBtn"/>
 </RelativeLayout>
