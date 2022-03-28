@@ -22,6 +22,7 @@
             android:id="@+id/bottomNavi"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:backgroundTint="@color/white"
             app:itemIconTint="#000000"
             app:itemTextColor="#000000"
             app:menu="@menu/bottom_menu"

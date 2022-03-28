@@ -1,27 +1,26 @@
-package com.example.eattaewon_back_kimminki
+package com.example.eataewon.Adapter
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.BitmapFactory
-import android.media.Image
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import java.io.File
+import com.example.eataewon.BbsDetailActivity
+import com.example.eataewon.R
+import com.example.eataewon.connect.BbsDto
 
-class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsVO>) :
+class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
         RecyclerView.Adapter<BbsAdapter.ItemViewHolder>()
 {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BbsAdapter.ItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.search_view_layout, parent, false)
         return ItemViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: BbsAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.bind(dataList[position], context)
     }
 
@@ -35,11 +34,11 @@ class BbsAdapter (private val context: Context, private val dataList: ArrayList<
         private val address = itemView.findViewById<TextView>(R.id.addressView)
         private val hashtag = itemView.findViewById<TextView>(R.id.hashtagView)
 
-        fun bind(bbsVO: BbsVO, context: Context) {
+        fun bind(bbsDto: BbsDto, context: Context) {
 
-            /*if (bbsVO.picture != "") {
+            /*if (bbsDto.picture != "") {
                 val resourceId =
-                    context.resources.getIdentifier(bbsVO.picture, "drawable", context.packageName)
+                    context.resources.getIdentifier(bbsDto.picture, "drawable", context.packageName)
 
                 if (resourceId > 0) {
                     shopPhoto.setImageResource(resourceId)
@@ -60,10 +59,10 @@ class BbsAdapter (private val context: Context, private val dataList: ArrayList<
                 shopPhoto.setImageResource(R.mipmap.ic_launcher_round)
             }*/
 
-            shopPhoto.setImageResource(bbsVO.picture)
-            shopName.text = bbsVO.shopname
-            address.text = bbsVO.address
-            hashtag.text = bbsVO.hashtag
+            shopPhoto.setImageResource(bbsDto.picture)
+            shopName.text = bbsDto.shopname
+            address.text = bbsDto.address
+            hashtag.text = bbsDto.hashtag
 
             // 게시물 클릭시 BbsDetailActivity로 이동
             itemView.setOnClickListener {
