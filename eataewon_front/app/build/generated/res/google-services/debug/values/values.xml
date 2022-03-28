@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://eattaewon-7c658-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">763712107163</string>
+    <string name="google_api_key" translatable="false">AIzaSyAx616MJhZ8MCM8ry6J61fdrRtplM2_78U</string>
+    <string name="google_app_id" translatable="false">1:763712107163:android:349453ca38ade487670c3e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAx616MJhZ8MCM8ry6J61fdrRtplM2_78U</string>
+    <string name="google_storage_bucket" translatable="false">eattaewon-7c658.appspot.com</string>
+    <string name="project_id" translatable="false">eattaewon-7c658</string>
+</resources>
