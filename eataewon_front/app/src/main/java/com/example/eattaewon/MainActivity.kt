@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
 
         loginBtn.setOnClickListener(this)
         signUpBtn.setOnClickListener(this)
-//////////////////
+
 
     // 로그인 페이지가 첫화면임 (activity_main.xml의 레이아웃 사용)
     setContentView(R.layout.activity_main)
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         .requestEmail()
         .build()
     googleSignInClient = GoogleSignIn.getClient(this, gso)
-    /////////////////////
+
 
 
 
@@ -171,7 +171,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             LoginClient.instance.loginWithKakaoAccount(this, callback = callback)
         }
     }
-    /////////////////////////////
+
     }
 
     override fun onClick(view: View?) {
