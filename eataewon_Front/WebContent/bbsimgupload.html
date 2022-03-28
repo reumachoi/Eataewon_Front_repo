@@ -15,7 +15,7 @@
 <h3>글쓰기</h3>
 
 <div align="center">
-<form id="frm" name="frm" action="http://localhost:3000/bbswriteImgup" method="post" enctype="multipart/form-data">
+<form id="frm" name="frm" method="post" enctype="multipart/form-data">
 
 <div align="center">
 	<div style="width: 1000px">
@@ -49,12 +49,12 @@
 		
 		<tr>
 		
-			<th class="table-primary" rowspan="3">사진</th>
+			<th class="table-primary">사진</th>
 			<td>
-			<input type="file" name="file[0]" multiple type="file" class="form-control" size="50px">
+			<input type="file" name="file" class="form-control" size="50px">
 			</td>
 		</tr>
-		<tr>
+	<!-- 	<tr>
 			<td>
 			<input type="file" name="file[1]" multiple type="file" class="form-control" size="50px">
 			</td>
@@ -65,8 +65,7 @@
 			<input type="file" name="file[2]" multiple type="file" class="form-control" size="50px">
 			</td>
 		</tr>
-		
-		
+		 -->
 		
 		<tr>
 		<th class="table-primary">HashTag#</th>
