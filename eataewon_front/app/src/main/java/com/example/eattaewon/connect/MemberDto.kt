@@ -4,11 +4,12 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class MemberDto(
-    var id:String?,
+
     val name:String?,
+    var id:String?,
     val pwd:String?,
     val email:String?,
-    val nickname:String?,
+    val nickName:String?,
     val profilPic:Int,
     val likepoint:Int,
     val profilMsg:String?): Parcelable{
@@ -25,11 +26,12 @@ class MemberDto(
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(id)
+
         parcel.writeString(name)
+        parcel.writeString(id)
         parcel.writeString(pwd)
         parcel.writeString(email)
-        parcel.writeString(nickname)
+        parcel.writeString(nickName)
         parcel.writeInt(profilPic)
         parcel.writeInt(likepoint)
         parcel.writeString(profilMsg)
