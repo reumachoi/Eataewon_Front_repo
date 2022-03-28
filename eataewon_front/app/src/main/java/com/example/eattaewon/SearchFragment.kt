@@ -1,4 +1,4 @@
-package com.example.eataewon
+package com.example.eattaewon
 
 import android.os.Bundle
 import android.view.*
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eataewon.Adapter.BbsAdapter
-import com.example.eataewon.connect.BbsDto
+import com.example.eattaewon.Adapter.BbsAdapter
+import com.example.eattaewon.connect.BbsDto
 
 class SearchFragment: Fragment(R.layout.fragment_search) {
 

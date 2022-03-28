@@ -1,4 +1,4 @@
-package com.example.eataewon.Adapter
+package com.example.eattaewon.Adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eataewon.R
-import com.example.eataewon.connect.BbsDto
+import com.example.eattaewon.R
+import com.example.eattaewon.connect.BbsDto
 
 class HomeViewAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
     RecyclerView.Adapter<HomeViewAdapter.ItemViewHolder>()

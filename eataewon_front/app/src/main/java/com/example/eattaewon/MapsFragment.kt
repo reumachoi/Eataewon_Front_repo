@@ -1,4 +1,4 @@
-package com.example.eataewon
+package com.example.eattaewon
 
 import android.Manifest
 import android.location.Location

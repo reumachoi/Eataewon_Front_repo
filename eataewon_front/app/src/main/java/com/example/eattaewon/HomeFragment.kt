@@ -1,4 +1,4 @@
-package com.example.eataewon
+package com.example.eattaewon
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
-import com.example.eataewon.Adapter.BbsAdapter
-import com.example.eataewon.Adapter.HomeViewAdapter
-import com.example.eataewon.connect.BbsDto
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.eattaewon.Adapter.HomeViewAdapter
+import com.example.eattaewon.connect.BbsDto
 
 class HomeFragment: Fragment(R.layout.fragment_home) {
 
