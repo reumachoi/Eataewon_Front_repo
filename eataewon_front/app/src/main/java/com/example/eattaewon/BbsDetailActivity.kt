@@ -1,5 +1,6 @@
 package com.example.eattaewon
 
+
 import android.content.ActivityNotFoundException
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -11,7 +12,7 @@ import com.example.eattaewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
 import com.kakao.sdk.link.WebSharerClient
-import com.kakao.sdk.template.model.*
+//import com.kakao.sdk.template.model.*
 
 class BbsDetailActivity : AppCompatActivity() {
 
@@ -20,7 +21,7 @@ class BbsDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
+/*
         var seq = 1
 
         //var data = BbsDao.getInstance().getBbsDetail(seq)
@@ -66,11 +67,11 @@ class BbsDetailActivity : AppCompatActivity() {
 
         binding.seeMapBtn.setOnClickListener {
 
-          val naverMapFragment = NaverMapFragment()
+            *//*  val naverMapFragment = NaverMapFragment()
             supportFragmentManager.beginTransaction()
                 .add(R.id.mapContent, naverMapFragment).commit()
 
-        }
+        }*//*
 
 
 //      카톡 글 공유하기
@@ -105,37 +106,10 @@ class BbsDetailActivity : AppCompatActivity() {
                 if (error != null) {
                     Log.e(TAG, "카카오링크 보내기 실패", error)
                 }
-                else if (linkResult != null) {
-                    Log.d(TAG, "카카오링크 보내기 성공 ${linkResult.intent}")
-                    startActivity(linkResult.intent)
 
-                    // 카카오링크 보내기에 성공했지만 아래 경고 메시지가 존재할 경우 일부 컨텐츠가 정상 동작하지 않을 수 있습니다.
-                    Log.w(TAG, "Warning Msg: ${linkResult.warningMsg}")
-                    Log.w(TAG, "Argument Msg: ${linkResult.argumentMsg}")
-                }
             }
-        } else {
-            // 카카오톡 미설치: 웹 공유 사용 권장
-            // 웹 공유 예시 코드
-            val sharerUrl = WebSharerClient.instance.defaultTemplateUri(defaultText)
-
-            // CustomTabs으로 웹 브라우저 열기
-
-            // 1. CustomTabs으로 Chrome 브라우저 열기
-            try {
-                KakaoCustomTabsClient.openWithDefault(this, sharerUrl)
-            } catch(e: UnsupportedOperationException) {
-                // Chrome 브라우저가 없을 때 예외처리
-            }
-
-            // 2. CustomTabs으로 디바이스 기본 브라우저 열기
-            try {
-                KakaoCustomTabsClient.open(this, sharerUrl)
-            } catch (e: ActivityNotFoundException) {
-                // 인터넷 브라우저가 없을 때 예외처리
-            }
-        }
-
-        }
+        }*/
     }
 }
+
+
