@@ -5,13 +5,13 @@ buildscript {
         google()
         mavenCentral()
         maven{ url 'https://naver.jfrog.io/artifactory/maven/'}
-        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/'}
+        //카카오 sdk 레포지토리 설정
+//        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/'}
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.0"
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
-        classpath 'com.google.gms:google-services:4.3.10'
-
+        classpath 'com.google.gms:google-services:4.3.8'
 
 
 
@@ -30,8 +30,6 @@ buildscript {
         implementation 'com.google.android.gms:play-services-auth:20.1.0'*/
     }
 }
-
-
 
 task clean(type: Delete) {
     delete rootProject.buildDir

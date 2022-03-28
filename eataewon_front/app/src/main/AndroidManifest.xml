@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.example.eattaewon">
-      
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.eattaewon">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -10,7 +11,7 @@
     <!-- queries에 카카오톡 패키지 추가 -->
     <queries>
         <package android:name="com.kakao.talk"/>
-    </queries> 
+    </queries>
 
     <!-- 인터넷 사용 권한 설정 -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -30,7 +31,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"    로 변경
     -->
     <application
-        android:name=".GlobalApplication"
+            android:name=".GlobalApplication"
             android:allowBackup="true"
             android:label="@string/app_name"
             android:icon="@mipmap/ic_launcher"
@@ -53,6 +54,12 @@
                 android:name="com.kakao.sdk.AppKey"
                 android:value="@string/kakao_app_key" />
 
+
+
+        <activity
+                android:name=".SecondActivity"
+                android:exported="true"
+                tools:ignore="Instantiatable"/>
         <activity
                 android:name=".MainActivity"
                 android:exported="true">
@@ -62,6 +69,7 @@
             </intent-filter>
         </activity>
 
+        <!-- 카카오 로그인 앱키-->
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
                   android:exported="true">
             <intent-filter>
@@ -71,7 +79,7 @@
 
                 <data
                         android:host="oauth"
-                        android:scheme="kakaoa05f68a3850359a6d8c92e79cdc0d8cb" />
+                        android:scheme="kakao{a05f68a3850359a6d8c92e79cdc0d8cb}" />
             </intent-filter>
         </activity>
 
@@ -80,11 +88,11 @@
                 android:exported="true" />
 
         <activity
-            android:name=".HomeActivity"
-            android:exported="true">
+                android:name=".HomeActivity"
+                android:exported="true">
             <intent-filter>
 
-              <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>

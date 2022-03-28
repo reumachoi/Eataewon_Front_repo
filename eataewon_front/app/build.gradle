@@ -3,8 +3,9 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
-   /* id 'com.google.gms.google-services'*/
+    id 'com.google.gms.google-services'
     /*id 'kotlin-parcelize'*/
+
 }
 
 android {
@@ -12,8 +13,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.eattaewon"
-        minSdk 21
-        targetSdk 32
+        minSdk 28
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -53,8 +54,20 @@ android {
 }
 
 dependencies {
-    implementation platform('com.google.firebase:firebase-bom:29.2.1')
-    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    dependencies {
+        // Import the BoM for the Firebase platform
+        implementation platform('com.google.firebase:firebase-bom:29.2.0')
+
+        // Declare the dependency for the Firebase Authentication library
+        // When using the BoM, you don't specify versions in Firebase library dependencies
+        implementation 'com.google.firebase:firebase-auth:19.2.0'
+        implementation 'com.google.android.gms:play-services-auth:18.1.0'
+
+        // Also declare the dependency for the Google Play services library and specify its version
+        implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+    }
+
 
     implementation("com.naver.maps:map-sdk:3.14.0")// 네이버 지도 SDK
     implementation("com.android.support:appcompat-v7:27.0.0")
@@ -67,21 +80,19 @@ dependencies {
 
     }
 
+    implementation "com.kakao.sdk:v2-user:2.0.0" // 카카오 로그인
+//    implementation "com.kakao.sdk:v2-talk:2.9.0" // 친구, 메시지(카카오톡)
+//    implementation "com.kakao.sdk:v2-story:2.9.0" // 카카오스토리
+    implementation "com.kakao.sdk:v2-link:2.0.0" // 메시지(카카오링크)
+//    implementation "com.kakao.sdk:v2-link:2.9.0" // 메시지(카카오링크)
+//    implementation "com.kakao.sdk:v2-navi:2.9.0" // 카카오내비
 
-    implementation "com.kakao.sdk:v2-user:2.4.2" // 카카오 로그인
-    implementation "com.kakao.sdk:v2-talk:2.4.2" // 친구, 메시지(카카오톡)
-    implementation "com.kakao.sdk:v2-story:2.4.2" // 카카오스토리
-    implementation "com.kakao.sdk:v2-link:2.4.2" // 메시지(카카오링크)
-    implementation "com.kakao.sdk:v2-navi:2.4.2" // 카카오내비
-
-    implementation("com.naver.maps:map-sdk:3.14.0")// 네이버 지도 SDK
-    implementation 'com.android.support:appcompat-v7:27.0.0'
 
     implementation('com.naver.maps:map-sdk:3.14.0') {
         exclude group: 'com.android.support'
     }
 
-    //implementation "com.kakao.sdk:v2-talk:2.9.0" // 친구, 메시지(카카오톡)
+
 
     implementation 'com.google.android.gms:play-services-location:17.0.0'   // google map 추가
     implementation 'com.google.android.gms:play-services-maps:17.0.0'       // google map 추가
@@ -92,11 +103,13 @@ dependencies {
     implementation 'com.github.bumptech.glide:compiler:4.11.0'
     implementation "com.squareup.retrofit2:converter-scalars:2.9.0" // Scalars 변환기 라이브러리
     implementation 'com.android.support:multidex:1.0.3'
+/*
 
     dependencies {
-        implementation "com.kakao.sdk:v2-user:2.9.0" // 카카오 로그인
+        implementation "com.kakao.sdk:v2-user:2.0.1" // 카카오 로그인
 
     }
+*/
 
 
    // recyclerview
@@ -118,20 +131,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //구글 로그인 코드
-    implementation 'com.google.firebase:firebase-analytics-ktx' //파이어베이스 앱 분석
+    implementation 'com.google.firebase:firebase-analytics-ktx'//파이어베이스 앱 분석
     implementation 'com.google.firebase:firebase-database-ktx'
 
-    //Java 8 사용 설정이 안되어있다면 추가
-    android {
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
-        }
 
-        kotlinOptions {
-            jvmTarget = "1.8"
-        }
-    }
 
 
 }
