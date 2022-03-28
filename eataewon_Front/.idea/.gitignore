@@ -1,6 +1,5 @@
 # 디폴트 무시된 파일
 /shelf/
-/workspace.xml
 # Created by https://www.toptal.com/developers/gitignore/api/kotlin,android,intellij
 # Edit at https://www.toptal.com/developers/gitignore?templates=kotlin,android,intellij
 
