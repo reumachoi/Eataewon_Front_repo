@@ -3,13 +3,20 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#ff0000"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="글쓰기 화면"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintVertical_bias="0.151"/>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

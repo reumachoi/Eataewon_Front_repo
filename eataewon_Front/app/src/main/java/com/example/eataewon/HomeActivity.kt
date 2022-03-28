@@ -3,6 +3,7 @@ package com.example.eataewon
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.eattaewon.connect.MemberDto
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -15,8 +16,12 @@ class HomeActivity : AppCompatActivity() {
         val writeFragment = WriteFragment()
         val bookmarkFragment = BookmarkFragment()
         val mypageFragment = MypageFragment()
-
+        val intent = intent
+        val user = intent.getParcelableExtra<MemberDto>("user")
         setCurrentFragment(homeFragment)
+        val bundle = Bundle()
+        bundle.putParcelable("user",user)
+        mypageFragment.arguments = bundle
 
         bottomNavi.setOnNavigationItemSelectedListener {
             when(it.itemId) {

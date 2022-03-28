@@ -2,23 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/action_home"
-        android:iconTint="@color/white"
-        android:icon="@drawable/ic_baseline_apps_24"
-        android:title=""/>
+        android:icon="@drawable/ic_navi_home"
+        android:title="홈"/>
     <item
         android:id="@+id/action_search"
-        android:icon="@drawable/ic_menu_search"
-        android:title="search"/>
+        android:icon="@drawable/ic_nevi_search"
+        android:title="검색"/>
     <item
         android:id="@+id/action_write"
-        android:icon="@drawable/ic_baseline_control_point_24"
-        android:title="write"/>
+        android:icon="@drawable/ic_navi_write"
+        android:title="글쓰기"/>
     <item
         android:id="@+id/action_bookmark"
-        android:icon="@drawable/ic_baseline_bookmark_border_24"
-        android:title="bookmark"/>
+        android:icon="@drawable/ic_navi_bookmark"
+        android:title="북마크"/>
     <item
         android:id="@+id/action_mypage"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="mypage"/>
+        android:icon="@drawable/ic_navi_mypage"
+        android:title="내정보"/>
 </menu>

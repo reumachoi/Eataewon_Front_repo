@@ -7,10 +7,15 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.eattaewon.databinding.ActivityMainBinding
 import com.kakao.sdk.user.UserApiClient
 
-//카카오 로그인
+
+//카카오 로그인 파일
 class SecondActivity : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
@@ -54,4 +59,6 @@ class SecondActivity : AppCompatActivity() {
             }
         }
     }
+
 }
+
