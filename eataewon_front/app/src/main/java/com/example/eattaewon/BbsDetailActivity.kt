@@ -15,9 +15,6 @@ import com.kakao.sdk.link.WebSharerClient
 //import com.kakao.sdk.template.model.*
 
 class BbsDetailActivity : AppCompatActivity() {
-
-    val binding by lazy { ActivityBbsDetailBinding.inflate(layoutInflater) }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)

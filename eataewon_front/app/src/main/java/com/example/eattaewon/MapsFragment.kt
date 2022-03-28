@@ -1,7 +1,6 @@
 package com.example.eattaewon
 
 import android.Manifest
-import android.app.Activity
 import android.location.Location
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -20,9 +19,9 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.CameraPosition
 
-class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback {
+class MapsFragment() : Fragment(), OnMapReadyCallback {
 
-    private var mMap: GoogleMap? = null
+    private lateinit var mMap: GoogleMap
 
     lateinit var locationPermission: ActivityResultLauncher<Array<String>>
     // GPS를 사용해서 위치를 확인
@@ -54,7 +53,7 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
+        //fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
         //updateLocation()
     }
 /*
@@ -102,9 +101,9 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback {
             .target(LATLNG)
             .zoom(15.0f)
             .build()
-        mMap?.clear()
-        mMap?.addMarker(markerOptions)
-        mMap?.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
+        mMap.clear()
+        mMap.addMarker(markerOptions)
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
 
         // Google Map Marker Code
 
@@ -112,23 +111,5 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback {
         //var scaledBitmap = Bitmap.createScaledBitmap(markerImg, 50, 50, false)
 
 
-    }
-
-    //글 상세보기에서 가게 위치 확인
-    fun setSeeBbsStoreLocation(latitude:Double, longitude:Double){
-        val LATLNG = LatLng(latitude, longitude)
-
-        val markerOptions = MarkerOptions()
-            .position(LATLNG)
-            .title("Here!")
-
-        val cameraPosition = CameraPosition.Builder()
-            .target(LATLNG)
-            .zoom(15.0f)
-            .build()
-
-        mMap?.clear()
-        mMap?.addMarker(markerOptions)
-        mMap?.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
     }
 }

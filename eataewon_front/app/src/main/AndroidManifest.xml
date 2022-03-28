@@ -25,19 +25,14 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
-    <!--
-        안드로이드 타이틀 없애기
-        android:theme="@style/Theme.Eattaewon_back_kimminki   에서
-        android:theme="@style/Theme.AppCompat.NoActionBar"    로 변경
-    -->
     <application
             android:name=".GlobalApplication"
             android:allowBackup="true"
-            android:label="@string/app_name"
             android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:usesCleartextTraffic="true">
 
 
@@ -60,7 +55,7 @@
                 android:exported="true"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".MainActivity"
+                android:name="com.example.eattaewon.HomeActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -115,4 +110,5 @@
         </activity>
 
     </application>
+
 </manifest>
