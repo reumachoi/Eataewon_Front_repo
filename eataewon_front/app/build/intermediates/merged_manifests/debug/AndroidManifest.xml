@@ -66,7 +66,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Eattaewon_back_kimminki"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true" >
 
         <!-- 최아름 카카오 sns, 네이버 map -->

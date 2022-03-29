@@ -35,7 +35,7 @@
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.Eattaewon_back_kimminki"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:usesCleartextTraffic="true">
 
 
