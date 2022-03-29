@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.example.eattaewon">
+          xmlns:tools="http://schemas.android.com/tools" package="com.example.eataewon">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -30,7 +30,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"    로 변경
     -->
     <application
-            android:name=".GlobalApplication"
+            android:name="com.example.eataewon.GlobalApplication"
             android:allowBackup="true"
             android:label="@string/app_name"
             android:icon="@mipmap/ic_launcher"
@@ -53,7 +53,7 @@
 
 
         <activity
-                android:name=".MainActivity"
+                android:name="com.example.eataewon.MainActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".KakaoActivity"
+        <activity android:name="com.example.eataewon.KakaoActivity"
                   android:exported="true"/>
 
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
@@ -78,11 +78,11 @@
         </activity>
 
         <activity
-                android:name=".SignActivity"
+                android:name="com.example.eataewon.SignActivity"
                 android:exported="true"/>
 
         <activity
-                android:name=".HomeActivity"
+                android:name="com.example.eataewon.HomeActivity"
                 android:exported="true">
             <intent-filter>
 
@@ -93,7 +93,7 @@
         </activity>
 
         <activity
-                android:name=".BbsDetailActivity"
+                android:name="com.example.eataewon.BbsDetailActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
