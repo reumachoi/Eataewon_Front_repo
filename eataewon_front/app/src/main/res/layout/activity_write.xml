@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".WriteActivity">
+
+    <Button
+            android:text="가게찾기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/findShop"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="88dp"
+            app:layout_constraintHorizontal_bias="0.499"/>
+    <TextView
+            android:text="가게이름"
+            android:layout_width="323dp"
+            android:layout_height="54dp" android:id="@+id/shopNameT"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/findShop" android:layout_marginTop="40dp"/>
+    <TextView
+            android:text="가게위치"
+            android:layout_width="323dp"
+            android:layout_height="54dp" android:id="@+id/shopLocaT"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/findShop" android:layout_marginTop="120dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

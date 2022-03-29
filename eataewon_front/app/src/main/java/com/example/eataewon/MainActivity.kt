@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -15,10 +16,12 @@ import com.example.eataewon.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(),View.OnClickListener{
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
+    var imm: InputMethodManager? = null //EditText 키보드 내려가도록
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
 
         //디테일 테스트 버튼 (최아름)
         binding.testBtn.setOnClickListener {
@@ -27,7 +30,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         }
         //글작성 테스트 버튼 (최아름)
         binding.button3.setOnClickListener {
-            val i = Intent(this, KakaoActivity::class.java)
+            val i = Intent(this, SearchKakaoMapActivity::class.java)
             startActivity(i)
         }
 
@@ -56,6 +59,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         when (view?.id) {
 
             R.id.login_Btn -> {
+                imm?.hideSoftInputFromWindow(loginPW.getWindowToken(), 0);
+
                 val id = loginID.text.toString()
                 val pwd = loginPW.text.toString()
                 val dto = MemberDto(id, "", pwd, "", "",0, 0,"")

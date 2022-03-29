@@ -1,13 +1,16 @@
 package com.example.eataewon
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.eataewon.connect.BbsService
+import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.databinding.ActivityKakaoMapBinding
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
@@ -18,19 +21,25 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class KakaoActivity : AppCompatActivity() {
+class SearchKakaoMapActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityKakaoMapBinding.inflate(layoutInflater) }
-    private val listItems = arrayListOf<ListLayout>()   // 리사이클러 뷰 아이템
+    private val listItems = arrayListOf<MapSearchListDto>()   // 리사이클러 뷰 아이템
     private val listAdapter = MapListAdapter(listItems)    // 리사이클러 뷰 어댑터
-    private var pageNumber = 1      // 검색 페이지 번호
     private var keyword = ""        // 검색 키워드
-
-
+    var imm: InputMethodManager? = null // EditText 키보드 내리기
+    var pos: Int? = null
+    var rememV : View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
+
+        // 중심점 변경 + 줌 레벨 변경
+        //binding.mapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.41, 126.52), 9, true);
+
+        binding.mapView.setZoomLevel(6,true)
 
         // 리사이클러 뷰
         binding.rvList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
@@ -40,7 +49,17 @@ class KakaoActivity : AppCompatActivity() {
         listAdapter.setItemClickListener(object: MapListAdapter.OnItemClickListener {
             override fun onClick(v: View, position: Int) {
                 val mapPoint = MapPoint.mapPointWithGeoCoord(listItems[position].y, listItems[position].x)
-                binding.mapView.setMapCenterPointAndZoomLevel(mapPoint, 1, true)
+                binding.mapView.setMapCenterPointAndZoomLevel(mapPoint, 3, true)
+
+                if(rememV != null){
+                    rememV!!.setBackgroundColor(Color.DKGRAY)
+                }
+
+                pos = position
+                rememV = v
+
+                v.setBackgroundColor(Color.LTGRAY)
+                binding.btnNextPage.isEnabled = true
             }
         })
 
@@ -48,6 +67,8 @@ class KakaoActivity : AppCompatActivity() {
         binding.btnSearch.setOnClickListener {
             keyword = binding.etSearchField.text.toString()
             searchKeyword(keyword)
+            imm?.hideSoftInputFromWindow(binding.etSearchField.getWindowToken(), 0);
+
         }
 
         // 이전 페이지 버튼
@@ -58,8 +79,10 @@ class KakaoActivity : AppCompatActivity() {
 
         // 다음 페이지 버튼
         binding.btnNextPage.setOnClickListener {
-            /*var i = Intent(this,WriteActivity::class.java)  //작성페이지 아직 없음
-            startActivity(i)*/
+            println("~~~~~~~~~~~~~~~~~"+listItems[pos!!].name)
+            var i = Intent(this,WriteActivity::class.java)
+            i.putExtra("shopData",listItems[pos!!])
+            startActivity(i)
         }
 
     }
@@ -98,7 +121,7 @@ class KakaoActivity : AppCompatActivity() {
             binding.mapView.removeAllPOIItems() // 지도의 마커 모두 제거
             for (document in searchResult!!.documents) {
                 // 결과를 리사이클러 뷰에 추가
-                val item = ListLayout(document.place_name,
+                val item = MapSearchListDto(document.place_name,
                     document.road_address_name,
                     document.address_name,
                     document.x.toDouble(),
