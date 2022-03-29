@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.example.eattaewon">
+
+          package="com.example.eataewon">
 
 
     <!--
@@ -46,17 +47,13 @@
                 android:name="com.naver.maps.map.CLIENT_ID"
                 android:value="1o2hhvg6b8"/>
 
-        <!-- 카카오 로그인 앱키-->
         <meta-data
                 android:name="com.kakao.sdk.AppKey"
-                android:value="@string/kakao_app_key" />
+                android:value="803510af840ec6fd9c1aefe41148b4e5" />
 
         <activity
-                android:name=".SecondActivity"
-                android:exported="true"
-                tools:ignore="Instantiatable"/>
-        <activity
-                android:name="com.example.eattaewon.MainActivity">
+                android:name="com.example.eataewon.MainActivity"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -76,7 +73,8 @@
                         android:scheme="kakaoa05f68a3850359a6d8c92e79cdc0d8cb" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".KakaoActivity"
+                  android:exported="true"/>
         <activity
                 android:name=".HomeActivity"
                 android:exported="true">
