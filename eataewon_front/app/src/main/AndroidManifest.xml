@@ -26,7 +26,7 @@
 
     <!--
         안드로이드 타이틀 없애기
-        android:theme="@style/Theme.Eattaewon_back_kimminki   에서
+        android:theme="@style/Theme.Eataewon_back_kimminki   에서
         android:theme="@style/Theme.AppCompat.NoActionBar"    로 변경
     -->
     <application

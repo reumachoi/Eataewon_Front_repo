@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eataewon.BbsDetailActivity
-import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDto
 
 class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
