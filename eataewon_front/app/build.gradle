@@ -11,7 +11,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.eattaewon"
+        applicationId "com.example.eataewon"
         minSdk 21
         targetSdk 32
         versionCode 1
