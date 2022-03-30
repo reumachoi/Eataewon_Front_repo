@@ -65,6 +65,7 @@ class WriteActivity : AppCompatActivity() {
 
         shopName.text = searchData?.name
         address.setText(searchData?.road)
+        val searchData = intent.getParcelableExtra<MapSearchListDto>("shopData")
 
         println(searchData.toString())
         /*
@@ -75,7 +76,6 @@ class WriteActivity : AppCompatActivity() {
         shopphnum = searchData.phone
         shopurl = searchData.place_url
         */
-
 
         //이미지 추가 버튼
         imagebtn.setOnClickListener {

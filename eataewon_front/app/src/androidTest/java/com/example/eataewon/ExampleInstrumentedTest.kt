@@ -19,6 +19,10 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+<<<<<<< HEAD:eataewon_front/app/src/androidTest/java/com/example/eataewon/ExampleInstrumentedTest.kt
         assertEquals("com.example.eataewon", appContext.packageName)
+=======
+        assertEquals("com.example.eataewon_back_kimminki", appContext.packageName)
+>>>>>>> areum:eataewon_front/app/src/androidTest/java/com/example/eattaewon/ExampleInstrumentedTest.kt
     }
 }
