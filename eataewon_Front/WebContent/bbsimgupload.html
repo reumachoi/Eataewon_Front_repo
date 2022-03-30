@@ -51,7 +51,8 @@
 		
 			<th class="table-primary">사진</th>
 			<td>
-			<input type="file" name="file" class="form-control" size="50px">
+			
+			<input type="file" id="filename" name="filename" class="form-control" size="50px">
 			</td>
 		</tr>
 	<!-- 	<tr>
@@ -146,7 +147,11 @@ let id = JSON.parse(login).id;
 $("#id").val(id);
 
 $("#btn").click(function () {
+
+	let aaa = $("#frm").serialize();
 	
+	alert(aaa);
+
 	$.ajax({
 		url:"http://localhost:3000/bbswriteImgup",
 		type:"get",

@@ -70,6 +70,7 @@ pre { /* 자동줄바꿈 설정 */
 
 <table>
 <col width="1500px"><col width="150">
+
 <tr>
 <td colspan="2" style="font-size: 22px; font-weight:bold;">picture</td>
 </tr>
@@ -81,22 +82,40 @@ pre { /* 자동줄바꿈 설정 */
 <td colspan="2" style="font-size: 22px; font-weight:bold;">hashtag</td>
 </tr>
 <tr>
-	<td colspan="2" id="hashtag" style="font-size: 20px;"></td>
+<td colspan="2" id="hashtag" style="font-size: 20px;"></td>
 </tr>
 <tr><td>&nbsp;</td></tr>
+
 <tr>
 <td colspan="2" style="font-size: 22px; font-weight:bold;">매장이름</td>
 </tr>
 <tr>
-	<td colspan="2" id="shopname" style="font-size: 20px;"></td>
+<td colspan="2" id="shopname" style="font-size: 20px;"></td>
 </tr>
 <tr><td>&nbsp;</td></tr>
+
 <tr>
 <td colspan="2" style="font-size: 22px; font-weight:bold;">주소</td>
 </tr>
 <tr>
-	<td colspan="2" id="address" style="font-size: 20px;"></td>
+<td colspan="2" id="address" style="font-size: 20px;"></td>
 </tr>
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">매장 번호</td>
+</tr>
+<tr>
+<td colspan="2" id="shopphnum" style="font-size: 20px;"></td>
+</tr>
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">매장 url</td>
+</tr>
+<tr>
+<td colspan="2" id="shopurl" style="font-size: 20px;"></td>
+</tr>
+
+
 </table>
 <br><br>
 
@@ -155,7 +174,8 @@ $.ajax({
 		$("#shopname").text(bbs.shopname);
 		$("#address").text(bbs.address);
 		$("#likecnt").text(bbs.likecnt);
-		
+		$("#shopphnum").text(bbs.shopphnum);
+		$("#shopurl").text(bbs.shopurl);
 		
 		
 		let login = JSON.parse(sessionStorage.getItem("login"));

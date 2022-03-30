@@ -53,6 +53,7 @@
 		<input type="text" class="form-control" id="picture" name="picture" size="50px">
 		</td>
 		</tr>
+		
 		<tr>
 		<th class="table-primary">HashTag#</th>
 		<td>
@@ -67,20 +68,38 @@
 		</td>
 		</tr>
 		
-		
+		<tr>
 		<th class="table-primary">위도</th>
 		<td>
 		<input type="text" class="form-control" id="latitude" name="latitude" size="50px">
 		</td>
 		</tr>
+		
+		<tr>
 		<th class="table-primary">경도</th>
 		<td>
 		<input type="text" class="form-control" id="longtitude" name="longtitude" size="50px">
 		</td>
 		</tr>
+		
+		<tr>
 		<th class="table-primary">주소</th>
 		<td>
 		<input type="text" class="form-control" id="address" name="address" size="50px">
+		</td>
+		</tr>
+		
+		<tr>
+		<th class="table-primary">매장 번호</th>
+		<td>
+		<input type="text" class="form-control" id="shopphnum" name="shopphnum" size="50px">
+		</td>
+		</tr>
+		
+		<tr>
+		<th class="table-primary">매장 url</th>
+		<td>
+		<input type="text" class="form-control" id="shopurl" name="shopurl" size="50px">
 		</td>
 		</tr>
 		
@@ -105,11 +124,11 @@ let id = JSON.parse(login).id;
 $("#id").val(id);
 
 $("#btn").click(function () {
-	
+		
 	$.ajax({
 		url:"http://localhost:3000/bbswrite",
 		type:"get",
-		data:$("#frm").serialize(),
+		data:$("#frm").serialize(),		
 		success:function(msg){
 			if(msg == "YES"){
 				alert('추가되었습니다');
@@ -121,7 +140,9 @@ $("#btn").click(function () {
 		error:function(){
 			alert('error');
 		}
+		
 	})
+	
 	
 });
 
