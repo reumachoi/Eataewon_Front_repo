@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.eattaewon">
+          package="com.example.eataewon">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -18,7 +18,7 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
         <activity
-                android:name="com.example.eattaewon.BbsDetailActivity"
+                android:name="com.example.eataewon.BbsDetailActivity"
                 android:exported="true"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -33,7 +33,7 @@
                 android:value="@string/google_maps_key"/>
 
         <activity
-                android:name="com.example.eattaewon.HomeActivity"
+                android:name="com.example.eataewon.HomeActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

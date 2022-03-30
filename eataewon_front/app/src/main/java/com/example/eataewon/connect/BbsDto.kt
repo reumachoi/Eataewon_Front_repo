@@ -1,4 +1,4 @@
-package com.example.eattaewon.connect
+package com.example.eataewon.connect
 
 import android.os.Parcel
 import android.os.Parcelable

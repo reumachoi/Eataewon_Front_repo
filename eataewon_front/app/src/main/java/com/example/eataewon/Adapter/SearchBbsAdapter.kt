@@ -1,4 +1,4 @@
-package com.example.eattaewon.Adapter
+package com.example.eataewon.Adapter
 
 import android.content.Context
 import android.content.Intent
@@ -8,15 +8,18 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eattaewon.BbsDetailActivity
-import com.example.eattaewon.R
-import com.example.eattaewon.connect.BbsDto
+import com.example.eataewon.BbsDetailActivity
+import com.example.eataewon.R
+import com.example.eataewon.connect.BbsDto
 
-class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
-        RecyclerView.Adapter<BbsAdapter.ItemViewHolder>()
+class SearchBbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
+        RecyclerView.Adapter<SearchBbsAdapter.ItemViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.search_view_layout, parent, false)
+        val view = LayoutInflater.from(context).inflate(
+            R.layout.search_view_layout,
+            parent, false
+        )
         return ItemViewHolder(view)
     }
 
@@ -35,29 +38,6 @@ class BbsAdapter (private val context: Context, private val dataList: ArrayList<
         private val hashtag = itemView.findViewById<TextView>(R.id.hashtagView)
 
         fun bind(bbsDto: BbsDto, context: Context) {
-
-            /*if (bbsDto.picture != "") {
-                val resourceId =
-                    context.resources.getIdentifier(bbsDto.picture, "drawable", context.packageName)
-
-                if (resourceId > 0) {
-                    shopPhoto.setImageResource(resourceId)
-                } else {
-                    Log.d("", "들어옴")
-
-                    val file: File = File(bbsVO.picture)
-                    val bExist = file.exists()
-                    if (bExist) {
-                        Log.d("", "이미지 파일 있음")
-                        val myBitmap = BitmapFactory.decodeFile(bbsVO.picture)
-                        shopPhoto.setImageBitmap(myBitmap)
-                    } else {
-                        Log.d("", "${bbsVO.picture} 이미지 파일 없음")
-                    }
-                }
-            } else {
-                shopPhoto.setImageResource(R.mipmap.ic_launcher_round)
-            }*/
 
             shopPhoto.setImageResource(bbsDto.picture)
             shopName.text = bbsDto.shopname

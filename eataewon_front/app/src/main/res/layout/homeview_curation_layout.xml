@@ -5,30 +5,33 @@
               android:orientation="vertical">
 
     <ImageView
-            android:layout_width="600dp"
-            android:layout_height="700dp"
+            android:id="@+id/CurationPhotoView"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="5dp"
-            android:id="@+id/CurationPhotoView"
             android:scaleType="fitXY"
             android:src="@drawable/food1"/>
 
     <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/CurationTitleView"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:text="Curation Title"
             android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:id="@+id/CurationTitleView"
+            android:gravity="left"
             android:textSize="20dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:minLines="2"/>
     <TextView
+            android:id="@+id/CuratorId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Curator ID"
             android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:id="@+id/CuratorId"/>
+            android:gravity="left"
+            />
 
 </LinearLayout>

@@ -1,5 +1,7 @@
-package com.example.eattaewon
+package com.example.eataewon
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,6 +20,8 @@ class HomeActivity : AppCompatActivity() {
 
         setCurrentFragment(homeFragment)
 
+
+        //bottomNavi.itemRippleColor(ColorStateList.valueOf(Color.parseColor("#FFFFFF")))
         bottomNavi.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.action_home->setCurrentFragment(homeFragment)

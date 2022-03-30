@@ -10,7 +10,7 @@
     <FrameLayout
             android:id="@+id/main_frame"
             android:layout_width="match_parent"
-            android:layout_height="823dp"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,7 @@
             app:menu="@menu/bottom_menu"
             tools:layout_editor_absoluteX="-16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-    />
+            app:labelVisibilityMode="unlabeled"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
