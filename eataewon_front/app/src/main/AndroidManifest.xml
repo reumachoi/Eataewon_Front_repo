@@ -28,9 +28,11 @@
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:usesCleartextTraffic="true">
         <activity
-                android:name=".WriteActivity"
+                android:name=".UpdateBbsActivity"
                 android:exported="true"/>
-        <!-- 최아름 카카오 sns, 네이버 map, 카카오 map -->
+        <activity
+                android:name=".WriteActivity"
+                android:exported="true"/> <!-- 최아름 카카오 sns, 네이버 map, 카카오 map -->
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>

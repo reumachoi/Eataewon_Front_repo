@@ -20,6 +20,10 @@ interface BbsService {
         @POST("/bbsdetail")
         fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
 
+        @POST("/bbsdelete")
+        fun bbsdelete(@Body seq:Int) : Call<Boolean>
+
+        //카카오 로컬 검색
         @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
         fun getSearchKeyword(
             @Header("Authorization") key: String,     // 카카오 API 인증키 [필수]
@@ -89,5 +93,18 @@ class BbsDao {
         return response?.body()
     }
 
+    fun bbsdelete(seq: Int) : Boolean?{
+        var response: Response<Boolean>?
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbsdelete(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
 
 }

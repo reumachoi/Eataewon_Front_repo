@@ -20,25 +20,49 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="122dp">
-                <ImageButton
-                        android:layout_width="266dp"
-                        android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
-                        android:id="@+id/imageButton" android:layout_weight="1"/>
-                <LinearLayout
-                        android:orientation="vertical"
+                <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:layout_weight="1">
+                        android:layout_height="match_parent">
+
+                    <ImageButton
+                            android:layout_width="108dp"
+                            android:layout_height="102dp" tools:srcCompat="@tools:sample/avatars"
+                            android:id="@+id/imageButton" android:layout_weight="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.052"
+                            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"/>
                     <TextView
                             android:text="유저이름"
-                            android:layout_width="211dp"
-                            android:layout_height="wrap_content" android:id="@+id/textView11"
-                            android:layout_weight="1"/>
+                            android:layout_width="85dp"
+                            android:layout_height="30dp" android:id="@+id/textView11"
+                            android:layout_weight="1"
+                            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="8dp" app:layout_constraintHorizontal_bias="0.103"
+                            app:layout_constraintStart_toEndOf="@+id/imageButton"/>
                     <TextView
                             android:text="작성날짜"
-                            android:layout_width="211dp"
-                            android:layout_height="wrap_content" android:id="@+id/textView10"
-                            android:layout_weight="1"/>
-                </LinearLayout>
+                            android:layout_width="135dp"
+                            android:layout_height="24dp" android:id="@+id/textView10"
+                            android:layout_weight="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="48dp" app:layout_constraintHorizontal_bias="0.138"
+                            app:layout_constraintStart_toEndOf="@+id/imageButton"/>
+                    <Button
+                            android:text="수정"
+                            android:layout_width="79dp"
+                            android:layout_height="37dp" android:id="@+id/updateBtn" android:layout_weight="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.436"
+                            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="80dp"/>
+                    <Button
+                            android:text="삭제"
+                            android:layout_width="79dp"
+                            android:layout_height="37dp" android:id="@+id/deleteBtn" android:layout_weight="1"
+                            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.055"
+                            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="80dp"
+                            app:layout_constraintStart_toEndOf="@+id/updateBtn"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
             <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -88,14 +112,14 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                <TextView
-                        android:text="가게위치"
-                        android:layout_width="515dp"
-                        android:layout_height="match_parent" android:id="@+id/DeLocation"/>
                 <Button
                         android:text="지도보기"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/seeMapBtn"/>
+                <TextView
+                        android:text="가게위치"
+                        android:layout_width="515dp"
+                        android:layout_height="match_parent" android:id="@+id/DeLocation"/>
             </LinearLayout>
             <FrameLayout
                     android:id="@+id/mapContent"
