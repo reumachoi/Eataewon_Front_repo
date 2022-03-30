@@ -1,15 +1,10 @@
 package com.example.eataewon
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.widget.doAfterTextChanged
-import com.example.eataewon.R
-import com.example.eataewon.connect.MemberDto
 
 
 class SignActivity : AppCompatActivity() {

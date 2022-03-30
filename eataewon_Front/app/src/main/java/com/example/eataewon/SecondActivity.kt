@@ -1,4 +1,4 @@
-package com.example.eattaewon
+package com.example.eataewon
 
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -7,8 +7,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.example.eataewon.MainActivity
-import com.example.eataewon.R
 import com.kakao.sdk.user.UserApiClient
 
 

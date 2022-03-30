@@ -3,8 +3,6 @@ package com.example.eataewon
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.example.eataewon.R
-
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment: Fragment(R.layout.fragment_search) {

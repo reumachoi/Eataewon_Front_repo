@@ -1,4 +1,4 @@
-package com.example.eattaewon
+package com.example.eataewon
 
 import org.junit.Test
 

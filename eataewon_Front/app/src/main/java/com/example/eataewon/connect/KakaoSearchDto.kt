@@ -1,4 +1,4 @@
-package com.example.eataewon
+package com.example.eataewon.connect
 
 // 검색 결과를 담는 클래스
 data class KakaoSearchDto(
