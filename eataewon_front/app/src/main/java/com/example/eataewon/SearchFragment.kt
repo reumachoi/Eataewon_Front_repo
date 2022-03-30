@@ -1,4 +1,4 @@
-package com.example.eattaewon
+package com.example.eataewon
 
 import android.os.Bundle
 import android.view.View

@@ -1,4 +1,4 @@
-package com.example.eattaewon
+package com.example.eataewon
 
 import android.Manifest
 import android.app.Activity

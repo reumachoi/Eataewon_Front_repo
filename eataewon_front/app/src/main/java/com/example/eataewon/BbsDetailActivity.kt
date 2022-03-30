@@ -1,16 +1,10 @@
-package com.example.eattaewon
+package com.example.eataewon
 
 
-import android.content.ActivityNotFoundException
-import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.eattaewon.connect.BbsDao
-import com.example.eattaewon.databinding.ActivityBbsDetailBinding
-import com.kakao.sdk.common.util.KakaoCustomTabsClient
-import com.kakao.sdk.link.LinkClient
-import com.kakao.sdk.link.WebSharerClient
+import com.example.eataewon.databinding.ActivityBbsDetailBinding
+
 //import com.kakao.sdk.template.model.*
 
 class BbsDetailActivity : AppCompatActivity() {

@@ -12,7 +12,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.eattaewon"
+        applicationId "com.example.eataewon"
         minSdk 28
         targetSdk 31
         versionCode 1
@@ -72,6 +72,11 @@ dependencies {
     implementation("com.naver.maps:map-sdk:3.14.0")// 네이버 지도 SDK
     implementation("com.android.support:appcompat-v7:27.0.0")
 
+    //네이버 로그인
+    implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.6'
+
+
+
 
 
 
@@ -114,6 +119,7 @@ dependencies {
 
    // recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'

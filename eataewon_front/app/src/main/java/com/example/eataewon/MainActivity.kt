@@ -1,4 +1,4 @@
-package com.example.eattaewon;
+package com.example.eataewon;
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,10 +9,9 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
-import com.example.eattaewon.connect.MemberDto
-import com.example.eattaewon.connect.RetrofitClient
+import com.example.eataewon.connect.MemberDto
 
-import com.example.eattaewon.databinding.ActivityMainBinding
+import com.example.eataewon.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -240,7 +239,5 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 }
             }
     } //firebaseAuthWithGoogle
-
-
 }
 

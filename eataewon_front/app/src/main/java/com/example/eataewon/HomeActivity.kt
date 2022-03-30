@@ -1,9 +1,9 @@
-package com.example.eattaewon
+package com.example.eataewon
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.eattaewon.connect.MemberDto
+import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {

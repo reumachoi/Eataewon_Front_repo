@@ -1,7 +1,7 @@
-package com.example.eattaewon
+package com.example.eataewon
 
-import com.example.eattaewon.connect.MemberDto
-import com.example.eattaewon.connect.RetrofitClient
+import com.example.eataewon.connect.MemberDto
+import com.example.eataewon.connect.RetrofitClient
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*

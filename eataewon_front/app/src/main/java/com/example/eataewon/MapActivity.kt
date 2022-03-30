@@ -1,6 +1,5 @@
-package com.example.eattaewon
+package com.example.eataewon
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.UiThread
 import androidx.fragment.app.FragmentActivity

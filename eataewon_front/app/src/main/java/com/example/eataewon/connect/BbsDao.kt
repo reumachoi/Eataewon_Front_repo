@@ -1,12 +1,8 @@
-package com.example.eattaewon.connect
+package com.example.eataewon.connect
 
-import com.example.eattaewon.MemberDao
-import com.example.eattaewon.MemberService
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface BbsService {
