@@ -5,7 +5,7 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="28"
+8        android:minSdkVersion="21"
 8-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="31" />
 9-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
@@ -21,23 +21,23 @@
 17-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:12:9-49
 17-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:12:18-47
 18        <package android:name="com.locnall.KimGiSa" />
-18-->[com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/47c86d353e3ec1443320c6e91181553a/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:12:9-55
-18-->[com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/47c86d353e3ec1443320c6e91181553a/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:12:18-52
+18-->[com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/c3fbc0d245faed547d85182943181fc4/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:12:9-55
+18-->[com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/c3fbc0d245faed547d85182943181fc4/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:12:18-52
 19        <package android:name="com.lguplus.navi" />
-19-->[com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/47c86d353e3ec1443320c6e91181553a/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:13:9-52
-19-->[com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/47c86d353e3ec1443320c6e91181553a/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:13:18-49
+19-->[com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/c3fbc0d245faed547d85182943181fc4/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:13:9-52
+19-->[com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/c3fbc0d245faed547d85182943181fc4/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:13:18-49
 20        <package android:name="com.kakao.talk.alpha" />
-20-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:11:9-56
-20-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:11:18-53
+20-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/637eeb6476fc283cf2115ee90665beaa/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:11:9-56
+20-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/637eeb6476fc283cf2115ee90665beaa/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:11:18-53
 21        <package android:name="com.kakao.talk.sandbox" />
-21-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:12:9-58
-21-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:12:18-55
+21-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/637eeb6476fc283cf2115ee90665beaa/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:12:9-58
+21-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/637eeb6476fc283cf2115ee90665beaa/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:12:18-55
 22        <package android:name="com.kakao.onetalk" />
-22-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:13:9-53
-22-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:13:18-50
+22-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/637eeb6476fc283cf2115ee90665beaa/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:13:9-53
+22-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/637eeb6476fc283cf2115ee90665beaa/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:13:18-50
 23
 24        <intent>
-24-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:15:9-21:18
+24-->[com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/637eeb6476fc283cf2115ee90665beaa/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:15:9-21:18
 25            <action android:name="android.intent.action.VIEW" />
 25-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
 25-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
@@ -51,8 +51,8 @@
 29-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
 30        </intent> <!-- Needs to be explicitly declared on Android R+ -->
 31        <package android:name="com.google.android.apps.maps" />
-31-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
-31-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
+31-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/9a911ff0f9c34d2078ecfb7242d741e9/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
+31-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/9a911ff0f9c34d2078ecfb7242d741e9/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
 32    </queries> <!-- 인터넷 사용 권한 설정 -->
 33    <uses-permission android:name="android.permission.INTERNET" /> <!-- 도시 블록 내에서의 정확한 위치(네트워크 위치) -->
 33-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:14:5-66
@@ -74,637 +74,563 @@
 38-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:19:22-77
 39
 40    <uses-feature
-40-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:9:5-11:35
+40-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:9:5-11:35
 41        android:glEsVersion="0x00020000"
-41-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:10:9-41
+41-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:10:9-41
 42        android:required="true" />
-42-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:11:9-32
+42-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:11:9-32
 43    <uses-feature
-43-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:12:5-14:36
+43-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:12:5-14:36
 44        android:name="android.hardware.wifi"
-44-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:13:9-45
+44-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:13:9-45
 45        android:required="false" />
-45-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:14:9-33
+45-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:14:9-33
 46
 47    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-47-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:18:5-76
-47-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:18:22-73
-48    <uses-permission android:name="android.permission.WAKE_LOCK" />
-48-->[com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:24:5-68
-48-->[com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:24:22-65
-49    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Include required permissions for Advertising Id -->
-49-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:26:5-110
-49-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:26:22-107
-50    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-50-->[com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
-50-->[com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:22-76
-51
-52    <application
-52-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:21:5-102:19
-53        android:name="com.example.eataewon.GlobalApplication"
-53-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:22:13-46
-54        android:allowBackup="true"
-54-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:23:13-39
-55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-55-->[androidx.core:core:1.7.0] /Users/reuma/.gradle/caches/transforms-3/1b669605d2438250c1499f9fc222f38b/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
-56        android:debuggable="true"
-57        android:extractNativeLibs="false"
-58        android:icon="@mipmap/ic_launcher"
-58-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:24:13-47
-59        android:label="@string/app_name"
-59-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:25:13-45
-60        android:roundIcon="@mipmap/ic_launcher_round"
-60-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:26:13-58
-61        android:supportsRtl="true"
-61-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:27:13-39
-62        android:testOnly="true"
-63        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" >
-63-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:28:13-81
-64            android:usesCleartextTraffic="true">
-65        <activity
-65-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:30:9-32:42
-66            android:name="com.example.eataewon.UpdateBbsActivity"
-66-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:31:17-50
-67            android:exported="true" />
-67-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:32:17-40
-68        <activity
-68-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:33:9-35:42
-69            android:name="com.example.eataewon.WriteActivity"
-69-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:34:17-46
-70            android:exported="true" /> <!-- 최아름 카카오 sns, 네이버 map, 카카오 map -->
-70-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:35:17-40
-71        <meta-data
-71-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:36:9-38:58
-72            android:name="com.google.android.geo.API_KEY"
-72-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:37:17-62
-73            android:value="@string/google_maps_key" />
-73-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:38:17-56
-74        <meta-data
-74-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:39:9-41:45
-75            android:name="com.naver.maps.map.CLIENT_ID"
-75-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:40:17-60
-76            android:value="1o2hhvg6b8" />
-76-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:41:17-43
-77        <meta-data
-77-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:42:9-44:67
-78            android:name="com.kakao.sdk.AppKey"
-78-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:43:17-52
-79            android:value="803510af840ec6fd9c1aefe41148b4e5" />
-79-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:44:17-65
-80
-81        <activity
-81-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:46:9-49:48
-82            android:name="com.example.eataewon.SecondActivity"
-82-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:47:17-67
-83            android:exported="true" />
-83-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:48:17-40
-84        <activity
-84-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:50:9-58:20
-85            android:name="com.example.eataewon.MainActivity"
-85-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:51:17-65
-86            android:exported="true" >
-86-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:52:17-40
-87            <intent-filter>
-87-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:53:13-57:29
-88                <action android:name="android.intent.action.MAIN" />
-88-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:17-68
-88-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:25-66
-89
-90                <category android:name="android.intent.category.LAUNCHER" />
-90-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:17-76
-90-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:27-74
-91            </intent-filter>
-92        </activity>
-93        <activity
-93-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:59:9-61:42
-94            android:name="com.example.eataewon.SearchKakaoMapActivity"
-94-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:60:17-55
-95            android:exported="true" />
-95-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:61:17-40
-96        <activity
-96-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:62:9-75:20
-97            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
-97-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:63:17-74
-98            android:exported="true"
-98-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:64:17-40
-99            android:launchMode="singleTask"
-99-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:17:13-44
-100            android:theme="@style/TransparentCompat" >
-100-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:18:13-53
-101            <intent-filter>
-101-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:65:13-74:29
-102                <action android:name="android.intent.action.VIEW" />
-102-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
-102-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
-103
-104                <category android:name="android.intent.category.DEFAULT" />
-104-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
-104-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
-105                <category android:name="android.intent.category.BROWSABLE" />
-105-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
-105-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
-106
-107                <data
-107-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
-108                    android:host="oauth"
-108-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
-109                    android:scheme="kakaoa05f68a3850359a6d8c92e79cdc0d8cb" />
-109-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
-110            </intent-filter>
-111        </activity>
-112        <activity
-112-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:76:9-78:42
-113            android:name="com.example.eataewon.SignActivity"
-113-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:77:17-45
-114            android:exported="true" />
-114-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:78:17-40
-115        <activity
-115-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:79:9-87:20
-116            android:name="com.example.eataewon.HomeActivity"
-116-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:80:17-45
-117            android:exported="true" >
-117-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:81:17-40
-118            <intent-filter>
-118-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:53:13-57:29
-119                <action android:name="android.intent.action.MAIN" />
-119-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:17-68
-119-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:25-66
-120
-121                <category android:name="android.intent.category.LAUNCHER" />
-121-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:17-76
-121-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:27-74
-122            </intent-filter>
-123        </activity>
-124        <activity
-124-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:88:9-101:20
-125            android:name="com.example.eataewon.BbsDetailActivity"
-125-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:89:17-70
-126            android:exported="true" >
-126-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:90:17-40
-127            <intent-filter>
-127-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:91:13-100:29
-128                <action android:name="android.intent.action.VIEW" />
-128-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
-128-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
-129
-130                <category android:name="android.intent.category.DEFAULT" />
-130-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
-130-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
-131                <category android:name="android.intent.category.BROWSABLE" />
-131-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
-131-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
-132
-133                <data
-133-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
-134                    android:host="kakaolink"
-134-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
-135                    android:scheme="803510af840ec6fd9c1aefe41148b4e5" />
-135-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
-136            </intent-filter>
-137        </activity>
-138        <activity
-138-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:10:9-14:56
-139            android:name="com.kakao.sdk.auth.TalkAuthCodeActivity"
-139-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:11:13-67
-140            android:exported="false"
-140-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:12:13-37
-141            android:launchMode="singleTask"
-141-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:13:13-44
-142            android:theme="@style/TransparentCompat" />
-142-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:14:13-53
-143
-144        <meta-data
-144-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:16:9-18:69
-145            android:name="com.google.android.gms.version"
-145-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:17:13-58
-146            android:value="@integer/google_play_services_version" />
-146-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:18:13-66
-147        <meta-data
-147-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:19:9-21:63
-148            android:name="com.facebook.sdk.ApplicationId"
-148-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:20:13-58
-149            android:value="@string/facebook_application_id" />
-149-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:21:13-60
-150
-151        <activity
-151-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:23:9-27:61
-152            android:name="com.firebase.ui.auth.KickoffActivity"
-152-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:24:13-64
-153            android:exported="false"
-153-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:25:13-37
-154            android:label=""
-154-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:26:13-29
-155            android:theme="@style/FirebaseUI.Transparent" />
-155-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:27:13-58
-156        <activity
-156-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:28:9-32:61
-157            android:name="com.firebase.ui.auth.ui.idp.SingleSignInActivity"
-157-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:29:13-76
-158            android:exported="false"
-158-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:30:13-37
-159            android:label=""
-159-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:31:13-29
-160            android:theme="@style/FirebaseUI.Transparent" />
-160-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:32:13-58
-161        <activity
-161-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:33:9-37:61
-162            android:name="com.firebase.ui.auth.ui.credentials.CredentialSaveActivity"
-162-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:34:13-86
-163            android:exported="false"
-163-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:35:13-37
-164            android:label=""
-164-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:36:13-29
-165            android:theme="@style/FirebaseUI.Transparent" />
-165-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:37:13-58
-166        <activity
-166-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:38:9-42:58
-167            android:name="com.firebase.ui.auth.ui.email.RecoverPasswordActivity"
-167-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:39:13-81
-168            android:exported="false"
-168-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:40:13-37
-169            android:label="@string/fui_title_recover_password_activity"
-169-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:41:13-72
-170            android:windowSoftInputMode="adjustResize" />
-170-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:42:13-55
-171        <activity
-171-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:43:9-47:58
-172            android:name="com.firebase.ui.auth.ui.email.EmailActivity"
-172-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:44:13-71
-173            android:exported="false"
-173-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:45:13-37
-174            android:label="@string/fui_sign_in_default"
-174-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:46:13-56
-175            android:windowSoftInputMode="adjustResize" />
-175-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:47:13-55
-176        <activity
-176-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:48:9-52:77
-177            android:name="com.firebase.ui.auth.ui.phone.PhoneActivity"
-177-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:49:13-71
-178            android:exported="false"
-178-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:50:13-37
-179            android:label="@string/fui_sign_in_with_phone_number"
-179-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:51:13-66
-180            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
-180-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:52:13-74
-181        <activity
-181-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:53:9-57:58
-182            android:name="com.firebase.ui.auth.ui.idp.WelcomeBackIdpPrompt"
-182-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:54:13-76
-183            android:exported="false"
-183-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:55:13-37
-184            android:label="@string/fui_title_welcome_back_idp_prompt"
-184-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:56:13-70
-185            android:windowSoftInputMode="adjustResize" />
-185-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:57:13-55
-186        <activity
-186-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:58:9-62:58
-187            android:name="com.firebase.ui.auth.ui.email.WelcomeBackPasswordPrompt"
-187-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:59:13-83
-188            android:exported="false"
-188-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:60:13-37
-189            android:label="@string/fui_title_welcome_back_password_prompt"
-189-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:61:13-75
-190            android:windowSoftInputMode="adjustResize" />
-190-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:62:13-55
-191        <activity
-191-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:63:9-67:58
-192            android:name="com.firebase.ui.auth.ui.email.WelcomeBackEmailLinkPrompt"
-192-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:64:13-84
-193            android:exported="false"
-193-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:65:13-37
-194            android:label="@string/fui_title_welcome_back_password_prompt"
-194-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:66:13-75
-195            android:windowSoftInputMode="adjustResize" />
-195-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:67:13-55
-196        <activity
-196-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:68:9-73:58
-197            android:name="com.firebase.ui.auth.ui.email.EmailLinkCatcherActivity"
-197-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:69:13-82
-198            android:exported="false"
-198-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:70:13-37
-199            android:label=""
-199-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:71:13-29
-200            android:theme="@style/FirebaseUI.Transparent"
-200-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:72:13-58
-201            android:windowSoftInputMode="adjustResize" />
-201-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:73:13-55
-202        <activity
-202-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:74:9-78:58
-203            android:name="com.firebase.ui.auth.ui.email.EmailLinkErrorRecoveryActivity"
-203-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:75:13-88
-204            android:exported="false"
-204-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:76:13-37
-205            android:label="@string/fui_sign_in_default"
-205-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:77:13-56
-206            android:windowSoftInputMode="adjustResize" />
-206-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:78:13-55
+47-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:18:5-76
+47-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:18:22-73
+48
+49    <application
+49-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:21:5-102:19
+50        android:name="com.example.eataewon.GlobalApplication"
+50-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:22:13-46
+51        android:allowBackup="true"
+51-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:23:13-39
+52        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+52-->[androidx.core:core:1.7.0] /Users/reuma/.gradle/caches/transforms-3/b7b1e3b43b03a30d555f87041aff767b/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+53        android:debuggable="true"
+54        android:icon="@mipmap/ic_launcher"
+54-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:24:13-47
+55        android:label="@string/app_name"
+55-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:25:13-45
+56        android:roundIcon="@mipmap/ic_launcher_round"
+56-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:26:13-58
+57        android:supportsRtl="true"
+57-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:27:13-39
+58        android:testOnly="true"
+59        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+59-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:28:13-81
+60        android:usesCleartextTraffic="true" >
+60-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:29:13-48
+61        <activity
+61-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:30:9-32:42
+62            android:name="com.example.eataewon.UpdateBbsActivity"
+62-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:31:17-50
+63            android:exported="true" />
+63-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:32:17-40
+64        <activity
+64-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:33:9-35:42
+65            android:name="com.example.eataewon.WriteActivity"
+65-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:34:17-46
+66            android:exported="true" /> <!-- 최아름 카카오 sns, 네이버 map, 카카오 map -->
+66-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:35:17-40
+67        <meta-data
+67-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:36:9-38:58
+68            android:name="com.google.android.geo.API_KEY"
+68-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:37:17-62
+69            android:value="@string/google_maps_key" />
+69-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:38:17-56
+70        <meta-data
+70-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:39:9-41:45
+71            android:name="com.naver.maps.map.CLIENT_ID"
+71-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:40:17-60
+72            android:value="1o2hhvg6b8" />
+72-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:41:17-43
+73        <meta-data
+73-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:42:9-44:67
+74            android:name="com.kakao.sdk.AppKey"
+74-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:43:17-52
+75            android:value="803510af840ec6fd9c1aefe41148b4e5" />
+75-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:44:17-65
+76
+77        <activity
+77-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:46:9-49:48
+78            android:name="com.example.eataewon.SecondActivity"
+78-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:47:17-67
+79            android:exported="true" />
+79-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:48:17-40
+80        <activity
+80-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:50:9-58:20
+81            android:name="com.example.eataewon.MainActivity"
+81-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:51:17-65
+82            android:exported="true" >
+82-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:52:17-40
+83            <intent-filter>
+83-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:53:13-57:29
+84                <action android:name="android.intent.action.MAIN" />
+84-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:17-68
+84-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:25-66
+85
+86                <category android:name="android.intent.category.LAUNCHER" />
+86-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:17-76
+86-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:27-74
+87            </intent-filter>
+88        </activity>
+89        <activity
+89-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:59:9-61:42
+90            android:name="com.example.eataewon.SearchKakaoMapActivity"
+90-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:60:17-55
+91            android:exported="true" />
+91-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:61:17-40
+92        <activity
+92-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:62:9-75:20
+93            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+93-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:63:17-74
+94            android:exported="true"
+94-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:64:17-40
+95            android:launchMode="singleTask"
+95-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/93a1de3202186e34b386625505897c6a/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:17:13-44
+96            android:theme="@style/TransparentCompat" >
+96-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/93a1de3202186e34b386625505897c6a/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:18:13-53
+97            <intent-filter>
+97-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:65:13-74:29
+98                <action android:name="android.intent.action.VIEW" />
+98-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
+98-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
+99
+100                <category android:name="android.intent.category.DEFAULT" />
+100-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
+100-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
+101                <category android:name="android.intent.category.BROWSABLE" />
+101-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
+101-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
+102
+103                <data
+103-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
+104                    android:host="oauth"
+104-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
+105                    android:scheme="kakaoa05f68a3850359a6d8c92e79cdc0d8cb" />
+105-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
+106            </intent-filter>
+107        </activity>
+108        <activity
+108-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:76:9-78:42
+109            android:name="com.example.eataewon.SignActivity"
+109-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:77:17-45
+110            android:exported="true" />
+110-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:78:17-40
+111        <activity
+111-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:79:9-87:20
+112            android:name="com.example.eataewon.HomeActivity"
+112-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:80:17-45
+113            android:exported="true" >
+113-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:81:17-40
+114            <intent-filter>
+114-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:53:13-57:29
+115                <action android:name="android.intent.action.MAIN" />
+115-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:17-68
+115-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:25-66
+116
+117                <category android:name="android.intent.category.LAUNCHER" />
+117-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:17-76
+117-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:27-74
+118            </intent-filter>
+119        </activity>
+120        <activity
+120-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:88:9-101:20
+121            android:name="com.example.eataewon.BbsDetailActivity"
+121-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:89:17-70
+122            android:exported="true" >
+122-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:90:17-40
+123            <intent-filter>
+123-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:91:13-100:29
+124                <action android:name="android.intent.action.VIEW" />
+124-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
+124-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
+125
+126                <category android:name="android.intent.category.DEFAULT" />
+126-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
+126-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
+127                <category android:name="android.intent.category.BROWSABLE" />
+127-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
+127-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
+128
+129                <data
+129-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
+130                    android:host="kakaolink"
+130-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
+131                    android:scheme="803510af840ec6fd9c1aefe41148b4e5" />
+131-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
+132            </intent-filter>
+133        </activity>
+134        <activity
+134-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/93a1de3202186e34b386625505897c6a/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:10:9-14:56
+135            android:name="com.kakao.sdk.auth.TalkAuthCodeActivity"
+135-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/93a1de3202186e34b386625505897c6a/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:11:13-67
+136            android:exported="false"
+136-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/93a1de3202186e34b386625505897c6a/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:12:13-37
+137            android:launchMode="singleTask"
+137-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/93a1de3202186e34b386625505897c6a/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:13:13-44
+138            android:theme="@style/TransparentCompat" />
+138-->[com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/93a1de3202186e34b386625505897c6a/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:14:13-53
+139
+140        <meta-data
+140-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:16:9-18:69
+141            android:name="com.google.android.gms.version"
+141-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:17:13-58
+142            android:value="@integer/google_play_services_version" />
+142-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:18:13-66
+143        <meta-data
+143-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:19:9-21:63
+144            android:name="com.facebook.sdk.ApplicationId"
+144-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:20:13-58
+145            android:value="@string/facebook_application_id" />
+145-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:21:13-60
+146
+147        <activity
+147-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:23:9-27:61
+148            android:name="com.firebase.ui.auth.KickoffActivity"
+148-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:24:13-64
+149            android:exported="false"
+149-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:25:13-37
+150            android:label=""
+150-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:26:13-29
+151            android:theme="@style/FirebaseUI.Transparent" />
+151-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:27:13-58
+152        <activity
+152-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:28:9-32:61
+153            android:name="com.firebase.ui.auth.ui.idp.SingleSignInActivity"
+153-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:29:13-76
+154            android:exported="false"
+154-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:30:13-37
+155            android:label=""
+155-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:31:13-29
+156            android:theme="@style/FirebaseUI.Transparent" />
+156-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:32:13-58
+157        <activity
+157-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:33:9-37:61
+158            android:name="com.firebase.ui.auth.ui.credentials.CredentialSaveActivity"
+158-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:34:13-86
+159            android:exported="false"
+159-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:35:13-37
+160            android:label=""
+160-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:36:13-29
+161            android:theme="@style/FirebaseUI.Transparent" />
+161-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:37:13-58
+162        <activity
+162-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:38:9-42:58
+163            android:name="com.firebase.ui.auth.ui.email.RecoverPasswordActivity"
+163-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:39:13-81
+164            android:exported="false"
+164-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:40:13-37
+165            android:label="@string/fui_title_recover_password_activity"
+165-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:41:13-72
+166            android:windowSoftInputMode="adjustResize" />
+166-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:42:13-55
+167        <activity
+167-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:43:9-47:58
+168            android:name="com.firebase.ui.auth.ui.email.EmailActivity"
+168-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:44:13-71
+169            android:exported="false"
+169-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:45:13-37
+170            android:label="@string/fui_sign_in_default"
+170-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:46:13-56
+171            android:windowSoftInputMode="adjustResize" />
+171-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:47:13-55
+172        <activity
+172-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:48:9-52:77
+173            android:name="com.firebase.ui.auth.ui.phone.PhoneActivity"
+173-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:49:13-71
+174            android:exported="false"
+174-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:50:13-37
+175            android:label="@string/fui_sign_in_with_phone_number"
+175-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:51:13-66
+176            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+176-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:52:13-74
+177        <activity
+177-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:53:9-57:58
+178            android:name="com.firebase.ui.auth.ui.idp.WelcomeBackIdpPrompt"
+178-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:54:13-76
+179            android:exported="false"
+179-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:55:13-37
+180            android:label="@string/fui_title_welcome_back_idp_prompt"
+180-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:56:13-70
+181            android:windowSoftInputMode="adjustResize" />
+181-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:57:13-55
+182        <activity
+182-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:58:9-62:58
+183            android:name="com.firebase.ui.auth.ui.email.WelcomeBackPasswordPrompt"
+183-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:59:13-83
+184            android:exported="false"
+184-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:60:13-37
+185            android:label="@string/fui_title_welcome_back_password_prompt"
+185-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:61:13-75
+186            android:windowSoftInputMode="adjustResize" />
+186-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:62:13-55
+187        <activity
+187-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:63:9-67:58
+188            android:name="com.firebase.ui.auth.ui.email.WelcomeBackEmailLinkPrompt"
+188-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:64:13-84
+189            android:exported="false"
+189-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:65:13-37
+190            android:label="@string/fui_title_welcome_back_password_prompt"
+190-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:66:13-75
+191            android:windowSoftInputMode="adjustResize" />
+191-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:67:13-55
+192        <activity
+192-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:68:9-73:58
+193            android:name="com.firebase.ui.auth.ui.email.EmailLinkCatcherActivity"
+193-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:69:13-82
+194            android:exported="false"
+194-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:70:13-37
+195            android:label=""
+195-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:71:13-29
+196            android:theme="@style/FirebaseUI.Transparent"
+196-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:72:13-58
+197            android:windowSoftInputMode="adjustResize" />
+197-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:73:13-55
+198        <activity
+198-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:74:9-78:58
+199            android:name="com.firebase.ui.auth.ui.email.EmailLinkErrorRecoveryActivity"
+199-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:75:13-88
+200            android:exported="false"
+200-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:76:13-37
+201            android:label="@string/fui_sign_in_default"
+201-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:77:13-56
+202            android:windowSoftInputMode="adjustResize" />
+202-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:78:13-55
+203        <activity
+203-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:79:9-82:65
+204            android:name="com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity"
+204-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:80:13-80
+205            android:exported="false"
+205-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:81:13-37
+206            android:label="@string/fui_default_toolbar_title" />
+206-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:82:13-62
 207        <activity
-207-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:79:9-82:65
-208            android:name="com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity"
-208-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:80:13-80
-209            android:exported="false"
-209-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:81:13-37
-210            android:label="@string/fui_default_toolbar_title" />
-210-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:82:13-62
+207-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:83:9-87:48
+208            android:name="com.facebook.FacebookActivity"
+208-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:84:13-57
+209            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+209-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:85:13-96
+210            android:label="@string/app_name" />
+210-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:86:13-45
 211        <activity
-211-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:83:9-87:48
-212            android:name="com.facebook.FacebookActivity"
-212-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:84:13-57
-213            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-213-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:85:13-96
-214            android:label="@string/app_name" />
-214-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:86:13-45
-215        <activity
-215-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:88:9-100:20
-216            android:name="com.facebook.CustomTabActivity"
-216-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:89:13-58
-217            android:exported="true" >
-217-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:90:13-36
-218            <intent-filter>
-218-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:92:13-99:29
-219                <action android:name="android.intent.action.VIEW" />
-219-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
-219-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
-220
-221                <category android:name="android.intent.category.DEFAULT" />
-221-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
-221-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
-222                <category android:name="android.intent.category.BROWSABLE" />
-222-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
-222-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
+211-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:88:9-100:20
+212            android:name="com.facebook.CustomTabActivity"
+212-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:89:13-58
+213            android:exported="true" >
+213-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:90:13-36
+214            <intent-filter>
+214-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:92:13-99:29
+215                <action android:name="android.intent.action.VIEW" />
+215-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
+215-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
+216
+217                <category android:name="android.intent.category.DEFAULT" />
+217-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
+217-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
+218                <category android:name="android.intent.category.BROWSABLE" />
+218-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
+218-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
+219
+220                <data android:scheme="@string/facebook_login_protocol_scheme" />
+220-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
+220-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
+221            </intent-filter>
+222        </activity>
 223
-224                <data android:scheme="@string/facebook_login_protocol_scheme" />
-224-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
-224-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
-225            </intent-filter>
-226        </activity>
-227
-228        <provider
-228-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:102:9-106:38
-229            android:name="com.firebase.ui.auth.data.client.AuthUiInitProvider"
-229-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:103:13-79
-230            android:authorities="com.example.eataewon.authuiinitprovider"
-230-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:104:13-70
-231            android:exported="false"
-231-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:105:13-37
-232            android:initOrder="90" />
-232-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:106:13-35
-233
-234        <activity
-234-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:27:9-44:20
-235            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-235-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:28:13-80
-236            android:excludeFromRecents="true"
-236-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:29:13-46
-237            android:exported="true"
-237-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:30:13-36
-238            android:launchMode="singleTask"
-238-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:31:13-44
-239            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-239-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:32:13-72
-240            <intent-filter>
-240-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:33:13-43:29
-241                <action android:name="android.intent.action.VIEW" />
-241-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
-241-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
-242
-243                <category android:name="android.intent.category.DEFAULT" />
-243-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
-243-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
-244                <category android:name="android.intent.category.BROWSABLE" />
-244-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
-244-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
-245
-246                <data
-246-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
-247                    android:host="firebase.auth"
-247-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
-248                    android:path="/"
-249                    android:scheme="genericidp" />
-249-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
-250            </intent-filter>
-251        </activity>
-252        <activity
-252-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:45:9-62:20
-253            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-253-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:46:13-79
-254            android:excludeFromRecents="true"
-254-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:47:13-46
-255            android:exported="true"
-255-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:48:13-36
-256            android:launchMode="singleTask"
-256-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:49:13-44
-257            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-257-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:50:13-72
-258            <intent-filter>
-258-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:51:13-61:29
-259                <action android:name="android.intent.action.VIEW" />
-259-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
-259-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
-260
-261                <category android:name="android.intent.category.DEFAULT" />
-261-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
-261-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
-262                <category android:name="android.intent.category.BROWSABLE" />
-262-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
-262-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
-263
-264                <data
-264-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
-265                    android:host="firebase.auth"
-265-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
-266                    android:path="/"
-267                    android:scheme="recaptcha" />
-267-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
-268            </intent-filter>
-269        </activity>
-270
-271        <service
-271-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:64:9-70:19
-272            android:name="com.google.firebase.components.ComponentDiscoveryService"
-272-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:65:13-84
-273            android:directBootAware="true"
-273-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:35:13-43
-274            android:exported="false" >
-274-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:66:13-37
-275            <meta-data
-275-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:67:13-69:85
-276                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-276-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:68:17-109
-277                android:value="com.google.firebase.components.ComponentRegistrar" />
-277-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:69:17-82
-278            <meta-data
-278-->[com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:11:13-13:85
-279                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
-279-->[com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:12:17-126
-280                android:value="com.google.firebase.components.ComponentRegistrar" />
-280-->[com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:13:17-82
-281            <meta-data
-281-->[com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:15:13-17:85
-282                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
-282-->[com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:16:17-124
-283                android:value="com.google.firebase.components.ComponentRegistrar" />
-283-->[com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:17:17-82
-284            <meta-data
-284-->[com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:15:13-17:85
-285                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
-285-->[com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:16:17-113
-286                android:value="com.google.firebase.components.ComponentRegistrar" />
-286-->[com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:17:17-82
-287            <meta-data
-287-->[com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:32:13-34:85
-288                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-288-->[com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:33:17-109
-289                android:value="com.google.firebase.components.ComponentRegistrar" />
-289-->[com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:34:17-82
-290            <meta-data
-290-->[com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:30:13-32:85
-291                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-291-->[com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:31:17-139
-292                android:value="com.google.firebase.components.ComponentRegistrar" />
-292-->[com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:32:17-82
-293            <meta-data
-293-->[com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
-294                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-294-->[com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
-295                android:value="com.google.firebase.components.ComponentRegistrar" />
-295-->[com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
-296        </service>
-297
-298        <activity
-298-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:23:9-27:75
-299            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-299-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:24:13-93
-300            android:excludeFromRecents="true"
-300-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:25:13-46
-301            android:exported="false"
-301-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:26:13-37
-302            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-302-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:27:13-72
-303        <!--
-304            Service handling Google Sign-In user revocation. For apps that do not integrate with
-305            Google Sign-In, this service will never be started.
-306        -->
-307        <service
-307-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:33:9-37:51
-308            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-308-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:34:13-89
-309            android:exported="true"
-309-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:35:13-36
-310            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-310-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:36:13-107
-311            android:visibleToInstantApps="true" />
-311-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:37:13-48
-312
-313        <activity
-313-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:21:9-25:51
-314            android:name="com.naver.maps.map.app.LegendActivity"
-314-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:22:13-65
-315            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-315-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:23:13-91
-316            android:label="@string/navermap_legend"
-316-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:24:13-52
-317            android:theme="@style/navermap_app" />
-317-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:25:13-48
-318        <activity
-318-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:26:9-30:51
-319            android:name="com.naver.maps.map.app.LegalNoticeActivity"
-319-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:27:13-70
-320            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-320-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:28:13-91
-321            android:label="@string/navermap_legal_notice"
-321-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:29:13-58
-322            android:theme="@style/navermap_app" />
-322-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:30:13-48
-323        <activity
-323-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:31:9-35:51
-324            android:name="com.naver.maps.map.app.OpenSourceLicenseActivity"
-324-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:32:13-76
-325            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-325-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:33:13-91
-326            android:label="@string/navermap_open_source_license"
-326-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:34:13-65
-327            android:theme="@style/navermap_app" /> <!-- Needs to be explicitly declared on P+ -->
-327-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:35:13-48
-328        <uses-library
-328-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
-329            android:name="org.apache.http.legacy"
-329-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
-330            android:required="false" />
-330-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
-331
-332        <provider
-332-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:26:9-31:39
-333            android:name="com.google.firebase.provider.FirebaseInitProvider"
-333-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:27:13-77
-334            android:authorities="com.example.eataewon.firebaseinitprovider"
-334-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:28:13-72
-335            android:directBootAware="true"
-335-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:29:13-43
-336            android:exported="false"
-336-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:30:13-37
-337            android:initOrder="100" />
-337-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:31:13-36
-338
-339        <activity
-339-->[com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-340            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-340-->[com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-341            android:exported="false"
-341-->[com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-342            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-342-->[com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-343
-344        <receiver
-344-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:29:9-33:20
-345            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-345-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:30:13-85
-346            android:enabled="true"
-346-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:31:13-35
-347            android:exported="false" >
-347-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:32:13-37
-348        </receiver>
-349
-350        <service
-350-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:35:9-38:40
-351            android:name="com.google.android.gms.measurement.AppMeasurementService"
-351-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:36:13-84
-352            android:enabled="true"
-352-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:37:13-35
-353            android:exported="false" />
-353-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:38:13-37
-354        <service
-354-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:39:9-43:72
-355            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-355-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:40:13-87
-356            android:enabled="true"
-356-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:41:13-35
-357            android:exported="false"
-357-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:42:13-37
-358            android:permission="android.permission.BIND_JOB_SERVICE" />
-358-->[com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:43:13-69
-359
-360        <provider
-360-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fd516be817c82f6958dbddf150741198/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-361            android:name="androidx.startup.InitializationProvider"
-361-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fd516be817c82f6958dbddf150741198/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-362            android:authorities="com.example.eataewon.androidx-startup"
-362-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fd516be817c82f6958dbddf150741198/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-363            android:exported="false" >
-363-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fd516be817c82f6958dbddf150741198/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-364            <meta-data
-364-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fd516be817c82f6958dbddf150741198/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-365                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-365-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fd516be817c82f6958dbddf150741198/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-366                android:value="androidx.startup" />
-366-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fd516be817c82f6958dbddf150741198/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-367            <meta-data
-367-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-368                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-368-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-369                android:value="androidx.startup" />
-369-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-370        </provider>
-371    </application>
-372
-373</manifest>
+224        <provider
+224-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:102:9-106:38
+225            android:name="com.firebase.ui.auth.data.client.AuthUiInitProvider"
+225-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:103:13-79
+226            android:authorities="com.example.eataewon.authuiinitprovider"
+226-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:104:13-70
+227            android:exported="false"
+227-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:105:13-37
+228            android:initOrder="90" />
+228-->[com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/7a3f0da8c9b06f28127d926f39ac53fb/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:106:13-35
+229
+230        <activity
+230-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:27:9-44:20
+231            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+231-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:28:13-80
+232            android:excludeFromRecents="true"
+232-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:29:13-46
+233            android:exported="true"
+233-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:30:13-36
+234            android:launchMode="singleTask"
+234-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:31:13-44
+235            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+235-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:32:13-72
+236            <intent-filter>
+236-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:33:13-43:29
+237                <action android:name="android.intent.action.VIEW" />
+237-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
+237-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
+238
+239                <category android:name="android.intent.category.DEFAULT" />
+239-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
+239-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
+240                <category android:name="android.intent.category.BROWSABLE" />
+240-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
+240-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
+241
+242                <data
+242-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
+243                    android:host="firebase.auth"
+243-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
+244                    android:path="/"
+245                    android:scheme="genericidp" />
+245-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
+246            </intent-filter>
+247        </activity>
+248        <activity
+248-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:45:9-62:20
+249            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+249-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:46:13-79
+250            android:excludeFromRecents="true"
+250-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:47:13-46
+251            android:exported="true"
+251-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:48:13-36
+252            android:launchMode="singleTask"
+252-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:49:13-44
+253            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+253-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:50:13-72
+254            <intent-filter>
+254-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:51:13-61:29
+255                <action android:name="android.intent.action.VIEW" />
+255-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
+255-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
+256
+257                <category android:name="android.intent.category.DEFAULT" />
+257-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
+257-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
+258                <category android:name="android.intent.category.BROWSABLE" />
+258-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
+258-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
+259
+260                <data
+260-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
+261                    android:host="firebase.auth"
+261-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
+262                    android:path="/"
+263                    android:scheme="recaptcha" />
+263-->/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
+264            </intent-filter>
+265        </activity>
+266
+267        <service
+267-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:64:9-70:19
+268            android:name="com.google.firebase.components.ComponentDiscoveryService"
+268-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:65:13-84
+269            android:directBootAware="true"
+269-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/49e6d2d7287c5c7aacdd022cff42645c/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:35:13-43
+270            android:exported="false" >
+270-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:66:13-37
+271            <meta-data
+271-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:67:13-69:85
+272                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+272-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:68:17-109
+273                android:value="com.google.firebase.components.ComponentRegistrar" />
+273-->[com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/bd9d6577e28b1edda89f3295f4671f33/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:69:17-82
+274        </service>
+275
+276        <activity
+276-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:23:9-27:75
+277            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+277-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:24:13-93
+278            android:excludeFromRecents="true"
+278-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:25:13-46
+279            android:exported="false"
+279-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:26:13-37
+280            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+280-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:27:13-72
+281        <!--
+282            Service handling Google Sign-In user revocation. For apps that do not integrate with
+283            Google Sign-In, this service will never be started.
+284        -->
+285        <service
+285-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:33:9-37:51
+286            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+286-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:34:13-89
+287            android:exported="true"
+287-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:35:13-36
+288            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+288-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:36:13-107
+289            android:visibleToInstantApps="true" />
+289-->[com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/39e62aa870f2a394ae2cba4838272148/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:37:13-48
+290
+291        <activity
+291-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:21:9-25:51
+292            android:name="com.naver.maps.map.app.LegendActivity"
+292-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:22:13-65
+293            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+293-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:23:13-91
+294            android:label="@string/navermap_legend"
+294-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:24:13-52
+295            android:theme="@style/navermap_app" />
+295-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:25:13-48
+296        <activity
+296-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:26:9-30:51
+297            android:name="com.naver.maps.map.app.LegalNoticeActivity"
+297-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:27:13-70
+298            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+298-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:28:13-91
+299            android:label="@string/navermap_legal_notice"
+299-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:29:13-58
+300            android:theme="@style/navermap_app" />
+300-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:30:13-48
+301        <activity
+301-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:31:9-35:51
+302            android:name="com.naver.maps.map.app.OpenSourceLicenseActivity"
+302-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:32:13-76
+303            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+303-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:33:13-91
+304            android:label="@string/navermap_open_source_license"
+304-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:34:13-65
+305            android:theme="@style/navermap_app" /> <!-- Needs to be explicitly declared on P+ -->
+305-->[com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/eb80a27b7845e17f2ef1f67842d17e05/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:35:13-48
+306        <uses-library
+306-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/9a911ff0f9c34d2078ecfb7242d741e9/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
+307            android:name="org.apache.http.legacy"
+307-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/9a911ff0f9c34d2078ecfb7242d741e9/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
+308            android:required="false" />
+308-->[com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/9a911ff0f9c34d2078ecfb7242d741e9/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
+309
+310        <provider
+310-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/49e6d2d7287c5c7aacdd022cff42645c/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:26:9-31:39
+311            android:name="com.google.firebase.provider.FirebaseInitProvider"
+311-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/49e6d2d7287c5c7aacdd022cff42645c/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:27:13-77
+312            android:authorities="com.example.eataewon.firebaseinitprovider"
+312-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/49e6d2d7287c5c7aacdd022cff42645c/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:28:13-72
+313            android:directBootAware="true"
+313-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/49e6d2d7287c5c7aacdd022cff42645c/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:29:13-43
+314            android:exported="false"
+314-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/49e6d2d7287c5c7aacdd022cff42645c/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:30:13-37
+315            android:initOrder="100" />
+315-->[com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/49e6d2d7287c5c7aacdd022cff42645c/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:31:13-36
+316
+317        <activity
+317-->[com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/ca4a20247b5d2655f2d4db0a3e374038/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+318            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+318-->[com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/ca4a20247b5d2655f2d4db0a3e374038/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+319            android:exported="false"
+319-->[com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/ca4a20247b5d2655f2d4db0a3e374038/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+320            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+320-->[com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/ca4a20247b5d2655f2d4db0a3e374038/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+321
+322        <provider
+322-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/b64e19b18b6763e9d6947b269ccd0779/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+323            android:name="androidx.startup.InitializationProvider"
+323-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/b64e19b18b6763e9d6947b269ccd0779/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+324            android:authorities="com.example.eataewon.androidx-startup"
+324-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/b64e19b18b6763e9d6947b269ccd0779/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+325            android:exported="false" >
+325-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/b64e19b18b6763e9d6947b269ccd0779/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+326            <meta-data
+326-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/b64e19b18b6763e9d6947b269ccd0779/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+327                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+327-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/b64e19b18b6763e9d6947b269ccd0779/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+328                android:value="androidx.startup" />
+328-->[androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/b64e19b18b6763e9d6947b269ccd0779/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+329            <meta-data
+329-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/4be85eb64d4a4d510753b8b20813e6b6/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+330                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+330-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/4be85eb64d4a4d510753b8b20813e6b6/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+331                android:value="androidx.startup" />
+331-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/4be85eb64d4a4d510753b8b20813e6b6/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+332        </provider>
+333    </application>
+334
+335</manifest>

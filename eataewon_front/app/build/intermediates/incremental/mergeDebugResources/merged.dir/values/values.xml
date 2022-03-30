@@ -949,7 +949,6 @@
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="action_bar_size">16dp</dimen>
-    <dimen name="app_bar_height">180dp</dimen>
     <dimen name="appcompat_dialog_background_inset">16dp</dimen>
     <dimen name="browser_actions_context_menu_max_width">500dp</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20dp</dimen>
@@ -1016,7 +1015,6 @@
     <dimen name="design_textinput_caption_translate_y">5dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <dimen name="fab_margin">16dp</dimen>
     <dimen name="fastscroll_default_thickness">8dp</dimen>
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
@@ -1465,7 +1463,6 @@
     <dimen name="test_navigation_bar_label_padding">10dp</dimen>
     <dimen name="test_navigation_bar_shadow_height">1dp</dimen>
     <dimen name="test_navigation_bar_text_size">12sp</dimen>
-    <dimen name="text_margin">16dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
     <dimen name="tooltip_margin">8dp</dimen>
@@ -1702,7 +1699,7 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
-    <string name="default_web_client_id" translatable="false">763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com</string>
+    <string name="default_web_client_id" translatable="false">CHANGE-ME</string>
     <string name="error_icon_content_description">Error</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
@@ -1818,12 +1815,7 @@
         You\'ve already used <ns2:g example="jane.doe@example.com" id="email_addr" translation_description="">%1$s</ns2:g>
         to sign in. Enter your password for that account.
     </string>
-    <string name="gcm_defaultSenderId" translatable="false">147227189570</string>
-    <string name="google_api_key" translatable="false">AIzaSyAx616MJhZ8MCM8ry6J61fdrRtplM2_78U</string>
-    <string name="google_app_id" translatable="false">1:763712107163:android:349453ca38ade487670c3e</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAx616MJhZ8MCM8ry6J61fdrRtplM2_78U</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAiqMn0isFejdyo22vishtrY6qJJ1T2tgc</string>
-    <string name="google_storage_bucket" translatable="false">eataewon.appspot.com</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyATSHTp2qQPxoeuektk4hUzUrrbPnoGKj8</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
@@ -2000,7 +1992,6 @@
     <string description="a11y string to indicate this button changes the input mode to a text field [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
     <string description="a11y string to indicate this button switches the user to choosing a year [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
     <string description="Button text to indicate that the widget will save the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_confirm">OK</string>
-    <string name="naver_map_sdk_client_id" translatable="false">1o2hhvg6b8</string>
     <string name="navermap_compass">Compass</string>
     <string name="navermap_copyright" translatable="false">Copyright © 2018-%d NAVER Corp.\nAll rights reserved.</string>
     <string name="navermap_current_location">Current location</string>
@@ -2022,7 +2013,6 @@
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
-    <string name="project_id" translatable="false">eataewon</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_bbs_details">BbsDetailsActivity</string>
@@ -6123,6 +6113,8 @@
     <style name="Theme.Eataewon.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <!--마이페이지 상단 툴바 스타일 추가-->
+        <item name="android:actionMenuTextColor">@color/black</item>
     </style>
     <style name="Theme.Eataewon.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="Theme.Material3.Dark" parent="Base.Theme.Material3.Dark"/>

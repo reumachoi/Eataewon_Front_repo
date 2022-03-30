@@ -4,7 +4,26 @@
             "outputFile": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/reuma/.gradle/caches/transforms-3/0912ddccc249552da3513e8ef1e9972f/transformed/material-1.5.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/reuma/.gradle/caches/transforms-3/346f5fdb611ae7d8556f533463d5689d/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "3524",
+                        "endLines": "52",
+                        "endColumns": "12",
+                        "endOffsets": "3669"
+                    }
+                },
+                {
+                    "source": "/Users/reuma/.gradle/caches/transforms-3/59896ca75d122dd8a2e8a52dd0665e60/transformed/material-1.5.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,5,8,13,17,20,23,26,31,34,38",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/Users/reuma/.gradle/caches/transforms-3/7c5deaa510384f74c575d75f1cf2038f/transformed/appcompat-1.4.1/res/values-v23/values-v23.xml",
+                    "source": "/Users/reuma/.gradle/caches/transforms-3/4237b77050197febe15fbee0b045256b/transformed/appcompat-1.4.1/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -31,25 +50,6 @@
                         "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
                         "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
                         "endOffsets": "185,320,395,482,1366,2262,2381,2508,2730,2954,3069,3176,3289,3519"
-                    }
-                },
-                {
-                    "source": "/Users/reuma/.gradle/caches/transforms-3/c576f9d9c512f569642f422425cb6951/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "50",
-                        "startColumns": "4",
-                        "startOffsets": "3524",
-                        "endLines": "52",
-                        "endColumns": "12",
-                        "endOffsets": "3669"
                     }
                 }
             ]

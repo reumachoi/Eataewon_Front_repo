@@ -22,20 +22,22 @@ increment by 1;
 
 
 create table eataewonBbs(
-    id varchar(50) not null,
-    seq int ,
-    title varchar(500) not null,
-    content varchar(4000) not null,
-    picture int,
-    hashtag varchar(500),
-    wdate timestamp,
-    shopname varchar(100),
-    address varchar(500),
-    latitude number(12,8),
-    longtitude number(12,8),
-    readcnt int,
-    likecnt int,
-    constraint pk_eataewonBbs primary key(seq)
+                            id varchar(50) not null,
+                            seq int ,
+                            title varchar(500) not null,
+                            content varchar(4000) not null,
+                            picture int,
+                            hashtag varchar(500),
+                            wdate timestamp,
+                            shopname varchar(100),
+                            address varchar(500),
+                            shopphnum varchar(50),
+                            shopurl varchar(100),
+                            latitude number(12,8),
+                            longtitude number(12,8),
+                            readcnt int,
+                            likecnt int,
+                            constraint pk_eataewonBbs primary key(seq)
 );
 
 ALTER TABLE eataewonBbs ADD CONSTRAINT FK_id FOREIGN KEY(id) REFERENCES eataewonMember(id);

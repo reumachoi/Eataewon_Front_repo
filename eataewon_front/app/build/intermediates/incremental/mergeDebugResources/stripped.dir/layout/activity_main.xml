@@ -53,9 +53,9 @@
             android:background="@drawable/style_edittext"
             android:ems="10"
             android:gravity="center"
-                android:textColor="@color/black"
+            android:textColor="@color/black"
             android:inputType="textPersonName"
-            android:text="아이디"
+            android:hint="아이디"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,6 +81,7 @@
             android:textColor="@color/black"
             android:background="@drawable/style_edittext"
             android:ems="10"
+            android:hint="비밀번호"
             android:gravity="center"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
@@ -162,5 +163,19 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.357"
             app:layout_constraintVertical_bias="0.017"/>
+<Button
+        android:id="@+id/naver_Btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/style_api_btn"
+        android:drawableBottom="@drawable/naver_ic"
+        android:padding="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/google_Btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/google_Btn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
