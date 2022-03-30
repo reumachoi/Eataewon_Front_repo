@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.eataewon.R;
+import com.google.android.gms.common.SignInButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -29,13 +31,13 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button Mypage;
 
   @NonNull
-  public final Button button2;
-
-  @NonNull
-  public final Button googleBtn;
+  public final SignInButton googleSignInButton;
 
   @NonNull
   public final ImageView imageView;
+
+  @NonNull
+  public final ImageButton kakaoLoginButton;
 
   @NonNull
   public final Button loginBtn;
@@ -47,29 +49,25 @@ public final class ActivityMainBinding implements ViewBinding {
   public final EditText loginPw;
 
   @NonNull
-  public final Button naverBtn;
-
-  @NonNull
   public final Button signUpAtivityBtn;
 
   @NonNull
   public final Button testBtn;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView LoginTitle,
-      @NonNull Button Mypage, @NonNull Button button2, @NonNull Button googleBtn,
-      @NonNull ImageView imageView, @NonNull Button loginBtn, @NonNull EditText loginID,
-      @NonNull EditText loginPw, @NonNull Button naverBtn, @NonNull Button signUpAtivityBtn,
+      @NonNull Button Mypage, @NonNull SignInButton googleSignInButton,
+      @NonNull ImageView imageView, @NonNull ImageButton kakaoLoginButton, @NonNull Button loginBtn,
+      @NonNull EditText loginID, @NonNull EditText loginPw, @NonNull Button signUpAtivityBtn,
       @NonNull Button testBtn) {
     this.rootView = rootView;
     this.LoginTitle = LoginTitle;
     this.Mypage = Mypage;
-    this.button2 = button2;
-    this.googleBtn = googleBtn;
+    this.googleSignInButton = googleSignInButton;
     this.imageView = imageView;
+    this.kakaoLoginButton = kakaoLoginButton;
     this.loginBtn = loginBtn;
     this.loginID = loginID;
     this.loginPw = loginPw;
-    this.naverBtn = naverBtn;
     this.signUpAtivityBtn = signUpAtivityBtn;
     this.testBtn = testBtn;
   }
@@ -113,21 +111,21 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.button2;
-      Button button2 = ViewBindings.findChildViewById(rootView, id);
-      if (button2 == null) {
-        break missingId;
-      }
-
-      id = R.id.google_Btn;
-      Button googleBtn = ViewBindings.findChildViewById(rootView, id);
-      if (googleBtn == null) {
+      id = R.id.google_sign_in_button;
+      SignInButton googleSignInButton = ViewBindings.findChildViewById(rootView, id);
+      if (googleSignInButton == null) {
         break missingId;
       }
 
       id = R.id.imageView;
       ImageView imageView = ViewBindings.findChildViewById(rootView, id);
       if (imageView == null) {
+        break missingId;
+      }
+
+      id = R.id.kakao_login_button;
+      ImageButton kakaoLoginButton = ViewBindings.findChildViewById(rootView, id);
+      if (kakaoLoginButton == null) {
         break missingId;
       }
 
@@ -149,12 +147,6 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.naver_Btn;
-      Button naverBtn = ViewBindings.findChildViewById(rootView, id);
-      if (naverBtn == null) {
-        break missingId;
-      }
-
       id = R.id.signUpAtivity_Btn;
       Button signUpAtivityBtn = ViewBindings.findChildViewById(rootView, id);
       if (signUpAtivityBtn == null) {
@@ -167,8 +159,9 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, LoginTitle, Mypage, button2,
-          googleBtn, imageView, loginBtn, loginID, loginPw, naverBtn, signUpAtivityBtn, testBtn);
+      return new ActivityMainBinding((ConstraintLayout) rootView, LoginTitle, Mypage,
+          googleSignInButton, imageView, kakaoLoginButton, loginBtn, loginID, loginPw,
+          signUpAtivityBtn, testBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

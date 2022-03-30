@@ -1,4 +1,13 @@
 ### Android ###
+checksums.lock
+outputFiles.bin
+cache.properties
+taskHistory.bin
+javaCompile.lock
+jarAnalysis.bin
+classAnalysis.bin
+fileHashes.lock
+
 # Gradle files
 .gradle/
 build/

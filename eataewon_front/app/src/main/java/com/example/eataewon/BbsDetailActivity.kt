@@ -62,14 +62,14 @@ class BbsDetailActivity : AppCompatActivity() {
         }
 
         binding.deleteBtn.setOnClickListener {
-            var delete = BbsDao.getInstance().bbsdelete(data!!.seq)
+            /*var delete = BbsDao.getInstance().bbsdelete(data!!.seq)
             if(delete == true){
                 Toast.makeText(this,"글이 삭제되었습니다",Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this,"글삭제를 실패했습니다",Toast.LENGTH_SHORT).show()
             }
             val i = Intent(this,HomeActivity::class.java)
-            startActivity(i)
+            startActivity(i)*/
         }
 
         binding.updateBtn.setOnClickListener {

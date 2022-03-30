@@ -73,7 +73,7 @@ dependencies {
     implementation("com.android.support:appcompat-v7:27.0.0")
 
     //네이버 로그인
-    implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.6'
+    //implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.6'
 
 
 

@@ -48,6 +48,10 @@
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/fragment_bookmark.xml"
     },
     {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_test2.jpg.flat",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/test2.jpg"
+    },
+    {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_cafe4.jpg.flat",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/cafe4.jpg"
     },
@@ -116,16 +120,16 @@
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_test3.jpg.flat",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/test3.jpg"
+    },
+    {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_ic_nevi_search.xml.flat",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/ic_nevi_search.xml"
     },
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/layout_activity_sign.xml.flat",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/activity_sign.xml"
-    },
-    {
-        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/layout_fragment_maps.xml.flat",
@@ -138,6 +142,10 @@
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_style_api_btn.xml.flat",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/style_api_btn.xml"
+    },
+    {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_ic_baseline_bookmark_border_24.xml.flat",
@@ -212,6 +220,10 @@
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/ic_baseline_account_circle_24.xml"
     },
     {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_test1.png.flat",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/test1.png"
+    },
+    {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_cafe1.jpg.flat",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/cafe1.jpg"
     },
@@ -258,6 +270,10 @@
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_ic_navi_write.xml.flat",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/drawable/ic_navi_write.xml"
+    },
+    {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/layout_activity_google.xml.flat",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/activity_google.xml"
     },
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/merged_res/debug/drawable_style_edittext.xml.flat",

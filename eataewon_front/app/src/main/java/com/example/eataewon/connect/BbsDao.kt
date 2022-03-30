@@ -2,25 +2,34 @@ package com.example.eataewon.connect
 
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface BbsService {
 
-        /*//post 보내고 받기
-        @POST("/bbswrite")
-        fun bbswrite(@Body dto:BbsDto) : Call<String>
+    @GET("/getBbsList")
+    fun getBbsList(): Call<List<BbsDto>>
 
-        //get 보내고 받기
-        @GET("/bbswrite")
-        fun bbswrite(@Query("test") dto:BbsDto) : Call<String>*/
+    @POST("/bbsScrap")
+    fun plusBbsScrap(@Body dto:BbsDto): Call<String>
 
-    @GET("/bbsdetail")
-    fun getBbsDetail(@Query("seq") seq:Int) : Call<BbsDto>
+    @POST("/likeBbs")
+    fun plusBbsLike(@Body dto:BbsDto) : Call<String>
 
-     @GET("/getBbsList")
-        fun getBbsList(): Call<List<BbsDto>>
+    @POST("/bbsdetail")
+    fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
 
+    @POST("/bbsdelete")
+    fun bbsdelete(@Body seq:Int) : Call<Boolean>
+
+    //카카오 로컬 검색
+    @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
+    fun getSearchKeyword(
+        @Header("Authorization") key: String,     // 카카오 API 인증키 [필수]
+        @Query("query") query: String             // 검색을 원하는 질의어 [필수]
+        // 매개변수 추가 가능
+        // @Query("category_group_code") category: String
+
+    ): Call<KakaoSearchDto>
 }
 
 class BbsDao {

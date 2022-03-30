@@ -23,6 +23,7 @@ interface MemberService{
     @POST("/bbsGetUser")
     fun bbsGetUser(@Body id:String): Call<MemberBbsDto>
 
+
 }
 
 class MemberDao {

@@ -65,7 +65,6 @@ class WriteActivity : AppCompatActivity() {
 
         shopName.text = searchData?.name
         address.setText(searchData?.road)
-        val searchData = intent.getParcelableExtra<MapSearchListDto>("shopData")
 
         println(searchData.toString())
         /*

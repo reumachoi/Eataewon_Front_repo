@@ -31,6 +31,9 @@ public final class ActivityWriteBinding implements ViewBinding {
   public final HorizontalScrollView horizontalScrollView;
 
   @NonNull
+  public final TextView shopNameT;
+
+  @NonNull
   public final TextView textView;
 
   @NonNull
@@ -61,8 +64,8 @@ public final class ActivityWriteBinding implements ViewBinding {
   public final Button writeWriteBtn;
 
   private ActivityWriteBinding(@NonNull ConstraintLayout rootView, @NonNull FrameLayout frameLayout,
-      @NonNull HorizontalScrollView horizontalScrollView, @NonNull TextView textView,
-      @NonNull EditText writeAddress, @NonNull Button writeAddressBtn,
+      @NonNull HorizontalScrollView horizontalScrollView, @NonNull TextView shopNameT,
+      @NonNull TextView textView, @NonNull EditText writeAddress, @NonNull Button writeAddressBtn,
       @NonNull Button writeCancleBtn, @NonNull EditText writeContent,
       @NonNull EditText writeHashtag, @NonNull Button writeImageBtn,
       @NonNull RecyclerView writeRecyclerview, @NonNull EditText writeTitle,
@@ -70,6 +73,7 @@ public final class ActivityWriteBinding implements ViewBinding {
     this.rootView = rootView;
     this.frameLayout = frameLayout;
     this.horizontalScrollView = horizontalScrollView;
+    this.shopNameT = shopNameT;
     this.textView = textView;
     this.writeAddress = writeAddress;
     this.writeAddressBtn = writeAddressBtn;
@@ -118,6 +122,12 @@ public final class ActivityWriteBinding implements ViewBinding {
       id = R.id.horizontalScrollView;
       HorizontalScrollView horizontalScrollView = ViewBindings.findChildViewById(rootView, id);
       if (horizontalScrollView == null) {
+        break missingId;
+      }
+
+      id = R.id.shopNameT;
+      TextView shopNameT = ViewBindings.findChildViewById(rootView, id);
+      if (shopNameT == null) {
         break missingId;
       }
 
@@ -182,7 +192,7 @@ public final class ActivityWriteBinding implements ViewBinding {
       }
 
       return new ActivityWriteBinding((ConstraintLayout) rootView, frameLayout,
-          horizontalScrollView, textView, writeAddress, writeAddressBtn, writeCancleBtn,
+          horizontalScrollView, shopNameT, textView, writeAddress, writeAddressBtn, writeCancleBtn,
           writeContent, writeHashtag, writeImageBtn, writeRecyclerview, writeTitle, writeWriteBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);

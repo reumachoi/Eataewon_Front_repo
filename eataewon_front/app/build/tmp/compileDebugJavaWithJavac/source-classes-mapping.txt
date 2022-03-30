@@ -32,6 +32,8 @@ com/example/eataewon/databinding/MapListViewLayoutBinding.java
  com.example.eataewon.databinding.MapListViewLayoutBinding
 com/example/eataewon/databinding/DropOutBinding.java
  com.example.eataewon.databinding.DropOutBinding
+com/example/eataewon/databinding/ActivityGoogleBinding.java
+ com.example.eataewon.databinding.ActivityGoogleBinding
 com/example/eataewon/databinding/SearchViewLayoutBinding.java
  com.example.eataewon.databinding.SearchViewLayoutBinding
 com/example/eataewon/databinding/ActivityMainBinding.java

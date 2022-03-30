@@ -4,6 +4,25 @@
             "outputFile": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
+                    "source": "/Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/res/values-v26/values-v26.xml",
+                    "from": {
+                        "startLines": "2,6,10,14",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,253,438,631",
+                        "endLines": "5,9,13,17",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "248,433,626,806"
+                    },
+                    "to": {
+                        "startLines": "17,21,25,29",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "989,1187,1372,1565",
+                        "endLines": "20,24,28,32",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "1182,1367,1560,1740"
+                    }
+                },
+                {
                     "source": "/Users/reuma/.gradle/caches/transforms-3/7c5deaa510384f74c575d75f1cf2038f/transformed/appcompat-1.4.1/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",

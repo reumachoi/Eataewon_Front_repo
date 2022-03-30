@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
-INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
-INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
-INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
+INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
+INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
+INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
 MERGED from [androidx.databinding:viewbinding:7.0.0] /Users/reuma/.gradle/caches/transforms-3/1270f6fb51378b40ca22a0f70eb58491/transformed/jetified-viewbinding-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.kakao.sdk:v2-user:2.9.0] /Users/reuma/.gradle/caches/transforms-3/31b2472c65c9c885d542c1a439fbe76e/transformed/jetified-v2-user-2.9.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.kakao.sdk:v2-talk:2.4.2] /Users/reuma/.gradle/caches/transforms-3/3fe3ae86d2d50d04672f4ebe8a2021e8/transformed/jetified-v2-talk-2.4.2/AndroidManifest.xml:2:1-11:12
@@ -14,10 +14,13 @@ MERGED from [com.kakao.sdk:v2-network:2.9.0] /Users/reuma/.gradle/caches/transfo
 MERGED from [com.kakao.sdk:v2-navi:2.4.2] /Users/reuma/.gradle/caches/transforms-3/47c86d353e3ec1443320c6e91181553a/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml:2:1-16:12
 MERGED from [com.kakao.sdk:v2-template:2.4.2] /Users/reuma/.gradle/caches/transforms-3/0a9bd17402f26d6999b821059c39324a/transformed/jetified-v2-template-2.4.2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:2:1-24:12
-MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:2:1-17:12
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:2:1-109:12
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:17:1-73:12
+MERGED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:17:1-40:12
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:2:1-38:12
 MERGED from [com.google.android.material:material:1.5.0] /Users/reuma/.gradle/caches/transforms-3/0912ddccc249552da3513e8ef1e9972f/transformed/material-1.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/reuma/.gradle/caches/transforms-3/e16e024cc408e6ece23127523b83200f/transformed/constraintlayout-2.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] /Users/reuma/.gradle/caches/transforms-3/af619a8dd6f54136ecf2ddcc0cd445a2/transformed/jetified-library-1.6.1/AndroidManifest.xml:6:1-15:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/reuma/.gradle/caches/transforms-3/7c5deaa510384f74c575d75f1cf2038f/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/reuma/.gradle/caches/transforms-3/5ad6a847b5a8735f8049806a03e3c01a/transformed/jetified-play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:17:1-44:12
@@ -27,27 +30,33 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/reuma/.gradle/caches/t
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/reuma/.gradle/caches/transforms-3/0526e3f86ae448153a058489c707c761/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fae9e38333c7c54c374566d615a157d4/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.7.0] /Users/reuma/.gradle/caches/transforms-3/42fc60361e59ccaff2f8bbb5bcc57e73/transformed/jetified-core-ktx-1.7.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:2:1-21:12
-MERGED from [com.google.firebase:firebase-analytics:20.1.1] /Users/reuma/.gradle/caches/transforms-3/f57003bf8f27bc3e39461649a5c45574/transformed/jetified-firebase-analytics-20.1.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-analytics:20.1.0] /Users/reuma/.gradle/caches/transforms-3/e605fdc86232b2f7409d69e5c3b5462a/transformed/jetified-firebase-analytics-20.1.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:15:1-38:12
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/reuma/.gradle/caches/transforms-3/432a19bf4b99dce3a3bef47ddb511550/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] /Users/reuma/.gradle/caches/transforms-3/785b7fa958ab34107d0cba5d8edf8e1c/transformed/jetified-firebase-appcheck-interop-16.0.0-beta02/AndroidManifest.xml:15:1-26:12
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/reuma/.gradle/caches/transforms-3/1e0976f4bdb7817a09b478fa40ea0d8f/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:15:1-40:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/reuma/.gradle/caches/transforms-3/c576f9d9c512f569642f422425cb6951/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.naver.maps:geometry:1.2.0] /Users/reuma/.gradle/caches/transforms-3/58da80a9c704d9279c62da9dcc6dff70/transformed/jetified-geometry-1.2.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/reuma/.gradle/caches/transforms-3/55a3a6e52c12dec7cd82b2561ce0e4f0/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/reuma/.gradle/caches/transforms-3/cc9f47f8fd26492b5d287de82cce4b7c/transformed/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/reuma/.gradle/caches/transforms-3/bd45e4af4247b9a04019734f7419fa05/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/reuma/.gradle/caches/transforms-3/331b72500285c3b850bb44e20d396f9f/transformed/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/reuma/.gradle/caches/transforms-3/4b7b988411e13c0dff98bca45f3f8e2b/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/reuma/.gradle/caches/transforms-3/17a4e4b2b7429c135b934f1fdbbb2d91/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /Users/reuma/.gradle/caches/transforms-3/13f7ff12bf1ba0c31e59517b931fe07b/transformed/jetified-firebase-installations-interop-17.0.1/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/reuma/.gradle/caches/transforms-3/1214a983da53736a8a5811062a7a7341/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:17:1-46:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5f0c4acba290e9fc35f31e5fbc2d4adb/transformed/jetified-play-services-measurement-sdk-20.1.1/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.0] /Users/reuma/.gradle/caches/transforms-3/d29eb44fa93131b409d073692fc51e17/transformed/jetified-play-services-measurement-sdk-20.1.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:17:1-27:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-measurement-base:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5683e5af989b54a46d49fe17c3612378/transformed/jetified-play-services-measurement-base-20.1.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.0] /Users/reuma/.gradle/caches/transforms-3/89cd989373d04cc12ac1a145e29d65b2/transformed/jetified-play-services-measurement-base-20.1.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/reuma/.gradle/caches/transforms-3/e1c3bb81ec477b4bd07ddd93fb6e68c3/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/reuma/.gradle/caches/transforms-3/0a6f530964ec154a6cfb2da6fbaf28a5/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/reuma/.gradle/caches/transforms-3/8461ca748eb90c075543f18e8d1cd511/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:16:1-26:12
@@ -65,8 +74,8 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/reuma
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/reuma/.gradle/caches/transforms-3/5f11f9e5bf5e29802ca8a9b225aae4ce/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] /Users/reuma/.gradle/caches/transforms-3/64a82348845ee4e7afb0ed8e77ab242e/transformed/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/reuma/.gradle/caches/transforms-3/f9b8c97bdcf0dac537915d4de672f8b3/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/89acac309496b2f2db12f67bb652b969/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/reuma/.gradle/caches/transforms-3/af09f18cf2008241b85bd7bdac3b5f1d/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/89acac309496b2f2db12f67bb652b969/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/reuma/.gradle/caches/transforms-3/533677f749fb019ca93cbf34f4e01246/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.1.0] /Users/reuma/.gradle/caches/transforms-3/4129464751c7e30754d75a1700ac9df6/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/reuma/.gradle/caches/transforms-3/8c0b386f7df0764e0c3666149cc57e52/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -77,40 +86,40 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/reuma/.gradle/ca
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/reuma/.gradle/caches/transforms-3/8089cdf9788ad1beaa61a23ecb58df6d/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/reuma/.gradle/caches/transforms-3/99cb86eb9dbc058ab4a015b2fdc8a0b0/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/reuma/.gradle/caches/transforms-3/7572e5b30f966630cae702f438bf5dea/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/reuma/.gradle/caches/transforms-3/c576f9d9c512f569642f422425cb6951/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/reuma/.gradle/caches/transforms-3/06a9a8a4ed61488f3c2c926e06d0dec6/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/reuma/.gradle/caches/transforms-3/bb021c9a3b4437196cd0d21b7bacbc5f/transformed/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/reuma/.gradle/caches/transforms-3/07d3cdce1d1780be3a9c97691554dcb0/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/reuma/.gradle/caches/transforms-3/8929dc0133dfc4f3a32c5e6435173eba/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:17:1-37:12
-MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/reuma/.gradle/caches/transforms-3/070bd6f25a2d8a16b1fe2bc54c52ade5/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/reuma/.gradle/caches/transforms-3/404c14dd65ef30786f48edfb64bd50e3/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/reuma/.gradle/caches/transforms-3/f70d0d0e12bcd35d752a7db7a2b8638b/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/6d7809427742cc44c9ee03cd8d311a45/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/reuma/.gradle/caches/transforms-3/07d3cdce1d1780be3a9c97691554dcb0/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4a4ce5e4d7795e4635f7e123c253c1e3/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/reuma/.gradle/caches/transforms-3/c1c52881ec4431c2c076853ed0c7088f/transformed/lifecycle-livedata-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/reuma/.gradle/caches/transforms-3/c86762e4cfba0fe1afc4c1eadcfb8a26/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /Users/reuma/.gradle/caches/transforms-3/c3c3dc6092fef2b4bfb301127fe636df/transformed/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:17:1-37:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/reuma/.gradle/caches/transforms-3/e3997bc57d064ce045c740c1ffc41efd/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/reuma/.gradle/caches/transforms-3/715c47e047c7eabd81621dc275a3bdb1/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/reuma/.gradle/caches/transforms-3/070bd6f25a2d8a16b1fe2bc54c52ade5/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/reuma/.gradle/caches/transforms-3/404c14dd65ef30786f48edfb64bd50e3/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/reuma/.gradle/caches/transforms-3/0670e5e6f0c38433b67175312d286fa3/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/6d7809427742cc44c9ee03cd8d311a45/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4299fd5156f47e4e81e027a548615943/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4a4ce5e4d7795e4635f7e123c253c1e3/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] /Users/reuma/.gradle/caches/transforms-3/ebefac4fd19ca1a96811de06a8d2317e/transformed/jetified-relinker-1.4.3/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/reuma/.gradle/caches/transforms-3/d048de0df32c0ce29a56d424309fd63d/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
-INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
-INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
+INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
+INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
+INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
 	package
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:4:11-41
 		INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
 		INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:3:11-57
 	android:versionCode
 		INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-100:12
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:1-104:12
 		INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:2:11-69
@@ -130,22 +139,26 @@ MERGED from [com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transfor
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:12:18-47
 uses-permission#android.permission.INTERNET
 ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:14:5-66
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:13:5-67
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:23:5-67
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:16:5-67
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:16:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:26:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:14:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
@@ -158,22 +171,26 @@ ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:16:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:17:5-78
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:12:5-79
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:24:5-79
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:17:5-79
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:17:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:10:5-79
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:10:5-79
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:24:5-79
 	android:name
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:17:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
@@ -185,11 +202,15 @@ ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/
 	android:name
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:19:22-77
 application
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:21:5-98:19
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:21:5-102:19
 MERGED from [com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:9:5-19:19
 MERGED from [com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:9:5-19:19
-MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:7:5-15:19
-MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:7:5-15:19
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:15:5-107:19
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:15:5-107:19
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:26:5-71:19
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:26:5-71:19
+MERGED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:20:5-36:19
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:20:5-36:19
 MERGED from [com.google.android.material:material:1.5.0] /Users/reuma/.gradle/caches/transforms-3/0912ddccc249552da3513e8ef1e9972f/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
@@ -202,40 +223,46 @@ MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gra
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:36:5-42:19
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/reuma/.gradle/caches/transforms-3/679b7e7482f1be20e0a745c7c9045d53/transformed/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/reuma/.gradle/caches/transforms-3/679b7e7482f1be20e0a745c7c9045d53/transformed/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:11:5-19:19
-MERGED from [com.google.firebase:firebase-analytics:20.1.1] /Users/reuma/.gradle/caches/transforms-3/f57003bf8f27bc3e39461649a5c45574/transformed/jetified-firebase-analytics-20.1.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:20.1.1] /Users/reuma/.gradle/caches/transforms-3/f57003bf8f27bc3e39461649a5c45574/transformed/jetified-firebase-analytics-20.1.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:20.1.0] /Users/reuma/.gradle/caches/transforms-3/e605fdc86232b2f7409d69e5c3b5462a/transformed/jetified-firebase-analytics-20.1.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:20.1.0] /Users/reuma/.gradle/caches/transforms-3/e605fdc86232b2f7409d69e5c3b5462a/transformed/jetified-firebase-analytics-20.1.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:28:5-36:19
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/reuma/.gradle/caches/transforms-3/432a19bf4b99dce3a3bef47ddb511550/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/reuma/.gradle/caches/transforms-3/432a19bf4b99dce3a3bef47ddb511550/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] /Users/reuma/.gradle/caches/transforms-3/785b7fa958ab34107d0cba5d8edf8e1c/transformed/jetified-firebase-appcheck-interop-16.0.0-beta02/AndroidManifest.xml:24:5-20
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] /Users/reuma/.gradle/caches/transforms-3/785b7fa958ab34107d0cba5d8edf8e1c/transformed/jetified-firebase-appcheck-interop-16.0.0-beta02/AndroidManifest.xml:24:5-20
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/reuma/.gradle/caches/transforms-3/1e0976f4bdb7817a09b478fa40ea0d8f/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/reuma/.gradle/caches/transforms-3/1e0976f4bdb7817a09b478fa40ea0d8f/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:25:5-38:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/reuma/.gradle/caches/transforms-3/55a3a6e52c12dec7cd82b2561ce0e4f0/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/reuma/.gradle/caches/transforms-3/55a3a6e52c12dec7cd82b2561ce0e4f0/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/reuma/.gradle/caches/transforms-3/bd45e4af4247b9a04019734f7419fa05/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/reuma/.gradle/caches/transforms-3/bd45e4af4247b9a04019734f7419fa05/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/reuma/.gradle/caches/transforms-3/17a4e4b2b7429c135b934f1fdbbb2d91/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/reuma/.gradle/caches/transforms-3/17a4e4b2b7429c135b934f1fdbbb2d91/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/reuma/.gradle/caches/transforms-3/1214a983da53736a8a5811062a7a7341/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/reuma/.gradle/caches/transforms-3/1214a983da53736a8a5811062a7a7341/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5f0c4acba290e9fc35f31e5fbc2d4adb/transformed/jetified-play-services-measurement-sdk-20.1.1/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5f0c4acba290e9fc35f31e5fbc2d4adb/transformed/jetified-play-services-measurement-sdk-20.1.1/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:29:5-30:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:29:5-30:19
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.0] /Users/reuma/.gradle/caches/transforms-3/d29eb44fa93131b409d073692fc51e17/transformed/jetified-play-services-measurement-sdk-20.1.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.0] /Users/reuma/.gradle/caches/transforms-3/d29eb44fa93131b409d073692fc51e17/transformed/jetified-play-services-measurement-sdk-20.1.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:28:5-29:19
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5683e5af989b54a46d49fe17c3612378/transformed/jetified-play-services-measurement-base-20.1.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5683e5af989b54a46d49fe17c3612378/transformed/jetified-play-services-measurement-base-20.1.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.0] /Users/reuma/.gradle/caches/transforms-3/89cd989373d04cc12ac1a145e29d65b2/transformed/jetified-play-services-measurement-base-20.1.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.0] /Users/reuma/.gradle/caches/transforms-3/89cd989373d04cc12ac1a145e29d65b2/transformed/jetified-play-services-measurement-base-20.1.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/reuma/.gradle/caches/transforms-3/e1c3bb81ec477b4bd07ddd93fb6e68c3/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/reuma/.gradle/caches/transforms-3/e1c3bb81ec477b4bd07ddd93fb6e68c3/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/reuma/.gradle/caches/transforms-3/0a6f530964ec154a6cfb2da6fbaf28a5/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
@@ -300,80 +327,88 @@ ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:44:17-65
 	android:name
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:43:17-52
-activity#com.example.eataewon.MainActivity
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:46:9-54:20
+activity#com.example.eataewon.SecondActivity
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:46:9-49:48
 	android:exported
 		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:48:17-40
+	tools:ignore
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:49:17-46
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:47:17-45
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:49:13-53:29
-action#android.intent.action.MAIN
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:50:17-68
-	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:50:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:52:17-76
-	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:52:27-74
-activity#com.example.eataewon.SearchKakaoMapActivity
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:55:9-57:42
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:47:17-67
+activity#com.example.eataewon.MainActivity
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:50:9-58:20
 	android:exported
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:57:17-40
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:52:17-40
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:17-55
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:51:17-65
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:53:13-57:29
+action#android.intent.action.MAIN
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:17-68
+	android:name
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:54:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:17-76
+	android:name
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:56:27-74
+activity#com.example.eataewon.SearchKakaoMapActivity
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:59:9-61:42
+	android:exported
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:61:17-40
+	android:name
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:60:17-55
 activity#com.kakao.sdk.auth.AuthCodeHandlerActivity
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:58:9-71:20
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:62:9-75:20
 MERGED from [com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:15:9-18:56
 MERGED from [com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:15:9-18:56
 	android:launchMode
 		ADDED from [com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:17:13-44
 	android:exported
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:60:17-40
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:64:17-40
 	android:theme
 		ADDED from [com.kakao.sdk:v2-auth:2.9.0] /Users/reuma/.gradle/caches/transforms-3/3d5f304e42037944d35d2991746e6809/transformed/jetified-v2-auth-2.9.0/AndroidManifest.xml:18:13-53
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:59:17-74
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:63:17-74
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:oauth+data:scheme:kakaoa05f68a3850359a6d8c92e79cdc0d8cb
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:61:13-70:29
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:65:13-74:29
 action#android.intent.action.VIEW
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:62:17-68
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:17-68
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:62:25-66
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:66:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:64:17-75
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:17-75
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:64:27-73
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:65:17-77
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:17-77
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:65:27-75
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:27-75
 data
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:67:17-69:81
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:71:17-73:81
 	android:host
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:68:25-45
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:25-45
 	android:scheme
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:69:25-79
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:25-79
 activity#com.example.eataewon.SignActivity
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:72:9-74:42
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:76:9-78:42
 	android:exported
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:74:17-40
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:78:17-40
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:73:17-45
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:77:17-45
 activity#com.example.eataewon.HomeActivity
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:75:9-83:20
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:79:9-87:20
 	android:exported
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:77:17-40
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:81:17-40
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:76:17-45
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:80:17-45
 activity#com.example.eataewon.BbsDetailActivity
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:84:9-97:20
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:88:9-101:20
 	android:exported
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:86:17-40
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:90:17-40
 	android:name
-		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:85:17-50
+		ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:89:17-70
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:kakaolink+data:scheme:803510af840ec6fd9c1aefe41148b4e5
-ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:87:13-96:29
+ADDED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml:91:13-100:29
 uses-sdk
 INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/AndroidManifest.xml
@@ -398,14 +433,20 @@ MERGED from [com.kakao.sdk:v2-template:2.4.2] /Users/reuma/.gradle/caches/transf
 MERGED from [com.kakao.sdk:v2-template:2.4.2] /Users/reuma/.gradle/caches/transforms-3/0a9bd17402f26d6999b821059c39324a/transformed/jetified-v2-template-2.4.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.5.0] /Users/reuma/.gradle/caches/transforms-3/0912ddccc249552da3513e8ef1e9972f/transformed/material-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.5.0] /Users/reuma/.gradle/caches/transforms-3/0912ddccc249552da3513e8ef1e9972f/transformed/material-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/reuma/.gradle/caches/transforms-3/e16e024cc408e6ece23127523b83200f/transformed/constraintlayout-2.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/reuma/.gradle/caches/transforms-3/e16e024cc408e6ece23127523b83200f/transformed/constraintlayout-2.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] /Users/reuma/.gradle/caches/transforms-3/af619a8dd6f54136ecf2ddcc0cd445a2/transformed/jetified-library-1.6.1/AndroidManifest.xml:11:5-13:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] /Users/reuma/.gradle/caches/transforms-3/af619a8dd6f54136ecf2ddcc0cd445a2/transformed/jetified-library-1.6.1/AndroidManifest.xml:11:5-13:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/reuma/.gradle/caches/transforms-3/7c5deaa510384f74c575d75f1cf2038f/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/reuma/.gradle/caches/transforms-3/7c5deaa510384f74c575d75f1cf2038f/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/reuma/.gradle/caches/transforms-3/5ad6a847b5a8735f8049806a03e3c01a/transformed/jetified-play-services-location-17.0.0/AndroidManifest.xml:5:5-44
@@ -424,26 +465,38 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/reuma/.gradle/cache
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fae9e38333c7c54c374566d615a157d4/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-ktx:1.7.0] /Users/reuma/.gradle/caches/transforms-3/42fc60361e59ccaff2f8bbb5bcc57e73/transformed/jetified-core-ktx-1.7.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.7.0] /Users/reuma/.gradle/caches/transforms-3/42fc60361e59ccaff2f8bbb5bcc57e73/transformed/jetified-core-ktx-1.7.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-analytics:20.1.1] /Users/reuma/.gradle/caches/transforms-3/f57003bf8f27bc3e39461649a5c45574/transformed/jetified-firebase-analytics-20.1.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:20.1.1] /Users/reuma/.gradle/caches/transforms-3/f57003bf8f27bc3e39461649a5c45574/transformed/jetified-firebase-analytics-20.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:20.1.0] /Users/reuma/.gradle/caches/transforms-3/e605fdc86232b2f7409d69e5c3b5462a/transformed/jetified-firebase-analytics-20.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:20.1.0] /Users/reuma/.gradle/caches/transforms-3/e605fdc86232b2f7409d69e5c3b5462a/transformed/jetified-firebase-analytics-20.1.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/reuma/.gradle/caches/transforms-3/432a19bf4b99dce3a3bef47ddb511550/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/reuma/.gradle/caches/transforms-3/432a19bf4b99dce3a3bef47ddb511550/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] /Users/reuma/.gradle/caches/transforms-3/785b7fa958ab34107d0cba5d8edf8e1c/transformed/jetified-firebase-appcheck-interop-16.0.0-beta02/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] /Users/reuma/.gradle/caches/transforms-3/785b7fa958ab34107d0cba5d8edf8e1c/transformed/jetified-firebase-appcheck-interop-16.0.0-beta02/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/reuma/.gradle/caches/transforms-3/1e0976f4bdb7817a09b478fa40ea0d8f/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/reuma/.gradle/caches/transforms-3/1e0976f4bdb7817a09b478fa40ea0d8f/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/reuma/.gradle/caches/transforms-3/c576f9d9c512f569642f422425cb6951/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/reuma/.gradle/caches/transforms-3/c576f9d9c512f569642f422425cb6951/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.naver.maps:geometry:1.2.0] /Users/reuma/.gradle/caches/transforms-3/58da80a9c704d9279c62da9dcc6dff70/transformed/jetified-geometry-1.2.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.naver.maps:geometry:1.2.0] /Users/reuma/.gradle/caches/transforms-3/58da80a9c704d9279c62da9dcc6dff70/transformed/jetified-geometry-1.2.0/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/reuma/.gradle/caches/transforms-3/55a3a6e52c12dec7cd82b2561ce0e4f0/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/reuma/.gradle/caches/transforms-3/55a3a6e52c12dec7cd82b2561ce0e4f0/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/reuma/.gradle/caches/transforms-3/cc9f47f8fd26492b5d287de82cce4b7c/transformed/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/reuma/.gradle/caches/transforms-3/cc9f47f8fd26492b5d287de82cce4b7c/transformed/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/reuma/.gradle/caches/transforms-3/bd45e4af4247b9a04019734f7419fa05/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/reuma/.gradle/caches/transforms-3/bd45e4af4247b9a04019734f7419fa05/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/reuma/.gradle/caches/transforms-3/331b72500285c3b850bb44e20d396f9f/transformed/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/reuma/.gradle/caches/transforms-3/331b72500285c3b850bb44e20d396f9f/transformed/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/reuma/.gradle/caches/transforms-3/4b7b988411e13c0dff98bca45f3f8e2b/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/reuma/.gradle/caches/transforms-3/4b7b988411e13c0dff98bca45f3f8e2b/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
@@ -454,18 +507,18 @@ MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /Users/r
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /Users/reuma/.gradle/caches/transforms-3/13f7ff12bf1ba0c31e59517b931fe07b/transformed/jetified-firebase-installations-interop-17.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/reuma/.gradle/caches/transforms-3/1214a983da53736a8a5811062a7a7341/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/reuma/.gradle/caches/transforms-3/1214a983da53736a8a5811062a7a7341/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5f0c4acba290e9fc35f31e5fbc2d4adb/transformed/jetified-play-services-measurement-sdk-20.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5f0c4acba290e9fc35f31e5fbc2d4adb/transformed/jetified-play-services-measurement-sdk-20.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.0] /Users/reuma/.gradle/caches/transforms-3/d29eb44fa93131b409d073692fc51e17/transformed/jetified-play-services-measurement-sdk-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.1.0] /Users/reuma/.gradle/caches/transforms-3/d29eb44fa93131b409d073692fc51e17/transformed/jetified-play-services-measurement-sdk-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5683e5af989b54a46d49fe17c3612378/transformed/jetified-play-services-measurement-base-20.1.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:20.1.1] /Users/reuma/.gradle/caches/transforms-3/5683e5af989b54a46d49fe17c3612378/transformed/jetified-play-services-measurement-base-20.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.0] /Users/reuma/.gradle/caches/transforms-3/89cd989373d04cc12ac1a145e29d65b2/transformed/jetified-play-services-measurement-base-20.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.0] /Users/reuma/.gradle/caches/transforms-3/89cd989373d04cc12ac1a145e29d65b2/transformed/jetified-play-services-measurement-base-20.1.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/reuma/.gradle/caches/transforms-3/e1c3bb81ec477b4bd07ddd93fb6e68c3/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/reuma/.gradle/caches/transforms-3/e1c3bb81ec477b4bd07ddd93fb6e68c3/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/reuma/.gradle/caches/transforms-3/0a6f530964ec154a6cfb2da6fbaf28a5/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
@@ -500,10 +553,10 @@ MERGED from [androidx.media:media:1.0.0] /Users/reuma/.gradle/caches/transforms-
 MERGED from [androidx.media:media:1.0.0] /Users/reuma/.gradle/caches/transforms-3/64a82348845ee4e7afb0ed8e77ab242e/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/reuma/.gradle/caches/transforms-3/f9b8c97bdcf0dac537915d4de672f8b3/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/reuma/.gradle/caches/transforms-3/f9b8c97bdcf0dac537915d4de672f8b3/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/89acac309496b2f2db12f67bb652b969/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/89acac309496b2f2db12f67bb652b969/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/reuma/.gradle/caches/transforms-3/af09f18cf2008241b85bd7bdac3b5f1d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/reuma/.gradle/caches/transforms-3/af09f18cf2008241b85bd7bdac3b5f1d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/89acac309496b2f2db12f67bb652b969/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/89acac309496b2f2db12f67bb652b969/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/reuma/.gradle/caches/transforms-3/533677f749fb019ca93cbf34f4e01246/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/reuma/.gradle/caches/transforms-3/533677f749fb019ca93cbf34f4e01246/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.1.0] /Users/reuma/.gradle/caches/transforms-3/4129464751c7e30754d75a1700ac9df6/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -524,38 +577,38 @@ MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/reuma/.gradle/caches/t
 MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/reuma/.gradle/caches/transforms-3/99cb86eb9dbc058ab4a015b2fdc8a0b0/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/reuma/.gradle/caches/transforms-3/7572e5b30f966630cae702f438bf5dea/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/reuma/.gradle/caches/transforms-3/7572e5b30f966630cae702f438bf5dea/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/reuma/.gradle/caches/transforms-3/c576f9d9c512f569642f422425cb6951/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/reuma/.gradle/caches/transforms-3/c576f9d9c512f569642f422425cb6951/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/reuma/.gradle/caches/transforms-3/06a9a8a4ed61488f3c2c926e06d0dec6/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/reuma/.gradle/caches/transforms-3/06a9a8a4ed61488f3c2c926e06d0dec6/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/reuma/.gradle/caches/transforms-3/bb021c9a3b4437196cd0d21b7bacbc5f/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/reuma/.gradle/caches/transforms-3/bb021c9a3b4437196cd0d21b7bacbc5f/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/reuma/.gradle/caches/transforms-3/07d3cdce1d1780be3a9c97691554dcb0/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/reuma/.gradle/caches/transforms-3/07d3cdce1d1780be3a9c97691554dcb0/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/reuma/.gradle/caches/transforms-3/8929dc0133dfc4f3a32c5e6435173eba/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/reuma/.gradle/caches/transforms-3/8929dc0133dfc4f3a32c5e6435173eba/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/reuma/.gradle/caches/transforms-3/070bd6f25a2d8a16b1fe2bc54c52ade5/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/reuma/.gradle/caches/transforms-3/070bd6f25a2d8a16b1fe2bc54c52ade5/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/reuma/.gradle/caches/transforms-3/404c14dd65ef30786f48edfb64bd50e3/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/reuma/.gradle/caches/transforms-3/404c14dd65ef30786f48edfb64bd50e3/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/reuma/.gradle/caches/transforms-3/f70d0d0e12bcd35d752a7db7a2b8638b/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/reuma/.gradle/caches/transforms-3/f70d0d0e12bcd35d752a7db7a2b8638b/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/6d7809427742cc44c9ee03cd8d311a45/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/6d7809427742cc44c9ee03cd8d311a45/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/reuma/.gradle/caches/transforms-3/07d3cdce1d1780be3a9c97691554dcb0/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/reuma/.gradle/caches/transforms-3/07d3cdce1d1780be3a9c97691554dcb0/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4a4ce5e4d7795e4635f7e123c253c1e3/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4a4ce5e4d7795e4635f7e123c253c1e3/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/reuma/.gradle/caches/transforms-3/c1c52881ec4431c2c076853ed0c7088f/transformed/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/reuma/.gradle/caches/transforms-3/c1c52881ec4431c2c076853ed0c7088f/transformed/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/reuma/.gradle/caches/transforms-3/c86762e4cfba0fe1afc4c1eadcfb8a26/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/reuma/.gradle/caches/transforms-3/c86762e4cfba0fe1afc4c1eadcfb8a26/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /Users/reuma/.gradle/caches/transforms-3/c3c3dc6092fef2b4bfb301127fe636df/transformed/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /Users/reuma/.gradle/caches/transforms-3/c3c3dc6092fef2b4bfb301127fe636df/transformed/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/reuma/.gradle/caches/transforms-3/e3997bc57d064ce045c740c1ffc41efd/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/reuma/.gradle/caches/transforms-3/e3997bc57d064ce045c740c1ffc41efd/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/reuma/.gradle/caches/transforms-3/715c47e047c7eabd81621dc275a3bdb1/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/reuma/.gradle/caches/transforms-3/715c47e047c7eabd81621dc275a3bdb1/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/reuma/.gradle/caches/transforms-3/070bd6f25a2d8a16b1fe2bc54c52ade5/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/reuma/.gradle/caches/transforms-3/070bd6f25a2d8a16b1fe2bc54c52ade5/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/reuma/.gradle/caches/transforms-3/404c14dd65ef30786f48edfb64bd50e3/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/reuma/.gradle/caches/transforms-3/404c14dd65ef30786f48edfb64bd50e3/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/reuma/.gradle/caches/transforms-3/0670e5e6f0c38433b67175312d286fa3/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/reuma/.gradle/caches/transforms-3/0670e5e6f0c38433b67175312d286fa3/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/6d7809427742cc44c9ee03cd8d311a45/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/reuma/.gradle/caches/transforms-3/6d7809427742cc44c9ee03cd8d311a45/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4299fd5156f47e4e81e027a548615943/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4299fd5156f47e4e81e027a548615943/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4a4ce5e4d7795e4635f7e123c253c1e3/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/reuma/.gradle/caches/transforms-3/4a4ce5e4d7795e4635f7e123c253c1e3/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] /Users/reuma/.gradle/caches/transforms-3/ebefac4fd19ca1a96811de06a8d2317e/transformed/jetified-relinker-1.4.3/AndroidManifest.xml:5:5-43
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] /Users/reuma/.gradle/caches/transforms-3/ebefac4fd19ca1a96811de06a8d2317e/transformed/jetified-relinker-1.4.3/AndroidManifest.xml:5:5-43
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/reuma/.gradle/caches/transforms-3/d048de0df32c0ce29a56d424309fd63d/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -602,34 +655,248 @@ ADDED from [com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transform
 		ADDED from [com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:13:18-50
 intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
 ADDED from [com.kakao.sdk:v2-common:2.9.0] /Users/reuma/.gradle/caches/transforms-3/025e40eaac7266dac0b72b0fdc8ea6ea/transformed/jetified-v2-common-2.9.0/AndroidManifest.xml:15:9-21:18
+meta-data#com.google.android.gms.version
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:16:9-18:69
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/reuma/.gradle/caches/transforms-3/8461ca748eb90c075543f18e8d1cd511/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/reuma/.gradle/caches/transforms-3/8461ca748eb90c075543f18e8d1cd511/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:18:13-66
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:17:13-58
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:19:9-21:63
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:21:13-60
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:20:13-58
+activity#com.firebase.ui.auth.KickoffActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:23:9-27:61
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:26:13-29
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:27:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:24:13-64
+activity#com.firebase.ui.auth.ui.idp.SingleSignInActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:28:9-32:61
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:31:13-29
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:30:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:32:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:29:13-76
+activity#com.firebase.ui.auth.ui.credentials.CredentialSaveActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:33:9-37:61
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:36:13-29
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:35:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:37:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:34:13-86
+activity#com.firebase.ui.auth.ui.email.RecoverPasswordActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:38:9-42:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:41:13-72
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:42:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:39:13-81
+activity#com.firebase.ui.auth.ui.email.EmailActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:43:9-47:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:46:13-56
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:47:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:45:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:44:13-71
+activity#com.firebase.ui.auth.ui.phone.PhoneActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:48:9-52:77
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:51:13-66
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:52:13-74
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:50:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:49:13-71
+activity#com.firebase.ui.auth.ui.idp.WelcomeBackIdpPrompt
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:53:9-57:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:56:13-70
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:57:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:55:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:54:13-76
+activity#com.firebase.ui.auth.ui.email.WelcomeBackPasswordPrompt
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:58:9-62:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:61:13-75
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:62:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:60:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:59:13-83
+activity#com.firebase.ui.auth.ui.email.WelcomeBackEmailLinkPrompt
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:63:9-67:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:66:13-75
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:67:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:65:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:64:13-84
+activity#com.firebase.ui.auth.ui.email.EmailLinkCatcherActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:68:9-73:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:71:13-29
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:73:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:70:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:72:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:69:13-82
+activity#com.firebase.ui.auth.ui.email.EmailLinkErrorRecoveryActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:74:9-78:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:77:13-56
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:78:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:76:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:75:13-88
+activity#com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:79:9-82:65
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:82:13-62
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:81:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:80:13-80
+activity#com.facebook.FacebookActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:83:9-87:48
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:86:13-45
+	tools:ignore
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:87:13-45
+	android:configChanges
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:85:13-96
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:84:13-57
+activity#com.facebook.CustomTabActivity
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:88:9-100:20
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:90:13-36
+	tools:ignore
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:91:13-45
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:89:13-58
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/facebook_login_protocol_scheme
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:92:13-99:29
+provider#com.firebase.ui.auth.data.client.AuthUiInitProvider
+ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:102:9-106:38
+	android:authorities
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:104:13-70
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:105:13-37
+	android:initOrder
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:106:13-35
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] /Users/reuma/.gradle/caches/transforms-3/6175f99f3e48948d4575631d34eedd07/transformed/jetified-firebase-ui-auth-7.2.0/AndroidManifest.xml:103:13-79
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:27:9-44:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:29:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:31:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:30:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:32:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:28:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:33:13-43:29
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:45:9-62:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:47:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:49:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:48:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:50:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:46:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:51:13-61:29
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:8:9-14:19
+ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:64:9-70:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/aef2fa388fa8096e2dd27897b82a18cb/transformed/jetified-firebase-common-ktx-20.1.0/AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:28:9-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:15:9-21:19
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:15:9-21:19
 MERGED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:33:9-37:35
 MERGED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:33:9-37:35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:10:13-37
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:66:13-37
 	tools:targetApi
 		ADDED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:37:13-32
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.1.0] /Users/reuma/.gradle/caches/transforms-3/46be7e38bc9b9125347486e49964aaea/transformed/jetified-firebase-common-20.1.0/AndroidManifest.xml:35:13-43
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:9:13-84
-meta-data#com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar
-ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:11:13-13:85
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:65:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:67:13-69:85
 	android:value
-		ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:13:17-82
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:69:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.1] /Users/reuma/.gradle/caches/transforms-3/16fb5a7fe9bfcae5c5bc527dd42124b7/transformed/jetified-firebase-analytics-ktx-20.1.1/AndroidManifest.xml:12:17-126
+		ADDED from [com.google.firebase:firebase-auth:21.0.2] /Users/reuma/.gradle/caches/transforms-3/79890c01c3e2494dcf8152976042183e/transformed/jetified-firebase-auth-21.0.2/AndroidManifest.xml:68:17-109
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /Users/reuma/.gradle/caches/transforms-3/e7e87fb81b809f28fc238cde127cc45b/transformed/jetified-play-services-auth-19.0.0/AndroidManifest.xml:34:13-89
 uses-feature#0x00020000
 ADDED from [com.naver.maps:map-sdk:3.14.0] /Users/reuma/.gradle/caches/transforms-3/52a42ee4bb87aa67aaf551d28f2dee67/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:9:5-11:35
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
@@ -688,6 +955,12 @@ ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.grad
 		ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
 	android:name
 		ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/reuma/.gradle/caches/transforms-3/c6673d5fe8c93ea274c064fbbbc07531/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
+meta-data#com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar
+ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics-ktx:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9e62232819eec121f0e6225a04c72279/transformed/jetified-firebase-analytics-ktx-20.1.0/AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar
 ADDED from [com.google.firebase:firebase-database-ktx:20.0.4] /Users/reuma/.gradle/caches/transforms-3/952840bbe132ae74660b662d24d77f01/transformed/jetified-firebase-database-ktx-20.0.4/AndroidManifest.xml:15:13-17:85
 	android:value
@@ -707,31 +980,21 @@ ADDED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/c
 	android:name
 		ADDED from [com.google.firebase:firebase-database:20.0.4] /Users/reuma/.gradle/caches/transforms-3/1ed5af12618cb15afedacf05f78b0bfd/transformed/jetified-firebase-database-20.0.4/AndroidManifest.xml:33:17-109
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:25:5-68
+ADDED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/0d3ece2b334e228d4ef521fd22600086/transformed/jetified-play-services-measurement-sdk-api-20.1.0/AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:24:22-65
-uses-permission#com.google.android.gms.permission.AD_ID
-ADDED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:27:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:27:5-79
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/49de7ac02a3f6dc0a915abbd64d12ff5/transformed/jetified-play-services-measurement-sdk-api-20.1.1/AndroidManifest.xml:26:5-79
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:25:22-76
+		ADDED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:24:22-65
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:31:13-33:85
+ADDED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:30:13-32:85
 	android:value
-		ADDED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:33:17-82
+		ADDED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:32:17-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:20.1.1] /Users/reuma/.gradle/caches/transforms-3/470f339dfd8cce0ad1243f829a1218f9/transformed/jetified-play-services-measurement-api-20.1.1/AndroidManifest.xml:32:17-139
+		ADDED from [com.google.android.gms:play-services-measurement-api:20.1.0] /Users/reuma/.gradle/caches/transforms-3/a4ffd2794496e7586cc2629bdc226291/transformed/jetified-play-services-measurement-api-20.1.0/AndroidManifest.xml:31:17-139
 meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
 ADDED from [com.google.firebase:firebase-installations:17.0.1] /Users/reuma/.gradle/caches/transforms-3/04cc560961cfd55e66891f138c96cdce/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
 	android:value
@@ -759,43 +1022,41 @@ ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.grad
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/reuma/.gradle/caches/transforms-3/18bcbea718e4275b2eeb72670e4ccb87/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4b8345f189121e4352ad472517920702/transformed/jetified-play-services-measurement-impl-20.1.1/AndroidManifest.xml:26:5-110
+ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] /Users/reuma/.gradle/caches/transforms-3/9cfb19170051368e216ae522eff522a5/transformed/jetified-play-services-measurement-impl-20.1.0/AndroidManifest.xml:26:5-110
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:26:22-107
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:29:9-33:20
+ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:29:9-33:20
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:31:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:32:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:30:13-85
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:30:13-85
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:35:9-38:40
+ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:35:9-38:40
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:37:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:37:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:38:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:36:13-84
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:36:13-84
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:39:9-43:72
+ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:39:9-43:72
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:41:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:41:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:42:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:42:13-37
 	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:43:13-69
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:43:13-69
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:20.1.1] /Users/reuma/.gradle/caches/transforms-3/4305d3dbfb8fba4d3eca3e6f1e594a5e/transformed/jetified-play-services-measurement-20.1.1/AndroidManifest.xml:40:13-87
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.0.0] /Users/reuma/.gradle/caches/transforms-3/8461ca748eb90c075543f18e8d1cd511/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] /Users/reuma/.gradle/caches/transforms-3/8461ca748eb90c075543f18e8d1cd511/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-measurement:20.1.0] /Users/reuma/.gradle/caches/transforms-3/2d8944b763e0b377c82a4773c98690bb/transformed/jetified-play-services-measurement-20.1.0/AndroidManifest.xml:40:13-87
+uses-permission#com.google.android.gms.permission.AD_ID
+ADDED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] /Users/reuma/.gradle/caches/transforms-3/8461ca748eb90c075543f18e8d1cd511/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/reuma/.gradle/caches/transforms-3/2ffe507a9f4175aa867189d964441bad/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:22-76
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/reuma/.gradle/caches/transforms-3/fd516be817c82f6958dbddf150741198/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/reuma/.gradle/caches/transforms-3/bb26688cb1b9ddcd69f0aabf211e1cdf/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20

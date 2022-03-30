@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_google.xml",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/activity_google.xml"
+    },
+    {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_second.xml",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/activity_second.xml"
     },
