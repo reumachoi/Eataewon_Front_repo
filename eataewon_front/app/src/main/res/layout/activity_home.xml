@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="823dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"></FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!--        tools:context=".MainActivity"
+        tools:ignore="ExtraText">
+
+<EditText
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:inputType="textPersonName"
+android:text="ID"
+android:ems="10"
+android:id="@+id/userId"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintHorizontal_bias="0.502"
+app:layout_constraintVertical_bias="0.523"/>
+<Button
+android:text="PW 찾기"
+android:layout_width="90dp"
+android:layout_height="45dp" android:id="@+id/PwSearch"
+app:layout_constraintTop_toBottomOf="@+id/sign" app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintHorizontal_bias="0.635" app:layout_constraintVertical_bias="0.055"
+app:layout_constraintStart_toStartOf="parent"/>
+<EditText
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:inputType="textPersonName"
+android:text="PW"
+android:ems="10"
+android:id="@+id/userPw"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintHorizontal_bias="0.502"
+app:layout_constraintVertical_bias="0.078"
+app:layout_constraintTop_toBottomOf="@+id/userId"/>
+<Button
+android:text="Google로 회원가입"
+android:layout_width="200dp"
+android:layout_height="45dp"
+android:id="@+id/GoogleLinkage"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintHorizontal_bias="0.478" app:layout_constraintTop_toBottomOf="@+id/IdSearch"
+app:layout_constraintVertical_bias="0.0"/>
+<Button
+android:text="ID 찾기"
+android:layout_width="90dp"
+android:layout_height="45dp" android:id="@+id/IdSearch"
+app:layout_constraintTop_toBottomOf="@+id/sign"
+app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintHorizontal_bias="0.355" app:layout_constraintVertical_bias="0.055"
+app:layout_constraintEnd_toEndOf="parent"/>
+<Button
+android:text="회원가입"
+android:layout_width="200dp"
+android:layout_height="40dp"
+android:id="@+id/sign"
+app:layout_constraintTop_toBottomOf="@+id/userPw"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintVertical_bias="0.218" app:layout_constraintHorizontal_bias="0.478"/>
+<Button
+android:text="로그인"
+android:layout_width="80dp"
+android:layout_height="70dp" android:id="@+id/Login"
+app:layout_constraintStart_toEndOf="@+id/userId" app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintHorizontal_bias="0.3" app:layout_constraintVertical_bias="0.574"/>
+<TextView
+android:text="PW"
+android:layout_width="64dp"
+android:layout_height="39dp"
+android:id="@+id/pwtext"
+app:layout_constraintEnd_toStartOf="@+id/userPw"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintHorizontal_bias="0.459"
+app:layout_constraintVertical_bias="0.131"
+app:layout_constraintTop_toBottomOf="@+id/idtext"/>
+<Button
+android:text="Kakao로 회원가입"
+android:layout_width="200dp"
+android:layout_height="45dp" android:id="@+id/KakaoLinkage"
+app:layout_constraintTop_toBottomOf="@+id/GoogleLinkage" app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintHorizontal_bias="0.478" app:layout_constraintVertical_bias="0.0"/>
+<TextView
+android:text="ID"
+android:layout_width="64dp"
+android:layout_height="39dp"
+android:id="@+id/idtext"
+app:layout_constraintEnd_toStartOf="@+id/userId"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintHorizontal_bias="0.459"
+app:layout_constraintVertical_bias="0.515"/>
+<ImageView
+android:layout_width="288dp"
+android:layout_height="222dp"
+tools:srcCompat="@tools:sample/avatars"
+android:id="@+id/imageView"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintBottom_toTopOf="@+id/userId"
+app:layout_constraintHorizontal_bias="0.498"
+app:layout_constraintVertical_bias="0.377"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
