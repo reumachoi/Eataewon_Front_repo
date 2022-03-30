@@ -1,7 +1,5 @@
 package com.example.eataewon.connect
 
-
-import com.example.eataewon.KakaoSearchDto
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*

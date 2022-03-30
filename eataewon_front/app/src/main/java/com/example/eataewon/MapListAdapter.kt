@@ -23,7 +23,6 @@ class MapListAdapter(val itemList: ArrayList<MapSearchListDto>):
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.name.text = itemList[position].name
         holder.road.text = itemList[position].road
-        holder.address.text = itemList[position].address
 
         // 아이템 클릭 이벤트
         holder.itemView.setOnClickListener {

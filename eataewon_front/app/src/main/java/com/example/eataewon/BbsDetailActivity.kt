@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
@@ -101,7 +102,10 @@ class BbsDetailActivity : AppCompatActivity() {
             }
         }
 
-        binding.seeMapBtn.setOnClickListener {
+        binding.showDetailShop.setOnClickListener {
+
+            binding.mapContent.isVisible = true
+            binding.showDetailShopField.isVisible = true
 
           val naverMapFragment = NaverMapFragment()
             supportFragmentManager.beginTransaction()

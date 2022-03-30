@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.eataewon.connect.BbsService
+import com.example.eataewon.connect.KakaoSearchDto
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.databinding.ActivityKakaoMapBinding
 import net.daum.mf.map.api.MapPOIItem
@@ -123,7 +124,8 @@ class SearchKakaoMapActivity : AppCompatActivity() {
                 // 결과를 리사이클러 뷰에 추가
                 val item = MapSearchListDto(document.place_name,
                     document.road_address_name,
-                    document.address_name,
+                    document.phone,
+                    document.place_url,
                     document.x.toDouble(),
                     document.y.toDouble())
                 listItems.add(item)

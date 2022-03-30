@@ -1,5 +1,6 @@
 package com.example.eataewon
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -23,11 +24,13 @@ class HomeActivity : AppCompatActivity() {
         bundle.putParcelable("user",user)
         mypageFragment.arguments = bundle
 
+        var i = Intent(this,WriteActivity::class.java)
+
         bottomNavi.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.action_home->setCurrentFragment(homeFragment)
                 R.id.action_search->setCurrentFragment(searchFragment)
-                R.id.action_write->setCurrentFragment(writeFragment)
+                R.id.action_write->startActivity(i)
                 R.id.action_bookmark->setCurrentFragment(bookmarkFragment)
                 R.id.action_mypage->setCurrentFragment(mypageFragment)
             }
