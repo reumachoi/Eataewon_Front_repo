@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
-            android:name=".GlobalApplication"
+            android:name="com.example.eataewon.GlobalApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -44,7 +44,11 @@
                 android:value="803510af840ec6fd9c1aefe41148b4e5"/>
 
         <activity
-                android:name=".MainActivity"
+                android:name="com.example.eataewon.SecondActivity"
+                android:exported="true"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name="com.example.eataewon.MainActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -73,7 +77,7 @@
                 android:name=".SignActivity"
                 android:exported="true"/>
         <activity
-                android:name=".HomeActivity"
+                android:name="com.example.eataewon.HomeActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -82,7 +86,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".BbsDetailActivity"
+                android:name="com.example.eataewon.BbsDetailActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
