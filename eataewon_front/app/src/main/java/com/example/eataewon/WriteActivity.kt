@@ -40,6 +40,8 @@ class WriteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_write)
 
+        val searchData = intent.getParcelableExtra<MapSearchListDto>("shopData")
+
         val recyclerView = findViewById<RecyclerView>(R.id.write_recyclerview)
 
         //텍스트
@@ -53,6 +55,7 @@ class WriteActivity : AppCompatActivity() {
         val addressbtn = findViewById<Button>(R.id.write_addressBtn)
         val writebtn = findViewById<Button>(R.id.write_writeBtn)
         val canclebtn = findViewById<Button>(R.id.write_cancleBtn)
+        val shopName = findViewById<TextView>(R.id.shopNameT)
 
         //주소 버튼
         addressbtn.setOnClickListener {
@@ -60,7 +63,8 @@ class WriteActivity : AppCompatActivity() {
             startActivity(i)
         }
 
-        val searchData = intent.getParcelableExtra<MapSearchListDto>("shopData")
+        shopName.text = searchData?.name
+        address.setText(searchData?.road)
 
         println(searchData.toString())
         /*
