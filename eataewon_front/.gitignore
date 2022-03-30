@@ -7,7 +7,7 @@ javaCompile.lock
 jarAnalysis.bin
 classAnalysis.bin
 fileHashes.lock
-
+libraries/
 # Gradle files
 .gradle/
 build/
