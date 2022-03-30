@@ -1,57 +1,53 @@
 package com.example.eataewon
 
 import android.Manifest
-import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Rect
 import android.net.Uri
 import android.os.Build
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.fragment_search.*
 
-class WriteFragment: Fragment(R.layout.fragment_write) {
-
+class WriteActivity : AppCompatActivity() {
     // storage 권한
     val STORAGE = arrayOf(
         Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        Manifest.permission.WRITE_EXTERNAL_STORAGE
+    )
 
     val STORAGE_CODE = 99
     var list = ArrayList<Uri>()
-    val adapter = MultiImageAdapter(list,this)
+    val adapter = MultiImageAdapter(list, this)
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_write)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_write, container, false)
-        val recyclerView = view.findViewById<RecyclerView>(R.id.write_recyclerview)
+        val recyclerView = findViewById<RecyclerView>(R.id.write_recyclerview)
 
         //텍스트
-        val title = view.findViewById<TextView>(R.id.write_title)
-        val content= view.findViewById<TextView>(R.id.write_content)
-        val address = view.findViewById<EditText>(R.id.write_address)
-        val hashtag = view.findViewById<TextView>(R.id.write_hashtag)
+        val title = findViewById<TextView>(R.id.write_title)
+        val content= findViewById<TextView>(R.id.write_content)
+        val address = findViewById<EditText>(R.id.write_address)
+        val hashtag = findViewById<TextView>(R.id.write_hashtag)
 
         //버튼
-        val imagebtn = view.findViewById<Button>(R.id.write_imageBtn)
-        val addressbtn = view.findViewById<Button>(R.id.write_addressBtn)
-        val writebtn = view.findViewById<Button>(R.id.write_writeBtn)
-        val canclebtn = view.findViewById<Button>(R.id.write_cancleBtn)
+        val imagebtn = findViewById<Button>(R.id.write_imageBtn)
+        val addressbtn = findViewById<Button>(R.id.write_addressBtn)
+        val writebtn = findViewById<Button>(R.id.write_writeBtn)
+        val canclebtn = findViewById<Button>(R.id.write_cancleBtn)
 
         //주소 버튼
         addressbtn.setOnClickListener {
@@ -75,7 +71,7 @@ class WriteFragment: Fragment(R.layout.fragment_write) {
         recyclerView.addItemDecoration(decoration)
 
         //리사이클 뷰
-        recyclerView.layoutManager = LinearLayoutManager(requireContext()).also { it.orientation = LinearLayoutManager.HORIZONTAL }
+        recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false )
         recyclerView.adapter = adapter
 
         //글쓰기 버튼
@@ -88,7 +84,6 @@ class WriteFragment: Fragment(R.layout.fragment_write) {
 
         }
 
-        return view
     }
 
     //여러개의 이미지 선택
@@ -102,7 +97,7 @@ class WriteFragment: Fragment(R.layout.fragment_write) {
             if (data?.clipData != null) { // 사진 여러개 선택한 경우
                 val count = data.clipData!!.itemCount
                 if (count > 10) {
-                    Toast.makeText(context, "사진은 10장까지 선택 가능합니다.", Toast.LENGTH_LONG)
+                    Toast.makeText(this, "사진은 10장까지 선택 가능합니다.", Toast.LENGTH_LONG)
                     return
                 }
                 for (i in 0 until count) {
@@ -123,7 +118,7 @@ class WriteFragment: Fragment(R.layout.fragment_write) {
     }
 
     //리사이클러 뷰 업데터
-    class MultiImageAdapter(private val items: ArrayList<Uri>, val context: WriteFragment) :
+    class MultiImageAdapter(private val items: ArrayList<Uri>, val context: WriteActivity) :
         RecyclerView.Adapter<MultiImageAdapter.ViewHolder>() {
 
         override fun getItemCount(): Int = items.size
@@ -153,7 +148,7 @@ class WriteFragment: Fragment(R.layout.fragment_write) {
     }
 
     //사진 간격
-    class RecyclerViewDecoration(private val divWidth: Int) : ItemDecoration() {
+    class RecyclerViewDecoration(private val divWidth: Int) : RecyclerView.ItemDecoration() {
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
             super.getItemOffsets(outRect, view, parent, state)
             outRect.right = divWidth
@@ -164,9 +159,9 @@ class WriteFragment: Fragment(R.layout.fragment_write) {
     fun checkPermission(permissions: Array<out String>, type:Int):Boolean{
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             for (permission in permissions){
-                if(ContextCompat.checkSelfPermission(requireActivity(), permission)
+                if(ContextCompat.checkSelfPermission(this, permission)
                     != PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(requireActivity(), permissions, type)
+                    ActivityCompat.requestPermissions(this, permissions, type)
                     return false
                 }
             }

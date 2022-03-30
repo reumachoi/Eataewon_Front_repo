@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    tools:context=".WriteActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/write_hashtag"
@@ -209,5 +211,4 @@
         app:layout_constraintBottom_toBottomOf="@+id/write_address"
         app:layout_constraintStart_toEndOf="@+id/write_address"
         app:layout_constraintTop_toTopOf="@+id/write_address" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
