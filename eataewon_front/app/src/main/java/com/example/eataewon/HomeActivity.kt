@@ -14,7 +14,6 @@ class HomeActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
-        val writeFragment = WriteFragment()
         val bookmarkFragment = BookmarkFragment()
         val mypageFragment = MypageFragment()
         val intent = intent

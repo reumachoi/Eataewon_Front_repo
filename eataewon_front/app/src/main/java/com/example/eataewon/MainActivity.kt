@@ -28,11 +28,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             val i = Intent(this, BbsDetailActivity::class.java)
             startActivity(i)
         }
-        //글작성 테스트 버튼 (최아름)
-        binding.button3.setOnClickListener {
-            val i = Intent(this, SearchKakaoMapActivity::class.java)
-            startActivity(i)
-        }
+
 
      /*   //백엔드 통신 확인용
         var result = MemberDao.getInstance().test()
