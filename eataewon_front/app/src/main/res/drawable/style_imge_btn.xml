@@ -4,7 +4,12 @@
     <solid android:color="@color/white" /> //배경색
 
     <stroke
+<<<<<<< HEAD
             android:width="2dp"
             android:color="#3C3C3C" /> //선색
+=======
+        android:width="2dp"
+        android:color="#3C3C3C" /> //선색
+>>>>>>> b3b473cdf2cfaaa620b44d708500c04d58ef8399
 
 </shape>

@@ -13,8 +13,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.eataewon"
-        minSdk 28
-        targetSdk 31
+        minSdk 21
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 

@@ -14,6 +14,7 @@ class HomeActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
+        val writeActivity = WriteActivity()
         val bookmarkFragment = BookmarkFragment()
         val mypageFragment = MypageFragment()
         val intent = intent
@@ -29,7 +30,12 @@ class HomeActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.action_home->setCurrentFragment(homeFragment)
                 R.id.action_search->setCurrentFragment(searchFragment)
-                R.id.action_write->startActivity(i)
+                R.id.action_write->{
+                    //안도현(로그인 후 홈엑티비티로 넘어가면서 intent.put으로 user값 넘기기)
+                    val intent = Intent(this,WriteActivity::class.java)
+                    intent.putExtra("user",user)
+                    startActivity(intent)
+                }
                 R.id.action_bookmark->setCurrentFragment(bookmarkFragment)
                 R.id.action_mypage->setCurrentFragment(mypageFragment)
             }

@@ -89,14 +89,14 @@
                 android:name="com.example.eataewon.BbsDetailActivity"
                 android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                        android:host="kakaolink"
-                        android:scheme="803510af840ec6fd9c1aefe41148b4e5"/>
+                    android:host="kakaolink"
+                    android:scheme="803510af840ec6fd9c1aefe41148b4e5" />
             </intent-filter>
         </activity>
     </application>

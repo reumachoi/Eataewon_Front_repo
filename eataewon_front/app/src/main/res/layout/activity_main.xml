@@ -163,5 +163,19 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.357"
             app:layout_constraintVertical_bias="0.017"/>
+<Button
+        android:id="@+id/naver_Btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/style_api_btn"
+        android:drawableBottom="@drawable/naver_ic"
+        android:padding="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/google_Btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/google_Btn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

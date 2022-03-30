@@ -2,16 +2,9 @@ package com.example.eataewon
 
 import android.content.ActivityNotFoundException
 import android.content.ContentValues.TAG
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isInvisible
-import androidx.core.view.isVisible
-import com.example.eataewon.connect.BbsDao
-import com.example.eataewon.connect.BbsDto
-import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
@@ -27,85 +20,9 @@ class BbsDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         var seq = 1
+        //var result = BbsDao.getInstance().getBbsDetail(seq)
 
-//        var data = BbsDao.getInstance().getBbsDetail(seq)
-
-
-
-        //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
-        val data = intent.getParcelableExtra<BbsDto>("data")
-
-        /*binding.DeTitle.text = data?.title
-        binding.DeContent.text = data?.content
-        binding.DeHashtag.text = data?.hashtag
-        binding.DeLocation.text = data?.address*/
-
-//       data에 같이 넘어온 글쓴이 아이디로 유저정보 가져오기 (사진,닉네임,한줄소개, 호감도)
-        /*var id = data?.id
-        var userData = MemberDao.getInstance().bbsGetUser(id!!)*/
-
-        //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
-        //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
-
-//        var plusScrap = BbsDao.getInstance().plusBbsScrap(data!!)
-
-        //var testData = listOf<BbsDto>("id",10,"title","content","picture")
-
-
-//        if(글쓴이랑 로그인유저가 같을때) if조건문 수정필요
-        if(true){
-            binding.deleteBtn.isVisible = true
-            binding.updateBtn.isVisible = true
-        }else{
-            binding.deleteBtn.isVisible = false
-            binding.updateBtn.isVisible = false
-        }
-
-        binding.deleteBtn.setOnClickListener {
-            /*var delete = BbsDao.getInstance().bbsdelete(data!!.seq)
-            if(delete == true){
-                Toast.makeText(this,"글이 삭제되었습니다",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this,"글삭제를 실패했습니다",Toast.LENGTH_SHORT).show()
-            }
-            val i = Intent(this,HomeActivity::class.java)
-            startActivity(i)*/
-        }
-
-        binding.updateBtn.setOnClickListener {
-            val i = Intent(this,UpdateBbsActivity::class.java)
-            i.putExtra("passUpdate",data)
-            startActivity(i)
-        }
-
-//      좋아요 버튼 클릭효과
-        binding.HeartBtn.setOnClickListener {
-            if(binding.HeartBtn.isSelected != true){
-                binding.HeartBtn.isSelected = true  //좋아요 누르기
-                //+이태원라이크 테이블에 유저값 넣어주기
-                //var plusLike = BbsDao.getInstance().plusBbsLike(data!!)
-            }else{
-                binding.HeartBtn.isSelected = false //좋아요 누른거 취소
-                //+이태원라이크 테이블에 유저값 삭제하기
-            }
-
-        }
-//      스크랩 버튼 클릭효과
-        binding.ScrapBtn.setOnClickListener {
-            if(binding.ScrapBtn.isSelected != true){
-                binding.ScrapBtn.isSelected = true  //스크랩 누르기
-                //+이태원스크랩 테이블에 유저값 넣어주기
-                //  var plusScrap = BbsDao.getInstance().plusBbsScrap()   //스크랩누르면
-            }else{
-                binding.ScrapBtn.isSelected = false //스크랩 누른거 취소
-                //+이태원스크랩 테이블에 유저값 삭제하기
-            }
-        }
-
-        binding.showDetailShop.setOnClickListener {
-
-            binding.mapContent.isVisible = true
-            binding.showDetailShopField.isVisible = true
+        binding.seeMapBtn.setOnClickListener {
 
           val naverMapFragment = NaverMapFragment()
             supportFragmentManager.beginTransaction()
@@ -113,31 +30,27 @@ class BbsDetailActivity : AppCompatActivity() {
 
         }
 
+        binding.shareBtn.setOnClickListener {
 
-//      카톡 글 공유하기
-        binding.floShareBtn.setOnClickListener {
-
-            // 피드 메시지 보내기
-            val defaultText = LocationTemplate(
-                address = data?.address!!,
-                addressTitle = data?.shopname!!,
-                content = Content(
-                    title = data?.title!!,
-                    description = data?.content!!.substring(0,20),
-                    imageUrl = "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220301_56%2F1646125809470g3mRx_JPEG%2Fupload_8734af74cb52984491186a224aa2a66e.jpeg",
-                    link = Link(
-//                        webUrl = "https://developers.com",
-                        mobileWebUrl = "https://developers.kakao.com"
-                    )
-                ),
-                social = Social(
-                    likeCount = 286,
-                    commentCount = 45,
-                    sharedCount = 845
+        // 피드 메시지 보내기
+            val defaultText = TextTemplate(
+                text = """
+        카카오링크는 카카오 플랫폼 서비스의 대표 기능으로써 사용자의 모바일 기기에 설치된 카카오 플랫폼과 연동하여 다양한 기능을 실행할 수 있습니다.
+        현재 이용할 수 있는 카카오링크는 다음과 같습니다.
+        카카오톡링크
+        카카오톡을 실행하여 사용자가 선택한 채팅방으로 메시지를 전송합니다.
+        카카오스토리링크
+        카카오스토리 글쓰기 화면으로 연결합니다.
+    """.trimIndent(),
+                link = Link(
+                    webUrl = "https://developers.kakao.com",
+                    mobileWebUrl = "https://developers.kakao.com"
                 )
             )
         // 사용자 정의 메시지 ID
         //  * 만들기 가이드: https://developers.kakao.com/docs/latest/ko/message/message-template
+        //val templateId = templateIds["ID 73529"] as Long
+        val url = "https://developers.kakao.com"
 
         // 카카오톡 설치여부 확인
         if (LinkClient.instance.isKakaoLinkAvailable(this)) {

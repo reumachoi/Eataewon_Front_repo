@@ -15,12 +15,12 @@ import com.example.eataewon.connect.BbsDto
 class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
         RecyclerView.Adapter<BbsAdapter.ItemViewHolder>()
 {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BbsAdapter.ItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.search_view_layout, parent, false)
         return ItemViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: BbsAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.bind(dataList[position], context)
     }
 

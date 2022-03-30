@@ -1,4 +1,3 @@
-package com.example.eataewon
 
 import android.Manifest
 import android.content.Intent

@@ -23,11 +23,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         setContentView(binding.root)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
 
-        //디테일 테스트 버튼 (최아름)
-        binding.testBtn.setOnClickListener {
-            val i = Intent(this, BbsDetailActivity::class.java)
-            startActivity(i)
-        }
+
 
 
      /*   //백엔드 통신 확인용
@@ -56,6 +52,10 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
 
             R.id.login_Btn -> {
                 imm?.hideSoftInputFromWindow(loginPW.getWindowToken(), 0);
+                
+                val id = loginID.text.toString()
+                val pw = loginPW.text.toString()
+                val dto = MemberDto("", id, pw, "", "",0, 0,"")
 
                 val id = loginID.text.toString()
                 val pwd = loginPW.text.toString()
