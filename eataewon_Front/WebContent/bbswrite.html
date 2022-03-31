@@ -31,6 +31,13 @@
 		</td>
 	</tr>
 	
+	<tr>
+	<th class="table-primary">닉네임</th>
+		<td>
+		<input type="text" id="nickname" name="nickname" size="70px" readonly="readonly">
+		</td>
+	</tr>
+	
 	
 	<tr>
 		<th class="table-primary">제목</th>
@@ -120,6 +127,7 @@
 <script type="text/javascript">
 let login = sessionStorage.getItem("login");
 let id = JSON.parse(login).id;
+let nickname = JSON.parse(login).nickname;
 // alert(id);
 $("#id").val(id);
 

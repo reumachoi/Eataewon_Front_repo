@@ -129,9 +129,11 @@ $.ajax({
 		$("#shopurl").val(bbs.shopurl);
 	},
 	error:function(){
-		alert('error');
+		alert(val(bbs.shopphnum));
 	}
 });
+
+
 
 $("#bbsupdate").click(function () {
 	$.ajax({
@@ -140,7 +142,7 @@ $("#bbsupdate").click(function () {
 		data:{
 				"seq":seq, "title":$("#title").val(), "content":$("#content").val(), "picture":$("#picture").val(), "shopname":$("#shopname").val(), 
 				"hashtag":$("#hashtag").val(), "address":$("#address").val(), "latitude":$("#latitude").val(), "longtitude":$("#longtitude").val(), 
-				"shopphnum":$("shopphnum").val(), "shopurl":$("#shopurl").val()
+				"shopphnum":$("#shopphnum").val(), "shopurl":$("#shopurl").val()
 				},
 		success:function(msg){
 			if(msg == "OK"){

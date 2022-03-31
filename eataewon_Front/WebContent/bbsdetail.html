@@ -32,7 +32,10 @@ pre { /* 자동줄바꿈 설정 */
 <table class="table table-striped">
 <col width="150"><col width="500">
 <tr>
-	<th>작성자</th><td id="id"></td>
+	<th>작성자 id</th><td id="id"></td>
+</tr>
+<tr>
+ <th>닉네임</th><td id="nickname"></td>
 </tr>
 
 <tr>
@@ -146,6 +149,7 @@ pre { /* 자동줄바꿈 설정 */
 let str = sessionStorage.getItem("login");	
 let json = JSON.parse(str);
 let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
+let nickname = JSON.parse(str).nickname;
 
 
 const url = new URL(location.href);
@@ -165,6 +169,7 @@ $.ajax({
 	success:function(bbs){
 		
 		$("#id").text(bbs.id);
+		$("#nickname").text(bbs.nickname);
 		$("#title").text(bbs.title);
 		$("#wdate").text(bbs.wdate);
 		$("#readcount").text(bbs.readcnt);
