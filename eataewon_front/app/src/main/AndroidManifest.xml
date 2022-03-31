@@ -100,6 +100,8 @@
         <activity
                 android:name=".WriteActivity"
                 android:exported="true"/>
+        <activity android:name=".SearchKakaoMapActivity"
+                  android:exported="true"/>
         <activity
                 android:name="com.example.eataewon.BbsDetailActivity"
                 android:exported="true">
