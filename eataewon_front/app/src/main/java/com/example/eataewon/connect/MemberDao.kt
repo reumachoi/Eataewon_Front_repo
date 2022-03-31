@@ -1,5 +1,6 @@
-package com.example.eataewon
+package com.example.eataewon.connect
 
+import com.example.eataewon.connect.MemberBbsDto
 import com.example.eataewon.connect.MemberDto
 import com.example.eataewon.connect.RetrofitClient
 import retrofit2.Call
@@ -8,16 +9,6 @@ import retrofit2.http.*
 
 interface MemberService{
 
-    //백엔드 통신 확인용
-    //@FormUrlEncoded 서버에서 인풋값 인코딩을 위함용 (post에서만 사용 + @Field)
-    @GET("/test")
-    fun test(
-        //인풋 정의
-        //@Field("userid") id:String
-    ):Call<String>  //아웃풋 정의
-
-
-    /// 3. object 를 보내고 받기
     @POST("/login")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
@@ -26,6 +17,10 @@ interface MemberService{
 
     @POST("/addmember")
     fun signup(@Body dto:MemberDto): Call<String>
+
+    //bbs에 저장된 아이디값으로 member에서 같은아이디 유저정보 가져오기
+    @POST("/bbsGetUser")
+    fun bbsGetUser(@Body id:String): Call<MemberBbsDto>
 
 
 }
@@ -45,18 +40,10 @@ class MemberDao {
         }
     }
 
-    //백엔드 통신 확인용
-    fun test(): String? {
-        val retrofit = RetrofitClient.getInstance()
-        val service = retrofit?.create(MemberService::class.java)
-        val call = service?.test()
-        var response = call?.execute()
-        return response?.body()
-    }
 
     fun login(dto: MemberDto): MemberDto? {
         var response: Response<MemberDto>?
-        println("ID:${dto.id}")
+        println("ID:${dto.id}, PWD:${dto.pwd}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
@@ -101,4 +88,19 @@ class MemberDao {
         return response?.body()
     }
 
+    //bbs에 저장된 아이디값으로 member에서 같은아이디 유저정보 가져오기
+    fun bbsGetUser(id:String): MemberBbsDto?{
+        var response : Response<MemberBbsDto>?
+        println(id)
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.bbsGetUser(id)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
 }

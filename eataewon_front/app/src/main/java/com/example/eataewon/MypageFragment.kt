@@ -1,5 +1,6 @@
 package com.example.eataewon
 
+
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
@@ -15,10 +16,12 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.eataewon.connect.MemberDto
+import kotlinx.android.synthetic.main.fragment_mypage.view.*
 
-class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.fragment_mypage),View.OnClickListener{
+class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.fragment_mypage){
+
     // storage 권한
-
     val STORAGE = arrayOf(
         Manifest.permission.READ_EXTERNAL_STORAGE,
         Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -26,20 +29,23 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
     val STORAGE_CODE = 99
 
     lateinit var mypageProfilpicuri:TextView
-    lateinit var mypageProfilpic:ImageView
+    lateinit var mypageProfilpic: ImageView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_mypage, container, false)
 
-      // 상단바 제작 에 사용
-        setHasOptionsMenu(true);
-
         //임시 테스트
-     //   val user = MemberDto(0,"","","","","","",0,"")
+        val user = arguments?.getParcelable<MemberDto>("user")
+
+        //상단 툴바바
+        v.toolbar.inflateMenu(R.menu.mypage_menu_item)
+
+        setHasOptionsMenu(true)
 
         //텍스트뷰
-        val mypageLikepoint = v.findViewById<TextView>(R.id.mypage_likepoint)
+        val mypageId = v.findViewById<TextView>(R.id.mypage_id)
         val mypageName = v.findViewById<TextView>(R.id.mypage_name)
+        val mypageLikepoint = v.findViewById<TextView>(R.id.mypage_likepoint)
         val mypageEmail = v.findViewById<TextView>(R.id.mypage_email)
         val mypageNickname = v.findViewById<TextView>(R.id.mypage_nickname)
         val mypageProfilmsg = v.findViewById<TextView>(R.id.mypage_profilmsg)
@@ -49,74 +55,60 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         mypageProfilpicuri = v.findViewById(R.id.mypage_profilpic_uri)
 
         //버튼
-        val cancleBtn = v.findViewById<Button>(R.id.mypage_cancleBtn)
         val updateBtn = v.findViewById<Button>(R.id.mypage_updateBtn)
-
+        val cancleBtn = v.findViewById<Button>(R.id.mypage_cancleBtn)
         val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
 
-
-/*
         //텍스트뷰에 값 입력
-        mypageLikepoint.text = user.likepoint.toString()
-        mypageName.text = user.name
-        mypageEmail.text = user.email
-        mypageNickname.text = user.nickname
-        mypageProfilmsg.text = user.profilMsg
-        mypageProfilpic.setImageURI(user.profilPic?.toUri())
-*/
+        mypageId.text = user?.id
+        mypageName.text = user?.name
+        mypageLikepoint.text = user?.likepoint.toString()
+        mypageEmail.text = user?.email
+        mypageNickname.text = user?.nickname
+        mypageProfilmsg.text = user?.profilMsg
 
-        //버튼 클릭 이벤트
-
-
-        cancleBtn.setOnClickListener(this)
+        //이미지 불러오기
+        //mypageProfilpic.setImageURI(user?.profilPic?.toUri())
 
         //사진
         imageBtn.setOnClickListener { GetAlbum() }
+
+        //툴바 메뉴 클릭
+        v.toolbar.setOnMenuItemClickListener{
+            when(it.itemId){
+             R.id.mypage_logout->{
+
+                 val logout = Intent(homeActivity,MainActivity::class.java)
+                 startActivity(logout)
+                    Toast.makeText(context,"로그아웃",Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                R.id.mypage_withdraw->{
+
+                    val intent = Intent(homeActivity,DeleteActivity::class.java)
+                    startActivity(intent)
+                    Toast.makeText(context,"회원탈퇴",Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else->false
+            }
+        }
+
+
+        //취소 버튼 이벤트
+        cancleBtn.setOnClickListener{
+
+        }
+
 
         //수정 버튼 이벤트
         updateBtn.setOnClickListener{
 
         }
+
+
         return v
-
-
-    }
- // 상단바 부분
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.mypage_toolbar, menu)
-
-
-        return super.onCreateOptionsMenu(menu, inflater)
-    }
-  // 상단바 이동
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-
-      val intent = Intent(homeActivity,DeleteActivity::class.java)
-      val intent1 = Intent(homeActivity,MainActivity::class.java)
-
-
-        when(item?.itemId){
-
-            R.id.withdraw-> startActivity(intent)
-            R.id.logout-> startActivity(intent1)
-        }
-
-        return super.onOptionsItemSelected(item)
-    }
-
-
-
-
-    //버튼 클릭 이벤트 내용
-    override fun onClick(view: View?) {
-        when(view?.id){
-
-
-            R.id.mypage_cancleBtn->{
-
-            }
-        }
     }
 
     // uri와 이미지뷰에 저장
@@ -157,7 +149,6 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         return true
     }
 
-
     //권한 승인
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -171,11 +162,15 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
             }
         }
     }
-   /////// 좋아요 테스트 부분
-    
 
-
-
-
+    //툴바 연결
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.mypage_menu_item,menu)
+    }
 }
+
+
+
+
 

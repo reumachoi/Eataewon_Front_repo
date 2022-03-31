@@ -8,6 +8,7 @@
         tools:context=".SecondActivity">
 
 
+
     <TextView
             android:id="@+id/nickname"
             android:layout_width="match_parent"
@@ -22,7 +23,7 @@
             android:id="@+id/kakao_logout_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="로그아웃"
+            android:text="카카오 로그아웃"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/kakao_unlink_button"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -32,7 +33,7 @@
             android:id="@+id/kakao_unlink_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="회원 탈퇴"
+            android:text="카카오 회원 탈퇴"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
