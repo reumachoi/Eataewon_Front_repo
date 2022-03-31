@@ -43,7 +43,7 @@ class MemberDao {
 
     fun login(dto: MemberDto): MemberDto? {
         var response: Response<MemberDto>?
-        println("ID:${dto.id}")
+        println("ID:${dto.id}, PWD:${dto.pwd}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
