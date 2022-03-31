@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_map.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_maps.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\fragment_maps.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_bbs_detail.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\activity_bbs_detail.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_naver_map.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\fragment_naver_map.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\search_view_layout.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\search_view_layout.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_write.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\fragment_write.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mypage.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\fragment_mypage.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_map2.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\activity_map2.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_bookmark.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\fragment_bookmark.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_second.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\activity_second.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_search.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sign.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\activity_sign.xml"
+    },
+    {
+        "merged": "C:\\Eataewon_Front\\eataewon_Front\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\drop_out.xml",
+        "source": "C:\\Eataewon_Front\\eataewon_Front\\app\\src\\main\\res\\layout\\drop_out.xml"
+    }
+]
