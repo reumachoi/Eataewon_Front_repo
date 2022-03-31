@@ -3,26 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_google.xml" value="0.25" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.19429347826086957" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_map.xml" value="0.10914855072463768" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_map2.xml" value="0.18795289855072464" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_second.xml" value="0.22" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_sign.xml" value="0.1" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/drop_out.xml" value="0.18795289855072464" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/fragment_bookmark.xml" value="0.22" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/fragment_home.xml" value="0.10914855072463768" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/fragment_maps.xml" value="0.2453125" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/fragment_mypage.xml" value="0.2453125" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/fragment_naver_map.xml" value="0.2453125" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/fragment_search.xml" value="0.2453125" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/fragment_write.xml" value="0.2453125" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/scrab_list.xml" value="0.2105978260869565" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/search_view_layout.xml" value="0.2453125" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.2692307692307692" />
-        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/menu/search_menu.xml" value="0.2692307692307692" />
         <entry key="..\:/GitHub_FinalBack/Login/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/GitHub_FinalBack/eataewon_back/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/GitHub_FinalBack/login/app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -30,36 +10,6 @@
         <entry key="..\:/GitHub_FinalFront/eataewon_front/app/src/main/res/layout/activity_sign.xml" value="0.1778115501519757" />
         <entry key="..\:/GitHub_FinalFront/eataewon_front/app/src/main/res/layout/drop_out.xml" value="0.33" />
         <entry key="..\:/GitHub_FinalFront/eataewon_front/app/src/main/res/layout/sign_main.xml" value="0.25" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/drawable/ic_baseline_control_point_24.xml" value="0.25416666666666665" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/drawable/ic_mypage_userdelete.xml" value="0.287962962962963" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/drawable/ic_navi_mypage.xml" value="0.287962962962963" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/drawable/imgeview_sample.xml" value="0.287962962962963" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/drawable/style_imge_btn.xml" value="0.25416666666666665" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/drawable/style_profil_img.xml" value="0.287962962962963" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/activity_bbs_detail.xml" value="0.33" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/activity_main.xml" value="0.128125" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/activity_sign.xml" value="0.12552083333333333" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/fragment_mypage.xml" value="0.25" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/fragment_naver_map.xml" value="0.128125" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/fragment_search.xml" value="0.128125" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/fragment_write.xml" value="0.33" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/search_view_layout.xml" value="0.128125" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/layout/write_image_item.xml" value="0.75" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/menu/menu_bbs_details.xml" value="0.28802083333333334" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/menu/menu_main.xml" value="0.14270833333333333" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/menu/mypage_toolbar.xml" value="0.2921875" />
-        <entry key="..\:/Study/project/Eataewon_Front/eataewon_front/app/src/main/res/menu/search_menu.xml" value="0.33" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/activity_bbs_detail.xml" value="0.16013071895424835" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.16013071895424835" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/activity_main.xml" value="0.16013071895424835" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/activity_sign.xml" value="0.16789215686274508" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/activity_write.xml" value="0.184375" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/activity_write1.xml" value="0.184375" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/fragment_home.xml" value="0.16013071895424835" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/fragment_mypage.xml" value="0.128125" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/fragment_write.xml" value="0.33" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/search_view_layout.xml" value="0.16789215686274508" />
-        <entry key="..\:/Study/project/backup/220329/eataewon_front/app/src/main/res/layout/write_image_item.xml" value="0.16013071895424835" />
         <entry key="..\:/Study/project/backup/eataewon_front/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.38625" />
         <entry key="..\:/Study/project/backup/eataewon_front/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.38625" />
         <entry key="..\:/Study/project/backup/eataewon_front/app/src/main/res/drawable/ic_baseline_apps_24.xml" value="0.38625" />
@@ -110,32 +60,6 @@
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_search.xml" value="0.16094771241830066" />
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_write.xml" value="0.16094771241830066" />
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/sign_main.xml" value="0.33" />
-<<<<<<< HEAD
-=======
->>>>>>> KIMMINKI
-=======
-        <entry key="..\:/Users/HAN/Documents/finafo/eataewon_front/app/src/main/res/layout/activity_second.xml" value="0.1940359477124183" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/activity_delete.xml" value="0.1940359477124183" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/activity_map.xml" value="0.1940359477124183" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/activity_second.xml" value="0.4" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/drop_out.xml" value="0.19852941176470587" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/fragment_maps.xml" value="0.19852941176470587" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/fragment_mypage.xml" value="0.4" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/search_view_layout.xml" value="0.19852941176470587" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.2682291666666667" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/menu_bbs_details.xml" value="0.2682291666666667" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/menu_main.xml" value="0.25364583333333335" />
-        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/search_menu.xml" value="0.2682291666666667" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/layout/activity_home.xml" value="0.1766304347826087" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/layout/activity_main.xml" value="0.20923913043478262" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/layout/activity_map2.xml" value="0.20923913043478262" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/layout/fragment_bookmark.xml" value="0.20923913043478262" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/layout/fragment_home.xml" value="0.1766304347826087" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/layout/fragment_mypage.xml" value="0.4" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/menu/bottom_menu.xml" value="0.234375" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/menu/menu_bbs_details.xml" value="0.234375" />
-        <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/menu/menu_main.xml" value="0.234375" />
->>>>>>> han
         <entry key="..\:/eat_project_back/eattaewon_back_kimminki/app/src/main/res/layout/activity_main.xml" value="0.2175925925925926" />
         <entry key="..\:/eat_project_back/eattaewon_back_kimminki/app/src/main/res/layout/activity_maps.xml" value="0.19583333333333333" />
         <entry key="..\:/eat_project_back/eattaewon_back_kimminki/app/src/main/res/layout/activity_search.xml" value="0.2175925925925926" />
@@ -159,7 +83,6 @@
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag4.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag5.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.13916666666666666" />
-<<<<<<< HEAD
         <entry key="app/src/main/res/drawable/click_bookmarkbtn.xml" value="0.49921875" />
         <entry key="app/src/main/res/drawable/click_likebtn.xml" value="0.49921875" />
         <entry key="app/src/main/res/drawable/click_scrapbtn.xml" value="0.4390625" />
@@ -167,10 +90,11 @@
         <entry key="app/src/main/res/drawable/style_imge_btn.xml" value="0.2564814814814815" />
         <entry key="app/src/main/res/layout/activity_bbs_detail.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_bbs_details.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/activity_google.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/activity_kakao.xml" value="0.3984375" />
         <entry key="app/src/main/res/layout/activity_kakao_map.xml" value="0.496875" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_map.xml" value="0.55625" />
         <entry key="app/src/main/res/layout/activity_map2.xml" value="0.55625" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.4036458333333333" />
@@ -191,59 +115,19 @@
         <entry key="app/src/main/res/layout/map_list_view_layout.xml" value="0.4953125" />
         <entry key="app/src/main/res/layout/search_view_layout.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/write_image_item.xml" value="0.5625" />
-=======
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.3" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/drawable/ic_menu_search.xml" value="0.3" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/drawable/searchview_background.xml" value="0.3" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/activity_bbs_detail.xml" value="0.2838541666666667" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.25" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_bookmark.xml" value="0.5536458333333333" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_home.xml" value="0.22" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_maps.xml" value="0.13804457953394123" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_mypage.xml" value="0.2838541666666667" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_search.xml" value="0.33" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/home_view_layout_top.xml" value="0.33" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/homeview_bbs_layout.xml" value="0.33" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/homeview_curation_layout.xml" value="0.24877450980392157" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/search_view_layout.xml" value="0.1715686274509804" />
-        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.2984375" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.3260416666666667" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/drawable/ic_baseline_apps_24.xml" value="0.3260416666666667" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/drawable/ic_baseline_bookmark_border_24.xml" value="0.3260416666666667" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/drawable/ic_baseline_contact_support_24.xml" value="0.3260416666666667" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/drawable/ic_baseline_control_point_24.xml" value="0.3260416666666667" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3260416666666667" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/drawable/ic_menu_search.xml" value="0.33958333333333335" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/drawable/searchview_background.xml" value="0.28958333333333336" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/activity_bbs_detail.xml" value="0.18341503267973855" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.18583333333333332" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_bookmark.xml" value="0.3098958333333333" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_home.xml" value="0.3098958333333333" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_maps.xml" value="0.32447916666666665" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_mypage.xml" value="0.3098958333333333" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_search.xml" value="0.3098958333333333" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_write.xml" value="0.3098958333333333" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/home_view_layout_top.xml" value="0.24754901960784315" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/search_view_layout.xml" value="0.25333333333333335" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/layout/view_search_layout.xml" value="0.2734375" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/menu-v26/search_menu.xml" value="0.2890625" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.32447916666666665" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/menu/search_menu.xml" value="0.30104166666666665" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/menu/top_menu.xml" value="0.32447916666666665" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3026041666666667" />
-        <entry key="..\:/eataewon_front/eataewon_front/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3026041666666667" />
->>>>>>> KIMMINKI
       </map>
     </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="retrofit2.http.POST" />
+    </list>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
-    <option name="id" value="Android" />
+    <option name="id" value="jpab" />
   </component>
 </project>

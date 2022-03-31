@@ -25,15 +25,14 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
             android:usesCleartextTraffic="true">
         <activity
                 android:name=".UpdateBbsActivity"
                 android:exported="true"/>
         <activity
-                android:name="WriteActivity"
-                android:exported="true" tools:ignore="MissingClass"/>
-        <!-- 최아름 카카오 sns, 네이버 map, 카카오 map -->
+                android:name=".WriteActivity"
+                android:exported="true"/> <!-- 최아름 카카오 sns, 네이버 map, 카카오 map -->
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
@@ -45,11 +44,7 @@
                 android:value="803510af840ec6fd9c1aefe41148b4e5"/>
 
         <activity
-                android:name="com.example.eataewon.SecondActivity"
-                android:exported="true"
-                tools:ignore="Instantiatable"/>
-        <activity
-                android:name="com.example.eataewon.MainActivity"
+                android:name=".MainActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -87,17 +82,17 @@
             </intent-filter>
         </activity>
         <activity
-                android:name="com.example.eataewon.BbsDetailActivity"
+                android:name=".BbsDetailActivity"
                 android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
 
                 <data
-                    android:host="kakaolink"
-                    android:scheme="803510af840ec6fd9c1aefe41148b4e5" />
+                        android:host="kakaolink"
+                        android:scheme="803510af840ec6fd9c1aefe41148b4e5"/>
             </intent-filter>
         </activity>
     </application>

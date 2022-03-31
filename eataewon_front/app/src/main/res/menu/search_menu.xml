@@ -3,12 +3,11 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/SearchView"
-        android:icon="@drawable/ic_menu_search"
-        android:iconTint="@color/white"
-        android:title="Search"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
-        app:showAsAction="ifRoom"
-        tools:targetApi="o" />
+    <item android:id="@+id/SearchView"
+          android:title="Search"
+          android:icon="@drawable/ic_menu_search"
+          android:iconTint="@color/white"
+          app:showAsAction="ifRoom"
+          app:actionViewClass="androidx.appcompat.widget.SearchView"
+          tools:targetApi="o"/>
 </menu>

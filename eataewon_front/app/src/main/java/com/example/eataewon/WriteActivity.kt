@@ -1,3 +1,4 @@
+package com.example.eataewon
 
 import android.Manifest
 import android.content.Intent
@@ -18,15 +19,10 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.eataewon.R
-import com.example.eataewon.SearchKakaoMapActivity
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.databinding.ActivityWriteBinding
 
 class WriteActivity : AppCompatActivity() {
-
-    val binding by lazy { ActivityWriteBinding.inflate(layoutInflater) }
-
     // storage 권한
     val STORAGE = arrayOf(
         Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -41,8 +37,6 @@ class WriteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_write)
 
-        val searchData = intent.getParcelableExtra<MapSearchListDto>("shopData")
-
         val recyclerView = findViewById<RecyclerView>(R.id.write_recyclerview)
 
         //텍스트
@@ -56,7 +50,6 @@ class WriteActivity : AppCompatActivity() {
         val addressbtn = findViewById<Button>(R.id.write_addressBtn)
         val writebtn = findViewById<Button>(R.id.write_writeBtn)
         val canclebtn = findViewById<Button>(R.id.write_cancleBtn)
-        val shopName = findViewById<TextView>(R.id.shopNameT)
 
         //주소 버튼
         addressbtn.setOnClickListener {
@@ -64,8 +57,7 @@ class WriteActivity : AppCompatActivity() {
             startActivity(i)
         }
 
-        shopName.text = searchData?.name
-        address.setText(searchData?.road)
+        val searchData = intent.getParcelableExtra<MapSearchListDto>("shopData")
 
         println(searchData.toString())
         /*

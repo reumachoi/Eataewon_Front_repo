@@ -1,7 +1,6 @@
 package com.example.eataewon.connect
 
-import com.example.eataewon.connect.MemberDto
-import com.example.eataewon.connect.RetrofitClient
+
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
@@ -22,7 +21,6 @@ interface MemberService{
     //bbs에 저장된 아이디값으로 member에서 같은아이디 유저정보 가져오기
     @POST("/bbsGetUser")
     fun bbsGetUser(@Body id:String): Call<MemberBbsDto>
-
 
 }
 
