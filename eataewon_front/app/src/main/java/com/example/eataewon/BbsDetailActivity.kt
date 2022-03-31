@@ -39,10 +39,10 @@ class BbsDetailActivity : AppCompatActivity() {
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
         val data = intent.getParcelableExtra<BbsDto>("data")
 
-        /*binding.DeTitle.text = data?.title
+        binding.DeTitle.text = data?.title
         binding.DeContent.text = data?.content
         binding.DeHashtag.text = data?.hashtag
-        binding.DeLocation.text = data?.address*/
+        binding.DeLocation.text = data?.address
 
 //       data에 같이 넘어온 글쓴이 아이디로 유저정보 가져오기 (사진,닉네임,한줄소개, 호감도)
         /*var id = data?.id

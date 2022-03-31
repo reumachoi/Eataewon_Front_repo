@@ -21,6 +21,7 @@
             <stringArg name="classpath">
               <args>
                 <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/42aa72c7a5d7b7034fba0b01b42d6fc7/transformed/jetified-libDaumMapAndroid.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/708ab93f2c06974c10f5ded451270cdf/transformed/jetified-viewbinding-7.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/af0907a162e796ad1f7cd5216d438dfa/transformed/jetified-kotlin-stdlib-jdk8-1.6.10.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/410bb6e2aa8d23310e00f43e1abfb441/transformed/jetified-map-sdk-3.14.0-api.jar</arg>
@@ -253,6 +254,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-livedata:2.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.arch.core:core-runtime:2.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: ./app/libs/libDaumMapAndroid.jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10" level="project" />
     <orderEntry type="library" name="Gradle: androidx.collection:collection:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.4.0" level="project" />
