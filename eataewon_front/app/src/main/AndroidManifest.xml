@@ -33,7 +33,7 @@
 
         <meta-data
                 android:name="com.google.android.actions"
-                android:resource="@menu/menu_main"/> <!-- 최아름 카카오 sns, 네이버 map -->
+                android:resource="@menu/mypage_toolbar"/> <!-- 최아름 카카오 sns, 네이버 map -->
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>

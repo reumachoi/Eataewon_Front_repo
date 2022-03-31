@@ -61,6 +61,8 @@
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/fragment_write.xml" value="0.16094771241830066" />
         <entry key="..\:/Study/project/eataewon_front/eataewon_front/app/src/main/res/layout/sign_main.xml" value="0.33" />
         <entry key="..\:/Users/HAN/Documents/finafo/eataewon_front/app/src/main/res/layout/activity_second.xml" value="0.1940359477124183" />
+        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/drawable/ic_mypage_logout.xml" value="0.26979166666666665" />
+        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/drawable/ic_mypage_userdelete.xml" value="0.26979166666666665" />
         <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/activity_delete.xml" value="0.1940359477124183" />
         <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/activity_map.xml" value="0.1940359477124183" />
         <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/layout/activity_second.xml" value="0.4" />
@@ -71,6 +73,7 @@
         <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.2682291666666667" />
         <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/menu_bbs_details.xml" value="0.2682291666666667" />
         <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/menu_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/mypage_toolbar.xml" value="0.2682291666666667" />
         <entry key="..\:/androidsamples/eataewon_front/app/src/main/res/menu/search_menu.xml" value="0.2682291666666667" />
         <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/layout/activity_home.xml" value="0.1766304347826087" />
         <entry key="..\:/androidsamples/eataewon_front3/app/src/main/res/layout/activity_main.xml" value="0.20923913043478262" />

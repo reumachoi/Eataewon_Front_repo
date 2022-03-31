@@ -83,7 +83,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
     }
  // 상단바 부분
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_main, menu)
+        inflater.inflate(R.menu.mypage_toolbar, menu)
 
 
         return super.onCreateOptionsMenu(menu, inflater)
