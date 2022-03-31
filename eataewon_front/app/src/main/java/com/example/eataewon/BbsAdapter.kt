@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eataewon.BbsDetailActivity
+import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDto
 
 class BbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
@@ -66,10 +68,6 @@ class BbsAdapter (private val context: Context, private val dataList: ArrayList<
             itemView.setOnClickListener {
                 Intent(context, BbsDetailActivity::class.java).apply {
 
-                    // 짐싸!
-                    putExtra("data", data)
-
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }.run { context.startActivity(this) }
             }
         }

@@ -1,22 +1,26 @@
 package com.example.eataewon
 
+
 import android.content.ActivityNotFoundException
-import android.content.ContentValues.TAG
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
-import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
 import com.kakao.sdk.link.WebSharerClient
-import com.kakao.sdk.template.model.*
+import com.kakao.sdk.template.Content
+import com.kakao.sdk.template.Link
+import com.kakao.sdk.template.LocationTemplate
+import com.kakao.sdk.template.Social
+
+//import com.kakao.sdk.template.model.*
 
 class BbsDetailActivity : AppCompatActivity() {
 
@@ -62,14 +66,14 @@ class BbsDetailActivity : AppCompatActivity() {
         }
 
         binding.deleteBtn.setOnClickListener {
-            var delete = BbsDao.getInstance().bbsdelete(data!!.seq)
+          /*  var delete = BbsDao.getInstance().bbsdelete(data!!.seq)
             if(delete == true){
                 Toast.makeText(this,"글이 삭제되었습니다",Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this,"글삭제를 실패했습니다",Toast.LENGTH_SHORT).show()
             }
             val i = Intent(this,HomeActivity::class.java)
-            startActivity(i)
+            startActivity(i)*/
         }
 
         binding.updateBtn.setOnClickListener {
@@ -107,7 +111,7 @@ class BbsDetailActivity : AppCompatActivity() {
             binding.mapContent.isVisible = true
             binding.showDetailShopField.isVisible = true
 
-          val naverMapFragment = NaverMapFragment()
+            val naverMapFragment = NaverMapFragment()
             supportFragmentManager.beginTransaction()
                 .add(R.id.mapContent, naverMapFragment).commit()
 
@@ -136,47 +140,49 @@ class BbsDetailActivity : AppCompatActivity() {
                     sharedCount = 845
                 )
             )
-        // 사용자 정의 메시지 ID
-        //  * 만들기 가이드: https://developers.kakao.com/docs/latest/ko/message/message-template
+            // 사용자 정의 메시지 ID
+            //  * 만들기 가이드: https://developers.kakao.com/docs/latest/ko/message/message-template
 
-        // 카카오톡 설치여부 확인
-        if (LinkClient.instance.isKakaoLinkAvailable(this)) {
-            // 카카오톡으로 카카오링크 공유 가능
-            LinkClient.instance.defaultTemplate(this, defaultText) { linkResult, error ->
-                if (error != null) {
-                    Log.e(TAG, "카카오링크 보내기 실패", error)
+            // 카카오톡 설치여부 확인
+            if (LinkClient.instance.isKakaoLinkAvailable(this)) {
+                // 카카오톡으로 카카오링크 공유 가능
+                LinkClient.instance.defaultTemplate(this, defaultText) { linkResult, error ->
+                    if (error != null) {
+                        Log.e(ContentValues.TAG, "카카오링크 보내기 실패", error)
+                    }
+                    else if (linkResult != null) {
+                        Log.d(ContentValues.TAG, "카카오링크 보내기 성공 ${linkResult.intent}")
+                        startActivity(linkResult.intent)
+
+                        // 카카오링크 보내기에 성공했지만 아래 경고 메시지가 존재할 경우 일부 컨텐츠가 정상 동작하지 않을 수 있습니다.
+                        Log.w(ContentValues.TAG, "Warning Msg: ${linkResult.warningMsg}")
+                        Log.w(ContentValues.TAG, "Argument Msg: ${linkResult.argumentMsg}")
+                    }
                 }
-                else if (linkResult != null) {
-                    Log.d(TAG, "카카오링크 보내기 성공 ${linkResult.intent}")
-                    startActivity(linkResult.intent)
+            } else {
+                // 카카오톡 미설치: 웹 공유 사용 권장
+                // 웹 공유 예시 코드
+                val sharerUrl = WebSharerClient.instance.defaultTemplateUri(defaultText)
 
-                    // 카카오링크 보내기에 성공했지만 아래 경고 메시지가 존재할 경우 일부 컨텐츠가 정상 동작하지 않을 수 있습니다.
-                    Log.w(TAG, "Warning Msg: ${linkResult.warningMsg}")
-                    Log.w(TAG, "Argument Msg: ${linkResult.argumentMsg}")
+                // CustomTabs으로 웹 브라우저 열기
+
+                // 1. CustomTabs으로 Chrome 브라우저 열기
+                try {
+                    KakaoCustomTabsClient.openWithDefault(this, sharerUrl)
+                } catch(e: UnsupportedOperationException) {
+                    // Chrome 브라우저가 없을 때 예외처리
+                }
+
+                // 2. CustomTabs으로 디바이스 기본 브라우저 열기
+                try {
+                    KakaoCustomTabsClient.open(this, sharerUrl)
+                } catch (e: ActivityNotFoundException) {
+                    // 인터넷 브라우저가 없을 때 예외처리
                 }
             }
-        } else {
-            // 카카오톡 미설치: 웹 공유 사용 권장
-            // 웹 공유 예시 코드
-            val sharerUrl = WebSharerClient.instance.defaultTemplateUri(defaultText)
-
-            // CustomTabs으로 웹 브라우저 열기
-
-            // 1. CustomTabs으로 Chrome 브라우저 열기
-            try {
-                KakaoCustomTabsClient.openWithDefault(this, sharerUrl)
-            } catch(e: UnsupportedOperationException) {
-                // Chrome 브라우저가 없을 때 예외처리
-            }
-
-            // 2. CustomTabs으로 디바이스 기본 브라우저 열기
-            try {
-                KakaoCustomTabsClient.open(this, sharerUrl)
-            } catch (e: ActivityNotFoundException) {
-                // 인터넷 브라우저가 없을 때 예외처리
-            }
-        }
 
         }
     }
 }
+
+

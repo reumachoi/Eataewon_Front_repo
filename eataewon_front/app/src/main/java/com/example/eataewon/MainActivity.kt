@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
@@ -31,7 +32,7 @@ import com.kakao.sdk.user.UserApiClient
 class MainActivity : AppCompatActivity(),View.OnClickListener{
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
-
+    var imm: InputMethodManager? = null //EditText 키보드 내려가도록
 ///////
     // firebase 인증을 위한 변수
     var auth : FirebaseAuth? = null
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
 
         //디테일 테스트 버튼 (최아름)
         binding.testBtn.setOnClickListener {
@@ -173,17 +175,10 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         when (view?.id) {
 
             R.id.login_Btn -> {
+                imm?.hideSoftInputFromWindow(loginPW.getWindowToken(), 0);
                 val id = loginID.text.toString()
                 val pw = loginPW.text.toString()
                 val dto = MemberDto(id, "", pw, "", "",0, 0,"")
-
-                /*val checkLogin = MemberDao.getInstance().login(dto)
-                if (checkLogin != null) {
-                    Toast.makeText(this, "환영합니다. ${checkLogin.id}님", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, HomeActivity::class.java))
-                } else {
-                    Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
-                }*/
 
                 //백엔드 접속후 id pw값을 찾아 login값에 dto값 넣기
                 val login = MemberDao.getInstance().login(dto)
