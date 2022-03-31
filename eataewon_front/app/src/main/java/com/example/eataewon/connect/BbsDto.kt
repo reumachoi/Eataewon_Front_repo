@@ -17,7 +17,7 @@ class BbsDto(
     var longitude:Double,
     var readcnt:Int,
     var likecnt:Int
-):Parcelable {
+    ):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readInt(),
