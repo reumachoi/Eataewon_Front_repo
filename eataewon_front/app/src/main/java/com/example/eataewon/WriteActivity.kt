@@ -18,6 +18,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.eataewon.R
+import com.example.eataewon.SearchKakaoMapActivity
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.databinding.ActivityWriteBinding
 

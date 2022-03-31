@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/homeview_bbs_layout.xml",
-        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/homeview_bbs_layout.xml"
-    },
-    {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_google.xml",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/activity_google.xml"
+    },
+    {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/homeview_bbs_layout.xml",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/homeview_bbs_layout.xml"
     },
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_second.xml",
@@ -54,6 +54,14 @@
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_bbs_detail.xml",
         "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/activity_bbs_detail.xml"
+    },
+    {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_naver_map.xml",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/fragment_naver_map.xml"
+    },
+    {
+        "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_delete.xml",
+        "source": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/src/main/res/layout/activity_delete.xml"
     },
     {
         "merged": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_update_bbs.xml",

@@ -23,59 +23,70 @@ public final class FragmentMypageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button Cancel;
+  public final ConstraintLayout constraintLayout3;
 
   @NonNull
-  public final Button Imagebtn;
+  public final ConstraintLayout constraintLayout4;
 
   @NonNull
-  public final EditText IntroCh;
+  public final Button mypageCancleBtn;
 
   @NonNull
-  public final EditText NickCh;
+  public final EditText mypageEmail;
 
   @NonNull
-  public final TextView Title;
+  public final TextView mypageLikepoint;
 
   @NonNull
-  public final Button correct;
+  public final TextView mypageName;
 
   @NonNull
-  public final EditText editTextTextPersonName3;
+  public final EditText mypageNickname;
 
   @NonNull
-  public final ImageView imageView2;
+  public final ImageView mypageProfilImage;
 
   @NonNull
-  public final TextView textView;
+  public final EditText mypageProfilmsg;
 
   @NonNull
-  public final TextView textView2;
+  public final Button mypageProfilpicBtn;
 
   @NonNull
-  public final TextView title2;
+  public final TextView mypageProfilpicUri;
 
   @NonNull
-  public final TextView title3;
+  public final Button mypageUpdateBtn;
 
-  private FragmentMypageBinding(@NonNull ConstraintLayout rootView, @NonNull Button Cancel,
-      @NonNull Button Imagebtn, @NonNull EditText IntroCh, @NonNull EditText NickCh,
-      @NonNull TextView Title, @NonNull Button correct, @NonNull EditText editTextTextPersonName3,
-      @NonNull ImageView imageView2, @NonNull TextView textView, @NonNull TextView textView2,
-      @NonNull TextView title2, @NonNull TextView title3) {
+  @NonNull
+  public final TextView textView14;
+
+  @NonNull
+  public final TextView textView21;
+
+  private FragmentMypageBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout constraintLayout3, @NonNull ConstraintLayout constraintLayout4,
+      @NonNull Button mypageCancleBtn, @NonNull EditText mypageEmail,
+      @NonNull TextView mypageLikepoint, @NonNull TextView mypageName,
+      @NonNull EditText mypageNickname, @NonNull ImageView mypageProfilImage,
+      @NonNull EditText mypageProfilmsg, @NonNull Button mypageProfilpicBtn,
+      @NonNull TextView mypageProfilpicUri, @NonNull Button mypageUpdateBtn,
+      @NonNull TextView textView14, @NonNull TextView textView21) {
     this.rootView = rootView;
-    this.Cancel = Cancel;
-    this.Imagebtn = Imagebtn;
-    this.IntroCh = IntroCh;
-    this.NickCh = NickCh;
-    this.Title = Title;
-    this.correct = correct;
-    this.editTextTextPersonName3 = editTextTextPersonName3;
-    this.imageView2 = imageView2;
-    this.textView = textView;
-    this.textView2 = textView2;
-    this.title2 = title2;
-    this.title3 = title3;
+    this.constraintLayout3 = constraintLayout3;
+    this.constraintLayout4 = constraintLayout4;
+    this.mypageCancleBtn = mypageCancleBtn;
+    this.mypageEmail = mypageEmail;
+    this.mypageLikepoint = mypageLikepoint;
+    this.mypageName = mypageName;
+    this.mypageNickname = mypageNickname;
+    this.mypageProfilImage = mypageProfilImage;
+    this.mypageProfilmsg = mypageProfilmsg;
+    this.mypageProfilpicBtn = mypageProfilpicBtn;
+    this.mypageProfilpicUri = mypageProfilpicUri;
+    this.mypageUpdateBtn = mypageUpdateBtn;
+    this.textView14 = textView14;
+    this.textView21 = textView21;
   }
 
   @Override
@@ -105,81 +116,94 @@ public final class FragmentMypageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.Cancel;
-      Button Cancel = ViewBindings.findChildViewById(rootView, id);
-      if (Cancel == null) {
+      id = R.id.constraintLayout3;
+      ConstraintLayout constraintLayout3 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout3 == null) {
         break missingId;
       }
 
-      id = R.id.Imagebtn;
-      Button Imagebtn = ViewBindings.findChildViewById(rootView, id);
-      if (Imagebtn == null) {
+      id = R.id.constraintLayout4;
+      ConstraintLayout constraintLayout4 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout4 == null) {
         break missingId;
       }
 
-      id = R.id.IntroCh;
-      EditText IntroCh = ViewBindings.findChildViewById(rootView, id);
-      if (IntroCh == null) {
+      id = R.id.mypage_cancleBtn;
+      Button mypageCancleBtn = ViewBindings.findChildViewById(rootView, id);
+      if (mypageCancleBtn == null) {
         break missingId;
       }
 
-      id = R.id.NickCh;
-      EditText NickCh = ViewBindings.findChildViewById(rootView, id);
-      if (NickCh == null) {
+      id = R.id.mypage_email;
+      EditText mypageEmail = ViewBindings.findChildViewById(rootView, id);
+      if (mypageEmail == null) {
         break missingId;
       }
 
-      id = R.id.Title;
-      TextView Title = ViewBindings.findChildViewById(rootView, id);
-      if (Title == null) {
+      id = R.id.mypage_likepoint;
+      TextView mypageLikepoint = ViewBindings.findChildViewById(rootView, id);
+      if (mypageLikepoint == null) {
         break missingId;
       }
 
-      id = R.id.correct;
-      Button correct = ViewBindings.findChildViewById(rootView, id);
-      if (correct == null) {
+      id = R.id.mypage_name;
+      TextView mypageName = ViewBindings.findChildViewById(rootView, id);
+      if (mypageName == null) {
         break missingId;
       }
 
-      id = R.id.editTextTextPersonName3;
-      EditText editTextTextPersonName3 = ViewBindings.findChildViewById(rootView, id);
-      if (editTextTextPersonName3 == null) {
+      id = R.id.mypage_nickname;
+      EditText mypageNickname = ViewBindings.findChildViewById(rootView, id);
+      if (mypageNickname == null) {
         break missingId;
       }
 
-      id = R.id.imageView2;
-      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView2 == null) {
+      id = R.id.mypage_profil_image;
+      ImageView mypageProfilImage = ViewBindings.findChildViewById(rootView, id);
+      if (mypageProfilImage == null) {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
+      id = R.id.mypage_profilmsg;
+      EditText mypageProfilmsg = ViewBindings.findChildViewById(rootView, id);
+      if (mypageProfilmsg == null) {
         break missingId;
       }
 
-      id = R.id.textView2;
-      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
-      if (textView2 == null) {
+      id = R.id.mypageProfilpicBtn;
+      Button mypageProfilpicBtn = ViewBindings.findChildViewById(rootView, id);
+      if (mypageProfilpicBtn == null) {
         break missingId;
       }
 
-      id = R.id.title2;
-      TextView title2 = ViewBindings.findChildViewById(rootView, id);
-      if (title2 == null) {
+      id = R.id.mypage_profilpic_uri;
+      TextView mypageProfilpicUri = ViewBindings.findChildViewById(rootView, id);
+      if (mypageProfilpicUri == null) {
         break missingId;
       }
 
-      id = R.id.title3;
-      TextView title3 = ViewBindings.findChildViewById(rootView, id);
-      if (title3 == null) {
+      id = R.id.mypage_updateBtn;
+      Button mypageUpdateBtn = ViewBindings.findChildViewById(rootView, id);
+      if (mypageUpdateBtn == null) {
         break missingId;
       }
 
-      return new FragmentMypageBinding((ConstraintLayout) rootView, Cancel, Imagebtn, IntroCh,
-          NickCh, Title, correct, editTextTextPersonName3, imageView2, textView, textView2, title2,
-          title3);
+      id = R.id.textView14;
+      TextView textView14 = ViewBindings.findChildViewById(rootView, id);
+      if (textView14 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView21;
+      TextView textView21 = ViewBindings.findChildViewById(rootView, id);
+      if (textView21 == null) {
+        break missingId;
+      }
+
+      return new FragmentMypageBinding((ConstraintLayout) rootView, constraintLayout3,
+          constraintLayout4, mypageCancleBtn, mypageEmail, mypageLikepoint, mypageName,
+          mypageNickname, mypageProfilImage, mypageProfilmsg, mypageProfilpicBtn,
+          mypageProfilpicUri, mypageUpdateBtn, textView14, textView21);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

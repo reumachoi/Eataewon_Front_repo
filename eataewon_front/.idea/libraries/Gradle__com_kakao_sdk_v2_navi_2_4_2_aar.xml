@@ -3,8 +3,8 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/47c86d353e3ec1443320c6e91181553a/transformed/jetified-v2-navi-2.4.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c3fbc0d245faed547d85182943181fc4/transformed/jetified-v2-navi-2.4.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c3fbc0d245faed547d85182943181fc4/transformed/jetified-v2-navi-2.4.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c3fbc0d245faed547d85182943181fc4/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/47c86d353e3ec1443320c6e91181553a/transformed/jetified-v2-navi-2.4.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/47c86d353e3ec1443320c6e91181553a/transformed/jetified-v2-navi-2.4.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -4,7 +4,7 @@
             "outputFile": "/Users/reuma/Desktop/eataewon/Eataewon_Front_repo/eataewon_front/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/reuma/.gradle/caches/transforms-3/4237b77050197febe15fbee0b045256b/transformed/appcompat-1.4.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/reuma/.gradle/caches/transforms-3/7c5deaa510384f74c575d75f1cf2038f/transformed/appcompat-1.4.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/reuma/.gradle/caches/transforms-3/b7b1e3b43b03a30d555f87041aff767b/transformed/core-1.7.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/reuma/.gradle/caches/transforms-3/1b669605d2438250c1499f9fc222f38b/transformed/core-1.7.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

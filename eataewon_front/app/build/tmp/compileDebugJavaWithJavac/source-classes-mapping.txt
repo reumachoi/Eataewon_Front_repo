@@ -1,3 +1,5 @@
+com/example/eataewon/databinding/HomeviewCurationLayoutBinding.java
+ com.example.eataewon.databinding.HomeviewCurationLayoutBinding
 com/example/eataewon/databinding/FragmentHomeBinding.java
  com.example.eataewon.databinding.FragmentHomeBinding
 com/example/eataewon/databinding/ActivityKakaoMapBinding.java
@@ -14,6 +16,8 @@ com/example/eataewon/databinding/ActivitySignBinding.java
  com.example.eataewon.databinding.ActivitySignBinding
 com/example/eataewon/databinding/FragmentNaverMapBinding.java
  com.example.eataewon.databinding.FragmentNaverMapBinding
+com/example/eataewon/databinding/HomeviewBbsLayoutBinding.java
+ com.example.eataewon.databinding.HomeviewBbsLayoutBinding
 com/example/eataewon/databinding/FragmentSearchBinding.java
  com.example.eataewon.databinding.FragmentSearchBinding
 com/example/eataewon/databinding/ActivityBbsDetailBinding.java
@@ -28,10 +32,10 @@ com/example/eataewon/databinding/ActivityHomeBinding.java
  com.example.eataewon.databinding.ActivityHomeBinding
 com/example/eataewon/databinding/FragmentMapsBinding.java
  com.example.eataewon.databinding.FragmentMapsBinding
+com/example/eataewon/databinding/ActivityDeleteBinding.java
+ com.example.eataewon.databinding.ActivityDeleteBinding
 com/example/eataewon/databinding/MapListViewLayoutBinding.java
  com.example.eataewon.databinding.MapListViewLayoutBinding
-com/example/eataewon/databinding/DropOutBinding.java
- com.example.eataewon.databinding.DropOutBinding
 com/example/eataewon/databinding/ActivityGoogleBinding.java
  com.example.eataewon.databinding.ActivityGoogleBinding
 com/example/eataewon/databinding/SearchViewLayoutBinding.java

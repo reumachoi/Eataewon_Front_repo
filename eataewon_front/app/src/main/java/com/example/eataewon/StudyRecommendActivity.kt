@@ -3,23 +3,18 @@ package com.example.eataewon
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.firebase.auth.FirebaseAuth
 
 class StudyRecommendActivity : AppCompatActivity() {
 
-    // 로그아웃 구현을 위한 변수
+/*    // 로그아웃 구현을 위한 변수
     var auth : FirebaseAuth ?= null
-    var googleSignInClient : GoogleSignInClient ?= null
+    var googleSignInClient : GoogleSignInClient ?= null*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_google)
 
-        // 구글 로그아웃을 위해 로그인 세션 가져오기
+   /*     // 구글 로그아웃을 위해 로그인 세션 가져오기
         var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com")
             .requestEmail()
@@ -41,7 +36,7 @@ class StudyRecommendActivity : AppCompatActivity() {
             logoutIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(logoutIntent)
         }
-
-    } //onCreate
+*/
+    }
 }
 

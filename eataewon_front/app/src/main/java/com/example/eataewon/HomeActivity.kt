@@ -1,12 +1,7 @@
 package com.example.eataewon
 
+import WriteActivity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import com.example.eataewon.connect.MemberDto
-import android.content.res.ColorStateList
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
         val searchFragment = SearchFragment()
         val writeActivity = WriteActivity()
         val bookmarkFragment = BookmarkFragment()
-        val mypageFragment = MypageFragment(this)
+        val mypageFragment = MypageFragment()
         val intent = intent
         val user = intent.getParcelableExtra<MemberDto>("user")
         setCurrentFragment(homeFragment)

@@ -23,14 +23,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         setContentView(binding.root)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
 
-
-
-
-     /*   //백엔드 통신 확인용
-        var result = MemberDao.getInstance().test()
-        binding.loginID.setText(result.toString())
-        binding.textView9.text = result.toString()
-        println(result.toString()+"test 확인")*/
+        //디테일 테스트 버튼 (최아름)
+        binding.testBtn.setOnClickListener {
+            val i = Intent(this, BbsDetailActivity::class.java)
+            startActivity(i)
+        }
 
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
