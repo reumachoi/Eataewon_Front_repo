@@ -1,5 +1,6 @@
 package com.example.eataewon
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,10 +14,11 @@ class HomeActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
-        val writeFragment = WriteFragment()
+
         val bookmarkFragment = BookmarkFragment()
         val mypageFragment = MypageFragment()
-        val intent = intent
+
+        val intent = Intent(this,WriteActivity::class.java)
         val user = intent.getParcelableExtra<MemberDto>("user")
         setCurrentFragment(homeFragment)
         val bundle = Bundle()
@@ -27,7 +29,7 @@ class HomeActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.action_home->setCurrentFragment(homeFragment)
                 R.id.action_search->setCurrentFragment(searchFragment)
-                R.id.action_write->setCurrentFragment(writeFragment)
+                R.id.action_write->startActivity(intent)
                 R.id.action_bookmark->setCurrentFragment(bookmarkFragment)
                 R.id.action_mypage->setCurrentFragment(mypageFragment)
             }
