@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:title=""/>
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_menu_search"
+        android:title="search"/>
+    <item
+        android:id="@+id/action_write"
+        android:icon="@drawable/ic_baseline_control_point_24"
+        android:title="write"/>
+    <item
+        android:id="@+id/action_bookmark"
+        android:icon="@drawable/ic_baseline_bookmark_border_24"
+        android:title="bookmark"/>
+    <item
+        android:id="@+id/action_mypage"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="mypage"/>
+</menu>

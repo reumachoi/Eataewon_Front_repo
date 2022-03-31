@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "147227189570",
+    "project_id": "eataewon",
+    "storage_bucket": "eataewon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763712107163:android:349453ca38ade487670c3e",
+        "android_client_info": {
+          "package_name": "com.example.eataewon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763712107163-d0i8lo7bqu1ri30jl1s46h4og4ltv3nb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eataewon",
+            "certificate_hash": "ec46c50a5e0f1970b8b8dba6218f4795d1f3e8d9"
+          }
+        },
+        {
+          "client_id": "763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx616MJhZ8MCM8ry6J61fdrRtplM2_78U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
