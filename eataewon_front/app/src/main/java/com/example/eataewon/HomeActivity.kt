@@ -1,9 +1,10 @@
 package com.example.eataewon
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -15,14 +16,12 @@ class HomeActivity : AppCompatActivity() {
         val searchFragment = SearchFragment()
         val writeFragment = WriteFragment()
         val bookmarkFragment = BookmarkFragment()
-        val mypageFragment = MypageFragment(this)
-        val intent = intent
-        val user = intent.getParcelableExtra<MemberDto>("user")
-        setCurrentFragment(homeFragment)
-        val bundle = Bundle()
-        bundle.putParcelable("user",user)
-        mypageFragment.arguments = bundle
+        val mypageFragment = MypageFragment()
 
+        setCurrentFragment(homeFragment)
+
+
+        //bottomNavi.itemRippleColor(ColorStateList.valueOf(Color.parseColor("#FFFFFF")))
         bottomNavi.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.action_home->setCurrentFragment(homeFragment)
