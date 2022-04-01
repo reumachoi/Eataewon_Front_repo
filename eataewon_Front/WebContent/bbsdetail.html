@@ -2,12 +2,42 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>bbsdetail</title>
+<title>Detail View</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="bbslist.html">Home
+            <span class="visually-hidden"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbslikelist.html">like❤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbsscraplist.html">scrap🔗</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mypage.html">mypage</a>
+        </li>
+      </ul>
+       
+   
+    </div>
+  </div>
+</nav>
 
 <style type="text/css">
 th{
@@ -25,7 +55,6 @@ pre { /* 자동줄바꿈 설정 */
 </head>
 <body>
 
-<h5>상세 페이지</h5>
 
 <div id="app" class="container">
 
@@ -149,7 +178,7 @@ pre { /* 자동줄바꿈 설정 */
 let str = sessionStorage.getItem("login");	
 let json = JSON.parse(str);
 let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
-let nickname = JSON.parse(str).nickname;
+
 
 
 const url = new URL(location.href);
@@ -169,8 +198,8 @@ $.ajax({
 	success:function(bbs){
 		
 		$("#id").text(bbs.id);
-		$("#nickname").text(bbs.nickname);
 		$("#title").text(bbs.title);
+		$("#nickname").text(bbs.nickname);
 		$("#wdate").text(bbs.wdate);
 		$("#readcount").text(bbs.readcnt);
 		$("#content").text(bbs.content);
@@ -195,6 +224,8 @@ $.ajax({
 	}
 	
 });
+
+
 
 
 $("#bbsupdate").click(function () {	

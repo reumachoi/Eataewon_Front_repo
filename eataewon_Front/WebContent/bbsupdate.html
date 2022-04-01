@@ -7,10 +7,39 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="bbslist.html">Home
+            <span class="visually-hidden"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbslikelist.html">like❤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbsscraplist.html">scrap🔗</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mypage.html">mypage</a>
+        </li>
+      </ul>
+       
+   
+    </div>
+  </div>
+</nav>
+
 </head>
 <body>
-
-<h2>글 수정</h2>
 
 <form action="">
 <div id="app" class="container">
@@ -129,7 +158,7 @@ $.ajax({
 		$("#shopurl").val(bbs.shopurl);
 	},
 	error:function(){
-		alert(val(bbs.shopphnum));
+		alert('error');
 	}
 });
 

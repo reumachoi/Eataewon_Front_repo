@@ -10,13 +10,44 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+	src="./jquery/jquery.twbsPagination.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./css/initial.css">
 <link rel="stylesheet" type="text/css" href="./css/table.css">
 <link rel="stylesheet" type="text/css" href="./css/button.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<script type="text/javascript"
-	src="./jquery/jquery.twbsPagination.min.js"></script>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="bbslist.html">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbslikelist.html">like❤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbsscraplist.html">scrap🔗</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mypage.html">mypage</a>
+        </li>
+      </ul>
+          <a class="nav-link" href="login.html">log-out</a>
+   
+    </div>
+  </div>
+</nav>
+	
 </head>
 <body>
 <br>
@@ -29,7 +60,8 @@
 						<option selected>선택</option>
 						<option value="title">제목</option>
 						<option value="content">내용</option>
-						<option value="id">작성자</option>
+						<option value="id">작성자 id</option>
+						<option value="nickname">닉네임</option>
 						<option value="hashtag">해쉬태그</option>
 						<option value="address">주소</option>
 						<option value="shopname">가게이름</option>
@@ -41,8 +73,6 @@
 				<td style="padding-left: 5px">
 					<span><button type="button" class="btn btn-primary" id="btnSearch">검색</button></span>
 					
-					<span><button type="button" class="btn btn-primary" id="btnScraplist">스크랩 목록</button></span>
-					<span><button type="button" class="btn btn-primary" id="btnlikelist">좋아요 목록</button></span>
 				</td>
 		</tr>
 	</table>	
@@ -53,7 +83,8 @@
 			<tr>
 				<th>번호</th>
 				<th>제목</th>
-				<th>작성자</th>
+	<!-- 			<th>작성자</th> -->
+	 			<th>닉네임</th> 
 			</tr>
 		</thead>
 
@@ -83,6 +114,21 @@
 $(document).ready(function () {
 	let str = sessionStorage.getItem("login");	
 	let json = JSON.parse(str);	
+//	let id = JSON.parse(str).id;
+	
+/* 	$.ajax({
+		url:"http://localhost:3000/getnickname",
+		type:"get",
+		data:{ "id":id },
+		success:function(bbs){			
+			$("#nickname").text(bbs.nickname);			
+		},
+		error:function(){
+			alert('error');
+		}
+		
+	}); */
+	
 	
 	getBbslist( 0 ); //#1여기 있는 코드나 #btnsearch 안에 있는 코드나 차이 없는데 검색 하지 않은 목록이랑 검색한 목록을 어떻게 다르게 구현함?
 	getBbsCount();
@@ -127,7 +173,9 @@ function getBbslist( page ) { //페이지는 도대체 어디서 나오는거? �
 			
 					str +=	  "<td>"+ "&nbsp;&nbsp;<a href='bbsdetail.html?seq=" + item.seq + "'>" + item.title + "</a></td>"
 				
-					str +=	  "<td>" + item.id + "</td>"
+		/* 			str +=	  "<td>" + item.id + "</td>" */
+					
+					str +=	  "<td>" + item.nickname + "</td>"
 					
 					
 							
