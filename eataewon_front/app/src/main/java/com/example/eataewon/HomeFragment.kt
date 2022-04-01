@@ -29,12 +29,12 @@ class HomeFragment: Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         // RecyclerView.Adapter<ViewHolder>()
-        CurationPager.adapter = HomePagerAdapter(testList)
+        CurationPager.adapter = HomePagerAdapter(requireActivity(), testList)
         // ViewPager Paging 방향은 Horizontal
         CurationPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         // HOME BBS VIEW
-        BbsPager.adapter = BbsPagerAdapter(testList)
+        BbsPager.adapter = BbsPagerAdapter(requireActivity(), testList)
         BbsPager.orientation = ViewPager2.ORIENTATION_VERTICAL
 
         //HomeBbsRecyclerView.adapter = BbsPagerAdapter(testList)

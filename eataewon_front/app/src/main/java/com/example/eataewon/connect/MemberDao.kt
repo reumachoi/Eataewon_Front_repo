@@ -9,13 +9,13 @@ import retrofit2.http.*
 
 interface MemberService{
 
-    @POST("/login")
+    @POST("/loginApp")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
-    @POST("/getId")
+    @POST("/getIdApp")
     fun getId(@Body id:String?=null): Call<String>
 
-    @POST("/addmember")
+    @POST("/addmemberApp")
     fun signup(@Body dto:MemberDto): Call<String>
 
     //bbs에 저장된 아이디값으로 member에서 같은아이디 유저정보 가져오기

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_google.xml" value="0.25" />
         <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.19429347826086957" />
         <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_main.xml" value="0.22" />
@@ -102,6 +103,7 @@
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag4.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag5.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.13916666666666666" />
+        <entry key="app/src/main/res/drawable/click_likebtn.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/click_scrapbtn.xml" value="0.23076923076923078" />
         <entry key="app/src/main/res/drawable/ic_mypage_logout.xml" value="0.21944444444444444" />
         <entry key="app/src/main/res/drawable/imgeview_sample.xml" value="0.21944444444444444" />
@@ -132,6 +134,7 @@
         <entry key="app/src/main/res/layout/map_list_view_layout.xml" value="0.2890625" />
         <entry key="app/src/main/res/menu/mypage_menu_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/mypage_toolbar.xml" value="0.41822916666666665" />
+        <entry key="app/src/main/res/menu/search_menu.xml" value="0.3307291666666667" />
       </map>
     </option>
   </component>

@@ -37,8 +37,8 @@ class BbsDetailActivity : AppCompatActivity() {
 
 
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
-        val data = intent.getParcelableExtra<BbsDto>("data")
-
+        val data = intent.getParcelableExtra<BbsDto>("clickBbs")
+        println(data)
         binding.DeTitle.text = data?.title
         binding.DeContent.text = data?.content
         binding.DeHashtag.text = data?.hashtag
@@ -78,7 +78,7 @@ class BbsDetailActivity : AppCompatActivity() {
 
         binding.updateBtn.setOnClickListener {
             val i = Intent(this,UpdateBbsActivity::class.java)
-            i.putExtra("passUpdate",data)
+//            i.putExtra("passUpdate",data)
             startActivity(i)
         }
 
