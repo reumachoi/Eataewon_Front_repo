@@ -1,7 +1,9 @@
 package com.example.eataewon
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
@@ -10,6 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eataewon.Adapter.SearchBbsAdapter
 import com.example.eataewon.connect.BbsDto
+import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment: Fragment(R.layout.fragment_search) {
 
@@ -23,7 +26,7 @@ class SearchFragment: Fragment(R.layout.fragment_search) {
         val searchview = view.findViewById<SearchView>(R.id.SearchView)
 
         // 리사이클러뷰 db 데이터와 접함
-        val bbsAdapter = SearchBbsAdapter(activity!!, testList)
+        val bbsAdapter = SearchBbsAdapter(requireActivity(), testList)
         var recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.adapter = bbsAdapter
 
@@ -37,7 +40,7 @@ class SearchFragment: Fragment(R.layout.fragment_search) {
         // 구글맵 뷰
         mapBtn.setOnClickListener {
             val mapsFragment = MapsFragment()
-            val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.main_frame, mapsFragment)
             transaction.commit()
         }

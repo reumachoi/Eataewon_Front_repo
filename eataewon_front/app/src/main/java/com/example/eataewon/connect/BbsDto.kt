@@ -17,7 +17,7 @@ class BbsDto(
     var longitude:Double,
     var readcnt:Int,
     var likecnt:Int
-):Parcelable {
+    ):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readInt(),
@@ -53,6 +53,10 @@ class BbsDto(
 
     override fun describeContents(): Int {
         return 0
+    }
+
+    override fun toString(): String {
+        return "BbsDto(id=$id, seq=$seq, title=$title, content=$content, picture=$picture, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt)"
     }
 
     companion object CREATOR : Parcelable.Creator<BbsDto> {

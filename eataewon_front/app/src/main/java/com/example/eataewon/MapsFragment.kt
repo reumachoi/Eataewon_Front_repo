@@ -1,6 +1,7 @@
 package com.example.eataewon
 
 import android.Manifest
+import android.app.Activity
 import android.location.Location
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -95,7 +96,7 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
         val markerOptions = MarkerOptions()
             .position(LATLNG)
             .title("Here!")
-            //.icon(discriptor)
+        //.icon(discriptor)
 
         val cameraPosition = CameraPosition.Builder()
             .target(LATLNG)

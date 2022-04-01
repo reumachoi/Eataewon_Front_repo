@@ -1,15 +1,18 @@
 package com.example.eataewon.Adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eataewon.BbsDetailActivity
 import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDto
 
-class HomePagerAdapter(private val datatList: ArrayList<BbsDto>) : RecyclerView.Adapter<HomePagerAdapter.PagerViewHolder>() {
+class HomePagerAdapter(private val context: Context, private val datatList: ArrayList<BbsDto>) : RecyclerView.Adapter<HomePagerAdapter.PagerViewHolder>() {
 
     inner class PagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -21,6 +24,13 @@ class HomePagerAdapter(private val datatList: ArrayList<BbsDto>) : RecyclerView.
             curationPhoto.setImageResource(bbsDto.picture)
             curationTitle.text = bbsDto.title
             curaterId.text = (bbsDto.id + " 큐레이션")
+
+            // 게시물 클릭시 BbsDetailActivity로 이동
+            itemView.setOnClickListener {
+                Intent(context, BbsDetailActivity::class.java).apply {
+
+                }.run { context.startActivity(this) }
+            }
         }
     }
 
