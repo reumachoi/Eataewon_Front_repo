@@ -83,6 +83,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.example.eataewon.StudyRecommendActivity">
+
+
+        </activity>
+
+
+
         <activity
                 android:name="com.example.eataewon.SignActivity"
                 android:exported="true" />
@@ -113,6 +120,8 @@
                         android:scheme="803510af840ec6fd9c1aefe41148b4e5"/>
             </intent-filter>
         </activity>
+
+
 
 
     </application>

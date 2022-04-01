@@ -27,6 +27,7 @@ import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.AuthErrorCause
 import com.kakao.sdk.user.UserApiClient
 
+
 class MainActivity : AppCompatActivity(),View.OnClickListener{
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
@@ -74,13 +75,12 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
 
     // 구글 로그인 버튼 클릭 시 이벤트 : googleLogin function 실행
     google_sign_in_button.setOnClickListener {
-        Log.d("googleLogin", "!!!googleLogin!!")
         googleLogin()
     }
 
     // 구글 로그인을 위해 구성되어야 하는 코드 (Id, Email request)
     var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-        .requestIdToken("763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com")
+        .requestIdToken("32578359584-lgb05195k1cpfs9as83ejpqhugo1i53p.apps.googleusercontent.com")
         .requestEmail()
         .build()
     googleSignInClient = GoogleSignIn.getClient(this, gso)
@@ -204,6 +204,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         }
     }
 
+    //구글 로그인
+
     fun googleLogin() {
         Log.d("googleLogin", "@@@@@@@@@@@@googleLogin")
         var signInIntent = googleSignInClient?.signInIntent
@@ -239,5 +241,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 }
             }
     } //firebaseAuthWithGoogle
+
+
+
+
 }
 

@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/drawable/ic_home_24.xml" value="0.2111111111111111" />
+        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/drawable/ic_menu_search.xml" value="0.2111111111111111" />
+        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/drawable/ic_navi_home.xml" value="0.2111111111111111" />
+        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/drawable/ic_navi_write.xml" value="0.2111111111111111" />
+        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/drawable/ic_nevi_search.xml" value="0.2111111111111111" />
+        <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/drawable/ic_person_24.xml" value="0.2111111111111111" />
         <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_google.xml" value="0.25" />
         <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.19429347826086957" />
         <entry key="..\:/Final_Front5/eataewon_front/app/src/main/res/layout/activity_main.xml" value="0.22" />
