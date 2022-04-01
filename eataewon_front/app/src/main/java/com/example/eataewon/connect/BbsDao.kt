@@ -6,6 +6,9 @@ import retrofit2.http.*
 
 interface BbsService {
 
+    @POST("/bbswrite")
+    fun bbsWrite(@Body dto: BbsDto): Call<String>
+
     @GET("/getBbsList")
     fun getBbsList(): Call<List<BbsDto>>
 
@@ -46,6 +49,21 @@ class BbsDao {
 
             return bbsDao!!
         }
+    }
+
+    fun bbsWrite(dto:BbsDto) : String?{
+        var response: Response<String>?
+        println("BbsDao fun bbsWrite dto : ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbsWrite(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
     }
 
     fun getBbsDetail(seq:Int) : BbsDto?{
