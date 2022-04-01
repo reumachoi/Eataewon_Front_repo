@@ -42,19 +42,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         var GOOGLE_LOGIN_CODE = 9001
         val database = Firebase.database
 
-///////
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
-
-        //디테일 테스트 버튼 (최아름)
-        binding.testBtn.setOnClickListener {
-            val i = Intent(this, BbsDetailActivity::class.java)
-            startActivity(i)
-        }
-
-
 
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)

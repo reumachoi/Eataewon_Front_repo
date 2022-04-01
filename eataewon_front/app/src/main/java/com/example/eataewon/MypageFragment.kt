@@ -19,7 +19,7 @@ import androidx.fragment.app.Fragment
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
 
-class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListener  {
+class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.fragment_mypage){ // ,View.OnClickListener  {
 
     // storage 권한
     val STORAGE = arrayOf(
@@ -77,11 +77,17 @@ class MypageFragment:Fragment(R.layout.fragment_mypage){ // ,View.OnClickListene
         v.toolbar.setOnMenuItemClickListener{
             when(it.itemId){
                 R.id.mypage_logoutBtn->{
+
+                    val logout = Intent(homeActivity,MainActivity::class.java)
+                    startActivity(logout)
                     Toast.makeText(context,"로그아웃",Toast.LENGTH_SHORT).show()
                     true
                 }
 
                 R.id.mypage_userdelet->{
+
+                    val intent = Intent(homeActivity,DeleteActivity::class.java)
+                    startActivity(intent)
                     Toast.makeText(context,"회원탈퇴",Toast.LENGTH_SHORT).show()
                     true
                 }

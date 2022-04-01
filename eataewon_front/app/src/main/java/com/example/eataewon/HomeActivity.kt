@@ -16,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
         val searchFragment = SearchFragment()
 
         val bookmarkFragment = BookmarkFragment()
-        val mypageFragment = MypageFragment()
+        val mypageFragment = MypageFragment(this)
 
         val intent = Intent(this,WriteActivity::class.java)
         val user = intent.getParcelableExtra<MemberDto>("user")
