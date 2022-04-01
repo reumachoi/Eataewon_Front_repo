@@ -6,10 +6,10 @@ import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
@@ -25,9 +25,10 @@ import com.kakao.sdk.template.Social
 class BbsDetailActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityBbsDetailBinding.inflate(layoutInflater) }
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(binding.root)
 
         var seq = 1
@@ -38,10 +39,14 @@ class BbsDetailActivity : AppCompatActivity() {
         val toolbar = binding.bbsdetailToolbar
         setSupportActionBar(toolbar)
 
+
+
+
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
-        val data = intent.getParcelableExtra<BbsDto>("clickBbs")
-        println(data)
-        toolbar.title=data?.title    //툴바 타이틀에 넣기_안도현
+        val data = intent.getParcelableExtra<BbsDto>("data")
+
+        //툴바 타이틀에 넣기_안도현
+        toolbar.title=data?.title
         binding.DeTitle.text = data?.title
         binding.DeContent.text = data?.content
         binding.DeHashtag.text = data?.hashtag
@@ -94,6 +99,19 @@ class BbsDetailActivity : AppCompatActivity() {
             }else{
                 binding.HeartBtn.isSelected = false //좋아요 누른거 취소
                 //+이태원라이크 테이블에 유저값 삭제하기
+            }
+        }
+
+        //툴바아이템 클릭
+        toolbar.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.bbsdetail_exitBtn->{
+
+                    Toast.makeText(this,"취소",Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                else->false
             }
         }
 
@@ -198,7 +216,16 @@ class BbsDetailActivity : AppCompatActivity() {
             }
 
         }
+
+    }
+
+    //툴바 연결_안도현
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.bbsdetail_toolbar,menu)
+        return true
     }
 }
+
 
 
