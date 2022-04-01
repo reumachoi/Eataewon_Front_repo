@@ -84,7 +84,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
                     true
                 }
 
-                R.id.mypage_withdraw->{
+                R.id.mypage_userdelet->{
 
                     val intent = Intent(homeActivity,DeleteActivity::class.java)
                     startActivity(intent)
