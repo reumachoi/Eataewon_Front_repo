@@ -13,7 +13,7 @@ interface MemberService{
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
     @POST("/getId")
-    fun getId(@Body dto:MemberDto): Call<String>
+    fun getId(@Body id:String?=null): Call<String>
 
     @POST("/addmember")
     fun signup(@Body dto:MemberDto): Call<String>
@@ -58,18 +58,18 @@ class MemberDao {
 
     }
 
-    fun getId(dto: MemberDto) : String?{
+    fun getId(id:String) : String?{
         var response: Response<String>?
-        println("ID:${dto.id}")
+        println("ID중복확인:${id}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.getId(dto)
+            val call = service?.getId(id)
             response = call?.execute()
         }catch(e:Exception){
             response = null
         }
-
+        println("아이디 중복확인 결과 ${response?.body()}")
         return response?.body()
     }
 
@@ -84,7 +84,7 @@ class MemberDao {
         }catch(e:Exception){
             response = null
         }
-
+        println("회원가입 결과 ${response?.body()}")
         return response?.body()
     }
 

@@ -8,7 +8,7 @@ class MemberDto(
     val name:String?,
     val pwd:String?,
     val email:String?,
-    val nickname:String?,
+    val nickName:String?,
     val profilPic:Int,
     val likepoint:Int,
     val profilMsg:String?): Parcelable{
@@ -29,7 +29,7 @@ class MemberDto(
         parcel.writeString(name)
         parcel.writeString(pwd)
         parcel.writeString(email)
-        parcel.writeString(nickname)
+        parcel.writeString(nickName)
         parcel.writeInt(profilPic)
         parcel.writeInt(likepoint)
         parcel.writeString(profilMsg)
@@ -37,6 +37,10 @@ class MemberDto(
 
     override fun describeContents(): Int {
         return 0
+    }
+
+    override fun toString(): String {
+        return "MemberDto(id=$id, name=$name, pwd=$pwd, email=$email, nickName=$nickName, profilPic=$profilPic, likepoint=$likepoint, profilMsg=$profilMsg)"
     }
 
     companion object CREATOR : Parcelable.Creator<MemberDto> {

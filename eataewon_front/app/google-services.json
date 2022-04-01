@@ -1,21 +1,20 @@
 {
   "project_info": {
-    "project_number": "763712107163",
-    "firebase_url": "https://eattaewon-7c658-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "eataewon-7c658",
-    "storage_bucket": "eattaewon-7c658.appspot.com"
+    "project_number": "32578359584",
+    "project_id": "eataewon-691f2",
+    "storage_bucket": "eataewon-691f2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:763712107163:android:349453ca38ade487670c3e",
+        "mobilesdk_app_id": "1:32578359584:android:fcaeb219cd86f1ebbdc745",
         "android_client_info": {
           "package_name": "com.example.eataewon"
         }
       },
       "oauth_client": [
         {
-          "client_id": "763712107163-d0i8lo7bqu1ri30jl1s46h4og4ltv3nb.apps.googleusercontent.com",
+          "client_id": "32578359584-cunsudbue9rc3t326k3s0bq0f04uoj7f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.eataewon",
@@ -23,20 +22,20 @@
           }
         },
         {
-          "client_id": "763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com",
+          "client_id": "32578359584-lgb05195k1cpfs9as83ejpqhugo1i53p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAx616MJhZ8MCM8ry6J61fdrRtplM2_78U"
+          "current_key": "AIzaSyA11VQFr8w36DzPYVWSQ9acg6Aqa62-AvU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com",
+              "client_id": "32578359584-lgb05195k1cpfs9as83ejpqhugo1i53p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -130,6 +130,7 @@
         <entry key="app/src/main/res/layout/fragment_write.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/homeview_bbs_layout.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/map_list_view_layout.xml" value="0.2890625" />
+        <entry key="app/src/main/res/menu/mypage_menu_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/mypage_toolbar.xml" value="0.41822916666666665" />
       </map>
     </option>

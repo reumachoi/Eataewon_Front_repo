@@ -96,7 +96,8 @@ class WriteActivity : AppCompatActivity() {
 
         //취소 버튼
         canclebtn.setOnClickListener {
-
+            val i = Intent(this,HomeActivity::class.java)
+            startActivity(i)
         }
 
     }
