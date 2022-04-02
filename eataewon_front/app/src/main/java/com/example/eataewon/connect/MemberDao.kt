@@ -1,5 +1,8 @@
 package com.example.eataewon.connect
 
+import com.example.eataewon.connect.MemberBbsDto
+import com.example.eataewon.connect.MemberDto
+import com.example.eataewon.connect.RetrofitClient
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
@@ -86,13 +89,13 @@ class MemberDao {
     }
 
     //bbs에 저장된 아이디값으로 member에서 같은아이디 유저정보 가져오기
-    fun bbsGetUser(id: String?): MemberBbsDto?{
+    fun bbsGetUser(id:String): MemberBbsDto?{
         var response : Response<MemberBbsDto>?
         println(id)
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.bbsGetUser(id!!)
+            val call = service?.bbsGetUser(id)
             response = call?.execute()
         }catch(e:Exception){
             response = null

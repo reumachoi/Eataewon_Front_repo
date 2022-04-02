@@ -65,8 +65,8 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         mypageName.text = user?.name
         mypageLikepoint.text = user?.likepoint.toString()
         mypageEmail.text = user?.email
-        mypageNickname.text = user?.nickName
-        mypageProfilmsg.text = user?.profilMsg
+        mypageNickname.text = user?.nickname
+        mypageProfilmsg.text = user?.profilmsg
 
         //이미지 불러오기
         //mypageProfilpic.setImageURI(user?.profilPic?.toUri())

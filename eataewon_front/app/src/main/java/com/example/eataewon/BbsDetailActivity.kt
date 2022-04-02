@@ -40,17 +40,21 @@ class BbsDetailActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
 
-
-
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
-        val data = intent.getParcelableExtra<BbsDto>("data")
+        val data = intent.getParcelableExtra<BbsDto>("clickBbs")
 
         //툴바 타이틀에 넣기_안도현
         toolbar.title=data?.title
+        binding.DeBbsUserT.text = data?.nickname
+        binding.DeBbsLikePoT.text = data?.likecnt.toString()+"명 좋아요"
+        binding.DeBbsWdateT.text = data?.wdate
         binding.DeTitle.text = data?.title
         binding.DeContent.text = data?.content
         binding.DeHashtag.text = data?.hashtag
-        binding.DeLocation.text = data?.address
+        binding.DeShopName.text = data?.shopname
+        binding.DeBbsShopLocaT.text = data?.address
+        binding.DeBbsShopPhT.text = data?.shopphnum
+        binding.DeBbsShopUrlT.text = data?.shopurl
 
 //       data에 같이 넘어온 글쓴이 아이디로 유저정보 가져오기 (사진,닉네임,한줄소개, 호감도)
         /*var id = data?.id
