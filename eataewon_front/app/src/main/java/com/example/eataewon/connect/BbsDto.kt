@@ -3,7 +3,6 @@ package com.example.eataewon.connect
 import android.os.Parcel
 import android.os.Parcelable
 
-
 class BbsDto(
     var id:String?,
     var nickname:String?,
@@ -15,6 +14,8 @@ class BbsDto(
     var wdate:String?,
     var shopname:String?,
     var address:String?,
+    var shopphnum:String?,
+    var shopurl:String?,
     var latitude:Double,
     var longitude:Double,
     var readcnt:Int,
@@ -27,6 +28,8 @@ class BbsDto(
         parcel.readString(),
         parcel.readString(),
         parcel.readInt(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -49,6 +52,8 @@ class BbsDto(
         parcel.writeString(wdate)
         parcel.writeString(shopname)
         parcel.writeString(address)
+        parcel.writeString(shopphnum)
+        parcel.writeString(shopurl)
         parcel.writeDouble(latitude)
         parcel.writeDouble(longitude)
         parcel.writeInt(readcnt)
@@ -60,7 +65,7 @@ class BbsDto(
     }
 
     override fun toString(): String {
-        return "BbsDto(id=$id, nickname=$nickname, seq=$seq, title=$title, content=$content, picture=$picture, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt)"
+        return "BbsDto(id=$id, nickname=$nickname, seq=$seq, title=$title, content=$content, picture=$picture, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, shopphnum=$shopphnum, shopurl=$shopurl, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt)"
     }
 
     companion object CREATOR : Parcelable.Creator<BbsDto> {
