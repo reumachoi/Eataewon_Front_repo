@@ -12,6 +12,7 @@ import android.view.Menu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
@@ -33,12 +34,14 @@ class BbsDetailActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(binding.root)
 
-        var seq = 1
 
-//        var data = BbsDao.getInstance().getBbsDetail(seq)
+        //로그인 유저정보
+        val prefs = getSharedPreferences("sharedPref", 0)
+        val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
+        val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
+        println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
 
         //툴바 생성_안도현
         val toolbar = binding.bbsdetailToolbar
@@ -77,7 +80,7 @@ class BbsDetailActivity : AppCompatActivity() {
 
 
 //        if(글쓴이랑 로그인유저가 같을때) if조건문 수정필요
-        if(true){
+        if(loginUserId.equals(data?.id)){
             binding.deleteBtn.isVisible = true
             binding.updateBtn.isVisible = true
         }else{
@@ -86,14 +89,15 @@ class BbsDetailActivity : AppCompatActivity() {
         }
 
         binding.deleteBtn.setOnClickListener {
-          /*  var delete = BbsDao.getInstance().bbsdelete(data!!.seq)
+            var delete = BbsDao.getInstance().bbsDelete(4)
+//            var delete = BbsDao.getInstance().bbsDelete(data?.seq!!)
             if(delete == true){
                 Toast.makeText(this,"글이 삭제되었습니다",Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this,"글삭제를 실패했습니다",Toast.LENGTH_SHORT).show()
             }
             val i = Intent(this,HomeActivity::class.java)
-            startActivity(i)*/
+            startActivity(i)
         }
 
         binding.updateBtn.setOnClickListener {

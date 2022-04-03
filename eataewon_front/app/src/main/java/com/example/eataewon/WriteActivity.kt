@@ -48,10 +48,12 @@ class WriteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        //로그인 유저정보
         val prefs = getSharedPreferences("sharedPref", 0)
         val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
+
         val recyclerView = findViewById<RecyclerView>(R.id.write_recyclerview)
 
         //주소 버튼
@@ -64,7 +66,7 @@ class WriteActivity : AppCompatActivity() {
 
         val searchData = intent.getParcelableExtra<MapSearchListDto>("shopData")
 
-        if(searchData != null){
+        if(searchData != null){ //지도에서 선택한 정보가 있을때 데이터 넣어주기
             binding.writeAddress.setText(searchData.road)
             binding.shopNameT.text = searchData.name
         }
@@ -133,8 +135,8 @@ class WriteActivity : AppCompatActivity() {
 
             if (data?.clipData != null) { // 사진 여러개 선택한 경우
                 val count = data.clipData!!.itemCount
-                if (count > 10) {
-                    Toast.makeText(this, "사진은 10장까지 선택 가능합니다.", Toast.LENGTH_LONG)
+                if (count > 4) {
+                    Toast.makeText(this, "사진은 4장까지 선택 가능합니다.", Toast.LENGTH_LONG).show()
                     return
                 }
                 for (i in 0 until count) {
@@ -154,8 +156,7 @@ class WriteActivity : AppCompatActivity() {
         }
 
         for (i in 0 until list.size) {
-            uriPath += "${list.get(i)} "
-//                getPath(list.get(i))+" "
+            uriPath += getPath(list.get(i))+" "
         }
         println("uriPath 결과 ${uriPath}")
     }

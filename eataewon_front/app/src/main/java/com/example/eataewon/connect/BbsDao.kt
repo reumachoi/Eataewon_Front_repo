@@ -18,8 +18,11 @@ interface BbsService {
     @POST("/bbsdetail")
     fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
 
-    @POST("/bbsdelete")
-    fun bbsdelete(@Body seq:Int) : Call<Boolean>
+    @POST("/bbsupdateApp")
+    fun bbsUpdate(@Body dto:BbsDto) : Call<Boolean>
+
+    @POST("/bbsdeleteApp")
+    fun bbsDelete(@Body seq:Int) : Call<Boolean>
 
     @POST("/bbswriteApp")
     fun bbswrite(@Body dto:BbsDto) : Call<String>
@@ -81,6 +84,34 @@ class BbsDao {
             response = null
         }
 
+        return response?.body()
+    }
+
+    fun bbsUpdate(dto:BbsDto):Boolean?{
+        var response: Response<Boolean>?
+        println("DTO: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbsUpdate(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun bbsDelete(seq:Int) : Boolean?{
+        var response: Response<Boolean>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbsDelete(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
         return response?.body()
     }
 
