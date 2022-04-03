@@ -56,6 +56,15 @@ class UpdateBbsActivity : AppCompatActivity() {
         binding.updateContent.setText(data?.content)
         binding.updateHashtag.setText(data?.hashtag)
 
+        //디테일에서 넘어온 값 그대로
+        var shopname = data?.shopname
+        var addr = data?.address
+        var shopphnum = data?.shopphnum
+        var shopurl = data?.shopurl
+        var latitude = data?.latitude
+        var longitude = data?.longitude
+
+
         //주소 버튼
         binding.updateFindMap.setOnClickListener {
             val editAddr = binding.updateAddress.text.toString()
@@ -66,9 +75,17 @@ class UpdateBbsActivity : AppCompatActivity() {
 
         val searchData = intent.getParcelableExtra<MapSearchListDto>("shopData")
 
-        if(searchData != null){ //지도에서 선택한 정보가 있을때 데이터 넣어주기
+
+        if(searchData != null){ //지도에서 선택한 정보가 있을때 새로운 데이터 넣어주기
             binding.updateAddress.setText(searchData.road)
             binding.updateShopNameT.text = searchData.name
+
+            shopname = searchData?.name
+            addr = searchData?.road
+            shopphnum = searchData?.phone
+            shopurl = searchData?.place_url
+            latitude = searchData?.y.toString().toDouble()
+            longitude = searchData?.x.toString().toDouble()
         }
 
         //이미지 추가 버튼
@@ -97,15 +114,10 @@ class UpdateBbsActivity : AppCompatActivity() {
             var title = binding.updateTitle.text.toString()
             var content = binding.updateContent.text.toString()
             var tag = binding.updateHashtag.text.toString()
-            var shopname = searchData?.name
-            var addr = searchData?.road
-            var shopphnum = searchData?.phone
-            var shopurl = searchData?.place_url
-            var lati = searchData?.y.toString().toDouble()
-            var longi = searchData?.x.toString().toDouble()
 
-            val dto = BbsDto(data?.id,data?.nickname,null, title,content,0,tag, LocalDate.now().toString(),
-                shopname,addr,shopphnum,shopurl,lati,longi,0,0,uriPath)
+
+            val dto = BbsDto(data?.id, data?.nickname,data?.seq, title, content,0, tag, LocalDate.now().toString(),
+                shopname,addr,shopphnum,shopurl, latitude!!,longitude!!,0,0,uriPath)
             println("writeactivity dto확인 ${dto}")
 
             val checkUpdate = BbsDao.getInstance().bbsUpdate(dto)
@@ -113,6 +125,7 @@ class UpdateBbsActivity : AppCompatActivity() {
             if(checkUpdate == true){
                 Toast.makeText(this,"글수정이 완료되었습니다", Toast.LENGTH_SHORT).show()
                 var i = Intent(this,BbsDetailActivity::class.java)
+                i.putExtra("updateToDetail",dto)
                 startActivity(i)
             }else{
                 Toast.makeText(this,"글수정이 실패했습니다", Toast.LENGTH_SHORT).show()

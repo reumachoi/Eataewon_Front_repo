@@ -100,11 +100,11 @@ class WriteActivity : AppCompatActivity() {
             var addr = searchData?.road
             var shopphnum = searchData?.phone
             var shopurl = searchData?.place_url
-            var lati = searchData?.y.toString().toDouble()
-            var longi = searchData?.x.toString().toDouble()
+            var latitude = searchData?.y.toString().toDouble()
+            var longitude = searchData?.x.toString().toDouble()
 
             val dto = BbsDto(loginUserId,loginUserNickname,null, title,content,0,tag,LocalDate.now().toString(),
-                            shopname,addr,shopphnum,shopurl,lati,longi,0,0,uriPath)
+                            shopname,addr,shopphnum,shopurl,latitude,longitude,0,0,uriPath)
             println("writeactivity dto확인 ${dto}")
             val checkWrite = BbsDao.getInstance().bbswrite(dto)
             println("글쓰기 통신결과 ${checkWrite}!!!!!!!!!!!")

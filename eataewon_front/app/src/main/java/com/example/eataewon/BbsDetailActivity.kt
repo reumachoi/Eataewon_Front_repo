@@ -51,7 +51,15 @@ class BbsDetailActivity : AppCompatActivity() {
 
 
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
-        val data = intent.getParcelableExtra<BbsDto>("clickBbs")
+        val homeData = intent.getParcelableExtra<BbsDto>("clickBbs")
+        val updateData = intent.getParcelableExtra<BbsDto>("updateToDetail")
+        var data : BbsDto? = null
+
+        if(homeData!=null){
+            data = homeData //홈에서 클릭해서 넘어온 값
+        }else if(updateData!=null){
+            data = updateData   //수정페이지에서 수정해서 넘어온 값
+        }
 
         //툴바 타이틀에 넣기_안도현
         toolbar.title=data?.title
