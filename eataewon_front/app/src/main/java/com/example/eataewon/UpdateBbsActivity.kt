@@ -25,6 +25,7 @@ import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.databinding.ActivityUpdateBbsBinding
 import com.example.eataewon.databinding.ActivityWriteBinding
+import kotlinx.android.synthetic.main.fragment_mypage.*
 import java.time.LocalDate
 
 class UpdateBbsActivity : AppCompatActivity() {
@@ -47,13 +48,13 @@ class UpdateBbsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        //로그인 유저정보
-        val prefs = getSharedPreferences("sharedPref", 0)
-        val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
-        val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
-        println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
+        val data = intent.getParcelableExtra<BbsDto>("clickBbs")
 
-        val recyclerView = findViewById<RecyclerView>(R.id.updateRecyclerview)
+        binding.updateTitle.setText(data?.title)
+        binding.updateAddress.setText(data?.address)
+        binding.updateShopNameT.text = data?.shopname
+        binding.updateContent.setText(data?.content)
+        binding.updateHashtag.setText(data?.hashtag)
 
         //주소 버튼
         binding.updateFindMap.setOnClickListener {
@@ -69,6 +70,7 @@ class UpdateBbsActivity : AppCompatActivity() {
             binding.updateAddress.setText(searchData.road)
             binding.updateShopNameT.text = searchData.name
         }
+
         //이미지 추가 버튼
         binding.updateImgBtn.setOnClickListener {
             if(checkPermission(STORAGE, STORAGE_CODE)) {
@@ -83,11 +85,11 @@ class UpdateBbsActivity : AppCompatActivity() {
 
         // 이미지 사진 간격 맞추기
         val decoration = RecyclerViewDecoration(10)
-        recyclerView.addItemDecoration(decoration)
+        binding.updateRecyclerview.addItemDecoration(decoration)
 
         //리사이클 뷰
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false )
-        recyclerView.adapter = adapter
+        binding.updateRecyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false )
+        binding.updateRecyclerview.adapter = adapter
 
 
         //글쓰기 버튼
@@ -102,7 +104,7 @@ class UpdateBbsActivity : AppCompatActivity() {
             var lati = searchData?.y.toString().toDouble()
             var longi = searchData?.x.toString().toDouble()
 
-            val dto = BbsDto(loginUserId,loginUserNickname,null, title,content,0,tag, LocalDate.now().toString(),
+            val dto = BbsDto(data?.id,data?.nickname,null, title,content,0,tag, LocalDate.now().toString(),
                 shopname,addr,shopphnum,shopurl,lati,longi,0,0,uriPath)
             println("writeactivity dto확인 ${dto}")
 
@@ -110,7 +112,7 @@ class UpdateBbsActivity : AppCompatActivity() {
 
             if(checkUpdate == true){
                 Toast.makeText(this,"글수정이 완료되었습니다", Toast.LENGTH_SHORT).show()
-                var i = Intent(this,HomeActivity::class.java)
+                var i = Intent(this,BbsDetailActivity::class.java)
                 startActivity(i)
             }else{
                 Toast.makeText(this,"글수정이 실패했습니다", Toast.LENGTH_SHORT).show()

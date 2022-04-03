@@ -236,6 +236,7 @@
                         android:layout_height="match_parent"
                         android:text="더보기" />
 
+
                 </LinearLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -287,7 +288,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="337dp"
                     android:layout_marginTop="16dp"
-                    android:visibility="gone"
+                    android:visibility="invisible"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/detailDateText"></FrameLayout>
             </LinearLayout>

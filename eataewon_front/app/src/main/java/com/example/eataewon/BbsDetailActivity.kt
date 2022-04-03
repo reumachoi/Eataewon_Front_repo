@@ -37,6 +37,7 @@ class BbsDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         //로그인 유저정보
         val prefs = getSharedPreferences("sharedPref", 0)
         val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
@@ -131,19 +132,6 @@ class BbsDetailActivity : AppCompatActivity() {
             }
         }
 
-        //툴바아이템 클릭
-        toolbar.setOnMenuItemClickListener {
-            when(it.itemId){
-                R.id.bbsdetail_exitBtn->{
-
-                    Toast.makeText(this,"취소",Toast.LENGTH_SHORT).show()
-                    true
-                }
-
-                else->false
-            }
-        }
-
 //      스크랩 버튼 클릭효과
         binding.ScrapBtn.setOnClickListener {
             if(binding.ScrapBtn.isSelected != true){
@@ -156,17 +144,17 @@ class BbsDetailActivity : AppCompatActivity() {
             }
         }
 
+        val naverMapFragment = NaverMapFragment()
+        supportFragmentManager.beginTransaction()
+            .add(R.id.mapContent, naverMapFragment).commit()
+
         binding.showDetailShop.setOnClickListener {
 
             binding.mapContent.isVisible = true
             binding.showDetailShopField.isVisible = true
 
-            val naverMapFragment = NaverMapFragment()
-            supportFragmentManager.beginTransaction()
-                .add(R.id.mapContent, naverMapFragment).commit()
-
+            naverMapFragment.setLocation(data!!.latitude, data!!.longitude)
         }
-
 
 //      카톡 글 공유하기
         binding.floShareBtn.setOnClickListener {
