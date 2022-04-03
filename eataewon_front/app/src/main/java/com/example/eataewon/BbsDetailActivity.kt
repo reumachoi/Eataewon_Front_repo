@@ -4,6 +4,8 @@ package com.example.eataewon
 import android.content.ActivityNotFoundException
 import android.content.ContentValues
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -19,6 +21,9 @@ import com.kakao.sdk.template.Content
 import com.kakao.sdk.template.Link
 import com.kakao.sdk.template.LocationTemplate
 import com.kakao.sdk.template.Social
+import java.io.FileNotFoundException
+import java.io.InputStream
+
 
 //import com.kakao.sdk.template.model.*
 
@@ -40,6 +45,7 @@ class BbsDetailActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
 
+
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
         val data = intent.getParcelableExtra<BbsDto>("clickBbs")
 
@@ -55,6 +61,8 @@ class BbsDetailActivity : AppCompatActivity() {
         binding.DeBbsShopLocaT.text = data?.address
         binding.DeBbsShopPhT.text = data?.shopphnum
         binding.DeBbsShopUrlT.text = data?.shopurl
+        binding.imageView4.setImageURI(Uri.parse("/storage/emulated/0/DCIM/Screenshots/Screenshot_20220322-113413_eattaewon_back_kimminki.jpg"))
+
 
 //       data에 같이 넘어온 글쓴이 아이디로 유저정보 가져오기 (사진,닉네임,한줄소개, 호감도)
         /*var id = data?.id
@@ -221,8 +229,18 @@ class BbsDetailActivity : AppCompatActivity() {
 
         }
 
+
     }
 
+    fun setImage(uri: Uri) {
+        try {
+            val `in`: InputStream? = contentResolver.openInputStream(uri)
+            val bitmap = BitmapFactory.decodeStream(`in`)
+            binding.imageView4.setImageBitmap(bitmap)
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        }
+    }
     //툴바 연결_안도현
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu)

@@ -21,6 +21,13 @@ interface BbsService {
     @POST("/bbsdelete")
     fun bbsdelete(@Body seq:Int) : Call<Boolean>
 
+    @POST("/bbswriteApp")
+    fun bbswrite(@Body dto:BbsDto) : Call<String>
+
+    @Headers("Content-Type: application/json")
+    @POST("/plustReadcntApp")
+    fun updateReadcnt(@Body seq:Int) : Call<String>
+
     //카카오 로컬 검색
     @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
     fun getSearchKeyword(
@@ -46,6 +53,35 @@ class BbsDao {
 
             return bbsDao!!
         }
+    }
+
+    fun updateReadcnt(seq:Int) : String?{
+        var response: Response<String>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.updateReadcnt(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun bbswrite(dto:BbsDto) : String?{
+        var response: Response<String>?
+        println("DTO: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbswrite(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
     }
 
     fun getBbsDetail(seq:Int) : BbsDto?{

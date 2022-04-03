@@ -9,7 +9,7 @@ class MemberDto(
     val pwd:String?,
     val email:String?,
     val nickname:String?,
-    val profilpic:Int,
+    val profilpic:String?,
     val likepoint:Int,
     val profilmsg:String?): Parcelable{
     constructor(parcel: Parcel) : this(
@@ -18,7 +18,7 @@ class MemberDto(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readInt(),
+        parcel.readString(),
         parcel.readInt(),
         parcel.readString()
     ) {
@@ -30,7 +30,7 @@ class MemberDto(
         parcel.writeString(pwd)
         parcel.writeString(email)
         parcel.writeString(nickname)
-        parcel.writeInt(profilpic)
+        parcel.writeString(profilpic)
         parcel.writeInt(likepoint)
         parcel.writeString(profilmsg)
     }
