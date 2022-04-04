@@ -22,20 +22,6 @@ interface MemberService{
     @POST("/bbsGetUser")
     fun bbsGetUser(@Body id:String): Call<MemberBbsDto>
 
-    @POST("/LikePWriteUp")
-    fun LikePWriteUp(@Body id:String): Call<Boolean>
-
-    @POST("/LikePHeartUp")
-    fun LikePHeartUp(@Body id:String): Call<Boolean>
-
-    @POST("/LikePScrapUp")
-    fun LikePScrapUp(@Body id:String): Call<Boolean>
-
-    @POST("/LikePHeartDown")
-    fun LikePHeartDown(@Body id:String): Call<Boolean>
-
-    @POST("/LikePScrapDown")
-    fun LikePScrapDown(@Body id:String): Call<Boolean>
 
     @POST("getProfilPicApp")
     fun getProfilPic(@Body id:String):Call<String>
@@ -117,76 +103,6 @@ class MemberDao {
             response = null
         }
 
-        return response?.body()
-    }
-
-    fun LikePWriteUp(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePWriteUp(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePHeartUp(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePHeartUp(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePHeartDown(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePHeartDown Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePHeartDown(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePScrapUp(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePScrapUp Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePScrapUp(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePScrapDown(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePScrapDown Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePScrapDown(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
         return response?.body()
     }
 

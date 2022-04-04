@@ -116,7 +116,7 @@ class WriteActivity : AppCompatActivity() {
             val seq = BbsDao.getInstance().bbswrite(dto)
             println("글쓰기 통신결과 넘어온 seq값 ${seq}!!!!!!!!!!!")
 
-            val checkLikeP = MemberDao.getInstance().LikePWriteUp(dto.id!!)
+            val checkLikeP = BbsDao.getInstance().LikePWriteUp(dto.id!!)
             if(checkLikeP==true){
                 println("글쓰기로 ${dto.id}의 호감도가 상승했습니다")
             }else{

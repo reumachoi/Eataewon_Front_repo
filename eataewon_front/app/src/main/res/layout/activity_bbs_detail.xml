@@ -168,6 +168,7 @@
                             android:layout_width="583dp"
                             android:layout_height="466dp"
                             android:layout_weight="1"
+                            android:visibility="gone"
                             app:srcCompat="@drawable/cafe1" />
 
                         <ImageView
@@ -175,6 +176,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:visibility="gone"
                             app:srcCompat="@drawable/cafe2" />
 
                         <ImageView
@@ -182,12 +184,14 @@
                                 android:layout_width="359dp"
                                 android:layout_height="443dp"
                                 android:layout_weight="1"
+                                android:visibility="gone"
                                 app:srcCompat="@drawable/cafe5"/>
                         <ImageView
                             android:id="@+id/DeImg4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:visibility="gone"
                             app:srcCompat="@drawable/cafe4" />
 
                     </LinearLayout>

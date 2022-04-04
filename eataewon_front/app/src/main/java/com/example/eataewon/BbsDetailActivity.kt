@@ -4,7 +4,6 @@ package com.example.eataewon
 import android.content.ActivityNotFoundException
 import android.content.ContentValues
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -12,9 +11,7 @@ import android.view.Menu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.example.eataewon.connect.BbsDao
-import com.example.eataewon.connect.BbsDto
-import com.example.eataewon.connect.MemberDao
+import com.example.eataewon.connect.*
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
@@ -23,8 +20,6 @@ import com.kakao.sdk.template.Content
 import com.kakao.sdk.template.Link
 import com.kakao.sdk.template.LocationTemplate
 import com.kakao.sdk.template.Social
-import java.io.FileNotFoundException
-import java.io.InputStream
 
 
 //import com.kakao.sdk.template.model.*
@@ -81,8 +76,8 @@ class BbsDetailActivity : AppCompatActivity() {
 
         //글쓴이 프로필사진 가져오기
         val profilPic = MemberDao.getInstance().getProfilPic(data?.id!!)
+        val picture = data.picture.toString().split(" ")
 
-//        var picture : Array = data?.
         //툴바 타이틀에 넣기_안도현
         toolbar.title=data?.title
         binding.profilPicture.setImageURI(Uri.parse(profilPic))
@@ -96,15 +91,24 @@ class BbsDetailActivity : AppCompatActivity() {
         binding.DeBbsShopLocaT.text = data?.address
         binding.DeBbsShopPhT.text = data?.shopphnum
         binding.DeBbsShopUrlT.text = data?.shopurl
-      /*  binding.DeImg1.setImageURI(Uri.parse())
-        binding.DeImg2.setImageURI(Uri.parse())
-        binding.DeImg3.setImageURI(Uri.parse())
-        binding.DeImg4.setImageURI(Uri.parse())*/
 
 
-//       data에 같이 넘어온 글쓴이 아이디로 유저정보 가져오기 (사진,닉네임,한줄소개, 호감도)
-        /*var id = data?.id
-        var userData = MemberDao.getInstance().bbsGetUser(id!!)*/
+        //등록된 사진 수만큼 보여주기
+           if(picture[0]!=null){
+               binding.DeImg1.isVisible = true
+           }else if(picture[1]!=null){
+               binding.DeImg2.isVisible = true
+           }else if(picture[2]!=null){
+               binding.DeImg3.isVisible = true
+           }else if(picture[3]!=null){
+               binding.DeImg4.isVisible = true
+           }
+
+        binding.DeImg1.setImageURI(Uri.parse(picture[0]))
+        binding.DeImg2.setImageURI(Uri.parse(picture[1]))
+        binding.DeImg3.setImageURI(Uri.parse(picture[2]))
+        binding.DeImg4.setImageURI(Uri.parse(picture[3]))
+
 
         //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
@@ -137,10 +141,17 @@ class BbsDetailActivity : AppCompatActivity() {
         binding.HeartBtn.setOnClickListener {
             if(binding.HeartBtn.isSelected != true){
                 binding.HeartBtn.isSelected = true  //좋아요 누르기
-                //+이태원라이크 테이블에 유저값 넣어주기
-                //var plusLike = BbsDao.getInstance().plusBbsLike(data!!)
 
-                val checkLikeP = MemberDao.getInstance().LikePHeartUp(data?.id!!)
+                //이태원라이크 테이블에 유저값 넣어주기
+                val dto = LikeDto(loginUserId, data.seq, null)
+                var plusLike = BbsDao.getInstance().insertLike(dto)
+                if(plusLike==true){
+                    println("Like테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 좋아요를 눌렀습니다")
+                }else{
+                    println("Like테이블 반영 실패")
+                }
+
+                val checkLikeP = BbsDao.getInstance().LikePHeartUp(data?.id!!)
                 if(checkLikeP==true){
                     println("하트버튼 클릭으로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
                 }else{
@@ -151,7 +162,7 @@ class BbsDetailActivity : AppCompatActivity() {
                 binding.HeartBtn.isSelected = false //좋아요 누른거 취소
                 //+이태원라이크 테이블에 유저값 삭제하기
 
-                val checkLikeP = MemberDao.getInstance().LikePHeartDown(data?.id!!)
+                val checkLikeP = BbsDao.getInstance().LikePHeartDown(data?.id!!)
                 if(checkLikeP==true){
                     println("하트버튼 클릭취소로 현재글쓴이 ${data.id}의 호감도가 하락했습니다")
                 }else{
@@ -177,10 +188,17 @@ class BbsDetailActivity : AppCompatActivity() {
         binding.ScrapBtn.setOnClickListener {
             if(binding.ScrapBtn.isSelected != true){
                 binding.ScrapBtn.isSelected = true  //스크랩 누르기
-                //+이태원스크랩 테이블에 유저값 넣어주기
-                //  var plusScrap = BbsDao.getInstance().plusBbsScrap()   //스크랩누르면
 
-                val checkLikeP = MemberDao.getInstance().LikePScrapUp(data?.id!!)
+                //이태원스크랩 테이블에 유저값 넣어주기
+                val dto = ScrapDto(loginUserId, data.seq, null)
+                var plusLike = BbsDao.getInstance().insertScrap(dto)
+                if(plusLike==true){
+                    println("Scrap테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 스크랩버튼을 눌렀습니다")
+                }else{
+                    println("Scrap테이블 반영 실패")
+                }
+
+                val checkLikeP = BbsDao.getInstance().LikePScrapUp(data?.id!!)
                 if(checkLikeP==true){
                     println("스크랩버튼 클릭으로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
                 }else{
@@ -190,7 +208,7 @@ class BbsDetailActivity : AppCompatActivity() {
                 binding.ScrapBtn.isSelected = false //스크랩 누른거 취소
                 //+이태원스크랩 테이블에 유저값 삭제하기
 
-                val checkLikeP = MemberDao.getInstance().LikePScrapDown(data?.id!!)
+                val checkLikeP = BbsDao.getInstance().LikePScrapDown(data?.id!!)
                 if(checkLikeP==true){
                     println("스크랩버튼 클릭취소로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
                 }else{
