@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
@@ -20,7 +19,7 @@
         android:textSize="50sp"
         android:textStyle="bold" />
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="90">
@@ -129,13 +128,13 @@
                 </LinearLayout>
 
                 <HorizontalScrollView
-                    android:id="@+id/horizontalScrollView"
+                    android:id="@+id/ScrollView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -144,13 +143,13 @@
                             android:id="@+id/updateRecyclerview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
                             android:orientation="horizontal">
-
                         </androidx.recyclerview.widget.RecyclerView>
 
                         <android.widget.Button
                             android:id="@+id/updateImgBtn"
-                            android:layout_width="200dp"
+                            android:layout_width="180dp"
                             android:layout_height="300dp"
                             android:layout_marginStart="24dp"
                             android:layout_marginEnd="50dp"
@@ -161,8 +160,9 @@
                             android:text="사진선택"
                             android:textColor="@color/black"
                             android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/updateRecyclerview"/>
+                    </RelativeLayout>
                 </HorizontalScrollView>
 
                 <FrameLayout
@@ -170,7 +170,7 @@
                     android:layout_height="3dp"
                     android:background="@color/black"
                     android:layout_marginTop="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+                    app:layout_constraintTop_toBottomOf="@+id/ScrollView">
 
                 </FrameLayout>
 
@@ -196,7 +196,7 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+                    app:layout_constraintTop_toBottomOf="@+id/ScrollView" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -279,7 +279,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

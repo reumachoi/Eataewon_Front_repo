@@ -18,7 +18,7 @@
         android:textSize="50sp"
         android:textStyle="bold" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="90">
@@ -126,32 +126,34 @@
 
                 </LinearLayout>
 
-                <HorizontalScrollView
-                    android:id="@+id/horizontalScrollView"
+                <android.widget.HorizontalScrollView
+                    android:id="@+id/ScrollView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
+                    android:fillViewport="true"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/write_recyclerview"
+                            nestedScrollingEnabled="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
                             android:orientation="horizontal">
 
                         </androidx.recyclerview.widget.RecyclerView>
 
                         <android.widget.Button
                             android:id="@+id/write_imageBtn"
-                            android:layout_width="200dp"
+                            android:layout_width="180dp"
                             android:layout_height="300dp"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginEnd="50dp"
+                            android:layout_toEndOf="@+id/write_recyclerview"
                             android:background="@drawable/style_imge_btn"
                             android:drawableTop="@drawable/ic_baseline_control_point_24"
                             android:drawableTint="@color/black"
@@ -160,15 +162,16 @@
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:textStyle="bold" />
-                    </LinearLayout>
-                </HorizontalScrollView>
+
+                    </RelativeLayout>
+                </android.widget.HorizontalScrollView>
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="3dp"
                     android:background="@color/black"
                     android:layout_marginTop="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+                    app:layout_constraintTop_toBottomOf="@+id/ScrollView">
 
                 </FrameLayout>
 
@@ -194,7 +197,7 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+                    app:layout_constraintTop_toBottomOf="@+id/ScrollView" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -275,10 +278,9 @@
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="@+id/write_address"
                     app:layout_constraintTop_toBottomOf="@+id/write_address" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"

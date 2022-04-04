@@ -1,6 +1,7 @@
 package com.example.eataewon
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Rect
@@ -20,7 +21,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.eataewon.connect.MapSearchListDto
-import com.example.eataewon.databinding.ActivityWriteBinding
+import kotlinx.android.synthetic.main.drop_out.view.*
+
 
 class WriteActivity : AppCompatActivity() {
     // storage 권한
@@ -73,21 +75,20 @@ class WriteActivity : AppCompatActivity() {
         imagebtn.setOnClickListener {
             if(checkPermission(STORAGE, STORAGE_CODE)) {
                 var intent = Intent(Intent.ACTION_PICK)
+                intent.data = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
                 intent.type = MediaStore.Images.Media.CONTENT_TYPE
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
-                intent.data = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-
                 startActivityForResult(intent, STORAGE_CODE)
             }
         }
 
-        /*// 이미지 사진 간격 맞추기
-        val decoration = RecyclerViewDecoration(10)
-        recyclerView.addItemDecoration(decoration)*/
+        // 이미지 사진 간격 맞추기
+        recyclerView.addItemDecoration(RecyclerViewDecoration(5))
 
         //리사이클 뷰
         recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false )
         recyclerView.adapter = adapter
+        recyclerView.setHasFixedSize(true)
 
         //글쓰기 버튼
         writebtn.setOnClickListener {
@@ -140,11 +141,11 @@ class WriteActivity : AppCompatActivity() {
         override fun getItemCount(): Int = items.size
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val item = items[position]
+            holder.bind(items[position],context)
             //크기 설정
-            Glide.with(context).load(item)
-                .override(500, 500)
-                .into(holder.image)
+         /*   Glide.with(context).load(item)
+                .override(300, 300)
+                .into(holder.image)*/
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -153,12 +154,13 @@ class WriteActivity : AppCompatActivity() {
         }
 
         class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-            private var view: View = v
+
             var image = v.findViewById<ImageView>(R.id.write_imageview)
 
 
-            fun bind(listener: View.OnClickListener, item: String) {
-                view.setOnClickListener(listener)
+            fun bind(items: Uri,context:Context) {
+                Glide.with(context).load(items).centerInside()
+                    .into(image)
             }
         }
     }
@@ -167,7 +169,19 @@ class WriteActivity : AppCompatActivity() {
     class RecyclerViewDecoration(private val divWidth: Int) : RecyclerView.ItemDecoration() {
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
             super.getItemOffsets(outRect, view, parent, state)
-            outRect.right = divWidth
+
+            val position = parent.getChildAdapterPosition(view)
+            val count = state.itemCount
+            val offset = divWidth
+
+            if(position==0){
+                outRect.left = offset
+            }else if(position==count-1){
+                outRect.right = offset
+            }else{
+                outRect.left = offset
+                outRect.right = offset
+            }
         }
     }
 
