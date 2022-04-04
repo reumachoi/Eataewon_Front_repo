@@ -36,6 +36,7 @@
        
    
     </div>
+     <a class="nav-link" href="login.html">log-out</a>
   </div>
 </nav>
 
@@ -83,8 +84,17 @@ pre { /* 자동줄바꿈 설정 */
 	<!-- <th>제목</th> -->
 	<td colspan="2" id="title" style="font-size: 22px; font-weight:bold;"></td>
 </tr>
-
 <tr>
+	<th> 이미지  </th>
+	<td>				
+	<!-- <img src="E://SpringBootFront//springBootFront//WebContent//image//upload//2022//03//30//d9db6941-334b-4d85-8ed0-c1b4b6a3ff46ballon.jpg" width='60' height='50'> -->
+			
+		<div id="uploadResult" > <!--추가--> 
+		</div>
+    </td>
+</tr>
+<tr>
+
 	<!-- <th>내용</th> -->
 	<td colspan="2" style="background-color: white;">
 		<pre id="content" style="font-size: 20px; 
@@ -180,19 +190,14 @@ let json = JSON.parse(str);
 let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
 
 
-
 const url = new URL(location.href);
 const urlParams = url.searchParams;
 let seq = urlParams.get("seq");
-
 //주소창에 있는 seq 값 가져오기
-
-
-
-//alert(id);
+//alert(seq);
 
 $.ajax({
-	url:"http://localhost:3000/bbsdetail",
+	url:"http://localhost:3000/bbsFileDetail",
 	type:"get",
 	data:{ "seq":seq },
 	success:function(bbs){
@@ -210,12 +215,37 @@ $.ajax({
 		$("#likecnt").text(bbs.likecnt);
 		$("#shopphnum").text(bbs.shopphnum);
 		$("#shopurl").text(bbs.shopurl);
+
+		srcFileName = decodeURIComponent(bbs.filepath,"UTF-8").replaceAll("\\", "/");
+		strFileName = bbs.filepath;
 		
+		console.log("srcFileName:"+srcFileName);
+		console.log("strFileName:"+strFileName);
+		var divArea = $("#uploadResult");
+	    var str = "";
+		if(strFileName != null){
+						
+            str += "<div class='col' readonly='readonly'>";
+            str += "<img src='./image/upload/"+srcFileName+"' width='70' height='60'/> &nbsp;&nbsp;"; 
+		    str += bbs.filename
+            str += "</div>"
+            
+		}else{
+            str += "<input type='text' class='form-control' size='50px' readonly='readonly'>";
+            //"<div class='form-control' readonly='readonly'>";				
+		}
+        divArea.append(str);
+
 		
 		let login = JSON.parse(sessionStorage.getItem("login"));
 		if(bbs.id != login.id){
 			$("#bbsupdate").hide();
 			$("#bbsdelete").hide();
+			
+		}else{ //접속한 아이디 = 게시판 아이디 일 경우 스크랩,좋아요 버튼 숨기기
+			$("#btnLike").hide();
+			$("#btnScrap").hide();
+			
 		}
 		
 	},
@@ -236,7 +266,7 @@ $("#bbsdelete").click(function () {
 	$.ajax({
 		url:"http://localhost:3000/bbsdelete",
 		type:"get",
-		data:{ "seq":seq },
+		data:{ "seq":seq ,"id":id },
 		success:function(msg){
 			if(msg == "OK"){
 				alert("삭제되었습니다");
@@ -256,7 +286,7 @@ $("#btnScrap").click(function(){
 	$.ajax({
 		url:"http://localhost:3000/bbsScrap",
 		type:"get",
-		data:{ "id":id, "bbs_seq":seq},
+		data:{ "id":id, "bbs_seq":seq, "seq":seq},
 		success:function(msg){
 			if(msg=="YES"){
 				alert("스크랩 되었습니다. 스크랩 게시판에서 확인 가능합니다.");
@@ -274,12 +304,13 @@ $("#btnScrap").click(function(){
 		})
 	});
 	
+
 $("#btnLike").click(function(){
-	//alert("seq"+seq);
 	$.ajax({
 		url:"http://localhost:3000/likeBbs",
 		type:"get",
-		data:{ "id":id, "bbsseq":seq},
+		//bbsseq는 seq는 값은 같지만 xml에서 받는 데이터명이 다르다.
+		data:{ "id":id, "bbsseq":seq, "seq":seq},
 		success:function(msg){
 			if(msg=="YES"){
 				alert("좋아요 완료. 좋아요된 게시물은 좋아요 게시판에서 확인 가능합니다.");

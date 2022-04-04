@@ -31,6 +31,8 @@
         </li>
       </ul>
           <a class="nav-link" href="login.html">log-out</a>
+          <button type="button" id="withdrawal" class="btn btn-outline-light">Withdrawal
+          </button>
    
     </div>
   </div>
@@ -48,25 +50,25 @@
   </div>
   
   <br><br>
-  
+	<button type="button" class="btn btn-outline-primary" id="mybbslist">내가 작성한 글 보기</button>  
 <form id="memfrm"> 
 <table class="table table-hover" border="1">
 	<tr>
 			<td>아이디</td>
 			<td>
-			<input type="text" id="id" name="id" readonly="readonly" size="20" >
+			<input type="text" class="form-control" id="id" name="id" readonly="readonly" size="20" >
 			</td>
 	</tr>
 	<tr>
 			<td>이름</td>
 			<td>
-			<input type="text" id="name" name="name" readonly="readonly" size="20" >
+			<input type="text" class="form-control" id="name" name="name" readonly="readonly" size="20" >
 			</td>
 	</tr>
 		<tr>
 			<td>이메일</td>
 			<td>
-			<input type="text" id="email" name="email" placeholder="이메일" size="20" >
+			<input type="text" class="form-control" id="email" name="email" placeholder="이메일" size="20" >
 			</td>
 	</tr>
 <!-- 	<tr>
@@ -78,25 +80,25 @@
 	<tr>
 			<td>패스워드 변경</td>
 			<td>
-			<input type="password" id="pwd" name="pwd" placeholder="패스워드 입력" size="20">
+			<input type="password" class="form-control" id="pwd" name="pwd" placeholder="패스워드 입력" size="20">
 			</td>
 	</tr>
 	<tr>
 			<td>닉네임 변경</td>
 			<td>
-			<input type="text" id="nickname" name="nickname" placeholder="변경 닉네임 입력" size="20">
+			<input type="text" class="form-control" id="nickname" name="nickname" placeholder="변경 닉네임 입력" size="20">
 			</td>
 	</tr>
 		<tr>
 			<td>프로필 사진</td>
 			<td>
-			<input type="text" id="profilpic" name="profilpic" placeholder="프로필 사진" size="20">
+			<input type="text" class="form-control" id="profilpic" name="profilpic" placeholder="프로필 사진" size="20">
 			</td>
 	</tr>
 		<tr>
 			<td>프로필 메세지 변경</td>
 			<td>
-			<input type="text" id="profilmsg" name="profilmsg" placeholder="변경 메세지 입력" size="20">
+			<input type="text" class="form-control" id="profilmsg" name="profilmsg" placeholder="변경 메세지 입력" size="20">
 			</td>
 	</tr>
 	
@@ -120,8 +122,17 @@
 let str = sessionStorage.getItem("login");	
 let json = JSON.parse(str);
 let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
-
 //alert(id);
+
+//회원탈퇴
+$("#withdrawal").click(function () {
+	location.href = "withdrawal.html";
+	});
+	
+//작성한 글 목록 보기
+$("#mybbslist").click(function () {
+	location.href = "mybbslist.html";
+	});	
 
 //회원정보 불러오기
 	$.ajax({

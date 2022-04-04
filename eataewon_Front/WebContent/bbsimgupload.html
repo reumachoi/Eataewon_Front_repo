@@ -51,10 +51,13 @@
 		
 			<th class="table-primary">사진</th>
 			<td>
+				<input name="uploadFiles" type="file" multiple>
+     		</td>
+<!-- 		</tr>
 			
 			<input type="file" id="filename" name="filename" class="form-control" size="50px">
 			</td>
-		</tr>
+		</tr> -->
 	<!-- 	<tr>
 			<td>
 			<input type="file" name="file[1]" multiple type="file" class="form-control" size="50px">
@@ -71,7 +74,7 @@
 		<tr>
 		<th class="table-primary">HashTag#</th>
 		<td>
-		<input type="text" class="form-control" id="hasgtag" name="hashtag" size="50px">
+		<input type="text" class="form-control" id="hashtag" name="hashtag" size="50px">
 		</td>
 		</tr>
 		
@@ -150,25 +153,65 @@ $("#btn").click(function () {
 
 	let aaa = $("#frm").serialize();
 	
-	alert(aaa);
+	//alert(aaa);
+	var formData = new FormData();
+    var inputFile = $("input[type='file']");
 
-	$.ajax({
-		url:"http://localhost:3000/bbswriteImgup",
-		type:"get",
-		data:$("#frm").serialize(),
-		success:function(msg){
-			if(msg == "YES"){
-				alert('추가되었습니다');
-				location.href = "bbslist.html";	
-			}else{
-				alert('추가되지 않았습니다');
-			}			
-		},
-		error:function(){
-			alert('error');
-		}
-	})
-	
+    var files = inputFile[0].files;
+
+    for (var i = 0; i < files.length; i++) {
+        //console.log(files[i]);
+        formData.append("uploadFiles", files[i]);
+    }
+    
+    $.ajax({
+        url: 'http://localhost:3000/uploadAjax',
+        processData: false,
+        contentType: false,
+        data: formData,
+        type: 'POST',
+        dataType:'json',
+        success: function(result){
+            console.log(result);
+            let strfilepath = "";
+            let strfilename = "";
+            if(result != ""){
+            //나중에 화면 처리
+                console.log("Ddddddddddd"+result[0].folderPath+":"+result[0].uuid +":"+ result[0].fileName);
+                
+                strfilepath = encodeURIComponent(result[0].folderPath+"/" +result[0].uuid + result[0].fileName,"UTF-8");
+                strfilename = result[0].fileName;
+                console.log("Dddddspathpathpathpath!!dddddd:~~~"+strfilepath);
+                console.log("result[0].fileName!!dddddd:~~~"+strfilename);
+            }
+                
+        let params = {id:$("#id").val(), title:$("#title").val(), content:$("#content").val(), filepath:strfilepath, filename:strfilename, 
+        			hashtag:$("#hashtag").val(), shopname:$("#shopname").val(),latitude:$("#latitude").val(),longtitude:$("#longtitude").val(),address:$("#address").val(),};
+            
+	            
+	 	$.ajax({
+			url:"http://localhost:3000/bbswriteImgup",		
+			type:"get",
+			/* data:$("#frm").serialize(), */
+			data:params,
+	 		success:function(msg){	                	
+				if(msg == "YES"){
+					alert('추가되었습니다');
+					location.href = "bbslist.html";	
+				}else{
+					alert('추가되지 않았습니다');
+				}			
+			},
+			error:function(){
+				alert('error');
+			}
+		})
+	        },
+	        error: function(jqXHR, textStatus, errorThrown){
+	            console.log(textStatus);
+	        }
+
+    }); //$.ajax
 });
 
 </script>

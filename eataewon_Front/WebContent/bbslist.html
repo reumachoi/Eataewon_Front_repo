@@ -114,20 +114,21 @@
 $(document).ready(function () {
 	let str = sessionStorage.getItem("login");	
 	let json = JSON.parse(str);	
-//	let id = JSON.parse(str).id;
+ 	let id = JSON.parse(str).id;
 	
-/* 	$.ajax({
+/*  	$.ajax({
 		url:"http://localhost:3000/getnickname",
 		type:"get",
 		data:{ "id":id },
-		success:function(bbs){			
+		success:function(bbs){	
+		//	alert(bbs.nickname);
 			$("#nickname").text(bbs.nickname);			
 		},
 		error:function(){
 			alert('error');
 		}
 		
-	}); */
+	});   */
 	
 	
 	getBbslist( 0 ); //#1여기 있는 코드나 #btnsearch 안에 있는 코드나 차이 없는데 검색 하지 않은 목록이랑 검색한 목록을 어떻게 다르게 구현함?
@@ -160,7 +161,7 @@ function getBbslist( page ) { //페이지는 도대체 어디서 나오는거? �
 	
 	$("#tbody").html(""); // 테이블 초기화
 	$.ajax({
-		url:"http://localhost:3000/getBbsListSearchPage",
+		url:"http://localhost:3000/getBbsListFileSearchPage",
 		type:"get",
 		data:{ "choice":choice, "search":search, "page":page },
 		success:function(list){
@@ -175,7 +176,7 @@ function getBbslist( page ) { //페이지는 도대체 어디서 나오는거? �
 				
 		/* 			str +=	  "<td>" + item.id + "</td>" */
 					
-					str +=	  "<td>" + item.nickname + "</td>"
+					str +=	  "<td>" + item.nickname + "</td>" // null 이 뜬다
 					
 					
 							
