@@ -47,7 +47,10 @@ class SearchBbsAdapter (private val context: Context, private val dataList: Arra
             // 게시물 클릭시 BbsDetailActivity로 이동
             itemView.setOnClickListener {
                 Intent(context, BbsDetailActivity::class.java).apply {
+                    // 짐싸!
+                    putExtra("clickBbs", bbsDto)
 
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }.run { context.startActivity(this) }
             }
         }
