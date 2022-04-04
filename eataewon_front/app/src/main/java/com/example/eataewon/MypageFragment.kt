@@ -20,7 +20,7 @@ import androidx.fragment.app.Fragment
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
 
-class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.fragment_mypage){ // ,View.OnClickListener  {
+class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.fragment_mypage){
 
     // storage 권한
     val STORAGE = arrayOf(
@@ -39,7 +39,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         val user = arguments?.getParcelable<MemberDto>("user")
 
         //상단 툴바바
-        v.toolbar.inflateMenu(R.menu.mypage_toolbar)
+        v.toolbar.inflateMenu(R.menu.mypage_menu_item)
 
 
         setHasOptionsMenu(true)
@@ -66,7 +66,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         mypageLikepoint.text = user?.likepoint.toString()
         mypageEmail.text = user?.email
         mypageNickname.text = user?.nickname
-        mypageProfilmsg.text = user?.profilMsg
+        mypageProfilmsg.text = user?.profilmsg
 
         //이미지 불러오기
         //mypageProfilpic.setImageURI(user?.profilPic?.toUri())
@@ -77,7 +77,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         //툴바 메뉴 클릭
         v.toolbar.setOnMenuItemClickListener{
             when(it.itemId){
-                R.id.mypage_logoutBtn->{
+                R.id.mypage_logout->{
 
                     val logout = Intent(homeActivity,MainActivity::class.java)
                     startActivity(logout)
@@ -167,9 +167,11 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
     //툴바 연결
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.mypage_toolbar,menu)
+        inflater.inflate(R.menu.mypage_menu_item,menu)
     }
 }
+
+
 
 
 

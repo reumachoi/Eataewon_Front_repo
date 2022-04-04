@@ -1,10 +1,16 @@
 package com.example.eataewon
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
+import com.example.eataewon.connect.MemberDao
+import com.example.eataewon.connect.MemberDto
 
 
 class SignActivity : AppCompatActivity() {
@@ -22,11 +28,10 @@ class SignActivity : AppCompatActivity() {
 
         val signupBtn = findViewById<Button>(R.id.signUP_btn)
 
-        /*signupID.doAfterTextChanged {
-            val id = signupID.text.toString()
-            val dto = MemberDto(0,"",id,"","","","",0,"")
-            val idcheck = MemberDao.getInstance().getId(dto)
-            if(idcheck=="NO"){
+        signupID.doAfterTextChanged {
+            val id = signupID.text.toString().trim()
+            val idcheck = MemberDao.getInstance().getId(id)
+            if(idcheck.equals("NO")){
                 signupidcheck.text = "이미 존재하는 아이디 입니다"
                 signupidcheck.setTextColor(Color.RED)
             }else{
@@ -43,14 +48,16 @@ class SignActivity : AppCompatActivity() {
             val nickname = signupNickname.text.toString()
             val profilmsg = signupProfilmsg.text.toString()
 
-            val dto = MemberDto(0,name,id,pwd,email,nickname,"",0,profilmsg)
+            val dto = MemberDto(id,name,pwd,email,nickname,0,0,profilmsg)
             val checksignup = MemberDao.getInstance().signup(dto)
-            if(checksignup=="yes"){
+            if(checksignup.equals("yes")){
                 Toast.makeText(this,"${dto.id} 회원가입 완료",Toast.LENGTH_SHORT).show()
+                val i = Intent(this,MainActivity::class.java)
+                startActivity(i)
             }else{
                 Toast.makeText(this,"회원가입 실패",Toast.LENGTH_SHORT).show()
             }
-        }*/
+        }
 
 
 

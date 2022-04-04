@@ -100,7 +100,19 @@ class BbsDetailActivity : AppCompatActivity() {
                 binding.HeartBtn.isSelected = false //좋아요 누른거 취소
                 //+이태원라이크 테이블에 유저값 삭제하기
             }
+        }
 
+        //툴바아이템 클릭
+        toolbar.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.bbsdetail_exitBtn->{
+
+                    Toast.makeText(this,"취소",Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                else->false
+            }
         }
 
         //툴바아이템 클릭

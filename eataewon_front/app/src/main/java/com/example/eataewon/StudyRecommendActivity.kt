@@ -21,7 +21,7 @@ class StudyRecommendActivity : AppCompatActivity() {
 
         // 구글 로그아웃을 위해 로그인 세션 가져오기
         var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com")
+            .requestIdToken("32578359584-lgb05195k1cpfs9as83ejpqhugo1i53p.apps.googleusercontent.com")
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)

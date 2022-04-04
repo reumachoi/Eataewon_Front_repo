@@ -37,7 +37,7 @@
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
             android:usesCleartextTraffic="true">
 
 
@@ -86,7 +86,9 @@
         <activity
                 android:name="com.example.eataewon.SignActivity"
                 android:exported="true" />
-
+        <activity
+                android:name="com.example.eataewon.StudyRecommendActivity"
+                android:exported="true"/>
         <activity
                 android:name="com.example.eataewon.HomeActivity"
                 android:exported="true">
