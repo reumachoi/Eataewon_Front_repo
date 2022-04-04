@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>탈퇴</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="bbslist.html">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbslikelist.html">like❤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbsscraplist.html">scrap🔗</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mypage.html">mypage</a>
+        </li>
+      </ul>
+          <a class="nav-link" href="login.html">log-out</a>
+   
+    </div>
+  </div>
+</nav>
+</head>
+<body>
+
+
+<!-- <div class="card border-primary mb-3" style="max-width: 30rem;">
+<form id="memfrm"> -->    
+<table class="table table-hover" border="1">
+		<tr>
+		<td colspan="2">
+		<p>회원 탈퇴를 진행을 위한 아이디와 비밀 번호를 입력하십시오.</p>
+		<p>아이디와 비밀번호가 일치 하지 않을시 탈퇴 처리 되지 않습니다.</p>
+		
+		</td>
+	</tr>	
+
+	<tr>
+			<td>아이디</td>
+			<td>
+			<input type="text" id="deleteId" size="20" />
+			<!-- <input type="text" class="form-control" id="deleteId" name="deleteId" size="20" /> -->
+			</td>
+	</tr>
+	
+	<tr>
+			<td>패스워드</td>
+			<td>
+			<input type="password" class="form-control" id="deletePwd" name="deletePwd" placeholder="패스워드 입력" size="20"/>
+			</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2">
+		<button type="button" class="btn btn-outline-primary" id="deleteMem">탈퇴</button>
+		</td>
+	</tr>
+
+</table>
+<!-- </form> 
+</div>
+ -->
+
+<script type="text/javascript">
+
+
+	//회원탈퇴
+	$("#deleteMem").click(function(){
+			
+		alert("id: "+ $("#deleteId").text);
+		alert("pwd: "+ $("#deletePwd").text);
+		
+		$.ajax({
+			url:"http://localhost:3000/deleteMem",
+			type:"get",
+			data:{
+					"id":$("#deleteid").val, 
+					"pwd":$("#pwd").val				
+				},
+			success:function(data){
+				if(data=="OK"){
+					alert('탈퇴 처리 되었습니다.');
+					location.href="login.html";
+				}else{
+					alert('아이디 혹은 비밀번호를 확인하세요.');
+				}
+			},
+			error:function(){
+				alert('error');
+			}
+		});
+	});
+
+	
+			
+	
+
+</script>
+
+
+</body>
+</html>
