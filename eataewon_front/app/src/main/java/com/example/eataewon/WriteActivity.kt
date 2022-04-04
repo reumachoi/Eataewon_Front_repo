@@ -81,9 +81,9 @@ class WriteActivity : AppCompatActivity() {
             }
         }
 
-        // 이미지 사진 간격 맞추기
+        /*// 이미지 사진 간격 맞추기
         val decoration = RecyclerViewDecoration(10)
-        recyclerView.addItemDecoration(decoration)
+        recyclerView.addItemDecoration(decoration)*/
 
         //리사이클 뷰
         recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false )
@@ -96,7 +96,8 @@ class WriteActivity : AppCompatActivity() {
 
         //취소 버튼
         canclebtn.setOnClickListener {
-
+            val i = Intent(this,HomeActivity::class.java)
+            startActivity(i)
         }
 
     }
@@ -142,7 +143,7 @@ class WriteActivity : AppCompatActivity() {
             val item = items[position]
             //크기 설정
             Glide.with(context).load(item)
-                .override(300, 300)
+                .override(500, 500)
                 .into(holder.image)
         }
 
