@@ -1,11 +1,13 @@
 package com.example.eataewon.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eataewon.BbsDetailActivity
 import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDto
 
@@ -45,6 +47,8 @@ class HomeBbsAdapter (private val dataList: ArrayList<BbsDto>) :
             userProfilePic.setImageResource(bbsDto.picture)
             userId.text = bbsDto.id
             bbsContent.text = bbsDto.content
+
+
             }
         }
     }

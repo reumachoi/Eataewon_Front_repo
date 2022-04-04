@@ -1,15 +1,18 @@
 package com.example.eataewon.Adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eataewon.BbsDetailActivity
 import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDto
 
-class BbsPagerAdapter (private val datatList: ArrayList<BbsDto>) :
+class BbsPagerAdapter (private val context: Context, private val datatList: ArrayList<BbsDto>) :
     RecyclerView.Adapter<BbsPagerAdapter.PagerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagerViewHolder {
@@ -43,6 +46,16 @@ class BbsPagerAdapter (private val datatList: ArrayList<BbsDto>) :
             userProfilePic.setImageResource(bbsDto.picture)
             userId.text = bbsDto.id
             bbsContent.text = bbsDto.content
+
+            // 게시물 클릭시 BbsDetailActivity로 이동
+            itemView.setOnClickListener {
+                Intent(context, BbsDetailActivity::class.java).apply {
+
+                    putExtra("clickBbs", bbsDto)
+
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }.run { context.startActivity(this) }
+            }
         }
     }
 }
