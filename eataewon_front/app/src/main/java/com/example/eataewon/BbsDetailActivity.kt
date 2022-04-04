@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
+import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
@@ -121,9 +122,24 @@ class BbsDetailActivity : AppCompatActivity() {
                 binding.HeartBtn.isSelected = true  //좋아요 누르기
                 //+이태원라이크 테이블에 유저값 넣어주기
                 //var plusLike = BbsDao.getInstance().plusBbsLike(data!!)
+
+                val checkLikeP = MemberDao.getInstance().LikePHeartUp(data?.id!!)
+                if(checkLikeP==true){
+                    println("하트버튼 클릭으로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
+                }else{
+                    println("하트버튼 클릭으로 현재글쓴이 호감도 상승에 실패했습니다")
+                }
+
             }else{
                 binding.HeartBtn.isSelected = false //좋아요 누른거 취소
                 //+이태원라이크 테이블에 유저값 삭제하기
+
+                val checkLikeP = MemberDao.getInstance().LikePHeartDown(data?.id!!)
+                if(checkLikeP==true){
+                    println("하트버튼 클릭취소로 현재글쓴이 ${data.id}의 호감도가 하락했습니다")
+                }else{
+                    println("하트버튼 클릭취소로 현재글쓴이 호감도 하락에 실패했습니다")
+                }
             }
         }
 
@@ -146,9 +162,23 @@ class BbsDetailActivity : AppCompatActivity() {
                 binding.ScrapBtn.isSelected = true  //스크랩 누르기
                 //+이태원스크랩 테이블에 유저값 넣어주기
                 //  var plusScrap = BbsDao.getInstance().plusBbsScrap()   //스크랩누르면
+
+                val checkLikeP = MemberDao.getInstance().LikePScrapUp(data?.id!!)
+                if(checkLikeP==true){
+                    println("스크랩버튼 클릭으로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
+                }else{
+                    println("스크랩버튼 클릭으로 현재글쓴이 호감도 상승에 실패했습니다")
+                }
             }else{
                 binding.ScrapBtn.isSelected = false //스크랩 누른거 취소
                 //+이태원스크랩 테이블에 유저값 삭제하기
+
+                val checkLikeP = MemberDao.getInstance().LikePScrapDown(data?.id!!)
+                if(checkLikeP==true){
+                    println("스크랩버튼 클릭취소로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
+                }else{
+                    println("스크랩버튼 클릭취소로 현재글쓴이 호감도 상승에 실패했습니다")
+                }
             }
         }
 

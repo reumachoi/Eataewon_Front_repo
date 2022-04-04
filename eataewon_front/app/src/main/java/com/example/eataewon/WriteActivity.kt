@@ -72,6 +72,7 @@ class WriteActivity : AppCompatActivity() {
         }
         //이미지 추가 버튼
         binding.writeImgBtn.setOnClickListener {
+
             if(checkPermission(STORAGE, STORAGE_CODE)) {
                 var intent = Intent(Intent.ACTION_PICK)
                 intent.type = MediaStore.Images.Media.CONTENT_TYPE
@@ -108,6 +109,14 @@ class WriteActivity : AppCompatActivity() {
             println("writeactivity dto확인 ${dto}")
             val checkWrite = BbsDao.getInstance().bbswrite(dto)
             println("글쓰기 통신결과 ${checkWrite}!!!!!!!!!!!")
+
+            val checkLikeP = MemberDao.getInstance().LikePWriteUp(dto.id!!)
+            if(checkLikeP==true){
+                println("글쓰기로 ${dto.id}의 호감도가 상승했습니다")
+            }else{
+                println("글쓰기로 호감도 상승에 실패했습니다")
+            }
+
             if(checkWrite.equals("YES")){
                 Toast.makeText(this,"글쓰기가 완료되었습니다",Toast.LENGTH_SHORT).show()
                 var i = Intent(this,HomeActivity::class.java)
@@ -196,6 +205,7 @@ class WriteActivity : AppCompatActivity() {
 
             fun bind(listener: View.OnClickListener, item: String) {
                 view.setOnClickListener(listener)
+
             }
         }
     }
