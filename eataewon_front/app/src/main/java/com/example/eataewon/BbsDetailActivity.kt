@@ -56,7 +56,6 @@ class BbsDetailActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
 
-
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
         val homeData = intent.getParcelableExtra<BbsDto>("clickBbs")
         val updateData = intent.getParcelableExtra<BbsDto>("updateToDetail")
@@ -70,8 +69,23 @@ class BbsDetailActivity : AppCompatActivity() {
             data = getBbsList   //글작성페이지에서 작성 후 넘어온 값
         }
 
+        //      글쓴이랑 로그인유저가 같을때
+        if(loginUserId.equals(data?.id)){
+            binding.deleteBtn.isVisible = true
+            binding.updateBtn.isVisible = true
+        }else{
+            binding.deleteBtn.isVisible = false
+            binding.updateBtn.isVisible = false
+        }
+
+
+        //글쓴이 프로필사진 가져오기
+        val profilPic = MemberDao.getInstance().getProfilPic(data?.id!!)
+
+//        var picture : Array = data?.
         //툴바 타이틀에 넣기_안도현
         toolbar.title=data?.title
+        binding.profilPicture.setImageURI(Uri.parse(profilPic))
         binding.DeBbsUserT.text = data?.nickname
         binding.DeBbsLikePoT.text = data?.likecnt.toString()+"명 좋아요"
         binding.DeBbsWdateT.text = data?.wdate
@@ -82,7 +96,10 @@ class BbsDetailActivity : AppCompatActivity() {
         binding.DeBbsShopLocaT.text = data?.address
         binding.DeBbsShopPhT.text = data?.shopphnum
         binding.DeBbsShopUrlT.text = data?.shopurl
-        binding.imageView4.setImageURI(Uri.parse("/storage/emulated/0/DCIM/Screenshots/Screenshot_20220322-113413_eattaewon_back_kimminki.jpg"))
+      /*  binding.DeImg1.setImageURI(Uri.parse())
+        binding.DeImg2.setImageURI(Uri.parse())
+        binding.DeImg3.setImageURI(Uri.parse())
+        binding.DeImg4.setImageURI(Uri.parse())*/
 
 
 //       data에 같이 넘어온 글쓴이 아이디로 유저정보 가져오기 (사진,닉네임,한줄소개, 호감도)
@@ -97,14 +114,6 @@ class BbsDetailActivity : AppCompatActivity() {
         //var testData = listOf<BbsDto>("id",10,"title","content","picture")
 
 
-//      글쓴이랑 로그인유저가 같을때
-        if(loginUserId.equals(data?.id)){
-            binding.deleteBtn.isVisible = true
-            binding.updateBtn.isVisible = true
-        }else{
-            binding.deleteBtn.isVisible = false
-            binding.updateBtn.isVisible = false
-        }
 
         binding.deleteBtn.setOnClickListener {
             var delete = BbsDao.getInstance().bbsDelete(4)
@@ -270,15 +279,6 @@ class BbsDetailActivity : AppCompatActivity() {
 
     }
 
-    fun setImage(uri: Uri) {
-        try {
-            val `in`: InputStream? = contentResolver.openInputStream(uri)
-            val bitmap = BitmapFactory.decodeStream(`in`)
-            binding.imageView4.setImageBitmap(bitmap)
-        } catch (e: FileNotFoundException) {
-            e.printStackTrace()
-        }
-    }
     //툴바 연결_안도현
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu)

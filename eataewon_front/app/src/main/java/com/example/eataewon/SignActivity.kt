@@ -76,8 +76,13 @@ class SignActivity : AppCompatActivity() {
             val email = signupEmail.text.toString()
             val nickname = signupNickname.text.toString()
             val profilmsg = signupProfilmsg.text.toString()
-            val profilpic = profilImg
+            var profilpic: String? = null
 
+            if(profilImg!=null){
+                profilpic = profilImg
+            }else{
+                profilpic = "/storage/emulated/0/Download/유튜브_기본프로필_파랑.jpg"
+            }
 
             val dto = MemberDto(id,name,pwd,email,nickname,profilpic,0,profilmsg)
             val checksignup = MemberDao.getInstance().signup(dto)
