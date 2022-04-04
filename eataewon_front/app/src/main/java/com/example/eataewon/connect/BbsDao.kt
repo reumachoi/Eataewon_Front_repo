@@ -6,8 +6,8 @@ import retrofit2.http.*
 
 interface BbsService {
 
-    @GET("/getBbsList")
-    fun getBbsList(): Call<List<BbsDto>>
+    @GET("/getBbsListApp")
+    fun getBbsList(@Body seq:Int): Call<BbsDto>
 
     @POST("/bbsScrap")
     fun plusBbsScrap(@Body dto:BbsDto): Call<String>
@@ -25,7 +25,7 @@ interface BbsService {
     fun bbsDelete(@Body seq:Int) : Call<Boolean>
 
     @POST("/bbswriteApp")
-    fun bbswrite(@Body dto:BbsDto) : Call<String>
+    fun bbswrite(@Body dto:BbsDto) : Call<Int>
 
     @Headers("Content-Type: application/json")
     @POST("/plustReadcntApp")
@@ -58,6 +58,20 @@ class BbsDao {
         }
     }
 
+    fun getBbsList(seq:Int):BbsDto?{
+        var response: Response<BbsDto>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.getBbsList(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
     fun updateReadcnt(seq:Int) : String?{
         var response: Response<String>?
         println("SEQ: ${seq}")
@@ -72,8 +86,8 @@ class BbsDao {
         return response?.body()
     }
 
-    fun bbswrite(dto:BbsDto) : String?{
-        var response: Response<String>?
+    fun bbswrite(dto:BbsDto) : Int?{
+        var response: Response<Int>?
         println("DTO: ${dto}")
         try {
             val retrofit = RetrofitClient.getInstance()

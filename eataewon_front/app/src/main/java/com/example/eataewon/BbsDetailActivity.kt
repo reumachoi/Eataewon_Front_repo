@@ -37,7 +37,13 @@ class BbsDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        val writeSeq = intent.getParcelableExtra<BbsDto>("writeSeq")
+        println("글쓰기하고 넘어온  seq 확인 ${writeSeq}~~~~~~~")
 
+        var getBbsList: BbsDto? = null
+        if(writeSeq.toString().toInt()>0){
+            getBbsList = BbsDao.getInstance().getBbsList(writeSeq.toString().toInt())
+        }
 
         //로그인 유저정보
         val prefs = getSharedPreferences("sharedPref", 0)
@@ -60,6 +66,8 @@ class BbsDetailActivity : AppCompatActivity() {
             data = homeData //홈에서 클릭해서 넘어온 값
         }else if(updateData!=null){
             data = updateData   //수정페이지에서 수정해서 넘어온 값
+        }else if(getBbsList!=null){
+            data = getBbsList   //글작성페이지에서 작성 후 넘어온 값
         }
 
         //툴바 타이틀에 넣기_안도현
@@ -89,7 +97,7 @@ class BbsDetailActivity : AppCompatActivity() {
         //var testData = listOf<BbsDto>("id",10,"title","content","picture")
 
 
-//        if(글쓴이랑 로그인유저가 같을때) if조건문 수정필요
+//      글쓴이랑 로그인유저가 같을때
         if(loginUserId.equals(data?.id)){
             binding.deleteBtn.isVisible = true
             binding.updateBtn.isVisible = true

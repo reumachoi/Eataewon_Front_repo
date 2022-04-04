@@ -1,6 +1,7 @@
 package com.example.eataewon
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
@@ -104,11 +105,16 @@ class WriteActivity : AppCompatActivity() {
             var latitude = searchData?.y.toString().toDouble()
             var longitude = searchData?.x.toString().toDouble()
 
+            for (i in 0 until list.size) {
+                uriPath += getPath(list.get(i))+" "
+            }
+            println("uriPath 결과2 ${uriPath}")
+
             val dto = BbsDto(loginUserId,loginUserNickname,null, title,content,0,tag,LocalDate.now().toString(),
                             shopname,addr,shopphnum,shopurl,latitude,longitude,0,0,uriPath)
             println("writeactivity dto확인 ${dto}")
-            val checkWrite = BbsDao.getInstance().bbswrite(dto)
-            println("글쓰기 통신결과 ${checkWrite}!!!!!!!!!!!")
+            val seq = BbsDao.getInstance().bbswrite(dto)
+            println("글쓰기 통신결과 넘어온 seq값 ${seq}!!!!!!!!!!!")
 
             val checkLikeP = MemberDao.getInstance().LikePWriteUp(dto.id!!)
             if(checkLikeP==true){
@@ -117,9 +123,10 @@ class WriteActivity : AppCompatActivity() {
                 println("글쓰기로 호감도 상승에 실패했습니다")
             }
 
-            if(checkWrite.equals("YES")){
+            if(seq!! >0){
                 Toast.makeText(this,"글쓰기가 완료되었습니다",Toast.LENGTH_SHORT).show()
                 var i = Intent(this,HomeActivity::class.java)
+                i.putExtra("writeSeq",seq)
                 startActivity(i)
             }else{
                 Toast.makeText(this,"글쓰기를 실패했습니다",Toast.LENGTH_SHORT).show()
@@ -164,10 +171,6 @@ class WriteActivity : AppCompatActivity() {
             adapter.notifyDataSetChanged()
         }
 
-        for (i in 0 until list.size) {
-            uriPath += getPath(list.get(i))+" "
-        }
-        println("uriPath 결과 ${uriPath}")
     }
 
     fun getPath(uri: Uri?): String {
@@ -191,6 +194,9 @@ class WriteActivity : AppCompatActivity() {
             Glide.with(context).load(item)
                 .override(300, 300)
                 .into(holder.image)
+
+            holder.bind(items[position],context, items, this)
+
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -201,11 +207,18 @@ class WriteActivity : AppCompatActivity() {
         class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
             private var view: View = v
             var image = v.findViewById<ImageView>(R.id.write_imageview)
-
-
-            fun bind(listener: View.OnClickListener, item: String) {
-                view.setOnClickListener(listener)
-
+            var xButton = v.findViewById<ImageButton>(R.id.imgDeleteBtn)
+            var pos: Int? = null
+            fun bind( item: Uri, context: Context, items: ArrayList<Uri>, adapter: MultiImageAdapter) {
+                xButton.setOnClickListener {
+                  println(items.toString())
+                  if(items.contains(item)){
+                      items.remove(item)
+                      pos = items.indexOf(item)
+                      println(items.toString())
+                      adapter.notifyDataSetChanged()
+                  }
+                }
             }
         }
     }
