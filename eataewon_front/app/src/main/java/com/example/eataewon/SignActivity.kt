@@ -78,20 +78,35 @@ class SignActivity : AppCompatActivity() {
             val profilmsg = signupProfilmsg.text.toString()
             var profilpic: String? = null
 
-            if(profilImg!=null){
-                profilpic = profilImg
-            }else{
-                profilpic = "/storage/emulated/0/Download/유튜브_기본프로필_파랑.jpg"
-            }
+            if(id==""){
+                Toast.makeText(this,"아이디가 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else if(pwd==""){
+                Toast.makeText(this,"비밀번호가 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else if(name==""){
+                Toast.makeText(this,"이름이 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else if(email==""){
+                Toast.makeText(this,"이메일이 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else if(nickname==""){
+                Toast.makeText(this,"닉네임이 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else if(profilmsg==""){
+                Toast.makeText(this,"소개가 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else {
 
-            val dto = MemberDto(id,name,pwd,email,nickname,profilpic,0,profilmsg)
-            val checksignup = MemberDao.getInstance().signup(dto)
-            if(checksignup.equals("yes")){
-                Toast.makeText(this,"${dto.id} 회원가입 완료",Toast.LENGTH_SHORT).show()
-                val i = Intent(this,MainActivity::class.java)
-                startActivity(i)
-            }else{
-                Toast.makeText(this,"회원가입 실패",Toast.LENGTH_SHORT).show()
+                if (profilImg != null) {
+                    profilpic = profilImg
+                } else {
+                    profilpic = "/storage/emulated/0/Download/유튜브_기본프로필_파랑.jpg"
+                }
+
+                val dto = MemberDto(id, name, pwd, email, nickname, profilpic, 0, profilmsg, 0)
+                val checksignup = MemberDao.getInstance().signup(dto)
+                if (checksignup.equals("yes")) {
+                    Toast.makeText(this, "${dto.id} 회원가입 완료", Toast.LENGTH_SHORT).show()
+                    val i = Intent(this, MainActivity::class.java)
+                    startActivity(i)
+                } else {
+                    Toast.makeText(this, "회원가입 실패", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

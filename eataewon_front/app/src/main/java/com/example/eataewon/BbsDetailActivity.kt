@@ -136,8 +136,14 @@ class BbsDetailActivity : AppCompatActivity() {
 
 
         binding.deleteBtn.setOnClickListener {
-            var delete = BbsDao.getInstance().bbsDelete(4)
-//            var delete = BbsDao.getInstance().bbsDelete(data?.seq!!)
+            var likePointDown = BbsDao.getInstance().LikePWriteDown(data?.id!!)
+            if(likePointDown==true){
+                println("글 삭제로 글쓴이 ${data.id}의 호감도가 50 하락했습니다")
+            }else{
+                println("글 삭제로 글쓴이 ${data.id}의 호감도 하락에 실패했습니다")
+            }
+            var delete = BbsDao.getInstance().bbsDelete(data?.seq!!)
+
             if(delete == true){
                 Toast.makeText(this,"글이 삭제되었습니다",Toast.LENGTH_SHORT).show()
             }else{

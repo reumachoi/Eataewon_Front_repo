@@ -2,14 +2,17 @@ package com.example.eataewon
 
 import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.core.widget.doAfterTextChanged
 import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.connect.MemberDto
 import com.example.eataewon.databinding.ActivityFindUserIdBinding
 import kotlinx.android.synthetic.main.activity_find_user_id.*
+
 
 class FindUserIdActivity : AppCompatActivity() {
 
@@ -57,7 +60,7 @@ class FindUserIdActivity : AppCompatActivity() {
             val pwd = resetPwdText.text.toString().trim()
             val id = binding.findIdResultId.text.toString()
 
-            val dto = MemberDto(id,"",pwd,"","","",0,"")
+            val dto = MemberDto(id,"",pwd,"","","",0,"",0)
             val resetPwd = MemberDao.getInstance().resetPwd(dto)
 
             if(resetPwd==true){

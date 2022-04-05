@@ -10,6 +10,8 @@
 
     <EditText
             android:id="@+id/writeHashtag"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
@@ -56,6 +58,8 @@
 
     <EditText
             android:id="@+id/writeTitle"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
@@ -81,6 +85,8 @@
 
     <EditText
             android:id="@+id/writeAddress"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:layout_width="341dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -161,6 +167,8 @@
 
     <EditText
             android:id="@+id/writeContent"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"

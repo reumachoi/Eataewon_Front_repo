@@ -59,6 +59,8 @@
             app:layout_constraintHorizontal_bias="0.486" android:layout_marginTop="296dp"/>
     <EditText
             android:id="@+id/findEmailText"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:layout_width="199dp"
             android:layout_height="44dp"
             android:background="@drawable/style_edittext"
@@ -123,6 +125,8 @@
             app:layout_constraintEnd_toStartOf="@+id/resetPwdText" android:layout_marginEnd="20dp"/>
     <EditText
             android:id="@+id/resetPwdText"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:layout_width="199dp"
             android:layout_height="44dp"
             android:background="@drawable/style_edittext"
@@ -160,6 +164,8 @@
             app:layout_constraintVertical_bias="1.0"/>
     <EditText
             android:id="@+id/findIdText"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:layout_width="199dp"
             android:layout_height="44dp"
             android:layout_marginTop="124dp"

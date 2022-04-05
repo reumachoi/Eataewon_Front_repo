@@ -110,26 +110,37 @@ class WriteActivity : AppCompatActivity() {
             }
             println("uriPath 결과2 ${uriPath}")
 
-            val dto = BbsDto(loginUserId,loginUserNickname,null, title,content,0,tag,LocalDate.now().toString(),
-                            shopname,addr,shopphnum,shopurl,latitude,longitude,0,0,uriPath)
-            println("writeactivity dto확인 ${dto}")
-            val seq = BbsDao.getInstance().bbswrite(dto)
-            println("글쓰기 통신결과 넘어온 seq값 ${seq}!!!!!!!!!!!")
-
-            val checkLikeP = BbsDao.getInstance().LikePWriteUp(dto.id!!)
-            if(checkLikeP==true){
-                println("글쓰기로 ${dto.id}의 호감도가 상승했습니다")
+            if(title==""){
+                Toast.makeText(this,"제목이 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else if(content==""){
+                Toast.makeText(this,"내용이 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else if(addr==""){
+                Toast.makeText(this,"주소가 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
+            }else if(uriPath==""){
+                Toast.makeText(this,"사진이 추가되지 않았습니다 다시 추가해주세요",Toast.LENGTH_SHORT).show()
             }else{
-                println("글쓰기로 호감도 상승에 실패했습니다")
-            }
 
-            if(seq!! >0){
-                Toast.makeText(this,"글쓰기가 완료되었습니다",Toast.LENGTH_SHORT).show()
-                var i = Intent(this,HomeActivity::class.java)
-                i.putExtra("writeSeq",seq)
-                startActivity(i)
-            }else{
-                Toast.makeText(this,"글쓰기를 실패했습니다",Toast.LENGTH_SHORT).show()
+                val dto = BbsDto(loginUserId,loginUserNickname,null, title,content,0,tag,LocalDate.now().toString(),
+                                shopname,addr,shopphnum,shopurl,latitude,longitude,0,0,uriPath)
+                println("writeactivity dto확인 ${dto}")
+                val seq = BbsDao.getInstance().bbswrite(dto)
+                println("글쓰기 통신결과 넘어온 seq값 ${seq}!!!!!!!!!!!")
+
+                val checkLikeP = BbsDao.getInstance().LikePWriteUp(dto.id!!)
+                if(checkLikeP==true){
+                    println("글쓰기로 ${dto.id}의 호감도가 상승했습니다")
+                }else{
+                    println("글쓰기로 호감도 상승에 실패했습니다")
+                }
+
+                if(seq!! >0){
+                    Toast.makeText(this,"글쓰기가 완료되었습니다",Toast.LENGTH_SHORT).show()
+                    var i = Intent(this,HomeActivity::class.java)
+                    i.putExtra("writeSeq",seq)
+                    startActivity(i)
+                }else{
+                    Toast.makeText(this,"글쓰기를 실패했습니다",Toast.LENGTH_SHORT).show()
+                }
             }
         }
 

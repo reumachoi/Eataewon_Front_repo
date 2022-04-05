@@ -34,7 +34,7 @@ import com.kakao.sdk.user.UserApiClient
 class MainActivity : AppCompatActivity(),View.OnClickListener{
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
-    var imm: InputMethodManager? = null //EditText 키보드 내려가도록
+
 
 ///////
     // firebase 인증을 위한 변수
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
+
 
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
@@ -161,10 +161,10 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         when (view?.id) {
 
             R.id.login_Btn -> {
-                imm?.hideSoftInputFromWindow(loginPW.getWindowToken(), 0);
+
                 val id = loginID.text.toString()
                 val pwd = loginPW.text.toString()
-                val dto = MemberDto( id, "",pwd, "", "","사진1", 0,"")
+                val dto = MemberDto( id, "",pwd, "", "","사진1", 0,"",0)
 
                 val checkLogin = MemberDao.getInstance().login(dto)
                 if (checkLogin != null) {

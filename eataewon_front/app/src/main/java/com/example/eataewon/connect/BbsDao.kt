@@ -46,6 +46,9 @@ interface BbsService {
     @POST("/LikePScrapUp")
     fun LikePScrapUp(@Body id:String): Call<Boolean>
 
+    @POST("/LikePWriteDown")
+    fun LikePWriteDown(@Body id:String): Call<Boolean>
+
     @POST("/LikePHeartDown")
     fun LikePHeartDown(@Body id:String): Call<Boolean>
 
@@ -234,6 +237,20 @@ class BbsDao {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
             val call = service?.LikePWriteUp(id)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun LikePWriteDown(id:String):Boolean?{
+        var response : Response<Boolean>?
+        println("LikePWriteUp Id: ${id}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.LikePWriteDown(id)
             response = call?.execute()
         }catch(e:Exception){
             response = null
