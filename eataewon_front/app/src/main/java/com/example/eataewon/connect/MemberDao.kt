@@ -30,6 +30,12 @@ interface MemberService{
 
     @POST("getProfilPicApp")
     fun getProfilPic(@Body id:String):Call<String>
+
+    @POST("/findUserData")
+    fun findUserData(@Body dto:MemberDto):Call<MemberDto>
+
+    @POST("/updateUserData")
+    fun updateUserData(@Body dto: MemberDto):Call<Boolean>
 }
 
 class MemberDao {
@@ -155,4 +161,31 @@ class MemberDao {
         return response?.body()
     }
 
+    fun findUserData(dto: MemberDto):MemberDto?{
+        var response : Response<MemberDto>?
+        println("findUserData dto: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.findUserData(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun updateUserData(dto: MemberDto):Boolean?{
+        var response : Response<Boolean>?
+        println("updateUserData dto: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.updateUserData(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
 }

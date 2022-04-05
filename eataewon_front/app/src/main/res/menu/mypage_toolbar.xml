@@ -3,6 +3,11 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 <!--안도현_마이페이지 툴바 메뉴-->
     <item
+            android:id="@+id/mypage_updateBtn"
+            android:title="내정보수정하기"
+            android:icon="@android:drawable/ic_menu_edit"
+            app:showAsAction="withText|always"/>
+    <item
         android:id="@+id/mypage_logoutBtn"
         android:title="로그아웃"
         android:icon="@drawable/ic_mypage_logout"

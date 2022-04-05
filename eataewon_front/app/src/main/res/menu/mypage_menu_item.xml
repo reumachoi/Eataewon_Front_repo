@@ -1,7 +1,9 @@
 <?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+            android:id="@+id/mypage_update"
+            android:title="내정보수정하기" />
     <item
             android:id="@+id/mypage_logout"
             android:title="로그아웃하기" />
