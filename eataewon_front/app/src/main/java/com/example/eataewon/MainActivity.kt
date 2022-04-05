@@ -148,6 +148,10 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             }
         }
 
+        binding.findUserBtn.setOnClickListener {
+            var i = Intent(this,FindUserIdActivity::class.java)
+            startActivity(i)
+        }
     }
 
     override fun onClick(view: View?) {

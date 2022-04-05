@@ -273,7 +273,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-            android:id="@+id/signUP_btn"
+            android:id="@+id/signUPBtn"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_marginTop="60dp"

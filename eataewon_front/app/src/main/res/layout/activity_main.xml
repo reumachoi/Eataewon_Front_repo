@@ -83,7 +83,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/google_sign_in_button"
-            android:layout_marginTop="44dp"/>
+            android:layout_marginTop="44dp" app:layout_constraintHorizontal_bias="0.388"/>
+    <Button
+            android:id="@+id/findUserBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:text="아이디/비번찾기"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/google_sign_in_button"
+            android:layout_marginTop="44dp" app:layout_constraintHorizontal_bias="0.607"/>
     <com.google.android.gms.common.SignInButton
 
             android:id="@+id/google_sign_in_button"
@@ -93,8 +106,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintVertical_bias="0.136"
+            app:layout_constraintVertical_bias="0.201"
             app:layout_constraintTop_toBottomOf="@+id/login_Btn"/>
     <ImageButton
             android:id="@+id/kakao_login_button"
@@ -104,11 +116,10 @@
             android:background="@android:color/transparent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
 
             app:layout_constraintTop_toBottomOf="@+id/login_Btn"
             app:layout_constraintBottom_toTopOf="@+id/google_sign_in_button"
-            app:layout_constraintVertical_bias="0.4"/>
+            app:layout_constraintVertical_bias="0.411"/>
     <EditText
             android:id="@+id/loginID"
             android:hint="아이디"

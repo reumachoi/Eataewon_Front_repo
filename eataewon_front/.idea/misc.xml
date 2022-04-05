@@ -113,9 +113,10 @@
         <entry key="app/src/main/res/layout/activity_bbs_detail.xml" value="0.2527922561429635" />
         <entry key="app/src/main/res/layout/activity_bbs_details.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_delete.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/activity_find_user_id.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/activity_kakao_map.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18588531821045998" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_map.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/activity_map2.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.1" />

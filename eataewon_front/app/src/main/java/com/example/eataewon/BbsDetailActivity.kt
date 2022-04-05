@@ -110,12 +110,28 @@ class BbsDetailActivity : AppCompatActivity() {
         binding.DeImg4.setImageURI(Uri.parse(picture[3]))
 
 
-        //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
+        //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
+        var id = loginUserId
+        var bbsseq = data.seq
 
-//        var plusScrap = BbsDao.getInstance().plusBbsScrap(data!!)
+        var sdto = ScrapDto(id,bbsseq,null)
+        var checkScrap = BbsDao.getInstance().checkUserScrap(sdto)
 
-        //var testData = listOf<BbsDto>("id",10,"title","content","picture")
+        if(checkScrap==true){
+            binding.HeartBtn.isSelected = true  //좋아요 누른상태
+        }else{
+            binding.HeartBtn.isSelected = false  //좋아요 안누른상태
+        }
+
+        var ldto = LikeDto(id,bbsseq,null)
+        var checkLike = BbsDao.getInstance().checkUserLike(ldto)
+
+        if(checkLike==true){
+            binding.ScrapBtn.isSelected = true  //스크랩 누른상태
+        }else{
+            binding.ScrapBtn.isSelected = false //스크랩 안누른상태
+        }
 
 
 
@@ -143,7 +159,9 @@ class BbsDetailActivity : AppCompatActivity() {
                 binding.HeartBtn.isSelected = true  //좋아요 누르기
 
                 //이태원라이크 테이블에 유저값 넣어주기
-                val dto = LikeDto(loginUserId, data.seq, null)
+                val id = loginUserId
+                val bbsseq = data.seq
+                val dto = LikeDto(id, bbsseq, null)
                 var plusLike = BbsDao.getInstance().insertLike(dto)
                 if(plusLike==true){
                     println("Like테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 좋아요를 눌렀습니다")
@@ -160,7 +178,17 @@ class BbsDetailActivity : AppCompatActivity() {
 
             }else{
                 binding.HeartBtn.isSelected = false //좋아요 누른거 취소
+
                 //+이태원라이크 테이블에 유저값 삭제하기
+                val id = loginUserId
+                val bbsseq = data.seq
+                val dto = LikeDto(id, bbsseq, null)
+                var deleteLike = BbsDao.getInstance().deleteLike(dto)
+                if(deleteLike==true){
+                    println("Like테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 좋아요를 취소했습니다")
+                }else{
+                    println("Like테이블 반영 실패")
+                }
 
                 val checkLikeP = BbsDao.getInstance().LikePHeartDown(data?.id!!)
                 if(checkLikeP==true){
@@ -190,9 +218,11 @@ class BbsDetailActivity : AppCompatActivity() {
                 binding.ScrapBtn.isSelected = true  //스크랩 누르기
 
                 //이태원스크랩 테이블에 유저값 넣어주기
-                val dto = ScrapDto(loginUserId, data.seq, null)
-                var plusLike = BbsDao.getInstance().insertScrap(dto)
-                if(plusLike==true){
+                val id = loginUserId
+                val bbsseq = data.seq
+                val dto = ScrapDto(id, bbsseq, null)
+                var plusScrap = BbsDao.getInstance().insertScrap(dto)
+                if(plusScrap==true){
                     println("Scrap테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 스크랩버튼을 눌렀습니다")
                 }else{
                     println("Scrap테이블 반영 실패")
@@ -206,7 +236,17 @@ class BbsDetailActivity : AppCompatActivity() {
                 }
             }else{
                 binding.ScrapBtn.isSelected = false //스크랩 누른거 취소
+
                 //+이태원스크랩 테이블에 유저값 삭제하기
+                val id = loginUserId
+                val bbsseq = data.seq
+                val dto = ScrapDto(id, bbsseq, null)
+                var deleteScrap = BbsDao.getInstance().deleteScrap(dto)
+                if(deleteScrap==true){
+                    println("Scrap테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 스크랩버튼을 취소했습니다")
+                }else{
+                    println("Scrap테이블 반영 실패")
+                }
 
                 val checkLikeP = BbsDao.getInstance().LikePScrapDown(data?.id!!)
                 if(checkLikeP==true){
