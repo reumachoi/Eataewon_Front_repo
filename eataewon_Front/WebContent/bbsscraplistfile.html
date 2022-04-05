@@ -167,11 +167,14 @@ $(document).ready(function () {
 				}
 			}
 			
-			
+			seqs[n] = id; //마지막 숫자는 seqs[n-1]일 것이므로 그 다음 값은 seq[n]이다. 따라서 seq[n]에 id를 삽입한다.
+			let sendJson = seqs;
+			//alert(sendJson); -> 5,8,aaa (선택된 bbsseq,선택된 bbsseq,id) 로 출력됨
+				
 		$.ajax({
-				url:"http://localhost:3000/deleteScarpfile",
+				url:"http://localhost:3000/deleteScrapfile",
 				type:"get",
-				data:{"json":seqs},
+				data:{"json":sendJson},
 				success:function(msg){
 					if(msg == "OK"){
 						alert("삭제되었습니다");
