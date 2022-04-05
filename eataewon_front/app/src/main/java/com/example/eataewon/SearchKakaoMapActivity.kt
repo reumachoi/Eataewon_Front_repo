@@ -3,12 +3,15 @@ package com.example.eataewon
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.BbsService
 import com.example.eataewon.connect.KakaoSearchDto
 import com.example.eataewon.connect.MapSearchListDto
@@ -20,7 +23,6 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
 
 class SearchKakaoMapActivity : AppCompatActivity() {
 
@@ -42,6 +44,8 @@ class SearchKakaoMapActivity : AppCompatActivity() {
         setContentView(binding.root)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
 
+        val editAddr = intent.getStringExtra("editAddr")
+        binding.etSearchField.setText(editAddr)
 
         // 리사이클러 뷰
         binding.rvList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

@@ -1,21 +1,17 @@
-<?xml version ="1.0" encoding ="utf-8"?>
-
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--안도현_마이페이지 툴바 메뉴-->
+    <item
+        android:id="@+id/mypage_logoutBtn"
+        android:title="로그아웃"
+        android:icon="@drawable/ic_mypage_logout"
+        app:showAsAction="withText|always"/>
 
     <item
-            android:id="@+id/logout"
-            android:title="로그아웃하기"
-            android:icon="@drawable/ic_mypage_logout"
-    />
-    <item
-            android:id="@+id/withdraw"
-            android:title="탈퇴하기"
-            android:icon="@drawable/ic_mypage_userdelete"
-    />
+        android:id="@+id/mypage_userdelet"
+        android:title="회원탈퇴"
+        android:icon="@drawable/ic_mypage_userdelete"
+        app:showAsAction="withText|always"/>
+
 </menu>
-
-
-
-
-
-

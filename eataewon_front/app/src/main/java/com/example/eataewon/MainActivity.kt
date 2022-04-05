@@ -1,6 +1,7 @@
 package com.example.eataewon;
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -24,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.google.gson.GsonBuilder
 import com.kakao.sdk.auth.LoginClient
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.AuthErrorCause
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
     var imm: InputMethodManager? = null //EditText 키보드 내려가도록
+
 ///////
     // firebase 인증을 위한 변수
     var auth : FirebaseAuth? = null
@@ -42,19 +45,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         var GOOGLE_LOGIN_CODE = 9001
         val database = Firebase.database
 
-///////
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
-
-        //디테일 테스트 버튼 (최아름)
-        binding.testBtn.setOnClickListener {
-            val i = Intent(this, BbsDetailActivity::class.java)
-            startActivity(i)
-        }
-
-
 
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
@@ -76,7 +71,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
 
         // 구글 로그인을 위해 구성되어야 하는 코드 (Id, Email request)
         var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com")
+            .requestIdToken("32578359584-lgb05195k1cpfs9as83ejpqhugo1i53p.apps.googleusercontent.com")
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
@@ -165,7 +160,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 imm?.hideSoftInputFromWindow(loginPW.getWindowToken(), 0);
                 val id = loginID.text.toString()
                 val pwd = loginPW.text.toString()
-                val dto = MemberDto( id, "",pwd, "", "",0, 0,"")
+                val dto = MemberDto( id, "",pwd, "", "","사진1", 0,"",0)
 
                 val checkLogin = MemberDao.getInstance().login(dto)
                 if (checkLogin != null) {
@@ -177,9 +172,17 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
 
                 //백엔드 접속후 id pw값을 찾아 login값에 dto값 넣기
                 val login = MemberDao.getInstance().login(dto)
-
+                println("로그인정보 ${login.toString()}")
                 if (login != null) {
                     Toast.makeText(this, "환영합니다. ${login.id}님", Toast.LENGTH_SHORT).show()
+
+                    //로그인유저 아이디 저장값 넘겨주기
+                    val sharedPreference = getSharedPreferences("sharedPref", 0)
+                    val editor = sharedPreference.edit()
+                    editor.putString("loginUserId",login.id)
+                    editor.apply()
+                    editor.putString("loginUserNickname",login.nickname)
+                    editor.commit()
 
                     //안도현(로그인 후 홈엑티비티로 넘어가면서 intent.put으로 login값 넘기기)
                     val intent = Intent(this,HomeActivity::class.java)

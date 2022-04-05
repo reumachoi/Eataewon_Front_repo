@@ -9,13 +9,13 @@ import retrofit2.http.*
 
 interface MemberService{
 
-    @POST("/login")
+    @POST("/loginApp")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
-    @POST("/getId")
-    fun getId(@Body dto:MemberDto): Call<String>
+    @POST("/getIdApp")
+    fun getId(@Body id:String?=null): Call<String>
 
-    @POST("/addmember")
+    @POST("/addmemberApp")
     fun signup(@Body dto:MemberDto): Call<String>
 
     //bbs에 저장된 아이디값으로 member에서 같은아이디 유저정보 가져오기
@@ -23,6 +23,11 @@ interface MemberService{
     fun bbsGetUser(@Body id:String): Call<MemberBbsDto>
 
 
+    @POST("getProfilPicApp")
+    fun getProfilPic(@Body id:String):Call<String>
+
+    @POST("/deleteMem")
+    fun deleteMem(@Body dto:MemberDto): Call<String>
 }
 
 class MemberDao {
@@ -58,18 +63,18 @@ class MemberDao {
 
     }
 
-    fun getId(dto: MemberDto) : String?{
+    fun getId(id:String) : String?{
         var response: Response<String>?
-        println("ID:${dto.id}")
+        println("ID중복확인:${id}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.getId(dto)
+            val call = service?.getId(id)
             response = call?.execute()
         }catch(e:Exception){
             response = null
         }
-
+        println("아이디 중복확인 결과 ${response?.body()}")
         return response?.body()
     }
 
@@ -84,7 +89,7 @@ class MemberDao {
         }catch(e:Exception){
             response = null
         }
-
+        println("회원가입 결과 ${response?.body()}")
         return response?.body()
     }
 
@@ -103,4 +108,35 @@ class MemberDao {
 
         return response?.body()
     }
+
+    fun getProfilPic(id:String):String?{
+        var response : Response<String>?
+        println("getProfilPic Id: ${id}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.getProfilPic(id)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun deleteMem(dto: MemberDto):String?{
+        var response: Response<String>?
+        println("getProfilPic Id: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java) /// 이쪽을 변경 해야 될듯
+            val call = service?.deleteMem(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
+
+
 }

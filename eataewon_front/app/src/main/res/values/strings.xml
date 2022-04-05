@@ -10,13 +10,13 @@
     <string name="action_settings">Settings</string>
 
     <!-- 카카오 로그인-->
-    <!-- kakao_native_app_key는 네이티브 앱키가 '12345'라면 'kakao12345'로 설정 -->
+     <!-- kakao_native_app_key는 네이티브 앱키가 '12345'라면 'kakao12345'로 설정 -->
     <string name="kakao_native_app_key" translatable="false">kakaoa05f68a3850359a6d8c92e79cdc0d8cb</string>
     <!-- 얘는 그냥 네이티브 앱키 그대로 입력하면 된다 -->
     <string name="kakao_app_key" translatable="false">a05f68a3850359a6d8c92e79cdc0d8cb</string>
 
     <!-- 구글 웹 클라이언트 아이디-->
-    <!--    <string name="default_web_client_id" translatable="false">763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com</string>-->
+<!--    <string name="default_web_client_id" translatable="false">763712107163-f31ivndnv69i1852nf40i3vf0ot0q1rv.apps.googleusercontent.com</string>-->
 
 
     <string-array name="Test">

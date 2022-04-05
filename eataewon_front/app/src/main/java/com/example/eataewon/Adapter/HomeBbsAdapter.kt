@@ -1,11 +1,13 @@
 package com.example.eataewon.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eataewon.BbsDetailActivity
 import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDto
 
@@ -32,6 +34,10 @@ class HomeBbsAdapter (private val dataList: ArrayList<BbsDto>) :
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val shopName = itemView.findViewById<TextView>(R.id.ShopName)
         private val shopLocation = itemView.findViewById<TextView>(R.id.ShopLocation)
+
+        /*imageView_img = (ImageView) itemView.findViewById(R.id.imageView_img);
+        imageView_img2 = (ImageView) itemView.findViewById(R.id.imageView_img2);*/
+
         private val bbsPhotoView = itemView.findViewById<ImageView>(R.id.BbsPhotoView)
         private val userProfilePic = itemView.findViewById<ImageView>(R.id.UserProfilePic)
         private val userId = itemView.findViewById<TextView>(R.id.UserId)
@@ -41,10 +47,12 @@ class HomeBbsAdapter (private val dataList: ArrayList<BbsDto>) :
 
             shopName.text = bbsDto.shopname
             shopLocation.text = bbsDto.address
-            bbsPhotoView.setImageResource(bbsDto.picture)
-            userProfilePic.setImageResource(bbsDto.picture)
+            /*bbsPhotoView.setImageDrawable(R.drawable.cafe1)
+            userProfilePic.setImageResource(bbsDto.picture)*/
             userId.text = bbsDto.id
             bbsContent.text = bbsDto.content
+
+
             }
         }
     }
