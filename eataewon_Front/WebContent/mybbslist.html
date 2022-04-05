@@ -33,10 +33,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="bbslikelist.html">like❤</a>
+          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="bbsscraplist.html">scrap🔗</a>
+          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="mypage.html">mypage</a>
@@ -145,12 +145,12 @@ $(document).ready(function () {
 	 
 	 
 	 $("#btnScraplist").click(function (){
-		location.href = "bbsscraplist.html" 
+		location.href = "bbsscraplistfile.html" 
 	 });
 	 
 	 
 	 $("#btnlikelist").click(function (){
-			location.href = "bbslikelist.html" 
+			location.href = "bbslikelistfile.html" 
 		 });
 	
 })
@@ -165,7 +165,7 @@ function getBbslist( page ) { //페이지는 도대체 어디서 나오는거? �
 	
 	$("#tbody").html(""); // 테이블 초기화
 	$.ajax({
-		url:"http://localhost:3000/getBbsListSearchPage",
+		url:"http://localhost:3000/getBbsListFileSearchPage",
 		type:"get",
 		data:{ "choice":choice, "search":search, "page":page },
 		success:function(list){
@@ -202,7 +202,7 @@ function getBbsCount() {
 	let search = $("#_search").val();
 	
 	$.ajax({
-		url:"http://localhost:3000/getBbsCount",
+		url:"http://localhost:3000/getBbsFileCount",
 		type:"get",
 		data:{ "choice":choice, "search":search, "page":0 }, //왜 page를 0이라 설정?
 		success:function(count){ //count가 어디서 나오는데? controller에 있는 getBbsCount함수 실행해서 나온 값?

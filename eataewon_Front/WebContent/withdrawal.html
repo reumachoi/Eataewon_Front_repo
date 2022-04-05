@@ -49,6 +49,7 @@
 		<td colspan="2">
 		<p>회원 탈퇴를 진행을 위한 아이디와 비밀 번호를 입력하십시오.</p>
 		<p>아이디와 비밀번호가 일치 하지 않을시 탈퇴 처리 되지 않습니다.</p>
+		<p>탈퇴 전 삭제되지 않은 글들은 탈퇴 이후에도 타회원이 열람 가능합니다.</p>
 		
 		</td>
 	</tr>	
@@ -86,17 +87,18 @@
 	//회원탈퇴
 	$("#deleteMem").click(function(){
 			
-		alert("id: "+ $("#deleteId").text);
-		alert("pwd: "+ $("#deletePwd").text);
+		alert("id: "+ $("#deleteId").val());
+		alert("pwd: "+ $("#deletePwd").val());
 		
 		$.ajax({
 			url:"http://localhost:3000/deleteMem",
 			type:"get",
 			data:{
-					"id":$("#deleteid").val, 
-					"pwd":$("#pwd").val				
+					"id":$("#deleteId").val(), 
+					"pwd":$("#deletePwd").val()				
 				},
 			success:function(data){
+				alert('success');
 				if(data=="OK"){
 					alert('탈퇴 처리 되었습니다.');
 					location.href="login.html";

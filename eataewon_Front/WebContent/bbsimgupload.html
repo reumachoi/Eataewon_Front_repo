@@ -31,6 +31,13 @@
 		</td>
 	</tr>
 	
+		<tr>
+	<th class="table-primary">닉네임</th>
+		<td>
+		<input type="text" id="nickname" name="nickname" size="70px" readonly="readonly">
+		</td>
+	</tr>
+	
 	
 	<tr>
 		<th class="table-primary">제목</th>
@@ -47,30 +54,12 @@
 		</tr>
 		
 		
-		<tr>
+	<tr>
 		
 			<th class="table-primary">사진</th>
 			<td>
 				<input name="uploadFiles" type="file" multiple>
-     		</td>
-<!-- 		</tr>
-			
-			<input type="file" id="filename" name="filename" class="form-control" size="50px">
-			</td>
-		</tr> -->
-	<!-- 	<tr>
-			<td>
-			<input type="file" name="file[1]" multiple type="file" class="form-control" size="50px">
-			</td>
-		</tr>
-		
-		<tr>
-			<td>
-			<input type="file" name="file[2]" multiple type="file" class="form-control" size="50px">
-			</td>
-		</tr>
-		 -->
-		
+     		</td>		
 		<tr>
 		<th class="table-primary">HashTag#</th>
 		<td>
@@ -101,6 +90,19 @@
 		<input type="text" class="form-control" id="address" name="address" size="50px">
 		</td>
 		</tr>
+				<tr>
+		<th class="table-primary">매장 번호</th>
+		<td>
+		<input type="text" class="form-control" id="shopphnum" name="shopphnum" size="50px">
+		</td>
+		</tr>
+		
+		<tr>
+		<th class="table-primary">매장 url</th>
+		<td>
+		<input type="text" class="form-control" id="shopurl" name="shopurl" size="50px">
+		</td>
+		</tr>
 		
 		
 		<tr>
@@ -117,50 +119,38 @@
 </div>
 
 <script type="text/javascript">
-/* var IDX = getQueryStringObject().idx;
-function getQueryStringObject() {
-   var a = window.location.search.substr(1).split('&');
-   if (a == "") return {};
-   var b = {};
-   for (var i = 0; i < a.length; ++i) {
-       var p = a[i].split('=', 2);
-       if (p.length == 1)
-           b[p[0]] = "";
-       else
-           b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-   }
-   return b;
-} 
 
-$.ajax({url: "boardView?idx="+IDX, success: function(result){
-	  $("#image").append('<img src="resources/'+ result.image + '" style="width: 100%;">');
-	  $("#title").text(result.title);
-	  $("#contents").text(result.contents);
- }});
-
-$.ajax({url: "replyList?idx="+IDX, success: function(replys){
-	  drawReply(replys)
- }});
-
-
-*/
 let login = sessionStorage.getItem("login");
 let id = JSON.parse(login).id;
-// alert(id);
+
 $("#id").val(id);
+
+$.ajax({
+	url:"http://localhost:3000/getnickname",
+	type:"get",
+	data:{ "id":id },
+	success:function(bbs){			
+		$("#nickname").val(bbs.nickname);			
+	},
+	error:function(){
+		alert('error');
+	}
+	
+});
+
+
 
 $("#btn").click(function () {
 
 	let aaa = $("#frm").serialize();
 	
-	//alert(aaa);
 	var formData = new FormData();
     var inputFile = $("input[type='file']");
 
     var files = inputFile[0].files;
 
     for (var i = 0; i < files.length; i++) {
-        //console.log(files[i]);
+
         formData.append("uploadFiles", files[i]);
     }
     
@@ -185,14 +175,26 @@ $("#btn").click(function () {
                 console.log("result[0].fileName!!dddddd:~~~"+strfilename);
             }
                 
-        let params = {id:$("#id").val(), title:$("#title").val(), content:$("#content").val(), filepath:strfilepath, filename:strfilename, 
-        			hashtag:$("#hashtag").val(), shopname:$("#shopname").val(),latitude:$("#latitude").val(),longtitude:$("#longtitude").val(),address:$("#address").val(),};
+        let params = {
+        		id:$("#id").val(), 
+        		nickname:$("#nickname").val(),
+        		title:$("#title").val(), 
+        		content:$("#content").val(), 
+        		filepath:strfilepath, 
+        		filename:strfilename, 
+        		hashtag:$("#hashtag").val(), 
+        		shopname:$("#shopname").val(),
+        		latitude:$("#latitude").val(),
+        		longtitude:$("#longtitude").val(),
+        		address:$("#address").val(),
+        		shopphnum:$("#shopphnum").val(),
+        		shopurl:$("#shopurl").val()
+        		};
             
 	            
 	 	$.ajax({
 			url:"http://localhost:3000/bbswriteImgup",		
 			type:"get",
-			/* data:$("#frm").serialize(), */
 			data:params,
 	 		success:function(msg){	                	
 				if(msg == "YES"){

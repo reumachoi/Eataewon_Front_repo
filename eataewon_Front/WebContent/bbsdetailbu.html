@@ -24,10 +24,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
+          <a class="nav-link" href="bbslikelist.html">like❤</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
+          <a class="nav-link" href="bbsscraplist.html">scrap🔗</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="mypage.html">mypage</a>
@@ -132,24 +132,6 @@ pre { /* 자동줄바꿈 설정 */
 </tr>
 <tr><td>&nbsp;</td></tr>
 
-
-<tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">위도</td>
-</tr>
-<tr>
-<td colspan="2" id="latitude" style="font-size: 20px;"></td>
-</tr>
-
-<tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">경도</td>
-</tr>
-<tr>
-<td colspan="2" id="longtitude" style="font-size: 20px;"></td>
-</tr>
-
-
-
-
 <tr>
 <td colspan="2" style="font-size: 22px; font-weight:bold;">주소</td>
 </tr>
@@ -226,8 +208,6 @@ $.ajax({
 		$("#hashtag").text(bbs.hashtag);
 		$("#shopname").text(bbs.shopname);
 		$("#address").text(bbs.address);
-		$("#latitude").text(bbs.latitude);
-		$("#longtitude").text(bbs.longtitude);
 		$("#likecnt").text(bbs.likecnt);
 		$("#shopphnum").text(bbs.shopphnum);
 		$("#shopurl").text(bbs.shopurl);
@@ -243,7 +223,7 @@ $.ajax({
 						
             str += "<div class='col' readonly='readonly'>";
             str += "<img src='./image/upload/"+srcFileName+"' width='500' height='500'/> &nbsp;&nbsp;"; 
-		/*     str += bbs.filename */
+		    str += bbs.filename
             str += "</div>"
             
 		}else{
@@ -275,12 +255,12 @@ $.ajax({
 
 
 $("#bbsupdate").click(function () {	
-	location.href = "bbsupdatefile.html?seq=" + seq;
+	location.href = "bbsupdate.html?seq=" + seq;
 });
 
 $("#bbsdelete").click(function () {	
 	$.ajax({
-		url:"http://localhost:3000/deleteBbsFile",
+		url:"http://localhost:3000/bbsdelete",
 		type:"get",
 		data:{ "seq":seq ,"id":id },
 		success:function(msg){
@@ -306,7 +286,7 @@ $("#btnScrap").click(function(){
 		success:function(msg){
 			if(msg=="YES"){
 				alert("스크랩 되었습니다. 스크랩 게시판에서 확인 가능합니다.");
-				location.href="bbsscraplistfile.html";
+				location.href="bbsscraplist.html";
 			}else if(msg=="DUP"){
 				alert("이미 스크랩한 게시물입니다.")			
 			}else{
@@ -323,14 +303,14 @@ $("#btnScrap").click(function(){
 
 $("#btnLike").click(function(){
 	$.ajax({
-		url:"http://localhost:3000/likeBbsFile",
+		url:"http://localhost:3000/likeBbs",
 		type:"get",
 		//bbsseq는 seq는 값은 같지만 xml에서 받는 데이터명이 다르다.
 		data:{ "id":id, "bbsseq":seq, "seq":seq},
 		success:function(msg){
 			if(msg=="YES"){
 				alert("좋아요 완료. 좋아요된 게시물은 좋아요 게시판에서 확인 가능합니다.");
-				location.href="bbslikelistfile.html";
+				location.href="bbslikelist.html";
 			}else if(msg=="DUP"){
 				alert("이미 좋아요한 게시물입니다.")			
 			}else{

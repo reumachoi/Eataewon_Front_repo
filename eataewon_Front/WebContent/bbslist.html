@@ -33,10 +33,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="bbslikelist.html">like❤</a>
+          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="bbsscraplist.html">scrap🔗</a>
+          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="mypage.html">mypage</a>
@@ -115,21 +115,7 @@ $(document).ready(function () {
 	let str = sessionStorage.getItem("login");	
 	let json = JSON.parse(str);	
  	let id = JSON.parse(str).id;
-	
-/*  	$.ajax({
-		url:"http://localhost:3000/getnickname",
-		type:"get",
-		data:{ "id":id },
-		success:function(bbs){	
-		//	alert(bbs.nickname);
-			$("#nickname").text(bbs.nickname);			
-		},
-		error:function(){
-			alert('error');
-		}
 		
-	});   */
-	
 	
 	getBbslist( 0 ); //#1여기 있는 코드나 #btnsearch 안에 있는 코드나 차이 없는데 검색 하지 않은 목록이랑 검색한 목록을 어떻게 다르게 구현함?
 	getBbsCount();
@@ -140,7 +126,7 @@ $(document).ready(function () {
 	});
 	 
 	 $("#writeBtn").click(function () {
-		location.href = "bbswrite.html";
+		location.href = "bbsimgupload.html";
 	});
 	 
 	 
@@ -150,7 +136,7 @@ $(document).ready(function () {
 	 
 	 
 	 $("#btnlikelist").click(function (){
-			location.href = "bbslikelist.html" 
+			location.href = "bbslikelistfile.html" 
 		 });
 	
 })

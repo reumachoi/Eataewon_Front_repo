@@ -113,7 +113,7 @@ $(document).ready(function () {
 
 	$("#tbody").html(""); // 테이블 초기화
 	$.ajax({
-		url:"http://localhost:3000/likeBbsList",
+		url:"http://localhost:3000/likeBbsListFile",
 		type:"get",
 		data:{ "id": id },
 		success:function(list){
@@ -174,16 +174,16 @@ $(document).ready(function () {
 		let sendJson = seqs;
 		//alert(sendJson); -> 5,8,aaa (선택된 bbsseq,선택된 bbsseq,id) 로 출력됨
 		$.ajax({
-				url:"http://localhost:3000/deleteLike",
+				url:"http://localhost:3000/deleteLikefile",
 				type:"get",
 				data:{"json":sendJson},
 				success:function(msg){
 					if(msg == "OK"){
 						alert("삭제되었습니다");
-						location.href = "bbslikelist.html";
+						location.href = "bbslikelistfile.html";
 					}else{
 						alert("삭제되지 않았습니다");
-						location.href = "bbslikelist.html";
+						location.href = "bbslikelistfile.html";
 					}
 				},
 				error:function(){
