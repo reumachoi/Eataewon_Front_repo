@@ -96,7 +96,7 @@
                     android:layout_height="120dp">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/profilPicture"
                         android:layout_width="66dp"
                         android:layout_height="64dp"
                         android:layout_marginStart="32dp"
@@ -114,7 +114,7 @@
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="@+id/DeBbsUserT"
-                        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                        app:layout_constraintTop_toTopOf="@+id/profilPicture" />
 
                     <TextView
                         android:id="@+id/DeBbsLikePoT"
@@ -141,8 +141,8 @@
                         android:textColor="@color/black"
                         android:textSize="30sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                        app:layout_constraintStart_toEndOf="@+id/imageView3" />
+                        app:layout_constraintBottom_toBottomOf="@+id/profilPicture"
+                        app:layout_constraintStart_toEndOf="@+id/profilPicture" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -151,7 +151,7 @@
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="@+id/DeBbsLikePoT"
-                        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                        app:layout_constraintTop_toTopOf="@+id/profilPicture" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -167,38 +167,32 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/imageView4"
+                            android:id="@+id/DeImg1"
                             android:layout_width="583dp"
                             android:layout_height="466dp"
                             android:layout_weight="1"
                             app:srcCompat="@drawable/cafe1" />
 
                         <ImageView
-                            android:id="@+id/imageView5"
+                            android:id="@+id/DeImg2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@drawable/cafe2" />
 
                         <ImageView
-                                android:id="@+id/imageView6"
+                                android:id="@+id/DeImg3"
                                 android:layout_width="359dp"
                                 android:layout_height="443dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/cafe5"/>
                         <ImageView
-                            android:id="@+id/imageView8"
+                            android:id="@+id/DeImg4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             app:srcCompat="@drawable/cafe4" />
 
-                        <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            app:srcCompat="@drawable/cafe3" />
                     </LinearLayout>
                 </HorizontalScrollView>
 
@@ -243,7 +237,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/DeLocation"
+                        android:id="@+id/DeShopName"
                         android:layout_width="279dp"
                         android:layout_height="match_parent"
                         android:text="가게이름"
@@ -286,6 +280,17 @@
                         app:layout_constraintHorizontal_bias="0.051"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/DeBbsShopLocaT" />
+                    <TextView
+                            android:id="@+id/DeBbsShopUrlT"
+                            android:layout_width="100dp"
+                            android:layout_height="28dp"
+                            android:layout_marginTop="20dp"
+                            android:text="가게전호번호"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.051"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/DeBbsShopLocaT"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <FrameLayout

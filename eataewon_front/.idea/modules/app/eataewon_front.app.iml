@@ -24,7 +24,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/42aa72c7a5d7b7034fba0b01b42d6fc7/transformed/jetified-libDaumMapAndroid.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/708ab93f2c06974c10f5ded451270cdf/transformed/jetified-viewbinding-7.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/af0907a162e796ad1f7cd5216d438dfa/transformed/jetified-kotlin-stdlib-jdk8-1.6.10.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/ce7316e6a7628588e0e079b155eaa22b/transformed/jetified-map-sdk-3.14.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/410bb6e2aa8d23310e00f43e1abfb441/transformed/jetified-map-sdk-3.14.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a7fa0379179e3d0c19deb4b4c814af5c/transformed/material-1.5.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/4a9168e4b13a7fb2eb791767a9f22e51/transformed/jetified-v2-user-2.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/27e54cbcfa1e478e65fa0504ad82c93c/transformed/jetified-v2-auth-2.0.0-api.jar</arg>
@@ -33,7 +33,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/f5bae9c39cfc643fbe67be4b4b164c5d/transformed/recyclerview-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/fc93692793c0d976acdf07afe15ba7cc/transformed/jetified-core-ktx-1.7.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/3d7cfe9e8a7662d474134b7e0ca7c795/transformed/jetified-firebase-database-ktx-20.0.4-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/2e863e4cd98b51bbdbb4f6a35d074c29/transformed/jetified-geometry-1.2.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/368b429cffed4018d7221d2391ea8577/transformed/jetified-geometry-1.2.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/9450a13e73b1151c377d317d3d0f25b1/transformed/legacy-support-v4-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/260bf9f460cda1af5d32c9fb8fbff491/transformed/jetified-play-services-maps-18.0.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d8761f8ea596207270e8cd9faa9ea52f/transformed/jetified-glide-4.12.0-api.jar</arg>
@@ -131,8 +131,8 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/5f07574cadc08bd507cd27798b94cbe4/transformed/jetified-compiler-4.11.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/1df31de8e1a73d875e94a0fab5e154a8/transformed/jetified-annotations-4.12.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/33f6ac908e62761c6fc034f5bfa7ff3a/transformed/multidex-2.0.0-api.jar</arg>
-                <arg>$MODULE_DIR$/../../../../../../../CoddingProgram/SDK/platforms/android-31/android.jar</arg>
-                <arg>$MODULE_DIR$/../../../../../../../CoddingProgram/SDK/build-tools/30.0.2/core-lambda-stubs.jar</arg>
+                <arg>$USER_HOME$/Library/Android/sdk/platforms/android-31/android.jar</arg>
+                <arg>$USER_HOME$/Library/Android/sdk/build-tools/30.0.2/core-lambda-stubs.jar</arg>
               </args>
             </stringArg>
             <stringArg name="destination" arg="$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/debug" />
