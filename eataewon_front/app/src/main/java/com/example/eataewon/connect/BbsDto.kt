@@ -5,7 +5,8 @@ import android.os.Parcelable
 
 class BbsDto(
     var id:String?,
-    var seq:Int,
+    var nickname:String?,
+    var seq: Int?,
     var title:String?,
     var content:String?,
     var picture:Int,
@@ -13,17 +14,23 @@ class BbsDto(
     var wdate:String?,
     var shopname:String?,
     var address:String?,
+    var shopphnum:String?,
+    var shopurl:String?,
     var latitude:Double,
     var longitude:Double,
     var readcnt:Int,
-    var likecnt:Int
+    var likecnt:Int,
+    var testurl:String?
     ):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
-        parcel.readInt(),
+        parcel.readString(),
+        parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readString(),
         parcel.readString(),
         parcel.readInt(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -31,13 +38,15 @@ class BbsDto(
         parcel.readDouble(),
         parcel.readDouble(),
         parcel.readInt(),
-        parcel.readInt()
+        parcel.readInt(),
+        parcel.readString()
     ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
-        parcel.writeInt(seq)
+        parcel.writeString(nickname)
+        parcel.writeValue(seq)
         parcel.writeString(title)
         parcel.writeString(content)
         parcel.writeInt(picture)
@@ -45,10 +54,13 @@ class BbsDto(
         parcel.writeString(wdate)
         parcel.writeString(shopname)
         parcel.writeString(address)
+        parcel.writeString(shopphnum)
+        parcel.writeString(shopurl)
         parcel.writeDouble(latitude)
         parcel.writeDouble(longitude)
         parcel.writeInt(readcnt)
         parcel.writeInt(likecnt)
+        parcel.writeString(testurl)
     }
 
     override fun describeContents(): Int {
@@ -56,7 +68,7 @@ class BbsDto(
     }
 
     override fun toString(): String {
-        return "BbsDto(id=$id, seq=$seq, title=$title, content=$content, picture=$picture, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt)"
+        return "BbsDto(id=$id, nickname=$nickname, seq=$seq, title=$title, content=$content, picture=$picture, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, shopphnum=$shopphnum, shopurl=$shopurl, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt, testurl=$testurl)"
     }
 
     companion object CREATOR : Parcelable.Creator<BbsDto> {
@@ -68,5 +80,6 @@ class BbsDto(
             return arrayOfNulls(size)
         }
     }
+
 
 }

@@ -15,6 +15,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.MenuItemCompat
 import androidx.fragment.app.Fragment
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
@@ -40,6 +41,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         //상단 툴바바
         v.toolbar.inflateMenu(R.menu.mypage_menu_item)
 
+
         setHasOptionsMenu(true)
 
         //텍스트뷰
@@ -49,7 +51,6 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         val mypageEmail = v.findViewById<TextView>(R.id.mypage_email)
         val mypageNickname = v.findViewById<TextView>(R.id.mypage_nickname)
         val mypageProfilmsg = v.findViewById<TextView>(R.id.mypage_profilmsg)
-
         //이미지
         mypageProfilpic = v.findViewById(R.id.mypage_profil_image)
         mypageProfilpicuri = v.findViewById(R.id.mypage_profilpic_uri)
@@ -64,8 +65,8 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         mypageName.text = user?.name
         mypageLikepoint.text = user?.likepoint.toString()
         mypageEmail.text = user?.email
-        mypageNickname.text = user?.nickName
-        mypageProfilmsg.text = user?.profilMsg
+        mypageNickname.text = user?.nickname
+        mypageProfilmsg.text = user?.profilmsg
 
         //이미지 불러오기
         //mypageProfilpic.setImageURI(user?.profilPic?.toUri())
@@ -84,7 +85,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
                     true
                 }
 
-                R.id.mypage_withdraw->{
+                R.id.mypage_userdelet->{
 
                     val intent = Intent(homeActivity,DeleteActivity::class.java)
                     startActivity(intent)

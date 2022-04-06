@@ -42,6 +42,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/style_edittext"
         android:ems="10"
+        android:textColor="@color/black"
         android:gravity="center"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,6 +77,7 @@
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="40dp"
+        android:textColor="@color/black"
         android:background="@drawable/style_edittext"
         android:ems="10"
         android:gravity="center"
@@ -109,6 +111,7 @@
         android:background="@drawable/style_edittext"
         android:ems="10"
         android:gravity="center"
+        android:textColor="@color/black"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/signUp_Pw"
         app:layout_constraintHorizontal_bias="0.0"
@@ -140,6 +143,7 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/signUp_Pw"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/signUp_Pw"
@@ -169,6 +173,7 @@
         android:background="@drawable/style_edittext"
         android:ems="10"
         android:gravity="center"
+        android:textColor="@color/black"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/signUp_email"
         app:layout_constraintHorizontal_bias="0.0"
@@ -199,6 +204,7 @@
         android:background="@drawable/style_edittext"
         android:ems="10"
         android:gravity="center"
+        android:textColor="@color/black"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/signUp_nickname"
         app:layout_constraintHorizontal_bias="0.78"
@@ -241,54 +247,44 @@
         app:layout_constraintTop_toBottomOf="@+id/signUp_profilmsg"
         tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:id="@+id/signUp_profilpic"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-
-            android:layout_marginTop="15dp"
-            android:background="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ImageContrastCheck" />
-
-        <TextView
-            android:id="@+id/signUp_profilpic_uri"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="10sp"
-            app:layout_constraintEnd_toEndOf="@+id/signUp_profilpic"
-            app:layout_constraintStart_toStartOf="@+id/signUp_profilpic"
-            app:layout_constraintTop_toBottomOf="@+id/signUp_profilpic" />
-
+        <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/signUp_profilpic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/black"
+                app:civ_border_overlay="true"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"/>
         <Button
-            android:id="@+id/signUp_imageBtn"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="15dp"
-            android:text="이미지 넣기"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
+                android:id="@+id/signUp_imageBtn"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="24dp"
+                android:text="이미지 넣기"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TouchTargetSizeCheck"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/signUP_btn"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="#FF9800"
-        android:text="회원가입"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        tools:ignore="TextContrastCheck" />
+            android:id="@+id/signUP_btn"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="#FF9800"
+            android:text="회원가입"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            tools:ignore="TextContrastCheck" app:layout_constraintHorizontal_bias="0.503"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,13 +4,17 @@ package com.example.eataewon
 import android.content.ActivityNotFoundException
 import android.content.ContentValues
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
+import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
@@ -19,30 +23,59 @@ import com.kakao.sdk.template.Content
 import com.kakao.sdk.template.Link
 import com.kakao.sdk.template.LocationTemplate
 import com.kakao.sdk.template.Social
+import java.io.FileNotFoundException
+import java.io.InputStream
+
 
 //import com.kakao.sdk.template.model.*
 
 class BbsDetailActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityBbsDetailBinding.inflate(layoutInflater) }
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        var seq = 1
 
-//        var data = BbsDao.getInstance().getBbsDetail(seq)
+
+        //로그인 유저정보
+        val prefs = getSharedPreferences("sharedPref", 0)
+        val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
+        val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
+        println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
+
+        //툴바 생성_안도현
+        val toolbar = binding.bbsdetailToolbar
+        setSupportActionBar(toolbar)
 
 
 
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
-        val data = intent.getParcelableExtra<BbsDto>("data")
+        val homeData = intent.getParcelableExtra<BbsDto>("clickBbs")
+        val updateData = intent.getParcelableExtra<BbsDto>("updateToDetail")
+        var data : BbsDto? = null
 
+        if(homeData!=null){
+            data = homeData //홈에서 클릭해서 넘어온 값
+        }else if(updateData!=null){
+            data = updateData   //수정페이지에서 수정해서 넘어온 값
+        }
+
+        //툴바 타이틀에 넣기_안도현
+        toolbar.title=data?.title
+        binding.DeBbsUserT.text = data?.nickname
+        binding.DeBbsLikePoT.text = data?.likecnt.toString()+"명 좋아요"
+        binding.DeBbsWdateT.text = data?.wdate
         binding.DeTitle.text = data?.title
         binding.DeContent.text = data?.content
         binding.DeHashtag.text = data?.hashtag
-        binding.DeLocation.text = data?.address
+        binding.DeShopName.text = data?.shopname
+        binding.DeBbsShopLocaT.text = data?.address
+        binding.DeBbsShopPhT.text = data?.shopphnum
+        binding.DeBbsShopUrlT.text = data?.shopurl
+        binding.imageView4.setImageURI(Uri.parse("/storage/emulated/0/DCIM/Screenshots/Screenshot_20220322-113413_eattaewon_back_kimminki.jpg"))
+
 
 //       data에 같이 넘어온 글쓴이 아이디로 유저정보 가져오기 (사진,닉네임,한줄소개, 호감도)
         /*var id = data?.id
@@ -57,7 +90,7 @@ class BbsDetailActivity : AppCompatActivity() {
 
 
 //        if(글쓴이랑 로그인유저가 같을때) if조건문 수정필요
-        if(true){
+        if(loginUserId.equals(data?.id)){
             binding.deleteBtn.isVisible = true
             binding.updateBtn.isVisible = true
         }else{
@@ -66,14 +99,15 @@ class BbsDetailActivity : AppCompatActivity() {
         }
 
         binding.deleteBtn.setOnClickListener {
-          /*  var delete = BbsDao.getInstance().bbsdelete(data!!.seq)
+            var delete = BbsDao.getInstance().bbsDelete(4)
+//            var delete = BbsDao.getInstance().bbsDelete(data?.seq!!)
             if(delete == true){
                 Toast.makeText(this,"글이 삭제되었습니다",Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this,"글삭제를 실패했습니다",Toast.LENGTH_SHORT).show()
             }
             val i = Intent(this,HomeActivity::class.java)
-            startActivity(i)*/
+            startActivity(i)
         }
 
         binding.updateBtn.setOnClickListener {
@@ -88,35 +122,77 @@ class BbsDetailActivity : AppCompatActivity() {
                 binding.HeartBtn.isSelected = true  //좋아요 누르기
                 //+이태원라이크 테이블에 유저값 넣어주기
                 //var plusLike = BbsDao.getInstance().plusBbsLike(data!!)
+
+                val checkLikeP = MemberDao.getInstance().LikePHeartUp(data?.id!!)
+                if(checkLikeP==true){
+                    println("하트버튼 클릭으로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
+                }else{
+                    println("하트버튼 클릭으로 현재글쓴이 호감도 상승에 실패했습니다")
+                }
+
             }else{
                 binding.HeartBtn.isSelected = false //좋아요 누른거 취소
                 //+이태원라이크 테이블에 유저값 삭제하기
-            }
 
+                val checkLikeP = MemberDao.getInstance().LikePHeartDown(data?.id!!)
+                if(checkLikeP==true){
+                    println("하트버튼 클릭취소로 현재글쓴이 ${data.id}의 호감도가 하락했습니다")
+                }else{
+                    println("하트버튼 클릭취소로 현재글쓴이 호감도 하락에 실패했습니다")
+                }
+            }
         }
+
+        //툴바아이템 클릭
+        toolbar.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.bbsdetail_exitBtn->{
+
+                    Toast.makeText(this,"취소",Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                else->false
+            }
+        }
+
 //      스크랩 버튼 클릭효과
         binding.ScrapBtn.setOnClickListener {
             if(binding.ScrapBtn.isSelected != true){
                 binding.ScrapBtn.isSelected = true  //스크랩 누르기
                 //+이태원스크랩 테이블에 유저값 넣어주기
                 //  var plusScrap = BbsDao.getInstance().plusBbsScrap()   //스크랩누르면
+
+                val checkLikeP = MemberDao.getInstance().LikePScrapUp(data?.id!!)
+                if(checkLikeP==true){
+                    println("스크랩버튼 클릭으로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
+                }else{
+                    println("스크랩버튼 클릭으로 현재글쓴이 호감도 상승에 실패했습니다")
+                }
             }else{
                 binding.ScrapBtn.isSelected = false //스크랩 누른거 취소
                 //+이태원스크랩 테이블에 유저값 삭제하기
+
+                val checkLikeP = MemberDao.getInstance().LikePScrapDown(data?.id!!)
+                if(checkLikeP==true){
+                    println("스크랩버튼 클릭취소로 현재글쓴이 ${data.id}의 호감도가 상승했습니다")
+                }else{
+                    println("스크랩버튼 클릭취소로 현재글쓴이 호감도 상승에 실패했습니다")
+                }
             }
         }
+
+        val naverMapFragment = NaverMapFragment()
+        supportFragmentManager.beginTransaction()
+            .add(R.id.mapContent, naverMapFragment).commit()
 
         binding.showDetailShop.setOnClickListener {
 
             binding.mapContent.isVisible = true
             binding.showDetailShopField.isVisible = true
 
-            val naverMapFragment = NaverMapFragment()
-            supportFragmentManager.beginTransaction()
-                .add(R.id.mapContent, naverMapFragment).commit()
-
+            naverMapFragment.setLocation(data!!.latitude, data!!.longitude)
         }
-
 
 //      카톡 글 공유하기
         binding.floShareBtn.setOnClickListener {
@@ -182,7 +258,26 @@ class BbsDetailActivity : AppCompatActivity() {
             }
 
         }
+
+
+    }
+
+    fun setImage(uri: Uri) {
+        try {
+            val `in`: InputStream? = contentResolver.openInputStream(uri)
+            val bitmap = BitmapFactory.decodeStream(`in`)
+            binding.imageView4.setImageBitmap(bitmap)
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        }
+    }
+    //툴바 연결_안도현
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.bbsdetail_toolbar,menu)
+        return true
     }
 }
+
 
 

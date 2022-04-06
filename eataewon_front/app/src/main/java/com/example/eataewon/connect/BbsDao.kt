@@ -6,8 +6,14 @@ import retrofit2.http.*
 
 interface BbsService {
 
-    @GET("/getBbsList")
-    fun getBbsList(): Call<List<BbsDto>>
+    @GET("/getUpperBbsListApp")
+    fun getUpperBbsList(): Call<ArrayList<BbsDto>>
+
+    @GET("/getLowerBbsListApp")
+    fun getLowerBbsList(): Call<ArrayList<BbsDto>>
+
+    @GET("/getBbsListApp")
+    fun getBbsListApp(): Call<ArrayList<BbsDto>>
 
     @POST("/bbsScrap")
     fun plusBbsScrap(@Body dto:BbsDto): Call<String>
@@ -18,8 +24,18 @@ interface BbsService {
     @POST("/bbsdetail")
     fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
 
-    @POST("/bbsdelete")
-    fun bbsdelete(@Body seq:Int) : Call<Boolean>
+    @POST("/bbsupdateApp")
+    fun bbsUpdate(@Body dto:BbsDto) : Call<Boolean>
+
+    @POST("/bbsdeleteApp")
+    fun bbsDelete(@Body seq:Int) : Call<Boolean>
+
+    @POST("/bbswriteApp")
+    fun bbswrite(@Body dto:BbsDto) : Call<String>
+
+    @Headers("Content-Type: application/json")
+    @POST("/plustReadcntApp")
+    fun updateReadcnt(@Body seq:Int) : Call<String>
 
     //카카오 로컬 검색
     @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
@@ -48,6 +64,63 @@ class BbsDao {
         }
     }
 
+    fun updateReadcnt(seq:Int) : String?{
+        var response: Response<String>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.updateReadcnt(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun bbswrite(dto:BbsDto) : String?{
+        var response: Response<String>?
+        println("DTO: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbswrite(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
+
+    fun bbsUpdate(dto:BbsDto):Boolean?{
+        var response: Response<Boolean>?
+        println("DTO: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbsUpdate(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun bbsDelete(seq:Int) : Boolean?{
+        var response: Response<Boolean>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbsDelete(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
     fun getBbsDetail(seq:Int) : BbsDto?{
         var response: Response<BbsDto>?
         println("SEQ: ${seq}")
@@ -62,4 +135,53 @@ class BbsDao {
 
         return response?.body()
     }
+
+    fun getBbsListApp() : ArrayList<BbsDto>? {
+        //var response: Response<BbsDto>?
+        println("~~~~~getBbsList()")
+        //try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.getBbsListApp()
+            val response = call?.execute()
+        //}catch(e:Exception){
+          //  response = null
+        //}
+
+        return response?.body()
+    }
+
+    fun getUpperBbsList() : ArrayList<BbsDto>? {
+        println("~~~~getUpperBbsList()")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getUpperBbsList()
+        val response = call?.execute()
+
+        return response?.body()
+    }
+
+    fun getLowerBbsList() : ArrayList<BbsDto>? {
+        println("~~~~getLowerBbsList()")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getLowerBbsList()
+        val response = call?.execute()
+
+        return response?.body() as ArrayList<BbsDto>
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
