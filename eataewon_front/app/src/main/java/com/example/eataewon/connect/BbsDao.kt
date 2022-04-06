@@ -62,7 +62,7 @@ interface BbsService {
     fun checkUserLike(@Body dto:LikeDto) : Call<Boolean>
 
     @POST("/findMyBbs")
-    fun findMyBbs(@Body id:String):Call<BbsDto>
+    fun findMyBbs(@Body id:String):Call<List<BbsDto>>
 
     //카카오 로컬 검색
     @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
@@ -345,17 +345,17 @@ class BbsDao {
         return response?.body()
     }
 
-    fun findMyBbs(id:String):BbsDto?{
-        var response: Response<BbsDto>?
+    fun findMyBbs(id:String):List<BbsDto>?{
+        //var response: Response<List<BbsDto>>?
         println("Id: ${id}")
-        try {
+        //try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
             val call = service?.findMyBbs(id);
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
+            val response = call?.execute()
+        //}catch(e:Exception){
+        //    response = null
+        //}
+        return response?.body() as List<BbsDto>
     }
 }

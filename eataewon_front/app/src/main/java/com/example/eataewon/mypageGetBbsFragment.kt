@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eataewon.Adapter.MypageBbsAdapter
 import com.example.eataewon.connect.BbsDao
+import com.example.eataewon.connect.BbsDto
 
 
 class mypageGetBbsFragment : Fragment() {
@@ -22,24 +23,29 @@ class mypageGetBbsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_mypage_get_bbs,container,false)
 
-        val mypageUser = arguments?.getString("mypageuser")
+        val myPageUser = arguments?.getString("mypageuser")
 
-        val myBbsList = BbsDao.getInstance().findMyBbs(mypageUser!!)
+        val myBbsList = myPageUser?.let { BbsDao.getInstance().findMyBbs(it) }
         println(myBbsList.toString())
-/*
-        // 리사이클러뷰 db 데이터와 접함
-        val bbsAdapter = MypageBbsAdapter(requireActivity(), MypageFragment.testList)
-        var recyclerView = view?.findViewById<RecyclerView>(R.id.mypageBbsRecycler)
-        recyclerView?.adapter = bbsAdapter
 
-        // 리사이클러뷰 GridLayout으로 설정
-        val layout = GridLayoutManager(activity, 2)
-        recyclerView?.layoutManager = layout
-        recyclerView?.setHasFixedSize(true)
+        if(myBbsList!=null){
+            val bbsAdapter = (myBbsList as ArrayList<BbsDto>?)?.let { MypageBbsAdapter(requireActivity(), it) }
+            var recyclerView = view?.findViewById<RecyclerView>(R.id.mypageBbsRecycler)
 
-*/
-        return inflater.inflate(R.layout.fragment_mypage_get_bbs, container, false)
+            recyclerView?.layoutManager = GridLayoutManager(activity, 2)
+            recyclerView?.adapter = bbsAdapter
+            recyclerView?.setHasFixedSize(true)
+        }else{
+            //작성한 글이 없습니다
+        }
+
+
+
+
+
+        return view
     }
 
 

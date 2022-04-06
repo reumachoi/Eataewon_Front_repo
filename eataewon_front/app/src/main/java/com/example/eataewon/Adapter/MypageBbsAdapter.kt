@@ -5,7 +5,6 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eataewon.BbsDetailActivity
@@ -25,11 +24,12 @@ class MypageBbsAdapter(private val context: Context, private val dataList: Array
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.bind(dataList[position], context)
+        holder.bind(dataList!![position] , context)
     }
 
     override fun getItemCount(): Int {
-        return dataList.size
+        println("dataList 사이즈 : ${dataList.size}")
+        return dataList!!.size
     }
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -39,7 +39,7 @@ class MypageBbsAdapter(private val context: Context, private val dataList: Array
         private val hashtag = itemView.findViewById<TextView>(R.id.hashtagMyBbs)
 
         fun bind(bbsDto: BbsDto, context: Context) {
-
+            println("MypageBbsAdapter ~~~~~~~~~~~~~~~~~~~~~~~`")
             //shopPhoto.setImageResource(bbsDto.picture)
             shopName.text = bbsDto.shopname
             address.text = bbsDto.address
