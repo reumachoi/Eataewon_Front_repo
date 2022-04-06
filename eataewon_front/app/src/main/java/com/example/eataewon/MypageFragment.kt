@@ -5,7 +5,6 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
@@ -23,6 +22,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eataewon.Adapter.MypageBbsAdapter
 import com.example.eataewon.Adapter.SearchBbsAdapter
+import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
@@ -43,8 +43,14 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_mypage, container, false)
 
+        //임시 테스트
+        val user = arguments?.getParcelable<MemberDto>("user")
+
+        val myBbsList = BbsDao.getInstance().findMyBbs(user?.id!!)
+        println(myBbsList.toString())
+
         // 리사이클러뷰 db 데이터와 접함
-        val bbsAdapter = MypageBbsAdapter(requireActivity(), SearchFragment.testList)
+        val bbsAdapter = MypageBbsAdapter(requireActivity(), testList)
         var recyclerView = view?.findViewById<RecyclerView>(R.id.mypageBbsRecycler)
         recyclerView?.adapter = bbsAdapter
 
@@ -59,8 +65,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
             .replace(R.id.inMypageFragment, mypageGetBbsFragment)
             .commit()
 
-        //임시 테스트
-        val user = arguments?.getParcelable<MemberDto>("user")
+
 
         //상단 툴바바
         v.toolbar.inflateMenu(R.menu.mypage_menu_item)

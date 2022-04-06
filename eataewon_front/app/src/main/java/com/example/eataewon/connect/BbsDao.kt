@@ -61,6 +61,9 @@ interface BbsService {
     @POST("/checkUserLike")
     fun checkUserLike(@Body dto:LikeDto) : Call<Boolean>
 
+    @POST("/findMyBbs")
+    fun findMyBbs(@Body id:String):Call<BbsDto>
+
     //카카오 로컬 검색
     @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
     fun getSearchKeyword(
@@ -335,6 +338,20 @@ class BbsDao {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
             val call = service?.checkUserScrap(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun findMyBbs(id:String):BbsDto?{
+        var response: Response<BbsDto>?
+        println("Id: ${id}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.findMyBbs(id);
             response = call?.execute()
         }catch(e:Exception){
             response = null

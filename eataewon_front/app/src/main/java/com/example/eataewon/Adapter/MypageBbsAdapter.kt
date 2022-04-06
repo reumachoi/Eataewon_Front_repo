@@ -13,7 +13,7 @@ import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 
-class MypageBbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
+class MypageBbsAdapter(private val context: Context, private val dataList: ArrayList<BbsDto>) :
         RecyclerView.Adapter<MypageBbsAdapter.ItemViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
