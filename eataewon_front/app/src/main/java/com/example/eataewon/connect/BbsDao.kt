@@ -9,6 +9,10 @@ interface BbsService {
     @GET("/getBbsList")
     fun getBbsList(): Call<List<BbsDto>>
 
+    @Headers("Content-Type: application/json")
+    @POST("/plustReadcntApp")
+    fun updateReadcnt(@Body seq:Int) : Call<String>
+
     @POST("/bbsScrap")
     fun plusBbsScrap(@Body dto:BbsDto): Call<String>
 
@@ -46,6 +50,21 @@ class BbsDao {
 
             return bbsDao!!
         }
+    }
+
+
+    fun updateReadcnt(seq:Int) : String?{
+        var response: Response<String>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.updateReadcnt(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
     }
 
     fun getBbsDetail(seq:Int) : BbsDto?{

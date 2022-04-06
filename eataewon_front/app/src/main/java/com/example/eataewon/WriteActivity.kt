@@ -143,7 +143,7 @@ class WriteActivity : AppCompatActivity() {
             val item = items[position]
             //크기 설정
             Glide.with(context).load(item)
-                .override(300, 300)
+                .override(500, 500)
                 .into(holder.image)
         }
 
