@@ -73,7 +73,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="36dp"
-
                         android:text="2010-10-20"
                         android:textColor="@color/white"
                         android:textSize="20sp"
@@ -222,6 +221,13 @@
                         android:text="해시태그"
                         android:textColor="@color/white"
                         android:background="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="핵시태그"
+                    android:textColor="@color/white"
+                    android:background="@color/black"/>
 
                 <TextView
                     android:id="@+id/DeHashtag"

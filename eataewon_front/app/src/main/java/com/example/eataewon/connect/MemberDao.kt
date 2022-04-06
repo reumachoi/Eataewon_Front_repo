@@ -12,6 +12,7 @@ interface MemberService{
     @POST("/loginApp")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
+
     @POST("/getIdApp")
     fun getId(@Body id:String?=null): Call<String>
 

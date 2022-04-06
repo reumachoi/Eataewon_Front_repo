@@ -70,6 +70,7 @@ class BbsDto(
 
     override fun toString(): String {
         return "BbsDto(id=$id, nickname=$nickname, seq=$seq, title=$title, content=$content, picture=$picture, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, shopphnum=$shopphnum, shopurl=$shopurl, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt, testurl=$testurl)"
+
     }
 
     companion object CREATOR : Parcelable.Creator<BbsDto> {
@@ -81,6 +82,6 @@ class BbsDto(
             return arrayOfNulls(size)
         }
     }
-
-
 }
+
+
