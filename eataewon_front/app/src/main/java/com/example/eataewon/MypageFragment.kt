@@ -46,21 +46,13 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         //임시 테스트
         val user = arguments?.getParcelable<MemberDto>("user")
 
-        val myBbsList = BbsDao.getInstance().findMyBbs(user?.id!!)
-        println(myBbsList.toString())
-
-        // 리사이클러뷰 db 데이터와 접함
-        val bbsAdapter = MypageBbsAdapter(requireActivity(), testList)
-        var recyclerView = view?.findViewById<RecyclerView>(R.id.mypageBbsRecycler)
-        recyclerView?.adapter = bbsAdapter
-
-        // 리사이클러뷰 GridLayout으로 설정
-        val layout = GridLayoutManager(activity, 2)
-        recyclerView?.layoutManager = layout
-        recyclerView?.setHasFixedSize(true)
+        //user데이터 넘겨주기
+        var mypageGetBbsFragment = mypageGetBbsFragment()
+        var bundle = Bundle()
+        bundle.putString("mypageuser",user?.id)
+        mypageGetBbsFragment.arguments = bundle
 
         //본인이 쓴 글 먼저 보여주기
-        val mypageGetBbsFragment = mypageGetBbsFragment()
         childFragmentManager.beginTransaction()
             .replace(R.id.inMypageFragment, mypageGetBbsFragment)
             .commit()
