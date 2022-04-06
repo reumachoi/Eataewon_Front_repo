@@ -79,7 +79,7 @@ class SignActivity : AppCompatActivity() {
             val profilpic = profilImg
 
 
-            val dto = MemberDto(id,name,pwd,email,nickname,profilpic,0,profilmsg)
+            val dto = MemberDto(id, name, pwd, email, nickname, profilpic, 0, profilmsg, 0)
             val checksignup = MemberDao.getInstance().signup(dto)
             if(checksignup.equals("yes")){
                 Toast.makeText(this,"${dto.id} 회원가입 완료",Toast.LENGTH_SHORT).show()

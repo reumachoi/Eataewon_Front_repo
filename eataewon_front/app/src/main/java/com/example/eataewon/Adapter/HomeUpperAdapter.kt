@@ -32,7 +32,7 @@ class HomeUpperAdapter(private val context: Context, private val datatList: Arra
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return datatList.size
     }
 
     inner class PagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -42,6 +42,8 @@ class HomeUpperAdapter(private val context: Context, private val datatList: Arra
         private val curaterNickame = itemView.findViewById<TextView>(R.id.CuratorNickName)
 
         fun bind(bbsDto: BbsDto, position: Int) {
+
+            //val dto = BbsDto("", "", null, "", "", 0, "", "", "", "", "", "", 0.0, 0.0, 0, 0, "")
 
             // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
             val picArray = bbsDto.testurl!!.split(" ")

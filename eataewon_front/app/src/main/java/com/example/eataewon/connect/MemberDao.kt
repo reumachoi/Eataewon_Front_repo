@@ -15,6 +15,9 @@ interface MemberService{
     @POST("/getIdApp")
     fun getId(@Body id:String?=null): Call<String>
 
+    @POST("/getEmailApp")
+    fun getEmail(@Body email:String) : Call<String>
+
     @POST("/addmemberApp")
     fun signup(@Body dto:MemberDto): Call<String>
 
@@ -22,20 +25,20 @@ interface MemberService{
     @POST("/bbsGetUser")
     fun bbsGetUser(@Body id:String): Call<MemberBbsDto>
 
-    @POST("/LikePWriteUp")
-    fun LikePWriteUp(@Body id:String): Call<Boolean>
+    @POST("/findUserData")
+    fun findUserData(@Body dto:MemberDto):Call<MemberDto>
 
-    @POST("/LikePHeartUp")
-    fun LikePHeartUp(@Body id:String): Call<Boolean>
+    @POST("/updateUserData")
+    fun updateUserData(@Body dto: MemberDto):Call<Boolean>
 
-    @POST("/LikePScrapUp")
-    fun LikePScrapUp(@Body id:String): Call<Boolean>
+    @POST("/deleteMemApp")
+    fun deleteMem(@Body dto:MemberDto): Call<String>
 
-    @POST("/LikePHeartDown")
-    fun LikePHeartDown(@Body id:String): Call<Boolean>
+    @POST("/resetPwd")
+    fun resetPwd(@Body dto:MemberDto):Call<Boolean>
 
-    @POST("/LikePScrapDown")
-    fun LikePScrapDown(@Body id:String): Call<Boolean>
+    @POST("getProfilPicApp")
+    fun getProfilPic(@Body id:String):Call<String>
 }
 
 class MemberDao {
@@ -86,6 +89,22 @@ class MemberDao {
         return response?.body()
     }
 
+    fun getEmail(email:String) : String?{
+        var response: Response<String>?
+        println("email: ${email}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.getEmail(email)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        println("이메일로 계정찾기결과 찾은 아이디는: ${response?.body()}")
+        return response?.body()
+    }
+
+
     fun signup(dto: MemberDto) : String?{
         var response: Response<String>?
         println(dto.toString())
@@ -117,13 +136,13 @@ class MemberDao {
         return response?.body()
     }
 
-    fun LikePWriteUp(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
+    fun findUserData(dto: MemberDto):MemberDto?{
+        var response : Response<MemberDto>?
+        println("findUserData dto: ${dto}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePWriteUp(id)
+            val call = service?.findUserData(dto)
             response = call?.execute()
         }catch(e:Exception){
             response = null
@@ -131,13 +150,13 @@ class MemberDao {
         return response?.body()
     }
 
-    fun LikePHeartUp(id:String):Boolean?{
+    fun updateUserData(dto: MemberDto):Boolean?{
         var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
+        println("updateUserData dto: ${dto}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePHeartUp(id)
+            val call = service?.updateUserData(dto)
             response = call?.execute()
         }catch(e:Exception){
             response = null
@@ -145,13 +164,27 @@ class MemberDao {
         return response?.body()
     }
 
-    fun LikePHeartDown(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
+    fun deleteMem(dto: MemberDto):String?{
+        var response: Response<String>?
+        println("getProfilPic Id: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java) /// 이쪽을 변경 해야 될듯
+            val call = service?.deleteMem(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
+    fun getProfilPic(id:String):String?{
+        var response : Response<String>?
+        println("getProfilPic Id: ${id}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePHeartDown(id)
+            val call = service?.getProfilPic(id)
             response = call?.execute()
         }catch(e:Exception){
             response = null
@@ -159,31 +192,18 @@ class MemberDao {
         return response?.body()
     }
 
-    fun LikePScrapUp(id:String):Boolean?{
+    fun resetPwd(dto: MemberDto):Boolean?{
         var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
+        println("resetPwd dto: ${dto}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePScrapUp(id)
+            val call = service?.resetPwd(dto)
             response = call?.execute()
         }catch(e:Exception){
             response = null
         }
-        return response?.body()
-    }
-
-    fun LikePScrapDown(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(MemberService::class.java)
-            val call = service?.LikePScrapDown(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
+        println("이메일 변경 결과?? ${response?.body()}")
         return response?.body()
     }
 }

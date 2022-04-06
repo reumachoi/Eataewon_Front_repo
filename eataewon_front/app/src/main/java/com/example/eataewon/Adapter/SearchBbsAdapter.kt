@@ -42,7 +42,12 @@ class SearchBbsAdapter (private val context: Context, private val dataList: Arra
 
         fun bind(bbsDto: BbsDto, context: Context) {
 
-            shopPhoto.setImageURI(Uri.parse(bbsDto.testurl!!.substring(0, bbsDto.testurl!!.indexOf(" "))))
+            //val dto = BbsDto("", "", null, "", "", 0, "", "", "", "", "", "", 0.0, 0.0, 0, 0, "")
+
+            // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
+            val picArray = bbsDto.testurl!!.split(" ")
+
+            shopPhoto.setImageURI(Uri.parse(picArray[0]))
             shopName.text = bbsDto.shopname
             address.text = bbsDto.address
             hashtag.text = bbsDto.hashtag

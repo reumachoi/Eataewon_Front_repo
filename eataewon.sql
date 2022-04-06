@@ -12,6 +12,7 @@ create table eataewonMember(
     profilpic varchar(100),
     likepoint int,
     profilmsg varchar(500),
+    del int,
     constraint pk_eataewonMember primary key(id)
 );
 
@@ -35,7 +36,7 @@ create table eataewonBbs(
     shopphnum varchar(50),
     shopurl varchar(100),
     latitude number(12,8),
-    longtitude number(12,8),
+    longitude number(12,8),
     readcnt int,
     likecnt int,
     testurl varchar(4000),
@@ -81,5 +82,19 @@ values('name','id','pwd','email','nickname',1010,1,'profilmsg');
 
 Insert into eataewonBbs (seq, id, title, content, picture, hashtag, wdate, shopname, address, latitude, longtitude,readcnt,likecnt)
 values(bbsseq.NEXTVAL,'id','title','content',1010,'hashtag',SYSDATE,'mulcam', 'seoul',37.503624 ,127.042391 , 1,1);
+
+
+
+SELECT SEQ, nickname, ID, TITLE, CONTENT, HASHTAG, WDATE, SHOPNAME, ADDRESS, READCNT, LIKECNT, TESTURL
+        FROM EATAEWONBBS;
+        
+SELECT a.SEQ, a.SHOPNAME, a.ADDRESS, a.TESTURL, a.NICKNAME, a.CONTENT, a.HASHTAG, a.WDATE, b.PROFILPIC
+        FROM EATAEWONBBS a, EATAEWONMEMBER b
+        WHERE a.ID = b.ID
+        ORDER BY WDATE DESC;
+
+SELECT SEQ, NICKNAME, PICTURE, TITLE, READCNT, LIKECNT
+        FROM EATAEWONBBS
+        ORDER BY READCNT DESC;
 
 COMMIT;

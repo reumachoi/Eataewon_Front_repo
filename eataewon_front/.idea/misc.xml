@@ -105,11 +105,15 @@
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.13916666666666666" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/activity_bbs_detail.xml" value="0.25" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.428125" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/activity_write.xml" value="0.18416666666666667" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_home.xml" value="0.28535353535353536" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_mypage_get_bbs.xml" value="0.1775" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_mypage_update.xml" value="0.1775" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/fragment_search.xml" value="0.428125" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/home_lower_layout.xml" value="0.20820668693009117" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/home_upper_layout.xml" value="0.20820668693009117" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/homeview_bbs_layout.xml" value="0.20820668693009117" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/mypage_bbsview_layout.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/click_likebtn.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/click_scrapbtn.xml" value="0.23076923076923078" />
         <entry key="app/src/main/res/drawable/ic_item_bbsdetail_exit.xml" value="0.17833333333333334" />

@@ -44,7 +44,7 @@
 
             <ImageView
                     android:id="@+id/BbsPhotoView2"
-                    android:layout_width="match_parent"
+                    android:layout_width="550dp"
                     android:layout_height="550dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="10dp"
@@ -54,7 +54,7 @@
 
             <ImageView
                     android:id="@+id/BbsPhotoView3"
-                    android:layout_width="match_parent"
+                    android:layout_width="550dp"
                     android:layout_height="550dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="10dp"
@@ -64,7 +64,7 @@
 
             <ImageView
                     android:id="@+id/BbsPhotoView4"
-                    android:layout_width="match_parent"
+                    android:layout_width="550dp"
                     android:layout_height="550dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="10dp"

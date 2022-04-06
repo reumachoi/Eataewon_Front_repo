@@ -40,10 +40,6 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
 
         private val shopName = itemView.findViewById<TextView>(R.id.ShopName)
         private val shopLocation = itemView.findViewById<TextView>(R.id.ShopLocation)
-
-        /*imageView_img = (ImageView) itemView.findViewById(R.id.imageView_img);
-        imageView_img2 = (ImageView) itemView.findViewById(R.id.imageView_img2);*/
-
         private val bbsPhotoView1 = itemView.findViewById<ImageView>(R.id.BbsPhotoView1)
         private val bbsPhotoView2 = itemView.findViewById<ImageView>(R.id.BbsPhotoView2)
         private val bbsPhotoView3 = itemView.findViewById<ImageView>(R.id.BbsPhotoView3)
@@ -55,6 +51,8 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
 
         fun bind(bbsDto: BbsDto, context: Context) {
 
+            //val dto = BbsDto("", "", null, "", "", 0, "", "", "", "", "", "", 0.0, 0.0, 0, 0, "")
+
             // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
             val picArray = bbsDto.testurl!!.split(" ")
 
@@ -62,10 +60,10 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
             shopLocation.text = bbsDto.address
             bbsPhotoView1.setImageURI(Uri.parse(picArray[0]))
             bbsPhotoView2.setImageURI(Uri.parse(picArray[1]))
-            //bbsPhotoView3.setImageURI(Uri.parse(picArray[2]))
-            //bbsPhotoView4.setImageURI(Uri.parse(picArray[3]))
+            bbsPhotoView3.setImageURI(Uri.parse(picArray[2]))
+            bbsPhotoView4.setImageURI(Uri.parse(picArray[3]))
             // profile은 MemberBbsDto로 수정 예정
-            userProfilePic.setImageURI(Uri.parse(picArray[0]))
+            //userProfilePic.setImageURI(Uri.parse(picArray[0]))
             userNickname.text = bbsDto.nickname
             bbsContent.text = bbsDto.content
 
