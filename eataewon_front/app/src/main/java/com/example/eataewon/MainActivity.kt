@@ -157,7 +157,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 imm?.hideSoftInputFromWindow(loginPW.getWindowToken(), 0);
                 val id = loginID.text.toString()
                 val pwd = loginPW.text.toString()
-                val dto = MemberDto( id, "",pwd, "", "",0, 0,"")
+                val dto = MemberDto( id, "",pwd, "", "","", 0,"",0)
 
                 val checkLogin = MemberDao.getInstance().login(dto)
                 if (checkLogin != null) {

@@ -9,20 +9,29 @@ import retrofit2.http.*
 
 interface MemberService{
 
-    @POST("/login")
+    @POST("/loginApp")
     fun login(@Body dto:MemberDto): Call<MemberDto>
 
-    @POST("/getId")
+
+    @POST("/getIdApp")
     fun getId(@Body id:String?=null): Call<String>
 
-    @POST("/addmember")
+    @POST("/addmemberApp")
     fun signup(@Body dto:MemberDto): Call<String>
 
     //bbs에 저장된 아이디값으로 member에서 같은아이디 유저정보 가져오기
     @POST("/bbsGetUser")
     fun bbsGetUser(@Body id:String): Call<MemberBbsDto>
 
+    @POST("/findUserData")
+    fun findUserData(@Body dto:MemberDto):Call<MemberDto>
 
+    @POST("/updateUserData")
+    fun updateUserData(@Body dto: MemberDto):Call<Boolean>
+
+
+    @POST("/deleteMemApp")
+    fun deleteMem(@Body dto:MemberDto): Call<String>
 }
 
 class MemberDao {
@@ -103,4 +112,48 @@ class MemberDao {
 
         return response?.body()
     }
+
+    fun findUserData(dto: MemberDto):MemberDto?{
+        var response : Response<MemberDto>?
+        println("findUserData dto: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.findUserData(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun updateUserData(dto: MemberDto):Boolean?{
+        var response : Response<Boolean>?
+        println("updateUserData dto: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.updateUserData(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun deleteMem(dto: MemberDto):String?{
+        var response: Response<String>?
+        println("getProfilPic Id: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java) /// 이쪽을 변경 해야 될듯
+            val call = service?.deleteMem(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
+
 }

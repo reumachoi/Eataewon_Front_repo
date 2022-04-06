@@ -215,6 +215,12 @@
                     android:layout_height="165dp"
                     android:text="큐레이션 내용"
                     android:textColor="@color/black" />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="해시태그"
+                        android:textColor="@color/white"
+                        android:background="@color/black"/>
 
                 <TextView
                     android:layout_width="match_parent"

@@ -53,20 +53,18 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         val mypageProfilmsg = v.findViewById<TextView>(R.id.mypage_profilmsg)
         //이미지
         mypageProfilpic = v.findViewById(R.id.mypage_profil_image)
-        mypageProfilpicuri = v.findViewById(R.id.mypage_profilpic_uri)
+
 
         //버튼
         val updateBtn = v.findViewById<Button>(R.id.mypage_updateBtn)
-        val cancleBtn = v.findViewById<Button>(R.id.mypage_cancleBtn)
         val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
 
         //텍스트뷰에 값 입력
         mypageId.text = user?.id
         mypageName.text = user?.name
         mypageLikepoint.text = user?.likepoint.toString()
-        mypageEmail.text = user?.email
-        mypageNickname.text = user?.nickname
-        mypageProfilmsg.text = user?.profilmsg
+
+
 
         //이미지 불러오기
         //mypageProfilpic.setImageURI(user?.profilPic?.toUri())
@@ -85,7 +83,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
                     true
                 }
 
-                R.id.mypage_userdelet->{
+                R.id.mypage_withdraw->{
 
                     val intent = Intent(homeActivity,DeleteActivity::class.java)
                     startActivity(intent)
@@ -97,17 +95,23 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         }
 
 
-        //취소 버튼 이벤트
-        cancleBtn.setOnClickListener{
+        v.lookMyBbsBtn.setOnClickListener {
+            //v.lookMeBtn.setBackgroundColor(Color.rgb(255, 255, 255))
 
+            val mypageGetBbsFragment = mypageGetBbsFragment()
+            childFragmentManager.beginTransaction()
+                .replace(R.id.inMypageFragment, mypageGetBbsFragment)
+                .commit()
         }
 
+        v.lookMeBtn.setOnClickListener {
+            //v.lookMyBbsBtn.setBackgroundColor(Color.rgb(255, 255, 255))
 
-        //수정 버튼 이벤트
-        updateBtn.setOnClickListener{
-
+            val mypageUpdateFragment = mypageUpdateFragment()
+            childFragmentManager.beginTransaction()
+                .replace(R.id.inMypageFragment, mypageUpdateFragment)
+                .commit()
         }
-
 
         return v
     }

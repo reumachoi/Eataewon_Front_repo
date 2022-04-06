@@ -127,6 +127,10 @@
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.13916666666666666" />
         <entry key="app/src/main/res/drawable/click_likebtn.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/click_scrapbtn.xml" value="0.23076923076923078" />
+<<<<<<< HEAD
+=======
+        <entry key="app/src/main/res/drawable/ic_baseline_control_point_24.xml" value="0.225" />
+>>>>>>> origin/developer
         <entry key="app/src/main/res/drawable/ic_item_bbsdetail_exit.xml" value="0.17833333333333334" />
         <entry key="app/src/main/res/drawable/ic_mypage_logout.xml" value="0.21944444444444444" />
         <entry key="app/src/main/res/drawable/imgeview_sample.xml" value="0.21944444444444444" />
@@ -151,10 +155,16 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_mypage_get_bbs.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_write.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/homeview_bbs_layout.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/map_list_view_layout.xml" value="0.2890625" />
+<<<<<<< HEAD
+=======
+        <entry key="app/src/main/res/layout/mypage_bbsview_layout.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/write_image_item.xml" value="0.37604166666666666" />
+>>>>>>> origin/developer
         <entry key="app/src/main/res/menu/bbsdetail_toolbar.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/menu/mypage_menu_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/mypage_toolbar.xml" value="0.41822916666666665" />

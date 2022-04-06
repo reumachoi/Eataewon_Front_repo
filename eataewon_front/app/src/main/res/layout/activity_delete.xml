@@ -4,8 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".delete">
+        android:layout_height="match_parent">
 
     <TextView
             android:text="정보 삭제 "
@@ -22,8 +21,18 @@
             android:id="@+id/deletId"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             android:layout_marginTop="36dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="224dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.001"
-            app:layout_constraintStart_toStartOf="@+id/textView2"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView2" app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/deletIdPw"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:layout_marginTop="36dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="224dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.113"
+            app:layout_constraintStart_toStartOf="@+id/textView2" app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:text="이름"
             android:layout_width="67dp"
@@ -32,6 +41,14 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.557"
             app:layout_constraintVertical_bias="0.128"/>
+    <TextView
+            android:text="비밀번호"
+            android:layout_width="67dp"
+            android:layout_height="49dp" android:id="@+id/textView12"
+            app:layout_constraintEnd_toStartOf="@+id/deletId"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.554"
+            app:layout_constraintVertical_bias="0.231"/>
     <Button
             android:text="삭제버튼"
             android:layout_width="181dp"

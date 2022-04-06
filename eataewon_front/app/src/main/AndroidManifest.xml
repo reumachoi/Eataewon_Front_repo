@@ -55,7 +55,9 @@
                 android:value="@string/kakao_app_key" />
 
 
-
+        <activity
+                android:name="com.example.eataewon.DeleteActivity"
+                android:exported="true"/>
         <activity
                 android:name="com.example.eataewon.SecondActivity"
                 android:exported="true"
