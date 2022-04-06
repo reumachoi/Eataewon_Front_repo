@@ -63,7 +63,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         mypageId.text = user?.id
         mypageName.text = user?.name
         mypageLikepoint.text = user?.likepoint.toString()
-        mypageEmail.text = user?.email
+
 
         //이미지 불러오기
         //mypageProfilpic.setImageURI(user?.profilPic?.toUri())
@@ -82,7 +82,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
                     true
                 }
 
-                R.id.mypage_userdelet->{
+                R.id.mypage_withdraw->{
 
                     val intent = Intent(homeActivity,DeleteActivity::class.java)
                     startActivity(intent)

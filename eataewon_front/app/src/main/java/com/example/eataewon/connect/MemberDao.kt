@@ -27,6 +27,10 @@ interface MemberService{
 
     @POST("/updateUserData")
     fun updateUserData(@Body dto: MemberDto):Call<Boolean>
+
+
+    @POST("/deleteMemApp")
+    fun deleteMem(@Body dto:MemberDto): Call<String>
 }
 
 class MemberDao {
@@ -135,4 +139,20 @@ class MemberDao {
         }
         return response?.body()
     }
+
+    fun deleteMem(dto: MemberDto):String?{
+        var response: Response<String>?
+        println("getProfilPic Id: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java) /// 이쪽을 변경 해야 될듯
+            val call = service?.deleteMem(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
+
 }
