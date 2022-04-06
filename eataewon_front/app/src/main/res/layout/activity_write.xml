@@ -21,9 +21,8 @@
     <!--가로 리사이클러 뷰-->
 
     <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="90">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -197,11 +196,11 @@
 
                         <android.widget.Button
                             android:id="@+id/write_imageBtn"
-                            android:layout_toEndOf="@+id/write_recyclerview"
                             android:layout_width="180dp"
                             android:layout_height="300dp"
                             android:layout_marginStart="24dp"
                             android:layout_marginEnd="50dp"
+                            android:layout_toEndOf="@+id/write_recyclerview"
                             android:background="@drawable/style_imge_btn"
                             android:drawableTop="@drawable/ic_baseline_control_point_24"
                             android:drawableTint="@color/black"
@@ -212,15 +211,6 @@
                             android:textStyle="bold" />
                     </RelativeLayout>
                 </HorizontalScrollView>
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/black"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
-
-                </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -282,34 +272,36 @@
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="80dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/write_cancleBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="5"
+                    android:layout_margin="0dp"
+                    android:background="#C1C1C1"
+                    android:text="취소"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/write_writeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="5"
+                    android:layout_margin="0dp"
+                    android:background="@color/black"
+                    android:text="쓰기"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
+
     </ScrollView>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/write_cancleBtn"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:backgroundTint="#989898"
-            android:layout_weight="5"
-            android:text="취소"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/write_writeBtn"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_weight="5"
-            android:backgroundTint="@color/black"
-            android:text="쓰기"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
 </LinearLayout>
