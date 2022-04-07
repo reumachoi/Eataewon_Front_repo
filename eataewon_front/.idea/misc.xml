@@ -103,6 +103,7 @@
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag4.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag5.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.13916666666666666" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/drawable/searchview_background.xml" value="0.44427083333333334" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/activity_bbs_detail.xml" value="0.25" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/activity_home.xml" value="0.428125" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/activity_write.xml" value="0.18416666666666667" />
@@ -114,6 +115,12 @@
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/home_upper_layout.xml" value="0.20820668693009117" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/homeview_bbs_layout.xml" value="0.20820668693009117" />
         <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/mypage_bbsview_layout.xml" value="0.1" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/layout/search_view_layout.xml" value="0.428125" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/menu/bbsdetail_toolbar.xml" value="0.4427083333333333" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.4427083333333333" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/menu/menu_bbs_details.xml" value="0.4427083333333333" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/menu/mypage_toolbar.xml" value="0.4427083333333333" />
+        <entry key="..\:/eataewon(front)/eataewon_front/app/src/main/res/menu/search_menu.xml" value="0.4427083333333333" />
         <entry key="app/src/main/res/drawable/click_likebtn.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/click_scrapbtn.xml" value="0.23076923076923078" />
         <entry key="app/src/main/res/drawable/ic_item_bbsdetail_exit.xml" value="0.17833333333333334" />

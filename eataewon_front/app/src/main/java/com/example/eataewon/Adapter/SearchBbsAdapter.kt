@@ -2,10 +2,9 @@ package com.example.eataewon.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Rect
 import android.net.Uri
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -70,3 +69,4 @@ class SearchBbsAdapter (private val context: Context, private val dataList: Arra
     }
 
 }
+
