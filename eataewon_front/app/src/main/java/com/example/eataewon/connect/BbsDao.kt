@@ -6,7 +6,8 @@ import retrofit2.http.*
 
 interface BbsService {
 
-    @GET("/getBbsListApp")
+    @Headers("Content-Type: application/json")
+    @POST("/getBbsListApp")
     fun getBbsList(@Body seq:Int): Call<BbsDto>
 
     @POST("/bbsdetail")
@@ -93,7 +94,7 @@ class BbsDao {
 
     fun getBbsList(seq:Int):BbsDto?{
         var response: Response<BbsDto>?
-        println("SEQ: ${seq}")
+        println("getBbsList SEQ: ${seq}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
