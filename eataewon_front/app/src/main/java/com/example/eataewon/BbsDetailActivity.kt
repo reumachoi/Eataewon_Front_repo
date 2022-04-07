@@ -1,6 +1,5 @@
 package com.example.eataewon
 
-
 import android.content.ActivityNotFoundException
 import android.content.ContentValues
 import android.content.Intent
@@ -32,12 +31,14 @@ class BbsDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val writeSeq = intent.getParcelableExtra<BbsDto>("writeSeq")
-        println("글쓰기하고 넘어온  seq 확인 ${writeSeq}~~~~~~~")
+        val writeData = intent.getParcelableExtra<BbsDto>("writeData")
+        println("글쓰기하고 넘어온  seq 확인 ${writeData?.seq.toString()}~~~~~~~")
 
         var getBbsList: BbsDto? = null
-        if(writeSeq.toString().toInt()>0){
-            getBbsList = BbsDao.getInstance().getBbsList(writeSeq.toString().toInt())
+        if(writeData!=null){
+            getBbsList = BbsDao.getInstance().getBbsList(writeData.seq!!)
+            println("getBbsList == writeData")
+            println("getBbsList 출력 !!!! ${getBbsList.toString()}")
         }
 
         //로그인 유저정보
@@ -58,10 +59,13 @@ class BbsDetailActivity : AppCompatActivity() {
 
         if(homeData!=null){
             data = homeData //홈에서 클릭해서 넘어온 값
+            println("data == homeData")
         }else if(updateData!=null){
             data = updateData   //수정페이지에서 수정해서 넘어온 값
+            println("data == updateData")
         }else if(getBbsList!=null){
             data = getBbsList   //글작성페이지에서 작성 후 넘어온 값
+            println("data == getBbsList")
         }
 
         //      글쓴이랑 로그인유저가 같을때
@@ -73,14 +77,15 @@ class BbsDetailActivity : AppCompatActivity() {
             binding.updateBtn.isVisible = false
         }
 
-
+        println("data 출력 테스트 : !!!!!!!!! : ${data.toString()}")
         //글쓴이 프로필사진 가져오기
-        val profilPic = MemberDao.getInstance().getProfilPic(data?.id!!)
-        val picture = data.picture.toString().split(" ")
+        println("글쓴이 아이디 : ${data?.id}")
+        val profilPic = MemberDao.getInstance().getProfilPic(data?.id.toString()!!)
+        val picture = data?.picture.toString().split(" ")
 
         //툴바 타이틀에 넣기_안도현
         toolbar.title=data?.title
-        binding.profilPicture.setImageURI(Uri.parse(profilPic))
+        binding.profilPicture.setImageURI(Uri.parse(profilPic!![0].toString()))
         binding.DeBbsUserT.text = data?.nickname
         binding.DeBbsLikePoT.text = data?.likecnt.toString()+"명 좋아요"
         binding.DeBbsWdateT.text = data?.wdate
@@ -96,24 +101,24 @@ class BbsDetailActivity : AppCompatActivity() {
         //등록된 사진 수만큼 보여주기
         if(picture[0]!=null){
             binding.DeImg1.isVisible = true
+            binding.DeImg1.setImageURI(Uri.parse(picture[0]))
         }else if(picture[1]!=null){
             binding.DeImg2.isVisible = true
+            binding.DeImg2.setImageURI(Uri.parse(picture[1]))
         }else if(picture[2]!=null){
             binding.DeImg3.isVisible = true
+            binding.DeImg3.setImageURI(Uri.parse(picture[2]))
         }else if(picture[3]!=null){
             binding.DeImg4.isVisible = true
+            binding.DeImg4.setImageURI(Uri.parse(picture[3]))
         }
 
-        binding.DeImg1.setImageURI(Uri.parse(picture[0]))
-        binding.DeImg2.setImageURI(Uri.parse(picture[1]))
-        binding.DeImg3.setImageURI(Uri.parse(picture[2]))
-        binding.DeImg4.setImageURI(Uri.parse(picture[3]))
 
 
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
         //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
         var id = loginUserId
-        var bbsseq = data.seq
+        var bbsseq = data?.seq
 
         var sdto = ScrapDto(id,bbsseq,null)
         var checkScrap = BbsDao.getInstance().checkUserScrap(sdto)
@@ -166,11 +171,11 @@ class BbsDetailActivity : AppCompatActivity() {
 
                 //이태원라이크 테이블에 유저값 넣어주기
                 val id = loginUserId
-                val bbsseq = data.seq
+                val bbsseq = data?.seq
                 val dto = LikeDto(id, bbsseq, null)
                 var plusLike = BbsDao.getInstance().insertLike(dto)
                 if(plusLike==true){
-                    println("Like테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 좋아요를 눌렀습니다")
+                    println("Like테이블에 ${data?.seq}번호의 글에 ${loginUserId}님이 좋아요를 눌렀습니다")
                 }else{
                     println("Like테이블 반영 실패")
                 }
@@ -187,11 +192,11 @@ class BbsDetailActivity : AppCompatActivity() {
 
                 //+이태원라이크 테이블에 유저값 삭제하기
                 val id = loginUserId
-                val bbsseq = data.seq
+                val bbsseq = data?.seq
                 val dto = LikeDto(id, bbsseq, null)
                 var deleteLike = BbsDao.getInstance().deleteLike(dto)
                 if(deleteLike==true){
-                    println("Like테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 좋아요를 취소했습니다")
+                    println("Like테이블에 ${data?.seq}번호의 글에 ${loginUserId}님이 좋아요를 취소했습니다")
                 }else{
                     println("Like테이블 반영 실패")
                 }
@@ -225,11 +230,11 @@ class BbsDetailActivity : AppCompatActivity() {
 
                 //이태원스크랩 테이블에 유저값 넣어주기
                 val id = loginUserId
-                val bbsseq = data.seq
+                val bbsseq = data?.seq
                 val dto = ScrapDto(id, bbsseq, null)
                 var plusScrap = BbsDao.getInstance().insertScrap(dto)
                 if(plusScrap==true){
-                    println("Scrap테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 스크랩버튼을 눌렀습니다")
+                    println("Scrap테이블에 ${data?.seq}번호의 글에 ${loginUserId}님이 스크랩버튼을 눌렀습니다")
                 }else{
                     println("Scrap테이블 반영 실패")
                 }
@@ -245,11 +250,11 @@ class BbsDetailActivity : AppCompatActivity() {
 
                 //+이태원스크랩 테이블에 유저값 삭제하기
                 val id = loginUserId
-                val bbsseq = data.seq
+                val bbsseq = data?.seq
                 val dto = ScrapDto(id, bbsseq, null)
                 var deleteScrap = BbsDao.getInstance().deleteScrap(dto)
                 if(deleteScrap==true){
-                    println("Scrap테이블에 ${data.seq}번호의 글에 ${loginUserId}님이 스크랩버튼을 취소했습니다")
+                    println("Scrap테이블에 ${data?.seq}번호의 글에 ${loginUserId}님이 스크랩버튼을 취소했습니다")
                 }else{
                     println("Scrap테이블 반영 실패")
                 }

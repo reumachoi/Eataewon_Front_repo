@@ -43,8 +43,8 @@ class HomeBbsAdapter (private val dataList: ArrayList<BbsDto>) :
 
             shopName.text = bbsDto.shopname
             shopLocation.text = bbsDto.address
-            bbsPhotoView.setImageResource(bbsDto.picture)
-            userProfilePic.setImageResource(bbsDto.picture)
+            /*bbsPhotoView.setImageResource(bbsDto.picture)
+            userProfilePic.setImageResource(bbsDto.picture)*/
             userId.text = bbsDto.id
             bbsContent.text = bbsDto.content
 
