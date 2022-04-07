@@ -43,7 +43,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/mypage_likepoint"
-            app:layout_constraintStart_toStartOf="@+id/mypage_likepoint"/>
+            app:layout_constraintStart_toStartOf="@+id/mypage_likepoint" android:id="@+id/textView20"/>
     <ImageView
             android:id="@+id/mypage_profil_image"
             android:layout_width="131dp"
@@ -124,23 +124,6 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/mypage_name"
             app:layout_constraintStart_toStartOf="@+id/mypage_name"/>
-    <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/toggle_button_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@+id/inMypageFragment"
-            app:layout_constraintBottom_toTopOf="@+id/inMypageFragment">
-
-        <com.google.android.material.button.MaterialButton
-                style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="내가 쓴 글 보기" android:id="@+id/lookMyBbsBtn"/>
-        <com.google.android.material.button.MaterialButton
-                style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="내정보 수정하기" android:id="@+id/lookMeBtn"/>
-    </com.google.android.material.button.MaterialButtonToggleGroup>
     <androidx.fragment.app.FragmentContainerView
             android:layout_width="487dp"
             android:layout_height="413dp"
@@ -148,7 +131,34 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" android:layout_marginTop="296dp"
             app:layout_constraintHorizontal_bias="0.504" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.308"/>
+            app:layout_constraintVertical_bias="0.421"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@+id/inMypageFragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/inMypageFragment"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0">
+        <RadioButton
+                android:text="내가 쓴 글 보기"
+                android:gravity="center"
+                android:padding="15dp"
+                android:checked="true"
+                android:background="@drawable/radiobtn_left_selector"
+                android:button="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/lookMyBbsBtn"
+        />
+        <RadioButton
+                android:text="내정보 수정하기"
+                android:gravity="center"
+                android:padding="15dp"
+                android:background="@drawable/radiobtn_right_selector"
+                android:button="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/lookMeBtn"
+        />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

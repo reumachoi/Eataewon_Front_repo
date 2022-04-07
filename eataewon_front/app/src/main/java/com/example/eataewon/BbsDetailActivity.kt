@@ -32,12 +32,12 @@ class BbsDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val writeSeq = intent.getParcelableExtra<BbsDto>("writeSeq")
-        println("글쓰기하고 넘어온  seq 확인 ${writeSeq}~~~~~~~")
+        val writeData = intent.getParcelableExtra<BbsDto>("writeSeq")
+        println("글쓰기하고 넘어온  seq 확인 ${writeData?.seq.toString()}~~~~~~~")
 
         var getBbsList: BbsDto? = null
-        if(writeSeq.toString().toInt()>0){
-            getBbsList = BbsDao.getInstance().getBbsList(writeSeq.toString().toInt())
+        if(writeData!=null){
+            getBbsList = BbsDao.getInstance().getBbsList(writeData.seq!!)
         }
 
         //로그인 유저정보
@@ -80,7 +80,7 @@ class BbsDetailActivity : AppCompatActivity() {
 
         //툴바 타이틀에 넣기_안도현
         toolbar.title=data?.title
-        binding.profilPicture.setImageURI(Uri.parse(profilPic))
+        binding.profilPicture.setImageURI(Uri.parse(profilPic!![0].toString()))
         binding.DeBbsUserT.text = data?.nickname
         binding.DeBbsLikePoT.text = data?.likecnt.toString()+"명 좋아요"
         binding.DeBbsWdateT.text = data?.wdate

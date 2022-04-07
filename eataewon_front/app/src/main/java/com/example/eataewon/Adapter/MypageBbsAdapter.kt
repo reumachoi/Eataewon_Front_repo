@@ -2,11 +2,14 @@ package com.example.eataewon.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.eataewon.BbsDetailActivity
 import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDao
@@ -33,17 +36,20 @@ class MypageBbsAdapter(private val context: Context, private val dataList: Array
     }
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        //private val shopPhoto = itemView.findViewById<ImageView>(R.id.shopPhotoMyBbs)
+        private val shopPhoto = itemView.findViewById<ImageView>(R.id.shopPhotoMyBbs)
         private val shopName = itemView.findViewById<TextView>(R.id.shopNameMyBbs)
         private val address = itemView.findViewById<TextView>(R.id.addressMyBbs)
-        private val hashtag = itemView.findViewById<TextView>(R.id.hashtagMyBbs)
+        private val wdate = itemView.findViewById<TextView>(R.id.wdateMyBbs)
 
         fun bind(bbsDto: BbsDto, context: Context) {
-            println("MypageBbsAdapter ~~~~~~~~~~~~~~~~~~~~~~~`")
-            //shopPhoto.setImageResource(bbsDto.picture)
+          /*  // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
+            val picArray = bbsDto.testurl!!.split(" ")*/
+
+            println("MypageBbsAdapter ~~~~~~~~~~~~~~~~~~~~~~~${bbsDto.testurl}")
+            shopPhoto.setImageURI(Uri.parse(bbsDto.testurl.toString().trim()))
             shopName.text = bbsDto.shopname
             address.text = bbsDto.address
-            hashtag.text = bbsDto.hashtag
+            wdate.text = bbsDto.wdate
 
             // 게시물 클릭시 BbsDetailActivity로 이동
             itemView.setOnClickListener {

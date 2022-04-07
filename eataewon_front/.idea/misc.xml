@@ -104,11 +104,18 @@
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/layout/frag5.xml" value="0.18416666666666667" />
         <entry key="..\:/eat_project_front/eataewon_front/app/src/main/res/menu/bottom_menu.xml" value="0.13916666666666666" />
         <entry key="app/src/main/res/drawable/click_likebtn.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/click_radio.xml" value="0.21166666666666667" />
         <entry key="app/src/main/res/drawable/click_scrapbtn.xml" value="0.23076923076923078" />
         <entry key="app/src/main/res/drawable/click_toggle.xml" value="0.225" />
         <entry key="app/src/main/res/drawable/ic_item_bbsdetail_exit.xml" value="0.17833333333333334" />
         <entry key="app/src/main/res/drawable/ic_mypage_logout.xml" value="0.21944444444444444" />
         <entry key="app/src/main/res/drawable/imgeview_sample.xml" value="0.21944444444444444" />
+        <entry key="app/src/main/res/drawable/radiobtn_left_checked.xml" value="0.21166666666666667" />
+        <entry key="app/src/main/res/drawable/radiobtn_left_selector.xml" value="0.21166666666666667" />
+        <entry key="app/src/main/res/drawable/radiobtn_left_unchecked.xml" value="0.21166666666666667" />
+        <entry key="app/src/main/res/drawable/radiobtn_right_checked.xml" value="0.21166666666666667" />
+        <entry key="app/src/main/res/drawable/radiobtn_right_selector.xml" value="0.21166666666666667" />
+        <entry key="app/src/main/res/drawable/radiobtn_right_unchecked.xml" value="0.21166666666666667" />
         <entry key="app/src/main/res/drawable/style_api_btn.xml" value="0.225" />
         <entry key="app/src/main/res/drawable/style_btn.xml" value="0.225" />
         <entry key="app/src/main/res/drawable/style_edittext.xml" value="0.225" />
@@ -134,7 +141,7 @@
         <entry key="app/src/main/res/layout/fragment_bookmark.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_mypage_get_bbs.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/fragment_mypage_update.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/fragment_naver_map.xml" value="0.31666666666666665" />

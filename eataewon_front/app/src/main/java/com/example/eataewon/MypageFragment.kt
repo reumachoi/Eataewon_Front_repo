@@ -16,13 +16,6 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.eataewon.Adapter.MypageBbsAdapter
-import com.example.eataewon.Adapter.SearchBbsAdapter
-import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
@@ -56,7 +49,6 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         childFragmentManager.beginTransaction()
             .replace(R.id.inMypageFragment, mypageGetBbsFragment)
             .commit()
-
 
 
         //상단 툴바바
@@ -115,10 +107,11 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         v.lookMyBbsBtn.setOnClickListener {
             //v.lookMeBtn.setBackgroundColor(Color.rgb(255, 255, 255))
 
-            val mypageGetBbsFragment = mypageGetBbsFragment()
+//            val mypageGetBbsFragment = mypageGetBbsFragment()
             childFragmentManager.beginTransaction()
                 .replace(R.id.inMypageFragment, mypageGetBbsFragment)
                 .commit()
+
         }
 
         v.lookMeBtn.setOnClickListener {

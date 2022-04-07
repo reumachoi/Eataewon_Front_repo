@@ -104,7 +104,8 @@ class WriteActivity : AppCompatActivity() {
             var shopurl = searchData?.place_url
             var latitude = searchData?.y.toString().toDouble()
             var longitude = searchData?.x.toString().toDouble()
-
+            var id = loginUserId
+            var nickname = loginUserNickname
             for (i in 0 until list.size) {
                 uriPath += getPath(list.get(i))+" "
             }
@@ -120,7 +121,7 @@ class WriteActivity : AppCompatActivity() {
                 Toast.makeText(this,"사진이 추가되지 않았습니다 다시 추가해주세요",Toast.LENGTH_SHORT).show()
             }else{
 
-                val dto = BbsDto(loginUserId,loginUserNickname,null, title,content,0,tag,LocalDate.now().toString(),
+                var dto = BbsDto(id,nickname,null, title,content,0,tag,LocalDate.now().toString(),
                                 shopname,addr,shopphnum,shopurl,latitude,longitude,0,0,uriPath)
                 println("writeactivity dto확인 ${dto}")
                 val seq = BbsDao.getInstance().bbswrite(dto)
@@ -133,10 +134,13 @@ class WriteActivity : AppCompatActivity() {
                     println("글쓰기로 호감도 상승에 실패했습니다")
                 }
 
+                dto = BbsDto(id,nickname,seq, title,content,0,tag,LocalDate.now().toString(),
+                    shopname,addr,shopphnum,shopurl,latitude,longitude,0,0,uriPath)
+
                 if(seq!! >0){
                     Toast.makeText(this,"글쓰기가 완료되었습니다",Toast.LENGTH_SHORT).show()
-                    var i = Intent(this,WriteActivity::class.java)
-                    i.putExtra("writeSeq",seq)
+                    var i = Intent(this,BbsDetailActivity::class.java)
+                    i.putExtra("writeData",dto)
                     startActivity(i)
                 }else{
                     Toast.makeText(this,"글쓰기를 실패했습니다",Toast.LENGTH_SHORT).show()
