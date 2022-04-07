@@ -23,9 +23,12 @@ import com.bumptech.glide.Glide
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MapSearchListDto
+import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.drop_out.view.*
 import com.example.eataewon.databinding.ActivityWriteBinding
 import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 
 class WriteActivity : AppCompatActivity() {
@@ -45,13 +48,21 @@ class WriteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd  a h:mm")
+        val formatted = current.format(formatter)
+        val intent = intent
         //로그인 유저정보
+        val user = intent.getParcelableExtra<MemberDto>("user")
         val prefs = getSharedPreferences("sharedPref", 0)
         val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
+
+        val writeuserid = findViewById<TextView>(R.id.write_userid)
+        val writedate = findViewById<TextView>(R.id.write_date)
+        writeuserid.text = user?.id.toString()
+        writedate.text = formatted
 
         val recyclerView = findViewById<RecyclerView>(R.id.write_recyclerview)
 

@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         val loginBtn = findViewById<Button>(R.id.login_Btn)
         val signUpBtn = findViewById<Button>(R.id.signUpAtivity_Btn)
 
+
         loginBtn.setOnClickListener(this)
         signUpBtn.setOnClickListener(this)
 
@@ -73,7 +74,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-
+        binding.findUserBtn.setOnClickListener{
+            startActivity(Intent(this, FindUserIdActivity::class.java))
+        }
         // 카카오 로그인 정보 확인
         UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
             if (error != null) {
