@@ -7,6 +7,36 @@
 
 <meta charset="UTF-8">
 <title>게시판</title>
+
+<style>
+
+.container {
+  padding: 2rem 0rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.titlefont{
+ font-family: 'Montserrat', sans-serif;
+}
+
+.atag {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 1.2em;
+ font-weight: bold; 
+ 
+}
+
+.btn btn-outline-secondary{
+ font-family: 'Montserrat', sans-serif;
+
+}
+
+</style>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -23,13 +53,16 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="cssHeader/css/style.css">
+<link rel="stylesheet" href="cssHeader/css/style.css">
 
-	<div id ="logout"><a href="login.html" class="nav-link">Logout</a></div>
+
+<!-- @@로그아웃@@ -->
+<div id ="logout"><a href="login.html" class="nav-link">Logout</a></div>
 
 
 
@@ -73,7 +106,7 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">About Us</a></li>
+	        	<li class="nav-item active"><a href="aboutus.html" class="nav-link">About Us</a></li>
 	        
 	        	<li class="nav-item"><a href="bbslist.html" class="nav-link">Places</a></li>
 	        		<li class="nav-item dropdown">
@@ -97,42 +130,7 @@
   <script src="cssHeader/js/bootstrap.min.js"></script>
   <script src="cssHeader/js/main.js"></script>
 	
-	
-	
-	
-	
-	
-<!--  기존 navibar
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">menu</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor03">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="bbslist.html">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="mypage.html">mypage</a>
-        </li>
-      </ul>
-          <a class="nav-link" href="login.html">log-out</a>
-   
-    </div>
-  </div>
-</nav>
--->	
 		
 </head>
 <body>
@@ -143,41 +141,63 @@
 		<tr>
 				<td style="padding-left: 5px"><select class="custom-select"
 					id="_choice" name="choice">
-						<option selected>선택</option>
-						<option value="title">제목</option>
-						<option value="content">내용</option>
-						<option value="id">작성자 id</option>
-						<option value="nickname">닉네임</option>
-						<option value="hashtag">해쉬태그</option>
-						<option value="address">주소</option>
-						<option value="shopname">가게이름</option>
+						<option selected>Choice</option>
+						<option value="title">Title</option>
+						<option value="content">Contents</option>
+						<option value="id">User ID</option>
+						<option value="nickname">Nickname</option>
+						<option value="hashtag">HashTag</option>
+						<option value="address">Address</option>
+						<option value="shopname">Shopname</option>
 				</select></td>
 				
 				<td style="padding-left: 5px" class="align-middle">
-				<input type="text" class="form-control" id="_search" name="search" placeholder="검색어"></td>
+				<input type="text" class="form-control form-control-lg" id="_search" name="search" placeholder="Find Keyword">
+				
+				</td>
 				
 				<td style="padding-left: 5px">
-					<span><button type="button" class="btn btn-primary" id="btnSearch">검색</button></span>
-					
+					<span>&nbsp; &nbsp;
+					<button type="button" class="btn btn-outline-secondary" id="btnSearch">Find</button></span>
+
+				</td>
+				<td>&nbsp; &nbsp;</td>
+				<td>
+						<div>
+		<button type="button" id="writeBtn" class="btn btn-outline-secondary">Post</button>
+		</div>
 				</td>
 		</tr>
 	</table>	
 	<br>
 
-	<table class="table table-striped table-hover">
-		<thead>
-			<tr>
-				<th>번호</th>
-				<th>제목</th>
-	<!-- 			<th>작성자</th> -->
-	 			<th>닉네임</th> 
-			</tr>
-		</thead>
 
-		<tbody id="tbody">
-		</tbody>
 
-	</table>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@썸네일@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-image">
+        <thead>
+          <tr>
+            <th scope="col" width="35">no</th>
+            <th scope="col" width="125">Image</th>
+            <th scope="col" width="295">Title</th>
+            <th scope="col" width="40">Nickname</th>
+            <th scope="col" width="40">#hashtag</th>
+            <th scope="col" width="35">View</th>
+          </tr>
+        </thead>
+        <tbody id="imgtbody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@썸네일 끝@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
 	<br><br>
 
 	<div class="container">
@@ -188,11 +208,8 @@
 	</div>
 	<br><br>
 
-	<div align="center">
-		<!-- <a href="bbswrite.html">글쓰기</a> -->
-		<button type="button" id="writeBtn" class="btn btn-primary">글쓰기</button>
-	</div>
-	<br><br>
+
+	
 
 </div>
 
@@ -202,12 +219,14 @@ $(document).ready(function () {
 	let json = JSON.parse(str);	
  	let id = JSON.parse(str).id;
 		
-	
-	getBbslist( 0 ); //#1여기 있는 코드나 #btnsearch 안에 있는 코드나 차이 없는데 검색 하지 않은 목록이랑 검색한 목록을 어떻게 다르게 구현함?
+
+	getBbslistimg(0); //이미지 게시판 구현
 	getBbsCount();
 	
+
+	
 	$("#btnSearch").click(function () {
-		getBbslist( 0 );
+		getBbslistimg( 0 );
 		getBbsCount();		
 	});
 	 
@@ -227,34 +246,58 @@ $(document).ready(function () {
 	
 })
 
-function getBbslist( page ) { //페이지는 도대체 어디서 나오는거? 사용할때마다 0이란 값을 page를 대신해서 넣어주긴 함. 이게 무슨의미?
+
+
+//이미지 게시판
+function getBbslistimg( page ) { //페이지는 도대체 어디서 나오는거? 사용할때마다 0이란 값을 page를 대신해서 넣어주긴 함. 이게 무슨의미?
 	let choice = $("#_choice").val();
 	let search = $("#_search").val();
 	
-	$("#tbody").html(""); // 테이블 초기화
+	$("#imgtbody").html(""); // 테이블 초기화
 	$.ajax({
-		url:"http://localhost:3000/getBbsListFileSearchPage",
+		url:"http://localhost:3000/getBbsListFileSearchPageImg",
 		type:"get",
 		data:{ "choice":choice, "search":search, "page":page },
 		success:function(list){
 			
 			$.each(list, function (i, item) {
 				
+				srcFileName = decodeURIComponent(item.filepath,"UTF-8").replaceAll("\\", "/");
+				strFileName = item.filepath;	
+				
+				console.log("srcFileName:"+srcFileName);
+				console.log("strFileName:"+strFileName);
+				
+			    var strImg = "";
+				if(strFileName != null){
+								
+		            strImg += "<div class='col' readonly='readonly'>";
+		            strImg += "<img src='./image/upload/"+srcFileName+"' width='110' height='110'/> &nbsp;&nbsp;"; 
+		            strImg += "</div>"
+		            
+				}else{
+		            strImg += "No Image In Here";			
+				}
+				
+				
 				let str = "<tr>"
 							+ "<th>" + (i + 1) + "</th>";
-				//#1 검색해서 아무것도 나오지 않았다 = 검색하지 않았다는 상태와 동일시? 그렇게 검색하지 않았을때의 일반 게시판 모습 구현?
 			
-					str +=	  "<td>"+ "&nbsp;&nbsp;<a href='bbsdetail.html?seq=" + item.seq + "'>" + item.title + "</a></td>"
-				
-		/* 			str +=	  "<td>" + item.id + "</td>" */
-					
-					str +=	  "<td>" + item.nickname + "</td>" // null 이 뜬다
-					
+					//이미지		
+					str +=	  "<td>"+ "<a href='bbsdetail.html?seq=" + item.seq + "'>" + strImg + "</a></td>"
 					
 							
+					str +=	  "<td>"+ "&nbsp;&nbsp;<a href='bbsdetail.html?seq=" + item.seq + "' class='atag'>" + item.title + "</a></td>"						
+					
+					str +=	  "<td>" + item.nickname + "</td>" 
+					
+					str +=	  "<td>" + item.hashtag + "</td>" 
+					
+					str +=	  "<td>" + item.readcnt + "</td>" 
+																	
 						+ "</tr>";	
 						
-				$("#tbody").append(str);
+				$("#imgtbody").append(str);
 			});
 		},
 		error:function(){
@@ -262,6 +305,8 @@ function getBbslist( page ) { //페이지는 도대체 어디서 나오는거? �
 		}			
 	});
 }
+
+
 
 // 글의 총수를 취득
 function getBbsCount() {

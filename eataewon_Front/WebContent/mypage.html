@@ -13,6 +13,23 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<link rel="stylesheet" href="cssHeader/css/style.css">
+	
+	<style type="text/css">
+	#card{
+	
+	display: flex;
+	margin-top:30px;
+  	justify-content: center;
+ 	align-items: center;
+  	min-height: 100vh;
+	}
+	
+	#btnChange{
+	justify-content: center;
+	align-items: center;
+	}
+	
+	</style>
 
 
 	<div id ="logout"><a href="login.html" class="nav-link">Logout</a>
@@ -59,7 +76,7 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">About Us</a></li>
+	        	<li class="nav-item active"><a href="aboutus.html" class="nav-link">About Us</a></li>
 	        
 	        	<li class="nav-item"><a href="bbslist.html" class="nav-link">Places</a></li>
 	        		<li class="nav-item dropdown">
@@ -84,45 +101,12 @@
   <script src="cssHeader/js/main.js"></script>
 
 
-
-
-	<!--  기존 navibar
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">menu</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarColor03">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="bbslist.html">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="mypage.html">mypage</a>
-        </li>
-      </ul>
-          <a class="nav-link" href="login.html">log-out</a>
-          <button type="button" id="withdrawal" class="btn btn-outline-light">Withdrawal
-          </button>
-   
-    </div>
-  </div>
-</nav> -->
 </head>
 <body>
 
+<div id="card">
 
-<div class="card border-primary mb-3" style="max-width: 30rem;">
+<div class="card border-secondary mb-3" style="max-width: 30rem;">
   <div class="card-header">회원 정보 조회 및 수정</div>
   <div class="card-body">
     <h4 class="card-title">당신의 호감도</h4>
@@ -130,8 +114,10 @@
     <p class="card-text">글을 작성하여 누적된 호감도가 표시됩니다.</p>
   </div>
   
+  
+  
   <br><br>
-	<button type="button" class="btn btn-outline-primary" id="mybbslist">내가 작성한 글 보기</button>  
+	<button type="button" class="btn btn-outline-secondary" id="mybbslist">내가 작성한 글 보기</button>  
 <form id="memfrm"> 
 <table class="table table-hover" border="1">
 	<tr>
@@ -152,12 +138,6 @@
 			<input type="text" class="form-control" id="email" name="email" placeholder="이메일" size="20" >
 			</td>
 	</tr>
-<!-- 	<tr>
-			<td>호감도</td>
-			<td>
-			<input type="text" id="likepoint2" readonly="readonly" size="20" >
-			</td>
-	</tr> -->
 	<tr>
 			<td>패스워드 변경</td>
 			<td>
@@ -186,20 +166,23 @@
 	<tr>
 		<td colspan="2">
 		<p>아이디, 이름은 가입한 당시 정보 그대로 유지됩니다.</p>
-		
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-		<button type="button" class="btn btn-outline-primary" id="updatemem">변경</button>
 		</td>
 	</tr>
 
+
 </table>
+
 </form> 
+<button type="button" class="btn btn-outline-secondary" id="updatemem">변경</button>
+</div>
+
+
 </div>
 
 <script type="text/javascript">
+$(document).ready(function () {
+	
+
 let str = sessionStorage.getItem("login");	
 let json = JSON.parse(str);
 let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
@@ -238,37 +221,36 @@ $("#mybbslist").click(function () {
 
 		
 //회원정보 수정하기
-		$("#updatemem").on("click",function(){			
-			$.ajax({
-				url:"http://localhost:3000/updateMem",
-				type:"get",
-				data:{
-					"id":id,
-					"email":$("#email").val(), 
-					"pwd":$("#pwd").val(), 
-					"nickname":$("#nickname").val(),
-					"profilmsg":$("#profilmsg").val(),
-					"profilpic":$("#profilpic").val()					
-				},
-				success:function(data){
-					if(data=="OK"){
-						alert('정보가 성공적으로 변경되었습니다.');
-						location.href="mypage.html";
-					}else{
-						alert('정보 변경에 실패했습니다.');
-					}
-				},
-				error:function(){
-					alert('error');
+	$("#updatemem").click(function(){		
+		$.ajax({
+			url:"http://localhost:3000/updateMem",
+			type:"get",
+			data:{
+				"id":id,
+				"email":$("#email").val(), 
+				"pwd":$("#pwd").val(), 
+				"nickname":$("#nickname").val(),
+				"profilmsg":$("#profilmsg").val(),
+				"profilpic":$("#profilpic").val()					
+			},
+			success:function(data){
+				if(data=="OK"){
+					alert('정보가 성공적으로 변경되었습니다.');
+					location.href="mypage.html";
+				}else{
+					alert('정보 변경에 실패했습니다.');
 				}
-			});
-			
+			},
+			error:function(){
+				alert('error');
+			}
 		});
 		
+	});
+	
 		
-	
-	
-	
+		
+})	
 
 </script>
 

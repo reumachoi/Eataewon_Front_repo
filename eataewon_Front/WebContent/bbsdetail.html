@@ -9,183 +9,197 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">menu</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor03">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="bbslist.html">Home
-            <span class="visually-hidden"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="mypage.html">mypage</a>
-        </li>
-      </ul>
-       
-   
-    </div>
-     <a class="nav-link" href="login.html">log-out</a>
-  </div>
-</nav>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="cssHeader/css/style.css">
+
+<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+
+
+<div id ="logout"><a href="login.html" class="nav-link">Logout</a></div>
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"><!-- <img src="./imagesrc/coffee.jpg"> --></h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-between">
+				<div class="col-md-8 order-md-last">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="navbar-brand" href="bbslist.html">Eataewon Class <span>Go To Explore Your Place</span></a>
+						</div>
+						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="social-media">
+	        </div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid">
+	    
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item active"><a href="aboutus.html" class="nav-link">About Us</a></li>
+	        
+	        	<li class="nav-item"><a href="bbslist.html" class="nav-link">Places</a></li>
+	        		<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="bbslikelistfile.html">Like</a>
+                <a class="dropdown-item" href="bbsscraplistfile.html">Scrap</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="mypage.html" class="nav-link">My Page</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+	
+
+	<script src="cssHeader/js/jquery.min.js"></script>
+  <script src="cssHeader/js/popper.js"></script>
+  <script src="cssHeader/js/bootstrap.min.js"></script>
+  <script src="cssHeader/js/main.js"></script>	
+	
+
+
 
 <style type="text/css">
-th{
-	background-color: #007bff;
-	color: white;
+
+span{
+font-size: 12px;
+font-family: 'Montserrat', sans-serif;
 }
-pre { /* 자동줄바꿈 설정 */
-  	white-space: pre-wrap;
-    word-break: break-all;
-    overflow: auto;
+
+#table1{
+font-family: 'Montserrat', sans-serif;
 }
-</style>
+
+#buttons{
+text-align:center;
+}
+
+
+</style> 
 
 
 </head>
 <body>
 
-
+<br><br><br>
 <div id="app" class="container">
 
-<table class="table table-striped">
-<col width="150"><col width="500">
+<table id="table1" class="table table-hover">
+<col width="90"><col width="500">
 <tr>
-	<th>작성자 id</th><td id="id"></td>
+	<th><span>User ID</span></th><td id="id"></td>
 </tr>
 <tr>
- <th>닉네임</th><td id="nickname"></td>
-</tr>
-
-<tr>
-	<th>작성일</th><td id="wdate"></td>
+ <th><span>Nickname</span></th><td id="nickname"></td>
 </tr>
 
 <tr>
-	<th>조회수</th><td id="readcount"></td>
-</tr>
-<tr>
-	<th>이글을 좋아하는 사람들의 수</th><td id="likecnt"></td>
-</tr>
-
-
-<tr>
-	<!-- <th>제목</th> -->
-	<td colspan="2" id="title" style="font-size: 22px; font-weight:bold;"></td>
+	<th><span>Date of Posting</span></th><td id="wdate"></td>
 </tr>
 
 <tr>
+	<th><span>View</span></th><td id="readcount"></td>
+</tr>
+<tr>
+	<th><span>Likes</span></th><td id="likecnt"></td>
+</tr>
 
+
+<tr>
+<!-- <th>제목</th> -->
+<td colspan="2" id="title" style="font-size: 22px; font-weight:bold; font-family: 'Montserrat', sans-serif; "></td>
+</tr>
+
+<tr>
 	<!-- <th>내용</th> -->
-	<td colspan="2" style="background-color: white;">
-		<pre id="content" style="font-size: 20px; 
-			font-family: 고딕,arial;background-color: white;"></pre>
+	<td colspan="2">
+	<pre id="content" style="font-size: 14px; 
+	font-family:'Montserrat', sans-serif;"></pre>
 	</td>	
 </tr>
-
-<tr>
-
-
-</tr>
-
-
 </table>
 
 
-<table>
-<col width="1500px"><col width="150">
+<table id="table1" class="table table-hover">
+<col width="90"><col width="500">
+
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">사진</td>
-</tr>
-<tr>
-	<td colspan="2">							
+	<td colspan="2" >							
 		<div id="uploadResult" > 
 		</div>
     </td>
 </tr>
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">hashtag</td>
-</tr>
-<tr>
-<td colspan="2" id="hashtag" style="font-size: 20px;"></td>
-</tr>
-<tr><td>&nbsp;</td></tr>
-
-<tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">매장이름</td>
-</tr>
-<tr>
-<td colspan="2" id="shopname" style="font-size: 20px;"></td>
-</tr>
-<tr><td>&nbsp;</td></tr>
-
-
-<tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">위도</td>
-</tr>
-<tr>
-<td colspan="2" id="latitude" style="font-size: 20px;"></td>
+<th><span>hashtag</span></th><td id="hashtag"></td>
 </tr>
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">경도</td>
-</tr>
-<tr>
-<td colspan="2" id="longtitude" style="font-size: 20px;"></td>
-</tr>
-
-
-
-
-<tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">주소</td>
-</tr>
-<tr>
-<td colspan="2" id="address" style="font-size: 20px;"></td>
+<th><span>Shop's name</span></th><td id="shopname"></td>
 </tr>
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">매장 번호</td>
-</tr>
-<tr>
-<td colspan="2" id="shopphnum" style="font-size: 20px;"></td>
+<th><span>Latitude</span></th><td id="latitude"></td>
 </tr>
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">매장 url</td>
+<th><span>Logtitude</span></th><td id="longtitude"></td>
 </tr>
+
 <tr>
-<td colspan="2" id="shopurl" style="font-size: 20px;"></td>
+<th><span>Address</span></th><td id="address"></td>
+</tr>
+
+<tr>
+<th><span>P.H</span></th><td id="shopphnum"></td>
+</tr>
+
+<tr>
+<th><span>URL</span></th><td id="shopurl"></td>
 </tr>
 
 
 </table>
 <br><br>
 
+
+<div id="buttons">
+
+<button type="button" id="btnLike" class="btn btn-dark">좋아요</button>
+<button type="button" id="btnScrap" class="btn btn-dark">스크랩</button>
+<button type="button" id="bbsupdate" class="btn btn-dark">수정</button>
+<button type="button" id="bbsdelete" class="btn btn-dark">삭제</button>
+
+
 <br><br>
-
-
-<button type="button" id="btnLike" class="btn btn-primary">좋아요</button>
-<button type="button" id="btnScrap" class="btn btn-primary">스크랩</button>
-<button type="button" id="bbsupdate" class="btn btn-primary">수정</button>
-<button type="button" id="bbsdelete" class="btn btn-primary">삭제</button>
-
-
-<br><br>
-
+</div>
 
 <table class="table">
 	<col width="500"><col width="500">
@@ -275,7 +289,7 @@ $.ajax({
 
 
 $("#bbsupdate").click(function () {	
-	location.href = "bbsupdatefile.html?seq=" + seq;
+	location.href = "bbsupdatefiletest.html?seq=" + seq;
 });
 
 $("#bbsdelete").click(function () {	

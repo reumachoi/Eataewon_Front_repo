@@ -58,7 +58,7 @@
 		
 			<th class="table-primary">사진</th>
 			<td>
-				<input name="uploadFiles" type="file" multiple>
+				<input name="uploadFiles" type="file" multiple>					
      		</td>		
 		<tr>
 		<th class="table-primary">HashTag#</th>
@@ -161,7 +161,7 @@ $("#btn").click(function () {
         data: formData,
         type: 'POST',
         dataType:'json',
-        success: function(result){
+        success: function(result){ // -> image file 명 Array 1.jpg 2.png
             console.log(result);
             let strfilepath = "";
             let strfilename = "";
@@ -175,43 +175,46 @@ $("#btn").click(function () {
                 console.log("result[0].fileName!!dddddd:~~~"+strfilename);
             }
                 
-        let params = {
-        		id:$("#id").val(), 
-        		nickname:$("#nickname").val(),
-        		title:$("#title").val(), 
-        		content:$("#content").val(), 
-        		filepath:strfilepath, 
-        		filename:strfilename, 
-        		hashtag:$("#hashtag").val(), 
-        		shopname:$("#shopname").val(),
-        		latitude:$("#latitude").val(),
-        		longtitude:$("#longtitude").val(),
-        		address:$("#address").val(),
-        		shopphnum:$("#shopphnum").val(),
-        		shopurl:$("#shopurl").val()
-        		};
+            // image file명들
             
+            
+	        let params = {
+	        		id:$("#id").val(), 
+	        		nickname:$("#nickname").val(),
+	        		title:$("#title").val(), 
+	        		content:$("#content").val(), 
+	        		filepath:strfilepath, 
+	        		filename:strfilename, 		// 1.jpg-2.png"
+	        		hashtag:$("#hashtag").val(), 
+	        		shopname:$("#shopname").val(),
+	        		latitude:$("#latitude").val(),
+	        		longtitude:$("#longtitude").val(),
+	        		address:$("#address").val(),
+	        		shopphnum:$("#shopphnum").val(),
+	        		shopurl:$("#shopurl").val()
+	        };
 	            
-	 	$.ajax({
-			url:"http://localhost:3000/bbswriteImgup",		
-			type:"get",
-			data:params,
-	 		success:function(msg){	                	
-				if(msg == "YES"){
-					alert('추가되었습니다');
-					location.href = "bbslist.html";	
-				}else{
-					alert('추가되지 않았습니다');
-				}			
-			},
-			error:function(){
-				alert('error');
-			}
-		})
-	        },
-	        error: function(jqXHR, textStatus, errorThrown){
-	            console.log(textStatus);
-	        }
+		            
+		 	$.ajax({
+				url:"http://localhost:3000/bbswriteImgup",		
+				type:"get",
+				data:params,
+		 		success:function(msg){	                	
+					if(msg == "YES"){
+						alert('추가되었습니다');
+						location.href = "bbslist.html";	
+					}else{
+						alert('추가되지 않았습니다');
+					}			
+				},
+				error:function(){
+					alert('error');
+				}
+			})
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log(textStatus);
+        }
 
     }); //$.ajax
 });
