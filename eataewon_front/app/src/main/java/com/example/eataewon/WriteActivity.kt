@@ -47,10 +47,11 @@ class WriteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
         val current = LocalDateTime.now()
-        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd  a h:mm")
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
         val formatted = current.format(formatter)
-        val intent = intent
+
         //로그인 유저정보
         val user = intent.getParcelableExtra<MemberDto>("user")
         val prefs = getSharedPreferences("sharedPref", 0)
@@ -58,8 +59,8 @@ class WriteActivity : AppCompatActivity() {
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
 
-        val writeuserid = findViewById<TextView>(R.id.write_userid)
-        val writedate = findViewById<TextView>(R.id.write_date)
+        val writeuserid = findViewById<TextView>(R.id.update_userNickname)
+        val writedate = findViewById<TextView>(R.id.update_date)
         writeuserid.text = user?.id.toString()
         writedate.text = formatted
 
@@ -68,7 +69,7 @@ class WriteActivity : AppCompatActivity() {
         //주소 버튼
         binding.writeAddressBtn.setOnClickListener {
             var i = Intent(this, SearchKakaoMapActivity::class.java)
-            //i.putExtra("editAddr",editAddr)
+            i.putExtra("editAddr",binding.writeAddress.text.toString())
             startActivity(i)
         }
 
@@ -113,7 +114,7 @@ class WriteActivity : AppCompatActivity() {
             var longitude = searchData?.x.toString().toDouble()
             var id = loginUserId
             var nickname = loginUserNickname
-
+            var wdate = current.format(formatter)
 
             for (i in 0 until list.size) {
                 uriPath += getPath(list.get(i))+" "
@@ -132,7 +133,7 @@ class WriteActivity : AppCompatActivity() {
             }else{
 
 
-                val dto = BbsDto(id,nickname,null,title,content,picture,hashtag,LocalDate.now().toString(),
+                val dto = BbsDto(id,nickname,null,title,content,picture,hashtag,wdate,
                     shopname,address,shopphnum,shopurl,latitude, longitude,0,0)
 
                 println("writeactivity dto확인 ${dto}")

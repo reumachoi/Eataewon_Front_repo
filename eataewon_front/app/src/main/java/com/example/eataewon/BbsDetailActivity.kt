@@ -57,9 +57,9 @@ class BbsDetailActivity : AppCompatActivity() {
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
 
-        //툴바 생성_안도현
+ /*       //툴바 생성_안도현
         val toolbar = binding.bbsdetailToolbar
-        setSupportActionBar(toolbar)
+        setSupportActionBar(toolbar)*/
 
 
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
@@ -94,7 +94,7 @@ class BbsDetailActivity : AppCompatActivity() {
         val picture = data?.picture.toString().split(" ")
 
         //툴바 타이틀에 넣기_안도현
-        toolbar.title=data?.title
+        //toolbar.title=data?.title
         binding.profilPicture.setImageURI(Uri.parse(profilPic!![0].toString()))
         binding.DeBbsUserT.text = data?.nickname
         binding.DeBbsLikePoT.text = "${data?.likecnt.toString()}명 좋아요"
@@ -235,7 +235,7 @@ class BbsDetailActivity : AppCompatActivity() {
             }
         }
 
-        //툴바아이템 클릭
+        /*//툴바아이템 클릭
         toolbar.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.bbsdetail_exitBtn->{
@@ -246,7 +246,7 @@ class BbsDetailActivity : AppCompatActivity() {
 
                 else->false
             }
-        }
+        }*/
 
 //      스크랩 버튼 클릭효과
         binding.ScrapBtn.setOnClickListener {

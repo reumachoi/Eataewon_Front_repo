@@ -75,6 +75,7 @@
             android:layout_marginTop="56dp"/>
     <TextView
             android:id="@+id/findIdResultId"
+            android:visibility="gone"
             android:layout_width="199dp"
             android:layout_height="44dp"
             android:background="@drawable/style_edittext"
@@ -107,6 +108,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/findEmailText"/>
     <Button
             android:text="비밀번호재설정"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/resetPwdBtn"
             app:layout_constraintStart_toEndOf="@+id/resetPwdText" app:layout_constraintTop_toTopOf="@+id/resetPwdText"
@@ -117,6 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PWD"
+            android:visibility="gone"
             android:textColor="#FF9800"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -125,6 +128,7 @@
             app:layout_constraintEnd_toStartOf="@+id/resetPwdText" android:layout_marginEnd="20dp"/>
     <EditText
             android:id="@+id/resetPwdText"
+            android:visibility="gone"
             android:singleLine="true"
             android:imeOptions="actionDone"
             android:layout_width="199dp"
@@ -153,6 +157,7 @@
             app:layout_constraintVertical_bias="1.0" android:layout_marginEnd="16dp"/>
     <TextView
             android:id="@+id/textView16"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" ID"

@@ -69,7 +69,7 @@
                     tools:layout_editor_absoluteX="0dp">
 
                     <TextView
-                        android:id="@+id/write_date"
+                        android:id="@+id/update_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="36dp"
@@ -87,8 +87,8 @@
                         android:layout_height="wrap_content"
                         android:text="Date"
                         android:textColor="@color/white"
-                        app:layout_constraintBottom_toTopOf="@+id/write_date"
-                        app:layout_constraintStart_toStartOf="@+id/write_date" />
+                        app:layout_constraintBottom_toTopOf="@+id/update_date"
+                        app:layout_constraintStart_toStartOf="@+id/update_date" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -111,20 +111,19 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ID"
-                            android:textColor="@color/black"
-                            android:textSize="15sp" />
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="닉네임"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"/>
 
                         <TextView
-                            android:id="@+id/write_userid"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="UserID"
-                            android:textColor="@color/black"
-                            android:textSize="30sp"
-                            android:textStyle="bold" />
+                                android:id="@+id/update_userNickname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                android:textStyle="bold"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -165,7 +164,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/updateAddress" />
 
                 <Button
-                    android:id="@+id/write_addressBtn"
+                    android:id="@+id/update_addressBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
@@ -197,20 +196,20 @@
                         </androidx.recyclerview.widget.RecyclerView>
 
                         <android.widget.Button
-                            android:id="@+id/updateImgBtn"
-                            android:layout_toEndOf="@+id/updateRecyclerview"
-                            android:layout_width="180dp"
-                            android:layout_height="300dp"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginEnd="50dp"
-                            android:background="@drawable/style_imge_btn"
-                            android:drawableTop="@drawable/ic_baseline_control_point_24"
-                            android:drawableTint="@color/black"
-                            android:paddingTop="80dp"
-                            android:text="사진선택"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                                android:id="@+id/updateImgBtn"
+                                android:layout_toEndOf="@+id/updateRecyclerview"
+                                android:layout_width="180dp"
+                                android:layout_height="300dp"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginEnd="50dp"
+                                android:background="@drawable/style_imge_btn"
+                                android:drawableTop="@drawable/ic_baseline_control_point_24"
+                                android:drawableTint="@color/black"
+                                android:paddingTop="80dp"
+                                android:text="사진선택"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
                     </RelativeLayout>
                 </HorizontalScrollView>
 
@@ -230,11 +229,11 @@
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/write_content"
-                    app:layout_constraintStart_toStartOf="@+id/write_content" />
+                    app:layout_constraintBottom_toTopOf="@+id/update_content"
+                    app:layout_constraintStart_toStartOf="@+id/update_content" />
 
                 <EditText
-                    android:id="@+id/write_content"
+                    android:id="@+id/update_content"
                     android:imeOptions="actionDone"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
@@ -258,7 +257,7 @@
                     android:paddingTop="20dp"
                     android:paddingBottom="20dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/write_content">
+                    app:layout_constraintTop_toBottomOf="@+id/update_content">
 
                     <TextView
                         android:layout_width="wrap_content"

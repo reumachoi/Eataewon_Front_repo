@@ -77,6 +77,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
         binding.findUserBtn.setOnClickListener{
             startActivity(Intent(this, FindUserIdActivity::class.java))
         }
+
         // 카카오 로그인 정보 확인
         UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
             if (error != null) {

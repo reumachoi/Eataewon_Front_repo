@@ -86,7 +86,7 @@
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/write_userid"
+                            android:id="@+id/update_userNickname"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="UserID"
@@ -107,7 +107,7 @@
                     tools:layout_editor_absoluteX="0dp">
 
                     <TextView
-                        android:id="@+id/write_date"
+                        android:id="@+id/update_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="36dp"
@@ -125,8 +125,8 @@
                         android:layout_height="wrap_content"
                         android:text="Date"
                         android:textColor="@color/white"
-                        app:layout_constraintBottom_toTopOf="@+id/write_date"
-                        app:layout_constraintStart_toStartOf="@+id/write_date" />
+                        app:layout_constraintBottom_toTopOf="@+id/update_date"
+                        app:layout_constraintStart_toStartOf="@+id/update_date" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
@@ -140,7 +140,7 @@
                     app:layout_constraintStart_toStartOf="@+id/write_address" />
 
                 <Button
-                    android:id="@+id/write_addressBtn"
+                    android:id="@+id/writeAddressBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
