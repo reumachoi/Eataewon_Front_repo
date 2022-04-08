@@ -1,6 +1,5 @@
 package com.example.eataewon
 
-
 import android.content.ActivityNotFoundException
 import android.content.ContentValues
 import android.content.Intent
@@ -12,10 +11,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.eataewon.Adapter.PagerAdapter
+import com.example.eataewon.Adapter.ViewPagerAdapter
 import com.example.eataewon.connect.*
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
+import com.example.eataewon.vPager.Fragment1
+import com.example.eataewon.vPager.Fragment2
+import com.example.eataewon.vPager.Fragment3
+import com.example.eataewon.vPager.Fragment4
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
@@ -32,7 +36,7 @@ import com.kakao.sdk.template.Social
 class BbsDetailActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityBbsDetailBinding.inflate(layoutInflater) }
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -53,9 +57,9 @@ class BbsDetailActivity : AppCompatActivity() {
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
 
-        //툴바 생성_안도현
+ /*       //툴바 생성_안도현
         val toolbar = binding.bbsdetailToolbar
-        setSupportActionBar(toolbar)
+        setSupportActionBar(toolbar)*/
 
 
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
@@ -90,10 +94,10 @@ class BbsDetailActivity : AppCompatActivity() {
         val picture = data?.picture.toString().split(" ")
 
         //툴바 타이틀에 넣기_안도현
-        toolbar.title=data?.title
+        //toolbar.title=data?.title
         binding.profilPicture.setImageURI(Uri.parse(profilPic!![0].toString()))
         binding.DeBbsUserT.text = data?.nickname
-        binding.DeBbsLikePoT.text = data?.likecnt.toString()+"명 좋아요"
+        binding.DeBbsLikePoT.text = "${data?.likecnt.toString()}명 좋아요"
         binding.DeBbsWdateT.text = data?.wdate
         binding.DeTitle.text = data?.title
         binding.DeContent.text = data?.content
@@ -104,7 +108,7 @@ class BbsDetailActivity : AppCompatActivity() {
         binding.DeBbsShopUrlT.text = data?.shopurl
 
 
-//사진 뷰페이저로 보여주기
+        //사진 뷰페이저로 보여주기
         val vPager2 = findViewById<ViewPager2>(R.id.vPager2)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
 
@@ -114,7 +118,7 @@ class BbsDetailActivity : AppCompatActivity() {
         val frag4 = Fragment4()
 
         val fragList = listOf<Fragment>(frag1,frag2,frag3,frag4)
-        val adapter = PagerAdapter(this)
+        val adapter = ViewPagerAdapter(this)
         adapter.fList = fragList
         vPager2.adapter = adapter
 
@@ -124,15 +128,16 @@ class BbsDetailActivity : AppCompatActivity() {
         }.attach()
 
         //등록된 사진 수만큼 보여주기
-           if(picture[0]!=null){
-              frag1.setImg(picture[0])
-           }else if(picture[1]!=null){
-               frag2.setImg(picture[1])
-           }else if(picture[2]!=null){
-               frag3.setImg(picture[2])
-           }else if(picture[3]!=null){
-               frag4.setImg(picture[3])
-           }
+        if(picture[0]!=null){
+            frag1.setImg(picture[0])
+        }else if(picture[1]!=null){
+            frag2.setImg(picture[1])
+        }else if(picture[2]!=null){
+            frag3.setImg(picture[2])
+        }else if(picture[3]!=null){
+            frag4.setImg(picture[3])
+        }
+
 
 
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
@@ -230,7 +235,7 @@ class BbsDetailActivity : AppCompatActivity() {
             }
         }
 
-        //툴바아이템 클릭
+        /*//툴바아이템 클릭
         toolbar.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.bbsdetail_exitBtn->{
@@ -241,7 +246,7 @@ class BbsDetailActivity : AppCompatActivity() {
 
                 else->false
             }
-        }
+        }*/
 
 //      스크랩 버튼 클릭효과
         binding.ScrapBtn.setOnClickListener {
@@ -375,6 +380,3 @@ class BbsDetailActivity : AppCompatActivity() {
         return true
     }
 }
-
-
-

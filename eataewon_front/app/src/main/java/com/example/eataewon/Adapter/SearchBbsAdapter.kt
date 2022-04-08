@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eataewon.BbsDetailActivity
 import com.example.eataewon.R
-import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 
 class SearchBbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
@@ -47,11 +46,6 @@ class SearchBbsAdapter (private val context: Context, private val dataList: Arra
 
             // 게시물 클릭시 BbsDetailActivity로 이동
             itemView.setOnClickListener {
-                var result = BbsDao.getInstance().updateReadcnt(bbsDto.seq!!)    //조회수 증가
-                if(result.equals("Success")) {
-                    println("글번호 ${bbsDto.seq} 조회수증가~~~~~~~~~~~~~~~")
-                }
-
                 Intent(context, BbsDetailActivity::class.java).apply {
                     // 짐싸!
                     putExtra("clickBbs", bbsDto)

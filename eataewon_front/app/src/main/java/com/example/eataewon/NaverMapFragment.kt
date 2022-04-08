@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.android.gms.maps.GoogleMap
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.*
 import com.naver.maps.map.overlay.Marker
@@ -51,6 +50,7 @@ class  NaverMapFragment : Fragment(), OnMapReadyCallback {
         marker.map = naverMap
     }
 
+
     fun setLocation(lati: Double, longi: Double) {
         val cameraUpdate = CameraUpdate.scrollTo(LatLng(lati, longi))
         nMap?.moveCamera(cameraUpdate)
@@ -60,7 +60,7 @@ class  NaverMapFragment : Fragment(), OnMapReadyCallback {
         println("네이버 맵 마커,카메라 이동")
     }
 
-        override fun onStart() {
+    override fun onStart() {
         super.onStart()
         mapView.onStart()
     }

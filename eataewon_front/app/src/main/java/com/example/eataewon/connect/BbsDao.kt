@@ -6,21 +6,17 @@ import retrofit2.http.*
 
 interface BbsService {
 
-    @Headers("Content-Type: application/json")
-    @POST("/getBbsListApp")
+    @GET("/getBbsList")
     fun getBbsList(@Body seq:Int): Call<BbsDto>
 
-    @POST("/bbsdetail")
-    fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
+    @POST("/bbswriteApp")
+    fun bbswrite(@Body dto:BbsDto) : Call<Int>
 
     @POST("/bbsupdateApp")
     fun bbsUpdate(@Body dto:BbsDto) : Call<Boolean>
 
     @POST("/bbsdeleteApp")
     fun bbsDelete(@Body seq:Int) : Call<Boolean>
-
-    @POST("/bbswriteApp")
-    fun bbswrite(@Body dto:BbsDto) : Call<Int>
 
     @Headers("Content-Type: application/json")
     @POST("/plustReadcntApp")
@@ -37,6 +33,18 @@ interface BbsService {
 
     @POST("/deleteBbsLikeApp")
     fun deleteLike(@Body dto:LikeDto) : Call<Boolean>
+
+    @POST("/bbsScrap")
+    fun plusBbsScrap(@Body dto:BbsDto): Call<String>
+
+    @POST("/likeBbs")
+    fun plusBbsLike(@Body dto:BbsDto) : Call<String>
+
+    @POST("/bbsdetail")
+    fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
+
+    @POST("/bbsdelete")
+    fun bbsdelete(@Body seq:Int) : Call<Boolean>
 
     @POST("/LikePWriteUp")
     fun LikePWriteUp(@Body id:String): Call<Boolean>
@@ -75,6 +83,7 @@ interface BbsService {
 
     ): Call<KakaoSearchDto>
 
+
 }
 
 class BbsDao {
@@ -94,7 +103,7 @@ class BbsDao {
 
     fun getBbsList(seq:Int):BbsDto?{
         var response: Response<BbsDto>?
-        println("getBbsList SEQ: ${seq}")
+        println("SEQ: ${seq}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
@@ -103,6 +112,22 @@ class BbsDao {
         }catch(e:Exception){
             response = null
         }
+        return response?.body()
+    }
+
+
+    fun bbswrite(dto:BbsDto) : Int?{
+        var response: Response<Int>?
+        println("DTO: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.bbswrite(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
         return response?.body()
     }
 
@@ -117,21 +142,6 @@ class BbsDao {
         }catch(e:Exception){
             response = null
         }
-        return response?.body()
-    }
-
-    fun bbswrite(dto:BbsDto) : Int?{
-        var response: Response<Int>?
-        println("DTO: ${dto}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.bbswrite(dto)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-
         return response?.body()
     }
 
@@ -350,10 +360,10 @@ class BbsDao {
         //var response: Response<List<BbsDto>>?
         println("Id: ${id}")
         //try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.findMyBbs(id);
-            val response = call?.execute()
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.findMyBbs(id);
+        val response = call?.execute()
         //}catch(e:Exception){
         //    response = null
         //}

@@ -34,10 +34,6 @@ class HomeBbsAdapter (private val dataList: ArrayList<BbsDto>) :
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val shopName = itemView.findViewById<TextView>(R.id.ShopName)
         private val shopLocation = itemView.findViewById<TextView>(R.id.ShopLocation)
-
-        /*imageView_img = (ImageView) itemView.findViewById(R.id.imageView_img);
-        imageView_img2 = (ImageView) itemView.findViewById(R.id.imageView_img2);*/
-
         private val bbsPhotoView = itemView.findViewById<ImageView>(R.id.BbsPhotoView)
         private val userProfilePic = itemView.findViewById<ImageView>(R.id.UserProfilePic)
         private val userId = itemView.findViewById<TextView>(R.id.UserId)
@@ -47,7 +43,7 @@ class HomeBbsAdapter (private val dataList: ArrayList<BbsDto>) :
 
             shopName.text = bbsDto.shopname
             shopLocation.text = bbsDto.address
-            /*bbsPhotoView.setImageDrawable(R.drawable.cafe1)
+            /*bbsPhotoView.setImageResource(bbsDto.picture)
             userProfilePic.setImageResource(bbsDto.picture)*/
             userId.text = bbsDto.id
             bbsContent.text = bbsDto.content

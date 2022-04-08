@@ -3,6 +3,7 @@ package com.example.eataewon.connect
 import android.os.Parcel
 import android.os.Parcelable
 
+
 class MemberDto(
     var id:String?,
     val name:String?,
@@ -13,7 +14,8 @@ class MemberDto(
     val likepoint:Int,
     val profilmsg:String?,
     val del:Int
-    ): Parcelable{
+): Parcelable{
+
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -56,6 +58,5 @@ class MemberDto(
             return arrayOfNulls(size)
         }
     }
-
-
 }
+

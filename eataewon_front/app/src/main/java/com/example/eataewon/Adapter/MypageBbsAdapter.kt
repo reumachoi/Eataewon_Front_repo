@@ -16,7 +16,7 @@ import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 
 class MypageBbsAdapter(private val context: Context, private val dataList: ArrayList<BbsDto>) :
-        RecyclerView.Adapter<MypageBbsAdapter.ItemViewHolder>()
+    RecyclerView.Adapter<MypageBbsAdapter.ItemViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(context).inflate(
@@ -42,11 +42,11 @@ class MypageBbsAdapter(private val context: Context, private val dataList: Array
         private val wdate = itemView.findViewById<TextView>(R.id.wdateMyBbs)
 
         fun bind(bbsDto: BbsDto, context: Context) {
-          /*  // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
-            val picArray = bbsDto.testurl!!.split(" ")*/
+            /*  // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
+              val picArray = bbsDto.testurl!!.split(" ")*/
 
-            println("MypageBbsAdapter ~~~~~~~~~~~~~~~~~~~~~~~${bbsDto.testurl}")
-            shopPhoto.setImageURI(Uri.parse(bbsDto.testurl.toString().trim()))
+            println("MypageBbsAdapter ~~~~~~~~~~~~~~~~~~~~~~~${bbsDto.picture}")
+            shopPhoto.setImageURI(Uri.parse(bbsDto.picture.toString().trim()))
             shopName.text = bbsDto.shopname
             address.text = bbsDto.address
             wdate.text = bbsDto.wdate
