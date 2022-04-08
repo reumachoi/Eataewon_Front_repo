@@ -46,7 +46,7 @@ class BbsDetailActivity : AppCompatActivity() {
 
         var getBbsList: BbsDto? = null
         if(writeData!=null){
-            getBbsList = BbsDao.getInstance().getBbsList(writeData.seq!!)
+            getBbsList = BbsDao.getInstance().getBbsListApp(writeData.seq!!)
             println("getBbsList == writeData")
             println("getBbsList 출력 !!!! ${getBbsList.toString()}")
         }
