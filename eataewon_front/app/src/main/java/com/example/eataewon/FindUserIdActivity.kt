@@ -8,6 +8,10 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.core.view.isVisible
+import androidx.core.widget.doAfterTextChanged
 import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.connect.MemberDto
 import com.example.eataewon.databinding.ActivityFindUserIdBinding
