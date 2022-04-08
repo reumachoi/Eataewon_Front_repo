@@ -2,8 +2,12 @@ package com.example.eataewon
 
 import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import com.example.eataewon.connect.MemberDao
@@ -39,9 +43,9 @@ class FindUserIdActivity : AppCompatActivity() {
         binding.findEamilBtn.setOnClickListener{
             val email = findEmailText.text.toString().trim()
 
-            //val findId = MemberDao.getInstance().getEmail(email)
+            val findId = MemberDao.getInstance().getEmail(email)
 
-            /*if(findId!=""){
+            if(findId!=""){
                 binding.findResultText.text = "입력하신 정보와 일치하는 계정을 찾았습니다 \n 비밀번호를 재설정해주세요"
                 binding.findResultText.isVisible = true
                 binding.findResultText.setTextColor(Color.BLUE)
@@ -50,7 +54,7 @@ class FindUserIdActivity : AppCompatActivity() {
                 binding.findResultText.text = "입력하신 정보와 일치하는 계정을 찾지못했습니다"
                 binding.findResultText.isVisible = true
                 binding.findResultText.setTextColor(Color.RED)
-            }*/
+            }
         }
 
         binding.resetPwdBtn.setOnClickListener {
@@ -58,7 +62,7 @@ class FindUserIdActivity : AppCompatActivity() {
             val id = binding.findIdResultId.text.toString()
 
             val dto = MemberDto(id,"",pwd,"","","",0,"",0)
-            /*val resetPwd = MemberDao.getInstance().resetPwd(dto)
+            val resetPwd = MemberDao.getInstance().resetPwd(dto)
 
             if(resetPwd==true){
                 binding.FindresultText.text = "${id} 계정의 비밀번호를 재설정했습니다"
@@ -68,7 +72,7 @@ class FindUserIdActivity : AppCompatActivity() {
                 binding.FindresultText.text = "${id} 계정의 비밀번호를 재설정을 실패했습니다"
                 binding.FindresultText.isVisible = true
                 binding.FindresultText.setTextColor(Color.RED)
-            }*/
+            }
         }
 
         binding.finishFindBtn.setOnClickListener {

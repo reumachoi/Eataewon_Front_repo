@@ -24,7 +24,6 @@ import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.connect.MemberDto
-import kotlinx.android.synthetic.main.drop_out.view.*
 import com.example.eataewon.databinding.ActivityWriteBinding
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -114,10 +113,13 @@ class WriteActivity : AppCompatActivity() {
             var longitude = searchData?.x.toString().toDouble()
             var id = loginUserId
             var nickname = loginUserNickname
+
+
             for (i in 0 until list.size) {
                 uriPath += getPath(list.get(i))+" "
             }
             println("uriPath 결과2 ${uriPath}")
+            var picture = uriPath
 
             if(title==""){
                 Toast.makeText(this,"제목이 작성되지 않았습니다 다시 작성해주세요",Toast.LENGTH_SHORT).show()
@@ -130,8 +132,8 @@ class WriteActivity : AppCompatActivity() {
             }else{
 
 
-                val dto = BbsDto(id,nickname,null,title,content,0,hashtag,LocalDate.now().toString(),
-                    shopname,address,shopphnum,shopurl,latitude, longitude,0,0,uriPath)
+                val dto = BbsDto(id,nickname,null,title,content,picture,hashtag,LocalDate.now().toString(),
+                    shopname,address,shopphnum,shopurl,latitude, longitude,0,0)
 
                 println("writeactivity dto확인 ${dto}")
                 val seq = BbsDao.getInstance().bbswrite(dto)

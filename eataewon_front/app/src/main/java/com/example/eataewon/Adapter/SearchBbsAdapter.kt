@@ -39,7 +39,7 @@ class SearchBbsAdapter (private val context: Context, private val dataList: Arra
 
         fun bind(bbsDto: BbsDto, context: Context) {
 
-            shopPhoto.setImageResource(bbsDto.picture)
+            //shopPhoto.setImageResource(bbsDto.picture)
             shopName.text = bbsDto.shopname
             address.text = bbsDto.address
             hashtag.text = bbsDto.hashtag

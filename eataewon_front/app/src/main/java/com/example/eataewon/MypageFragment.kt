@@ -15,8 +15,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.MenuItemCompat
 import androidx.fragment.app.Fragment
+import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
 
@@ -32,15 +32,27 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
     lateinit var mypageProfilpicuri:TextView
     lateinit var mypageProfilpic: ImageView
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_mypage, container, false)
 
         //임시 테스트
         val user = arguments?.getParcelable<MemberDto>("user")
 
+        //user데이터 넘겨주기
+        var mypageGetBbsFragment = mypageGetBbsFragment()
+        var bundle = Bundle()
+        bundle.putString("mypageuser",user?.id)
+        mypageGetBbsFragment.arguments = bundle
+
+        //본인이 쓴 글 먼저 보여주기
+        childFragmentManager.beginTransaction()
+            .replace(R.id.inMypageFragment, mypageGetBbsFragment)
+            .commit()
+
+
         //상단 툴바바
         v.toolbar.inflateMenu(R.menu.mypage_menu_item)
-
 
         setHasOptionsMenu(true)
 
@@ -48,26 +60,15 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         val mypageId = v.findViewById<TextView>(R.id.mypage_id)
         val mypageName = v.findViewById<TextView>(R.id.mypage_name)
         val mypageLikepoint = v.findViewById<TextView>(R.id.mypage_likepoint)
-        val mypageEmail = v.findViewById<TextView>(R.id.mypage_email)
-        val mypageNickname = v.findViewById<TextView>(R.id.mypage_nickname)
-        val mypageProfilmsg = v.findViewById<TextView>(R.id.mypage_profilmsg)
+
         //이미지
         mypageProfilpic = v.findViewById(R.id.mypage_profil_image)
-
-
-        //버튼
-        val updateBtn = v.findViewById<Button>(R.id.mypage_updateBtn)
         val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
 
         //텍스트뷰에 값 입력
         mypageId.text = user?.id
         mypageName.text = user?.name
         mypageLikepoint.text = user?.likepoint.toString()
-
-
-
-        //이미지 불러오기
-        //mypageProfilpic.setImageURI(user?.profilPic?.toUri())
 
         //사진
         imageBtn.setOnClickListener { GetAlbum() }
@@ -96,17 +97,13 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
 
 
         v.lookMyBbsBtn.setOnClickListener {
-            //v.lookMeBtn.setBackgroundColor(Color.rgb(255, 255, 255))
-
-            val mypageGetBbsFragment = mypageGetBbsFragment()
             childFragmentManager.beginTransaction()
                 .replace(R.id.inMypageFragment, mypageGetBbsFragment)
                 .commit()
+
         }
 
         v.lookMeBtn.setOnClickListener {
-            //v.lookMyBbsBtn.setBackgroundColor(Color.rgb(255, 255, 255))
-
             val mypageUpdateFragment = mypageUpdateFragment()
             childFragmentManager.beginTransaction()
                 .replace(R.id.inMypageFragment, mypageUpdateFragment)

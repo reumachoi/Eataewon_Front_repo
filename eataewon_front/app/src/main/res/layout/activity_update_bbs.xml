@@ -46,6 +46,7 @@
 
                 <EditText
                     android:id="@+id/updateTitle"
+                    android:imeOptions="actionDone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="48dp"
@@ -140,6 +141,7 @@
 
                 <EditText
                     android:id="@+id/updateAddress"
+                    android:imeOptions="actionDone"
                     android:layout_width="400dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="50dp"
@@ -233,6 +235,7 @@
 
                 <EditText
                     android:id="@+id/write_content"
+                    android:imeOptions="actionDone"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_marginTop="60dp"
@@ -267,6 +270,7 @@
 
                     <EditText
                         android:id="@+id/updateHashtag"
+                        android:imeOptions="actionDone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/white"

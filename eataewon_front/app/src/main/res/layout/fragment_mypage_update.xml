@@ -9,6 +9,7 @@
 
     <EditText
             android:id="@+id/mypage_email"
+            android:imeOptions="actionDone"
             android:layout_width="400dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/black"
@@ -43,6 +44,7 @@
             android:id="@+id/textView14" android:layout_marginBottom="8dp" android:layout_marginStart="4dp"/>
     <EditText
             android:id="@+id/mypage_nickname"
+            android:imeOptions="actionDone"
             android:layout_width="400dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/black"
@@ -68,7 +70,7 @@
             app:layout_constraintBottom_toTopOf="@+id/mypage_nickname" android:layout_marginBottom="4dp"
             android:layout_marginStart="4dp"/>
     <Button
-            android:id="@+id/mypage_updateBtn"
+            android:id="@+id/mypageUserupdateBtn"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:text="수정"
@@ -81,6 +83,7 @@
             app:layout_constraintHorizontal_bias="0.52"/>
     <EditText
             android:id="@+id/mypage_profilmsg"
+            android:imeOptions="actionDone"
             android:layout_width="400dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/black"
