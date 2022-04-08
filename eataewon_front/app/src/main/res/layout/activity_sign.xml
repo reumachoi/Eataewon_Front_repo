@@ -37,6 +37,7 @@
 
     <EditText
         android:id="@+id/signUp_Id"
+        android:imeOptions="actionDone"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="50dp"
@@ -74,6 +75,7 @@
 
     <EditText
         android:id="@+id/signUp_Pw"
+        android:imeOptions="actionDone"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="40dp"
@@ -105,6 +107,7 @@
 
     <EditText
         android:id="@+id/signUp_name"
+        android:imeOptions="actionDone"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
@@ -136,6 +139,7 @@
 
     <EditText
         android:id="@+id/signUp_email"
+        android:imeOptions="actionDone"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
@@ -167,6 +171,7 @@
 
     <EditText
         android:id="@+id/signUp_nickname"
+        android:imeOptions="actionDone"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
@@ -198,6 +203,7 @@
 
     <EditText
         android:id="@+id/signUp_profilmsg"
+        android:imeOptions="actionDone"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
