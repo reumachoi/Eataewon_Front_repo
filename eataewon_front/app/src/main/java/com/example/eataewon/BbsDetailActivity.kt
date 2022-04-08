@@ -11,8 +11,13 @@ import android.view.Menu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
+import com.example.eataewon.Adapter.PagerAdapter
 import com.example.eataewon.connect.*
 import com.example.eataewon.databinding.ActivityBbsDetailBinding
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
 import com.kakao.sdk.link.LinkClient
 import com.kakao.sdk.link.WebSharerClient
@@ -99,25 +104,35 @@ class BbsDetailActivity : AppCompatActivity() {
         binding.DeBbsShopUrlT.text = data?.shopurl
 
 
+//사진 뷰페이저로 보여주기
+        val vPager2 = findViewById<ViewPager2>(R.id.vPager2)
+        val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+
+        val frag1 = Fragment1()
+        val frag2 = Fragment2()
+        val frag3 = Fragment3()
+        val frag4 = Fragment4()
+
+        val fragList = listOf<Fragment>(frag1,frag2,frag3,frag4)
+        val adapter = PagerAdapter(this)
+        adapter.fList = fragList
+        vPager2.adapter = adapter
+
+        //인디케이터
+        TabLayoutMediator(tabLayout, vPager2) { tab, position ->
+            //Some implementation...
+        }.attach()
+
         //등록된 사진 수만큼 보여주기
            if(picture[0]!=null){
-               binding.DeImg1.isVisible = true
-               binding.DeImg1.setImageURI(Uri.parse(picture[0]))
+              frag1.setImg(picture[0])
            }else if(picture[1]!=null){
-               binding.DeImg2.isVisible = true
-               binding.DeImg2.setImageURI(Uri.parse(picture[1]))
+               frag2.setImg(picture[1])
            }else if(picture[2]!=null){
-               binding.DeImg3.isVisible = true
-               binding.DeImg3.setImageURI(Uri.parse(picture[2]))
+               frag3.setImg(picture[2])
            }else if(picture[3]!=null){
-               binding.DeImg4.isVisible = true
-               binding.DeImg4.setImageURI(Uri.parse(picture[3]))
+               frag4.setImg(picture[3])
            }
-
-
-
-
-
 
 
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
