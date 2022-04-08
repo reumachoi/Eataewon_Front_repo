@@ -26,10 +26,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="ToolbarThema" parent="ThemeOverlay.AppCompat.Light">
-        <item name="android:fontFamily">@font/font</item>
-
-    </style>
     <style name="Theme.Eattaewon_back_kimminki.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="Theme.Eattaewon_back_kimminki.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>

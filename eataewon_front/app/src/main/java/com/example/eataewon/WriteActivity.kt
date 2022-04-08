@@ -24,7 +24,6 @@ import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.connect.MemberDto
-import kotlinx.android.synthetic.main.drop_out.view.*
 import com.example.eataewon.databinding.ActivityWriteBinding
 import java.time.LocalDate
 import java.time.LocalDateTime

@@ -84,7 +84,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
                     true
                 }
 
-                R.id.mypage_userdelet->{
+                R.id.mypage_withdraw->{
 
                     val intent = Intent(homeActivity,DeleteActivity::class.java)
                     startActivity(intent)
@@ -96,18 +96,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         }
 
 
-
-        /*if(v.lookMeBtn.isPressed == true){
-            Toast.makeText(homeActivity,"lookMeBtn click",Toast.LENGTH_SHORT).show()
-            v.lookMyBbsBtn.isPressed = false
-        }else if(v.lookMyBbsBtn.isPressed == true){
-            v.lookMeBtn.isPressed = false
-        }*/
-
         v.lookMyBbsBtn.setOnClickListener {
-            //v.lookMeBtn.setBackgroundColor(Color.rgb(255, 255, 255))
-
-//            val mypageGetBbsFragment = mypageGetBbsFragment()
             childFragmentManager.beginTransaction()
                 .replace(R.id.inMypageFragment, mypageGetBbsFragment)
                 .commit()
@@ -115,8 +104,6 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         }
 
         v.lookMeBtn.setOnClickListener {
-            //v.lookMyBbsBtn.setBackgroundColor(Color.rgb(255, 255, 255))
-
             val mypageUpdateFragment = mypageUpdateFragment()
             childFragmentManager.beginTransaction()
                 .replace(R.id.inMypageFragment, mypageUpdateFragment)

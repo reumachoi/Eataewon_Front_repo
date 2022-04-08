@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:theme="@style/Theme.Eattaewon_back_kimminki.NoActionBar"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -124,23 +124,34 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/mypage_name"
             app:layout_constraintStart_toStartOf="@+id/mypage_name"/>
-    <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/toggle_button_group"
+    <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@+id/inMypageFragment"
-            app:layout_constraintBottom_toTopOf="@+id/inMypageFragment">
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/inMypageFragment"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0">
+        <RadioButton
+                android:text="내가 쓴 글 보기"
+                android:gravity="center"
+                android:padding="15dp"
+                android:checked="true"
+                android:background="@drawable/radiobtn_left_selector"
+                android:button="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/lookMyBbsBtn"
+        />
+        <RadioButton
+                android:text="내정보 수정하기"
+                android:gravity="center"
+                android:padding="15dp"
+                android:background="@drawable/radiobtn_right_selector"
+                android:button="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/lookMeBtn"
+        />
+    </RadioGroup>
 
-        <com.google.android.material.button.MaterialButton
-                style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="내가 쓴 글 보기" android:id="@+id/lookMyBbsBtn"/>
-        <com.google.android.material.button.MaterialButton
-                style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="내정보 수정하기" android:id="@+id/lookMeBtn"/>
-    </com.google.android.material.button.MaterialButtonToggleGroup>
     <androidx.fragment.app.FragmentContainerView
             android:layout_width="487dp"
             android:layout_height="413dp"
