@@ -8341,7 +8341,7 @@ h1, h2, h3, h4, h5,
         color: #fff; }
 
 .searchform {
-  height: 50px;
+  height: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
   border-radius: 40px; }
@@ -8368,14 +8368,14 @@ h1, h2, h3, h4, h5,
       color: rgba(0, 0, 0, 0.7) !important; }
   .searchform .search {
     width: 50px;
-    height: 50px;
+    height: 15px;
     background: #ff0000 !important; }
     .searchform .search span {
       font-size: 16px;
       color: #fff; }
 
 .form-control {
-  height: 50px !important;
+ /*  height: 50px !important; */
   background: #fff !important;
   color: #000 !important;
   font-size: 14px;

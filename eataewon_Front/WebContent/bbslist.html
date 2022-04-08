@@ -181,10 +181,10 @@ h4 {
         <thead>
           <tr>
             <th scope="col" width="35">no</th>
-            <th scope="col" width="125">Image</th>
+            <th scope="col" width="110">Image</th>
             <th scope="col" width="295">Title</th>
-            <th scope="col" width="40">Nickname</th>
-            <th scope="col" width="40">#hashtag</th>
+            <th scope="col" width="35">&nbsp&nbsp&nbsp&nbsp&nbspNickname</th>
+            <th scope="col" width="35">#hashtag</th>
             <th scope="col" width="35">View</th>
           </tr>
         </thead>
@@ -272,7 +272,7 @@ function getBbslistimg( page ) { //페이지는 도대체 어디서 나오는거
 				if(strFileName != null){
 								
 		            strImg += "<div class='col' readonly='readonly'>";
-		            strImg += "<img src='./image/upload/"+srcFileName+"' width='110' height='110'/> &nbsp;&nbsp;"; 
+		            strImg += "<img src='./image/upload/"+srcFileName+"' width='100' height='100'/>"; 
 		            strImg += "</div>"
 		            
 				}else{
@@ -286,10 +286,10 @@ function getBbslistimg( page ) { //페이지는 도대체 어디서 나오는거
 					//이미지		
 					str +=	  "<td>"+ "<a href='bbsdetail.html?seq=" + item.seq + "'>" + strImg + "</a></td>"
 					
-							
-					str +=	  "<td>"+ "&nbsp;&nbsp;<a href='bbsdetail.html?seq=" + item.seq + "' class='atag'>" + item.title + "</a></td>"						
+					//글제목		
+					str +=	  "<td>"+ "<a href='bbsdetail.html?seq=" + item.seq + "' class='atag'>" + item.title + "</a></td>"						
 					
-					str +=	  "<td>" + item.nickname + "</td>" 
+					str +=	  "<td>" +"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+ item.nickname + "</td>" 
 					
 					str +=	  "<td>" + item.hashtag + "</td>" 
 					
