@@ -39,7 +39,7 @@ class SignActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign)
+        setContentView(binding.root)
 
         binding.signUpId.doAfterTextChanged {
             val id = binding.signUpId.text.toString().trim()
