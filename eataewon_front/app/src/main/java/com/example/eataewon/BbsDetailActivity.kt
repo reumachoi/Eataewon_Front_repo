@@ -41,12 +41,12 @@ class BbsDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val writeData = intent.getParcelableExtra<BbsDto>("writeData")
-        println("글쓰기하고 넘어온  seq 확인 ${writeData?.seq.toString()}~~~~~~~")
+        val writeSeq = intent.getIntExtra("writeSeq",0)
+        println("글쓰기하고 넘어온  seq 확인 ${writeSeq}~~~~~~~")
 
         var getBbsList: BbsDto? = null
-        if(writeData!=null){
-            getBbsList = BbsDao.getInstance().getBbsListApp(writeData.seq!!)
+        if(writeSeq!=null){
+            getBbsList = BbsDao.getInstance().getBbsListApp(writeSeq)
             println("getBbsList == writeData")
             println("getBbsList 출력 !!!! ${getBbsList.toString()}")
         }
@@ -56,10 +56,6 @@ class BbsDetailActivity : AppCompatActivity() {
         val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
-
- /*       //툴바 생성_안도현
-        val toolbar = binding.bbsdetailToolbar
-        setSupportActionBar(toolbar)*/
 
 
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)

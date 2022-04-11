@@ -193,13 +193,6 @@
                         android:background="@color/black"/>
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="핵시태그"
-                    android:textColor="@color/white"
-                    android:background="@color/black"/>
-
-                <TextView
                     android:id="@+id/DeHashtag"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
@@ -227,56 +220,57 @@
 
                 </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/showDetailShopField"
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:visibility="gone">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/showDetailShopField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
 
                     <TextView
-                        android:id="@+id/DeBbsShopLocaT"
-                        android:layout_width="67dp"
-                        android:layout_height="27dp"
-                        android:layout_marginTop="16dp"
-                        android:text="가게주소"
-                        android:textColor="@color/black"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.047"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                            android:id="@+id/DeBbsShopLocaT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="가게주소"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.047"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
 
                     <TextView
-                        android:id="@+id/DeBbsShopPhT"
-                        android:layout_width="100dp"
-                        android:layout_height="28dp"
-                        android:layout_marginTop="20dp"
-                        android:text="가게전호번호"
-                        android:textColor="@color/black"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.051"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/DeBbsShopLocaT" />
+                            android:id="@+id/DeBbsShopPhT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="가게전화번호"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.047"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
                     <TextView
                             android:id="@+id/DeBbsShopUrlT"
-                            android:layout_width="100dp"
-                            android:layout_height="28dp"
-                            android:layout_marginTop="20dp"
-                            android:text="가게전호번호"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="가게url"
                             android:textColor="@color/black"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.051"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/DeBbsShopLocaT"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
                 <FrameLayout
-                    android:id="@+id/mapContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="337dp"
-                    android:layout_marginTop="16dp"
-                    android:visibility="gone"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/detailDateText"></FrameLayout>
+                        android:id="@+id/mapContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/detailDateText"></FrameLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

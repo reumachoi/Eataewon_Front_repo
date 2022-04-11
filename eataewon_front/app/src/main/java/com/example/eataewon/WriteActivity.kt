@@ -147,7 +147,7 @@ class WriteActivity : AppCompatActivity() {
 
                 if(seq!! >0){
                     Toast.makeText(this,"글쓰기가 완료되었습니다",Toast.LENGTH_SHORT).show()
-                    var i = Intent(this,HomeActivity::class.java)
+                    var i = Intent(this,BbsDetailActivity::class.java)
                     i.putExtra("writeSeq",seq)
                     startActivity(i)
                 }else{
