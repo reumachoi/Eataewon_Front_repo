@@ -50,18 +50,16 @@ class WriteActivity : AppCompatActivity() {
         val formatted = current.format(formatter)
 
         //로그인 유저정보
-        val user = intent.getParcelableExtra<MemberDto>("user")
+        //val user = intent.getParcelableExtra<MemberDto>("user")
         val prefs = getSharedPreferences("sharedPref", 0)
         val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
 
-        val writeuserid = findViewById<TextView>(R.id.write_userNickname)
-        val writedate = findViewById<TextView>(R.id.write_date)
-        writeuserid.text = user?.id.toString()
-        writedate.text = formatted
+        binding.writeUserNickname.text = loginUserId
+        binding.writeDate.text = formatted
 
-        val userProfilPic = MemberDao.getInstance().getProfilPic(user?.id!!)
+        val userProfilPic = MemberDao.getInstance().getProfilPic(loginUserId!!)
         println("글쓴이 프로필 사진 가져오기 ${userProfilPic}")
         binding.writeProfilPic.setImageURI(Uri.parse(userProfilPic))
 

@@ -79,7 +79,7 @@ class SearchKakaoMapActivity : AppCompatActivity() {
 
         // 이전 페이지 버튼
         binding.btnPrevPage.setOnClickListener {
-            var i = Intent(this,WriteActivity::class.java)
+            var i = Intent(this,HomeActivity::class.java)
             startActivity(i)
         }
 
