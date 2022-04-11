@@ -95,7 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="120dp">
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profilPicture"
                         android:layout_width="66dp"
                         android:layout_height="64dp"
@@ -193,12 +193,12 @@
                         android:background="@color/black"/>
 
                 <TextView
-                    android:id="@+id/DeHashtag"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:text="#장소"
-                    android:textColor="@color/white"
-                    android:background="@color/black"/>
+                        android:id="@+id/DeHashtag"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="#장소"
+                        android:textColor="@color/white"
+                        android:background="@color/black"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"

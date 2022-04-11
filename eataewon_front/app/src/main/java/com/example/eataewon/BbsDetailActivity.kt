@@ -88,10 +88,11 @@ class BbsDetailActivity : AppCompatActivity() {
         println("글쓴이 아이디 : ${data?.id}")
         val profilPic = MemberDao.getInstance().getProfilPic(data?.id.toString()!!)
         val picture = data?.picture.toString().split(" ")
+        println(picture.toString() + "사진사진~~~~~~~")
 
         //툴바 타이틀에 넣기_안도현
-        //toolbar.title=data?.title
-        binding.profilPicture.setImageURI(Uri.parse(profilPic!![0].toString()))
+        binding.bbsdetailToolbar.title=data?.title
+        binding.profilPicture.setImageURI(Uri.parse(profilPic?.trim()))
         binding.DeBbsUserT.text = data?.nickname
         binding.DeBbsLikePoT.text = "${data?.likecnt.toString()}명 좋아요"
         binding.DeBbsWdateT.text = data?.wdate
@@ -113,28 +114,50 @@ class BbsDetailActivity : AppCompatActivity() {
         val frag3 = Fragment3()
         val frag4 = Fragment4()
 
-        val fragList = listOf<Fragment>(frag1,frag2,frag3,frag4)
-        val adapter = ViewPagerAdapter(this)
-        adapter.fList = fragList
-        vPager2.adapter = adapter
+        //등록된 사진 수만큼 보여주기
+        if(picture.size == 1){
+            val fragList = listOf<Fragment>(frag1)
+            val adapter = ViewPagerAdapter(this)
+            adapter.fList = fragList
+            vPager2.adapter = adapter
+
+            frag1.setImg(picture[0])
+
+        }else if(picture.size == 2){
+            val fragList = listOf<Fragment>(frag1,frag2)
+            val adapter = ViewPagerAdapter(this)
+            adapter.fList = fragList
+            vPager2.adapter = adapter
+
+            frag1.setImg(picture[0])
+            frag2.setImg(picture[1])
+
+        }else if(picture.size == 3){
+            val fragList = listOf<Fragment>(frag1,frag2, frag3)
+            val adapter = ViewPagerAdapter(this)
+            adapter.fList = fragList
+            vPager2.adapter = adapter
+
+            frag1.setImg(picture[0])
+            frag2.setImg(picture[1])
+            frag3.setImg(picture[2])
+
+        }else{
+            val fragList = listOf<Fragment>(frag1,frag2, frag3, frag4)
+            val adapter = ViewPagerAdapter(this)
+            adapter.fList = fragList
+            vPager2.adapter = adapter
+
+            frag1.setImg(picture[0])
+            frag2.setImg(picture[1])
+            frag3.setImg(picture[2])
+            frag4.setImg(picture[3])
+        }
 
         //인디케이터
         TabLayoutMediator(tabLayout, vPager2) { tab, position ->
             //Some implementation...
         }.attach()
-
-        //등록된 사진 수만큼 보여주기
-        if(picture[0]!=null){
-            frag1.setImg(picture[0])
-        }else if(picture[1]!=null){
-            frag2.setImg(picture[1])
-        }else if(picture[2]!=null){
-            frag3.setImg(picture[2])
-        }else if(picture[3]!=null){
-            frag4.setImg(picture[3])
-        }
-
-
 
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
         //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
