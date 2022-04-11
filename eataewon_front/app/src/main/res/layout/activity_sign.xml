@@ -240,7 +240,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/signUp_profilmsg"
                 tools:ignore="MissingConstraints">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/signUp_profilpic"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
