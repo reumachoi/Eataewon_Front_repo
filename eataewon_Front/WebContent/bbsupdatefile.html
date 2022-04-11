@@ -7,7 +7,33 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+span{
+font-size: 12px;
+font-family: 'Montserrat', sans-serif;
+}
+
+#table1{
+font-family: 'Montserrat', sans-serif;
+}
+
+#buttons{
+text-align:center;
+}
+
+#inputBtn{
+text-align:center;
+}
+
+/* #uploadResult{
+text-align:center;
+} */
+
+
+
+</style> 
 
 
 <!-- Navibar css -->
@@ -20,9 +46,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
 
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-	
-	
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>	
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -80,6 +104,7 @@
 	      </div>
 	    </div>
 	  </nav>
+	  </section>
 <!-- END nav -->
 
 	
@@ -90,33 +115,6 @@
 <script src="cssHeader/js/bootstrap.min.js"></script>
 <script src="cssHeader/js/main.js"></script>	
 	
-
-<style type="text/css">
-
-span{
-font-size: 12px;
-font-family: 'Montserrat', sans-serif;
-}
-
-#table1{
-font-family: 'Montserrat', sans-serif;
-}
-
-#buttons{
-text-align:center;
-}
-
-#inputBtn{
-text-align:center;
-}
-
-/* #uploadResult{
-text-align:center;
-} */
-
-
-
-</style> 
 
 
 </head>
@@ -162,7 +160,7 @@ text-align:center;
 <tr>
 	<th><span>Content</span></th>
 	<td>
-		<textarea class="form-control" id="content"></textarea>
+		<textarea class="form-control" rows="10" id="content"></textarea>
 	</td>
 </tr>
 
@@ -173,16 +171,11 @@ text-align:center;
 		<div id="uploadResult" > 
 		</div>
 		<br>
-		<input name="uploadFiles" type="file" multiple> 
+		<input name="uploadFiles" type="file" multiple id="uploadResultImg"> 
+		<div class="uploadResult2"></div>
     	</td>			
 	<tr>
 		
-<!-- 		<tr>
-		<td colspan="2">
-			<div id="inputBtn"><input name="uploadFiles" type="file" multiple> 
-     		</td>
-		</tr> -->
-
 <tr>
 	<th><span>HashTag#</span></th>
 	<td>
@@ -307,6 +300,35 @@ $.ajax({
 	}
 });
 
+
+//파일 첨부시 미리보기
+
+var sel_files = [];
+
+$("#uploadResultImg").on("change", handleImgsFilesSelect);
+
+function handleImgsFilesSelect(e) {
+	var files = e.target.files;
+	var filesArr = Array.prototype.slice.call(files);
+
+	filesArr.forEach(function(f) {
+
+		sel_files.push(f);
+		
+		$(".uploadResult2").html("");
+
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			var img_html = "<img src=\""+e.target.result+"\" width='500' height='500'  />";
+			var explain = "<br><p>변경할 이미지</p>";
+			$(".uploadResult2").append(explain);
+			$(".uploadResult2").append(img_html);
+		}
+		reader.readAsDataURL(f);
+	});
+}
+
+//미리보기 코드 끝
 
 
 $("#bbsupdate").click(function () {
