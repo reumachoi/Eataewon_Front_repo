@@ -20,10 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.eataewon.connect.BbsDao
-import com.example.eataewon.connect.BbsDto
-import com.example.eataewon.connect.MapSearchListDto
-import com.example.eataewon.connect.MemberDto
+import com.example.eataewon.connect.*
 import com.example.eataewon.databinding.ActivityWriteBinding
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -59,10 +56,14 @@ class WriteActivity : AppCompatActivity() {
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
 
-        val writeuserid = findViewById<TextView>(R.id.update_userNickname)
-        val writedate = findViewById<TextView>(R.id.update_date)
+        val writeuserid = findViewById<TextView>(R.id.write_userNickname)
+        val writedate = findViewById<TextView>(R.id.write_date)
         writeuserid.text = user?.id.toString()
         writedate.text = formatted
+
+        val userProfilPic = MemberDao.getInstance().getProfilPic(user?.id!!)
+        println("글쓴이 프로필 사진 가져오기 ${userProfilPic}")
+        binding.writeProfilPic.setImageURI(Uri.parse(userProfilPic))
 
         val recyclerView = findViewById<RecyclerView>(R.id.write_recyclerview)
 
@@ -140,7 +141,7 @@ class WriteActivity : AppCompatActivity() {
                 val seq = BbsDao.getInstance().bbswrite(dto)
                 println("글쓰기 통신결과 넘어온 seq값 ${seq}!!!!!!!!!!!")
 
-                val checkLikeP = BbsDao.getInstance().LikePWriteUp(dto.id!!)
+                val checkLikeP = BbsDao.getInstance().LikePWriteUp(id!!)
                 if(checkLikeP==true){
                     println("글쓰기로 ${dto.id}의 호감도가 상승했습니다")
                 }else{

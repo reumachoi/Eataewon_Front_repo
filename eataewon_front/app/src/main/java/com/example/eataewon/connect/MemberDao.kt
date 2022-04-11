@@ -166,7 +166,7 @@ class MemberDao {
 
     fun deleteMem(dto: MemberDto):String?{
         var response: Response<String>?
-        println("getProfilPic Id: ${dto}")
+        println("deleteMem Id: ${dto}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java) /// 이쪽을 변경 해야 될듯

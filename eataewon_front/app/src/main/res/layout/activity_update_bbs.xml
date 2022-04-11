@@ -100,7 +100,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/writeProfilPic"
                         android:layout_width="66dp"
                         android:layout_height="66dp"
                         app:srcCompat="@drawable/ic_baseline_account_circle_24" />

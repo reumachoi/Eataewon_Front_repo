@@ -246,7 +246,7 @@ class BbsDao {
 
     fun LikePWriteUp(id:String):Boolean?{
         var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
+        println("글쓰기 하고난 후에 작성자 호감도 증가 LikePWriteUp Id: ${id}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)

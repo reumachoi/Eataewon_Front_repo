@@ -177,6 +177,16 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 if (login != null) {
                     Toast.makeText(this, "환영합니다. ${login.id}님", Toast.LENGTH_SHORT).show()
 
+                    println("로그인정보 ${login.toString()}")
+
+                    //로그인유저 아이디 저장값 넘겨주기
+                    val sharedPreference = getSharedPreferences("sharedPref", 0)
+                    val editor = sharedPreference.edit()
+                    editor.putString("loginUserId",login.id)
+                    editor.apply()
+                    editor.putString("loginUserNickname",login.nickname)
+                    editor.commit()
+
                     //안도현(로그인 후 홈엑티비티로 넘어가면서 intent.put으로 login값 넘기기)
                     val intent = Intent(this,HomeActivity::class.java)
                     intent.putExtra("user",login)
