@@ -19,7 +19,6 @@
 
     <style name="ToolbarThema" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:fontFamily">@font/font</item>
-
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>

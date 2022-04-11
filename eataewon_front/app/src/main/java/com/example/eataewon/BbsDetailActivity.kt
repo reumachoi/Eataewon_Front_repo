@@ -94,7 +94,7 @@ class BbsDetailActivity : AppCompatActivity() {
         val picture = data?.picture.toString().split(" ")
 
         //툴바 타이틀에 넣기_안도현
-        //toolbar.title=data?.title
+        toolbar.title=data?.title
         binding.profilPicture.setImageURI(Uri.parse(profilPic!![0].toString()))
         binding.DeBbsUserT.text = data?.nickname
         binding.DeBbsLikePoT.text = "${data?.likecnt.toString()}명 좋아요"
