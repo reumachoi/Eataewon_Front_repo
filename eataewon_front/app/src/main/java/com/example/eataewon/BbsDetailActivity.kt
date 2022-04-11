@@ -142,6 +142,12 @@ class BbsDetailActivity : AppCompatActivity() {
 
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
         //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
+
+        //기본으로는 좋아요,스크랩 안한상태
+        binding.HeartBtn.isSelected = false
+        binding.ScrapBtn.isSelected = false
+
+
         var id = loginUserId
         var bbsseq = data?.seq
 
@@ -194,6 +200,9 @@ class BbsDetailActivity : AppCompatActivity() {
             if(binding.HeartBtn.isSelected != true){
                 binding.HeartBtn.isSelected = true  //좋아요 누르기
 
+                val plusBbsLikecnt = BbsDao.getInstance().likecntPlus(data?.seq!!)
+                println("현재 글 번호 : ${data?.seq} 좋아요수 상승결과 ${plusBbsLikecnt}")
+
                 //이태원라이크 테이블에 유저값 넣어주기
                 val id = loginUserId
                 val bbsseq = data?.seq
@@ -214,6 +223,9 @@ class BbsDetailActivity : AppCompatActivity() {
 
             }else{
                 binding.HeartBtn.isSelected = false //좋아요 누른거 취소
+
+                val minusBbsLikecnt = BbsDao.getInstance().likecntMinus(data?.seq!!)
+                println("현재 글 번호 : ${data?.seq} 좋아요수 하락결과 ${minusBbsLikecnt}")
 
                 //+이태원라이크 테이블에 유저값 삭제하기
                 val id = loginUserId

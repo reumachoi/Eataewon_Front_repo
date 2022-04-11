@@ -50,7 +50,6 @@ class WriteActivity : AppCompatActivity() {
         val formatted = current.format(formatter)
 
         //로그인 유저정보
-        //val user = intent.getParcelableExtra<MemberDto>("user")
         val prefs = getSharedPreferences("sharedPref", 0)
         val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")

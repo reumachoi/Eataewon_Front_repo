@@ -15,12 +15,21 @@ interface BbsService {
     @POST("/bbsupdateApp")
     fun bbsUpdate(@Body dto:BbsDto) : Call<Boolean>
 
+    @Headers("Content-Type: application/json")
     @POST("/bbsdeleteApp")
     fun bbsDelete(@Body seq:Int) : Call<Boolean>
 
     @Headers("Content-Type: application/json")
     @POST("/plustReadcntApp")
     fun updateReadcnt(@Body seq:Int) : Call<String>
+
+    @Headers("Content-Type: application/json")
+    @POST("/likecntPlus")
+    fun likecntPlus(@Body seq:Int) : Call<Boolean>
+
+    @Headers("Content-Type: application/json")
+    @POST("/likecntMinus")
+    fun likecntMinus(@Body seq:Int) : Call<Boolean>
 
     @POST("/bbsScrapApp")
     fun insertScrap(@Body dto:ScrapDto) : Call<Boolean>
@@ -152,6 +161,34 @@ class BbsDao {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
             val call = service?.bbsUpdate(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun likecntPlus(seq:Int) : Boolean?{
+        var response: Response<Boolean>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.likecntPlus(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun likecntMinus(seq:Int) : Boolean?{
+        var response: Response<Boolean>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.likecntMinus(seq)
             response = call?.execute()
         }catch(e:Exception){
             response = null
