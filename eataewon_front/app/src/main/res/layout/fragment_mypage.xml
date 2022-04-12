@@ -24,30 +24,37 @@
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/mypage_likepoint"
+            android:layout_width="102dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="108dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/mypageProfilpicBtn"
+            app:layout_constraintStart_toEndOf="@+id/mypageProfilpicBtn" android:layout_marginBottom="4dp"/>
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginBottom="20dp"
-            android:text="프로필 사진"
+            android:layout_marginBottom="8dp"
+            android:text="호감도"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_profil_image"
-            app:layout_constraintStart_toStartOf="@+id/mypage_profil_image" />
+            app:layout_constraintBottom_toTopOf="@+id/mypage_likepoint"
+            app:layout_constraintStart_toStartOf="@+id/mypage_likepoint"/>
 
     <ImageView
             android:id="@+id/mypage_profil_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="84dp"
+            android:layout_width="130dp"
+            android:layout_height="115dp"
+            android:layout_marginStart="76dp"
             android:background="@drawable/style_profil_img"
             android:scaleType="centerCrop"
             android:src="@drawable/imgeview_sample"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" android:layout_marginTop="44dp"/>
     <TextView
             android:id="@+id/mypage_profilpic_uri"
             android:layout_width="wrap_content"
@@ -55,82 +62,24 @@
             android:text="TextView"
             app:layout_constraintEnd_toEndOf="@+id/mypage_profil_image"
             app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_profil_image" />
-
-    <Button
-            android:id="@+id/mypageProfilpicBtn"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:text="사진변경"
-            app:layout_constraintEnd_toEndOf="@+id/mypage_profil_image"
-            app:layout_constraintHorizontal_bias="0.475"
-            app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_profilpic_uri"
-            tools:ignore="TouchTargetSizeCheck" />
-
+            app:layout_constraintTop_toBottomOf="@+id/mypage_profil_image" app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginTop="32dp"/>
     <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="8dp"
             android:text="아이디"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/mypage_id"
-            app:layout_constraintStart_toStartOf="@+id/mypage_id" />
-
-    <TextView
-            android:id="@+id/mypage_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/mypage_likepoint"
-            app:layout_constraintTop_toTopOf="@+id/mypage_profil_image" />
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="호감도"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_likepoint"
-            app:layout_constraintStart_toStartOf="@+id/mypage_likepoint" />
-
-    <TextView
-            android:id="@+id/mypage_likepoint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
-            android:text="TextView"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/mypageProfilpicBtn"
-            app:layout_constraintStart_toEndOf="@+id/mypageProfilpicBtn" />
-
-    <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="이름"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_name"
-            app:layout_constraintStart_toStartOf="@+id/mypage_name" />
-
+            app:layout_constraintStart_toStartOf="@+id/mypage_id"/>
     <TextView
             android:id="@+id/mypage_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="32dp"
             android:gravity="center"
             android:text="TextView"
             android:textAlignment="center"
@@ -140,112 +89,84 @@
             app:layout_constraintEnd_toEndOf="@+id/mypage_id"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/mypage_id"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_id" />
-
+            app:layout_constraintTop_toBottomOf="@+id/mypage_id"/>
     <TextView
+            android:id="@+id/mypage_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="이메일"
-            android:textColor="@color/black"
-            android:textSize="15sp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_email"
-            app:layout_constraintStart_toStartOf="@+id/mypage_email" />
-
-    <EditText
-            android:id="@+id/mypage_email"
-            android:layout_width="400dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="80dp"
-            android:backgroundTint="@color/black"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@+id/mypage_likepoint"
+            app:layout_constraintTop_toTopOf="@+id/mypage_profil_image"/>
+    <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="프로필 사진"
             android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/mypage_profil_image"
+            app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"/>
+
+    <Button
+            android:id="@+id/mypageProfilpicBtn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="사진변경"
+            app:layout_constraintEnd_toEndOf="@+id/mypage_profil_image"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_likepoint"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
+            tools:ignore="TouchTargetSizeCheck" app:layout_constraintTop_toBottomOf="@+id/mypage_profil_image"
+            android:layout_marginTop="16dp"/>
     <TextView
+            android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="닉네임"
+            android:layout_marginBottom="8dp"
+            android:text="이름"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_nickname"
-            app:layout_constraintStart_toStartOf="@+id/mypage_nickname" />
-
-    <EditText
-            android:id="@+id/mypage_nickname"
-            android:layout_width="400dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="60dp"
-            android:backgroundTint="@color/black"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/mypage_email"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="@+id/mypage_email"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_email"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <TextView
+            app:layout_constraintBottom_toTopOf="@+id/mypage_name"
+            app:layout_constraintStart_toStartOf="@+id/mypage_name"/>
+    <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_button_group"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="소개"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_profilmsg"
-            app:layout_constraintStart_toStartOf="@+id/mypage_profilmsg" />
+            android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@+id/inMypageFragment"
+            app:layout_constraintBottom_toTopOf="@+id/inMypageFragment">
 
-    <EditText
-            android:id="@+id/mypage_profilmsg"
-            android:layout_width="400dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="60dp"
-            android:backgroundTint="@color/black"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/mypage_nickname"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="@+id/mypage_nickname"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_nickname"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
+        <com.google.android.material.button.MaterialButton
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내가 쓴 글 보기" android:id="@+id/lookMyBbsBtn"/>
+        <com.google.android.material.button.MaterialButton
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="내정보 수정하기" android:id="@+id/lookMeBtn"/>
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+    <androidx.fragment.app.FragmentContainerView
+            android:layout_width="487dp"
+            android:layout_height="413dp"
+            android:id="@+id/inMypageFragment"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" android:layout_marginTop="296dp"
+            app:layout_constraintHorizontal_bias="0.504" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.308"/>
     <Button
-            android:id="@+id/mypage_cancleBtn"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="취소"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:backgroundTint="#989898"
-            app:layout_constraintBottom_toBottomOf="@+id/mypage_updateBtn"
-            app:layout_constraintStart_toStartOf="@+id/mypage_profilmsg"
-            app:layout_constraintTop_toTopOf="@+id/mypage_updateBtn" />
+            android:text="Button"
+            android:layout_width="69dp"
+            android:layout_height="37dp" android:id="@+id/profilPicUpdateBtn"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_profilpic_uri"
+            android:layout_marginTop="20dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintBottom_toTopOf="@+id/toggle_button_group"/>
 
-    <Button
-            android:id="@+id/mypage_updateBtn"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="36dp"
-            android:text="수정"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/mypage_profilmsg"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_profilmsg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

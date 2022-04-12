@@ -20,7 +20,7 @@ class DeleteActivity : AppCompatActivity(),View.OnClickListener {
 
 
 
-       deletebtn.setOnClickListener(this)
+        deletebtn.setOnClickListener(this)
     }
 
 

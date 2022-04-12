@@ -54,8 +54,9 @@
                 android:name="com.kakao.sdk.AppKey"
                 android:value="@string/kakao_app_key" />
 
+
         <activity
-                android:name="com.example.eataewon.DeleteActivity"
+                android:name=".DeleteActivity"
                 android:exported="true"/>
 
         <activity

@@ -42,8 +42,8 @@ class BbsPagerAdapter (private val context: Context, private val datatList: Arra
         fun bind(bbsDto: BbsDto, position: Int) {
             shopName.text = bbsDto.shopname
             shopLocation.text = bbsDto.address
-            /*bbsPhotoView.setImageResource(bbsDto.picture)
-            userProfilePic.setImageResource(bbsDto.picture)*/
+            bbsPhotoView.setImageResource(bbsDto.picture)
+            userProfilePic.setImageResource(bbsDto.picture)
             userId.text = bbsDto.id
             bbsContent.text = bbsDto.content
 

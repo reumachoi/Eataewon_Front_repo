@@ -5,6 +5,8 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.database.Cursor
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
@@ -15,8 +17,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.MenuItemCompat
 import androidx.fragment.app.Fragment
+import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
 
@@ -32,11 +34,13 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
     lateinit var mypageProfilpicuri:TextView
     lateinit var mypageProfilpic: ImageView
 
+    var profilUri:String? = null
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_mypage, container, false)
 
         //임시 테스트
-        val user = arguments?.getParcelable<MemberDto>("user")
+        val user = arguments?.getParcelable<MemberDto>("user") // 멤버에서 받아 온다.
 
         //상단 툴바바
         v.toolbar.inflateMenu(R.menu.mypage_menu_item)
@@ -48,9 +52,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         val mypageId = v.findViewById<TextView>(R.id.mypage_id)
         val mypageName = v.findViewById<TextView>(R.id.mypage_name)
         val mypageLikepoint = v.findViewById<TextView>(R.id.mypage_likepoint)
-        val mypageEmail = v.findViewById<TextView>(R.id.mypage_email)
-        val mypageNickname = v.findViewById<TextView>(R.id.mypage_nickname)
-        val mypageProfilmsg = v.findViewById<TextView>(R.id.mypage_profilmsg)
+
 
         //이미지
         mypageProfilpic = v.findViewById(R.id.mypage_profil_image)
@@ -58,22 +60,34 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
 
         //버튼
         val updateBtn = v.findViewById<Button>(R.id.mypage_updateBtn)
-        val cancleBtn = v.findViewById<Button>(R.id.mypage_cancleBtn)
         val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
 
         //텍스트뷰에 값 입력
         mypageId.text = user?.id
         mypageName.text = user?.name
-        mypageLikepoint.text = user?.likepoint.toString()
-        mypageEmail.text = user?.email
-        mypageNickname.text = user?.nickname
-        mypageProfilmsg.text = user?.profilmsg
+        mypageLikepoint.text = user?.likepoint.toString()  // 인기도 표기
+
 
         //이미지 불러오기
         //mypageProfilpic.setImageURI(user?.profilPic?.toUri())
 
         //사진
         imageBtn.setOnClickListener { GetAlbum() }
+
+
+
+
+
+        v.profilPicUpdateBtn.setOnClickListener {
+            println("${profilUri}!!!!!!!!")
+            val id = user?.id
+            val profilpic = profilUri
+            val dto = MemberDto(id,"","","","",profilpic,0,"",0)
+            val result = MemberDao.getInstance().updateUserProfilPic(dto)
+            if (result==true){
+                println("성공적으로 프로필 사진이 변경 되셨습니다.")
+            }
+        }
 
         //툴바 메뉴 클릭
         v.toolbar.setOnMenuItemClickListener{
@@ -98,22 +112,38 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         }
 
 
-        //취소 버튼 이벤트
-        cancleBtn.setOnClickListener{
+        v.lookMyBbsBtn.setOnClickListener {
+            //v.lookMeBtn.setBackgroundColor(Color.rgb(255, 255, 255))
 
+            val mypageGetBbsFragment = mypageGetBbsFragment()
+            childFragmentManager.beginTransaction()
+                .replace(R.id.inMypageFragment, mypageGetBbsFragment)
+                .commit()
         }
 
+        v.lookMeBtn.setOnClickListener {
+            //v.lookMyBbsBtn.setBackgroundColor(Color.rgb(255, 255, 255))
 
-        //수정 버튼 이벤트
-        updateBtn.setOnClickListener{
-
+            val mypageUpdateFragment = mypageUpdateFragment()
+            childFragmentManager.beginTransaction()
+                .replace(R.id.inMypageFragment, mypageUpdateFragment)
+                .commit()
         }
-
 
         return v
     }
 
-    // uri와 이미지뷰에 저장
+    fun getPath(uri: Uri?): String {
+        val projection = arrayOf<String>(MediaStore.Images.Media.DATA)
+        val cursor: Cursor = homeActivity.managedQuery(uri, projection, null, null, null)
+        homeActivity.startManagingCursor(cursor)
+        val columnIndex: Int = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        cursor.moveToFirst()
+        return cursor.getString(columnIndex)
+    }
+
+
+    // uri와 이미지뷰에 저장 //이코드 를 변경해서 uri를 dto
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -123,6 +153,9 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
                     val uri = data?.data
                     mypageProfilpicuri.text = uri.toString()
                     mypageProfilpic.setImageURI(uri)
+
+                    profilUri =  getPath(uri)
+                    println("${profilUri}~~~~~~~~~~~~~~~")
                 }
             }
         }
@@ -171,7 +204,8 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         inflater.inflate(R.menu.mypage_menu_item,menu)
     }
 
-   // 인기도
+
+
 
 }
 

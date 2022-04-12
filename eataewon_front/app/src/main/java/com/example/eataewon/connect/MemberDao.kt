@@ -22,12 +22,19 @@ interface MemberService{
     @POST("/bbsGetUser")
     fun bbsGetUser(@Body id:String): Call<MemberBbsDto>
 
+    @POST("/findUserData")
+    fun findUserData(@Body dto:MemberDto):Call<MemberDto>
 
-    @POST("getProfilPicApp")
-    fun getProfilPic(@Body id:String):Call<String>
+    @POST("/updateUserData")
+    fun updateUserData(@Body dto: MemberDto):Call<Boolean>
 
     @POST("/deleteMem")
     fun deleteMem(@Body dto:MemberDto): Call<String>
+
+    @POST("/updateUserProfilPic")
+    fun  updateUserProfilPic(@Body dto: MemberDto): Call<Boolean>
+
+
 }
 
 class MemberDao {
@@ -109,13 +116,27 @@ class MemberDao {
         return response?.body()
     }
 
-    fun getProfilPic(id:String):String?{
-        var response : Response<String>?
-        println("getProfilPic Id: ${id}")
+    fun findUserData(dto: MemberDto):MemberDto?{
+        var response : Response<MemberDto>?
+        println("findUserData dto: ${dto}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(MemberService::class.java)
-            val call = service?.getProfilPic(id)
+            val call = service?.findUserData(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun updateUserData(dto: MemberDto):Boolean?{
+        var response : Response<Boolean>?
+        println("updateUserData dto: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.updateUserData(dto)
             response = call?.execute()
         }catch(e:Exception){
             response = null
@@ -138,5 +159,19 @@ class MemberDao {
         return response?.body()
     }
 
+    fun updateUserProfilPic(dto: MemberDto ): Boolean?{
+        var response: Response<Boolean>?
+        println("updateUserProfilPic !${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java) /// 이쪽을 변경 해야 될듯
+            val call = service?.updateUserProfilPic(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
+        return response?.body()
+    }
 
 }

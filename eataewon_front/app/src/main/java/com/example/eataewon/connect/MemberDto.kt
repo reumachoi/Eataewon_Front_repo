@@ -3,6 +3,7 @@ package com.example.eataewon.connect
 import android.os.Parcel
 import android.os.Parcelable
 
+
 class MemberDto(
     var id:String?,
     val name:String?,
@@ -13,8 +14,7 @@ class MemberDto(
     val likepoint:Int,
     val profilmsg:String?,
     val del:Int
-    ): Parcelable{
-
+): Parcelable{
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -24,8 +24,7 @@ class MemberDto(
         parcel.readString(),
         parcel.readInt(),
         parcel.readString(),
-                parcel.readInt()
-
+        parcel.readInt()
     ) {
     }
 
@@ -46,7 +45,7 @@ class MemberDto(
     }
 
     override fun toString(): String {
-        return "MemberDto(id=$id, name=$name, pwd=$pwd, email=$email, nickname=$nickname, profilpic=$profilpic, likepoint=$likepoint, profilmsg=$profilmsg,del=$del )"
+        return "MemberDto(id=$id, name=$name, pwd=$pwd, email=$email, nickname=$nickname, profilpic=$profilpic, likepoint=$likepoint, profilmsg=$profilmsg, del=$del)"
     }
 
     companion object CREATOR : Parcelable.Creator<MemberDto> {

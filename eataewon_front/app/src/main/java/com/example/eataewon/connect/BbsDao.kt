@@ -6,46 +6,24 @@ import retrofit2.http.*
 
 interface BbsService {
 
-    @GET("/getBbsListApp")
-    fun getBbsList(@Body seq:Int): Call<BbsDto>
-
-    @POST("/bbsdetail")
-    fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
-
-    @POST("/bbsupdateApp")
-    fun bbsUpdate(@Body dto:BbsDto) : Call<Boolean>
-
-    @POST("/bbsdeleteApp")
-    fun bbsDelete(@Body seq:Int) : Call<Boolean>
-
-    @POST("/bbswriteApp")
-    fun bbswrite(@Body dto:BbsDto) : Call<Int>
+    @GET("/getBbsList")
+    fun getBbsList(): Call<List<BbsDto>>
 
     @Headers("Content-Type: application/json")
     @POST("/plustReadcntApp")
     fun updateReadcnt(@Body seq:Int) : Call<String>
 
-    @POST("/bbsScrapApp")
-    fun insertScrap(@Body dto:ScrapDto) : Call<Boolean>
+    @POST("/bbsScrap")
+    fun plusBbsScrap(@Body dto:BbsDto): Call<String>
 
-    @POST("/bbsLikeApp")
-    fun insertLike(@Body dto:LikeDto) : Call<Boolean>
+    @POST("/likeBbs")
+    fun plusBbsLike(@Body dto:BbsDto) : Call<String>
 
-    @POST("/LikePWriteUp")
-    fun LikePWriteUp(@Body id:String): Call<Boolean>
+    @POST("/bbsdetail")
+    fun getBbsDetail(@Body seq:Int) : Call<BbsDto>
 
-    @POST("/LikePHeartUp")
-    fun LikePHeartUp(@Body id:String): Call<Boolean>
-
-    @POST("/LikePScrapUp")
-    fun LikePScrapUp(@Body id:String): Call<Boolean>
-
-    @POST("/LikePHeartDown")
-    fun LikePHeartDown(@Body id:String): Call<Boolean>
-
-    @POST("/LikePScrapDown")
-    fun LikePScrapDown(@Body id:String): Call<Boolean>
-
+    @POST("/bbsdelete")
+    fun bbsdelete(@Body seq:Int) : Call<Boolean>
 
     //카카오 로컬 검색
     @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
@@ -74,19 +52,6 @@ class BbsDao {
         }
     }
 
-    fun getBbsList(seq:Int):BbsDto?{
-        var response: Response<BbsDto>?
-        println("SEQ: ${seq}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.getBbsList(seq)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
 
     fun updateReadcnt(seq:Int) : String?{
         var response: Response<String>?
@@ -95,49 +60,6 @@ class BbsDao {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
             val call = service?.updateReadcnt(seq)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun bbswrite(dto:BbsDto) : Int?{
-        var response: Response<Int>?
-        println("DTO: ${dto}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.bbswrite(dto)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-
-        return response?.body()
-    }
-
-    fun bbsUpdate(dto:BbsDto):Boolean?{
-        var response: Response<Boolean>?
-        println("DTO: ${dto}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.bbsUpdate(dto)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun bbsDelete(seq:Int) : Boolean?{
-        var response: Response<Boolean>?
-        println("SEQ: ${seq}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.bbsDelete(seq)
             response = call?.execute()
         }catch(e:Exception){
             response = null
@@ -159,104 +81,4 @@ class BbsDao {
 
         return response?.body()
     }
-
-    fun insertScrap(dto:ScrapDto):Boolean?{
-        var response: Response<Boolean>?
-        println("Dto: ${dto}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.insertScrap(dto)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun insertLike(dto:LikeDto):Boolean?{
-        var response: Response<Boolean>?
-        println("Dto: ${dto}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.insertLike(dto)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePWriteUp(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.LikePWriteUp(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePHeartUp(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePWriteUp Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.LikePHeartUp(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePHeartDown(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePHeartDown Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.LikePHeartDown(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePScrapUp(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePScrapUp Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.LikePScrapUp(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun LikePScrapDown(id:String):Boolean?{
-        var response : Response<Boolean>?
-        println("LikePScrapDown Id: ${id}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.LikePScrapDown(id)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-
 }

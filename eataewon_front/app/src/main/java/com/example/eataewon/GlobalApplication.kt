@@ -6,7 +6,6 @@ import com.naver.maps.map.NaverMapSdk
 
 //카카오 로그인
 class GlobalApplication : Application() {
-
     override fun onCreate() {
         super.onCreate()
 

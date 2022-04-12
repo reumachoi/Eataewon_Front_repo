@@ -49,7 +49,8 @@
                         android:layout_marginEnd="25dp"
                         android:layout_weight="1"
                         android:text="삭제"
-                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -61,23 +62,25 @@
                         android:layout_height="37dp"
                         android:layout_weight="1"
                         android:text="수정"
-                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/white"
                         app:layout_constraintBottom_toBottomOf="@+id/deleteBtn"
                         app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
                         app:layout_constraintTop_toTopOf="@+id/deleteBtn" />
 
                     <TextView
-                            android:id="@+id/DeBbsWdateT"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="36dp"
-                            android:layout_weight="1"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.698"/>
+                        android:id="@+id/DeBbsWdateT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+
+                        android:text="2010-10-20"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.698" />
 
                     <TextView
                         android:id="@+id/textView15"
@@ -94,7 +97,7 @@
                     android:layout_height="120dp">
 
                     <ImageView
-                        android:id="@+id/profilPicture"
+                        android:id="@+id/imageView3"
                         android:layout_width="66dp"
                         android:layout_height="64dp"
                         android:layout_marginStart="32dp"
@@ -105,14 +108,14 @@
 
                     <TextView
 
-                            android:id="@+id/textView17"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="닉네임"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="@+id/DeBbsUserT"
-                            app:layout_constraintTop_toTopOf="@+id/profilPicture"/>
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/DeBbsUserT"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
                     <TextView
                         android:id="@+id/DeBbsLikePoT"
@@ -130,16 +133,17 @@
                         app:layout_constraintVertical_bias="0.857" />
 
                     <TextView
-                            android:id="@+id/DeBbsUserT"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_weight="1"
-                            android:textColor="@color/black"
-                            android:textSize="30sp"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="@+id/profilPicture"
-                            app:layout_constraintStart_toEndOf="@+id/profilPicture"/>
+                        android:id="@+id/DeBbsUserT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="UserID"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -148,11 +152,12 @@
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="@+id/DeBbsLikePoT"
-                        app:layout_constraintTop_toTopOf="@+id/profilPicture" />
+                        app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <HorizontalScrollView
+
                     android:layout_width="match_parent"
                     android:layout_height="443dp">
 
@@ -160,40 +165,41 @@
                         android:id="@+id/picLinear"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                    >
+                        android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/DeImg1"
+                            android:id="@+id/imageView4"
                             android:layout_width="583dp"
                             android:layout_height="466dp"
                             android:layout_weight="1"
-                            android:visibility="gone"
                             app:srcCompat="@drawable/cafe1" />
 
                         <ImageView
-                            android:id="@+id/DeImg2"
+                            android:id="@+id/imageView5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:visibility="gone"
                             app:srcCompat="@drawable/cafe2" />
 
                         <ImageView
-                                android:id="@+id/DeImg3"
+                                android:id="@+id/imageView6"
                                 android:layout_width="359dp"
                                 android:layout_height="443dp"
                                 android:layout_weight="1"
-                                android:visibility="gone"
                                 app:srcCompat="@drawable/cafe5"/>
                         <ImageView
-                            android:id="@+id/DeImg4"
+                            android:id="@+id/imageView8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:visibility="gone"
                             app:srcCompat="@drawable/cafe4" />
 
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/cafe3" />
                     </LinearLayout>
                 </HorizontalScrollView>
 
@@ -210,13 +216,20 @@
                     android:layout_height="165dp"
                     android:text="큐레이션 내용"
                     android:textColor="@color/black" />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="해시태그"
+                        android:textColor="@color/white"
+                        android:background="@color/black"/>
 
                 <TextView
                     android:id="@+id/DeHashtag"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:text="해시태그"
-                    android:textColor="@color/black" />
+                    android:text="#장소"
+                    android:textColor="@color/white"
+                    android:background="@color/black"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -224,7 +237,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/DeShopName"
+                        android:id="@+id/DeLocation"
                         android:layout_width="279dp"
                         android:layout_height="match_parent"
                         android:text="가게이름"
@@ -236,7 +249,6 @@
                         android:layout_height="match_parent"
                         android:text="더보기" />
 
-
                 </LinearLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -247,7 +259,7 @@
 
                     <TextView
                         android:id="@+id/DeBbsShopLocaT"
-                        android:layout_width="match_parent"
+                        android:layout_width="67dp"
                         android:layout_height="27dp"
                         android:layout_marginTop="16dp"
                         android:text="가게주소"
@@ -258,29 +270,16 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                            android:id="@+id/DeBbsShopPhT"
-                            android:layout_width="match_parent"
-                            android:layout_height="28dp"
-                            android:layout_marginTop="10dp"
-                            android:text="가게전호번호"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/DeBbsShopLocaT"/>
-                    <TextView
-                            android:id="@+id/DeBbsShopUrlT"
-                            android:layout_width="match_parent"
-                            android:layout_height="28dp"
-                            android:text="가게url"
-                            android:autoLink="web"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="10dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.051"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/DeBbsShopPhT"
-                            tools:layout_editor_absoluteY="146dp"/>
+                        android:id="@+id/DeBbsShopPhT"
+                        android:layout_width="100dp"
+                        android:layout_height="28dp"
+                        android:layout_marginTop="20dp"
+                        android:text="가게전호번호"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.051"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/DeBbsShopLocaT" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <FrameLayout
@@ -288,7 +287,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="337dp"
                     android:layout_marginTop="16dp"
-                    android:visibility="invisible"
+                    android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/detailDateText"></FrameLayout>
             </LinearLayout>
