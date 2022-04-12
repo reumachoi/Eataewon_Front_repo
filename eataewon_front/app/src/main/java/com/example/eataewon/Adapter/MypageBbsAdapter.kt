@@ -42,11 +42,11 @@ class MypageBbsAdapter(private val context: Context, private val dataList: Array
         private val wdate = itemView.findViewById<TextView>(R.id.wdateMyBbs)
 
         fun bind(bbsDto: BbsDto, context: Context) {
-            /*  // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
-              val picArray = bbsDto.testurl!!.split(" ")*/
+            // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
+            val picArray = bbsDto.picture!!.split(" ")
 
             println("MypageBbsAdapter ~~~~~~~~~~~~~~~~~~~~~~~${bbsDto.picture}")
-            shopPhoto.setImageURI(Uri.parse(bbsDto.picture.toString().trim()))
+            shopPhoto.setImageURI(Uri.parse(picArray[0]))
             shopName.text = bbsDto.shopname
             address.text = bbsDto.address
             wdate.text = bbsDto.wdate

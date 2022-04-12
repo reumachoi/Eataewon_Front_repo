@@ -157,120 +157,120 @@ class UpdateBbsActivity : AppCompatActivity() {
 
     }
 
-        //여러개의 이미지 선택
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            super.onActivityResult(requestCode, resultCode, data)
+    //여러개의 이미지 선택
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-            if (resultCode == RESULT_OK && requestCode == STORAGE_CODE) {
+        if (resultCode == RESULT_OK && requestCode == STORAGE_CODE) {
 
-                if (data?.clipData != null) { // 사진 여러개 선택한 경우
-                    val count = data.clipData!!.itemCount
-                    if (count > 10) {
-                        Toast.makeText(this, "사진은 10장까지 선택 가능합니다.", Toast.LENGTH_LONG)
-                        return
-                    }
-                    for (i in 0 until count) {
-                        val imageUri = data.clipData!!.getItemAt(i).uri
+            if (data?.clipData != null) { // 사진 여러개 선택한 경우
+                val count = data.clipData!!.itemCount
+                if (count > 10) {
+                    Toast.makeText(this, "사진은 10장까지 선택 가능합니다.", Toast.LENGTH_LONG)
+                    return
+                }
+                for (i in 0 until count) {
+                    val imageUri = data.clipData!!.getItemAt(i).uri
+                    list.add(imageUri)
+                }
+
+            } else { // 단일 선택
+                data?.data?.let { uri ->
+                    val imageUri : Uri? = data?.data
+                    if (imageUri != null) {
                         list.add(imageUri)
                     }
-
-                } else { // 단일 선택
-                    data?.data?.let { uri ->
-                        val imageUri : Uri? = data?.data
-                        if (imageUri != null) {
-                            list.add(imageUri)
-                        }
-                    }
                 }
-                adapter.notifyDataSetChanged()
             }
+            adapter.notifyDataSetChanged()
+        }
+    }
+
+    fun getPath(uri: Uri?): String {
+        val projection = arrayOf<String>(MediaStore.Images.Media.DATA)
+        val cursor: Cursor = managedQuery(uri, projection, null, null, null)
+        startManagingCursor(cursor)
+        val columnIndex: Int = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        cursor.moveToFirst()
+        return cursor.getString(columnIndex)
+    }
+
+    //리사이클러 뷰 업데터
+    class MultiImageAdapter(private val items: ArrayList<Uri>, val context: UpdateBbsActivity) :
+        RecyclerView.Adapter<MultiImageAdapter.ViewHolder>() {
+
+        override fun getItemCount(): Int = items.size
+
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+            val item = items[position]
+
+            //크기 설정
+            Glide.with(context).load(item)
+                .override(500, 500)
+                .into(holder.image)
+
+            holder.bind(items[position],context, items, this)
+
         }
 
-        fun getPath(uri: Uri?): String {
-            val projection = arrayOf<String>(MediaStore.Images.Media.DATA)
-            val cursor: Cursor = managedQuery(uri, projection, null, null, null)
-            startManagingCursor(cursor)
-            val columnIndex: Int = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
-            cursor.moveToFirst()
-            return cursor.getString(columnIndex)
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+            val inflatedView = LayoutInflater.from(parent.context).inflate(R.layout.write_image_item, parent, false)
+            return ViewHolder(inflatedView)
         }
 
-        //리사이클러 뷰 업데터
-        class MultiImageAdapter(private val items: ArrayList<Uri>, val context: UpdateBbsActivity) :
-            RecyclerView.Adapter<MultiImageAdapter.ViewHolder>() {
+        class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
-            override fun getItemCount(): Int = items.size
+            var image = v.findViewById<ImageView>(R.id.write_imageview)
+            var xButton = v.findViewById<ImageButton>(R.id.imgDeleteBtn)
+            var pos: Int? = null
 
-            override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-                val item = items[position]
-
-                //크기 설정
-                Glide.with(context).load(item)
-                    .override(500, 500)
-                    .into(holder.image)
-
-                holder.bind(items[position],context, items, this)
-
-            }
-
-            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-                val inflatedView = LayoutInflater.from(parent.context).inflate(R.layout.write_image_item, parent, false)
-                return ViewHolder(inflatedView)
-            }
-
-            class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-
-                var image = v.findViewById<ImageView>(R.id.write_imageview)
-                var xButton = v.findViewById<ImageButton>(R.id.imgDeleteBtn)
-                var pos: Int? = null
-
-                fun bind(item: Uri, context: Context, items: ArrayList<Uri>, adapter: MultiImageAdapter) {
-                    xButton.setOnClickListener {
+            fun bind(item: Uri, context: Context, items: ArrayList<Uri>, adapter: MultiImageAdapter) {
+                xButton.setOnClickListener {
+                    println(items.toString())
+                    if (items.contains(item)) {
+                        items.remove(item)
+                        pos = items.indexOf(item)
                         println(items.toString())
-                        if (items.contains(item)) {
-                            items.remove(item)
-                            pos = items.indexOf(item)
-                            println(items.toString())
-                            adapter.notifyDataSetChanged()
-                        }
-                    }
-
-                }
-            }
-        }
-
-        //사진 간격
-        class RecyclerViewDecoration(private val divWidth: Int) : RecyclerView.ItemDecoration() {
-            override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-                super.getItemOffsets(outRect, view, parent, state)
-
-                val position = parent.getChildAdapterPosition(view)
-                val count = state.itemCount
-                val offset = divWidth
-
-                if(position==0){
-                    outRect.left = offset
-                }else if(position==count-1){
-                    outRect.right = offset
-                }else{
-                    outRect.left = offset
-                    outRect.right = offset
-                }
-            }
-        }
-
-        // 다른 권한등도 확인이 가능하도록
-        fun checkPermission(permissions: Array<out String>, type:Int):Boolean{
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                for (permission in permissions){
-                    if(ContextCompat.checkSelfPermission(this, permission)
-                        != PackageManager.PERMISSION_GRANTED){
-                        ActivityCompat.requestPermissions(this, permissions, type)
-                        return false
+                        adapter.notifyDataSetChanged()
                     }
                 }
+
             }
-            return true
         }
+    }
+
+    //사진 간격
+    class RecyclerViewDecoration(private val divWidth: Int) : RecyclerView.ItemDecoration() {
+        override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+            super.getItemOffsets(outRect, view, parent, state)
+
+            val position = parent.getChildAdapterPosition(view)
+            val count = state.itemCount
+            val offset = divWidth
+
+            if(position==0){
+                outRect.left = offset
+            }else if(position==count-1){
+                outRect.right = offset
+            }else{
+                outRect.left = offset
+                outRect.right = offset
+            }
+        }
+    }
+
+    // 다른 권한등도 확인이 가능하도록
+    fun checkPermission(permissions: Array<out String>, type:Int):Boolean{
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            for (permission in permissions){
+                if(ContextCompat.checkSelfPermission(this, permission)
+                    != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(this, permissions, type)
+                    return false
+                }
+            }
+        }
+        return true
+    }
 
 }

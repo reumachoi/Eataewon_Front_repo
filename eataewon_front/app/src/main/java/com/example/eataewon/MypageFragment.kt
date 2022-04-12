@@ -5,6 +5,8 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.database.Cursor
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
@@ -17,6 +19,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.eataewon.connect.BbsDto
+import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
 
@@ -32,6 +35,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
     lateinit var mypageProfilpicuri:TextView
     lateinit var mypageProfilpic: ImageView
 
+    var profilUri:String? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_mypage, container, false)
@@ -66,6 +70,8 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
 
         //텍스트뷰에 값 입력
+        println("${user?.profilpic} 유저 프로필사진 마이페이지")
+        mypageProfilpic.setImageURI(Uri.parse(user?.profilpic))
         mypageId.text = user?.id
         mypageName.text = user?.name
         mypageLikepoint.text = user?.likepoint.toString()
@@ -95,6 +101,16 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
             }
         }
 
+        v.profilPicUpdateBtn.setOnClickListener {
+            println("${profilUri}!!!!!!!!")
+            val id = user?.id
+            val profilpic = profilUri
+            val dto = MemberDto(id,"","","","",profilpic,0,"",0)
+            val result = MemberDao.getInstance().updateUserProfilPic(dto)
+            if (result==true){
+                println("성공적으로 프로필 사진이 변경 되셨습니다.")
+            }
+        }
 
         v.lookMyBbsBtn.setOnClickListener {
             childFragmentManager.beginTransaction()
@@ -123,10 +139,22 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
                     val uri = data?.data
                     mypageProfilpicuri.text = uri.toString()
                     mypageProfilpic.setImageURI(uri)
+                    profilUri =  getPath(uri)
+                    println("${profilUri}~~~~~~~~~~~~~~~")
                 }
             }
         }
     }
+
+    fun getPath(uri: Uri?): String {
+        val projection = arrayOf<String>(MediaStore.Images.Media.DATA)
+        val cursor: Cursor = homeActivity.managedQuery(uri, projection, null, null, null)
+        homeActivity.startManagingCursor(cursor)
+        val columnIndex: Int = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        cursor.moveToFirst()
+        return cursor.getString(columnIndex)
+    }
+
 
     // 갤러리 취득
     fun GetAlbum(){

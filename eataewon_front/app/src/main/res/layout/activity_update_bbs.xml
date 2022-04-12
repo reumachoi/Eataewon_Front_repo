@@ -21,9 +21,9 @@
             android:textStyle="bold" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="90">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="90">
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -31,84 +31,84 @@
                 android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="제목"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/updateTitle"
-                    app:layout_constraintStart_toStartOf="@+id/updateTitle" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="제목"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/updateTitle"
+                        app:layout_constraintStart_toStartOf="@+id/updateTitle" />
 
                 <EditText
-                    android:id="@+id/updateTitle"
-                    android:imeOptions="actionDone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:backgroundTint="@color/black"
-                    android:ems="10"
-                    android:hint="Title"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                        android:id="@+id/updateTitle"
+                        android:imeOptions="actionDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="48dp"
+                        android:backgroundTint="@color/black"
+                        android:ems="10"
+                        android:hint="Title"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout4"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/black"
-                    app:layout_constraintTop_toBottomOf="@+id/updateTitle"
-                    tools:layout_editor_absoluteX="0dp">
+                        android:id="@+id/constraintLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/black"
+                        app:layout_constraintTop_toBottomOf="@+id/updateTitle"
+                        tools:layout_editor_absoluteX="0dp">
 
                     <TextView
-                        android:id="@+id/update_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="36dp"
-                        android:text="2010-10-20"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.698" />
+                            android:id="@+id/update_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:text="2010-10-20"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.698" />
 
                     <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Date"
-                        android:textColor="@color/white"
-                        app:layout_constraintBottom_toTopOf="@+id/update_date"
-                        app:layout_constraintStart_toStartOf="@+id/update_date" />
+                            android:id="@+id/textView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toTopOf="@+id/update_date"
+                            app:layout_constraintStart_toStartOf="@+id/update_date" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="66dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
                     <ImageView
-                        android:id="@+id/ImageView2"
-                        android:layout_width="66dp"
-                        android:layout_height="66dp"
-                        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+                            android:id="@+id/writerProfilPic"
+                            android:layout_width="66dp"
+                            android:layout_height="66dp"
+                            app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
                         <TextView
                                 android:layout_width="wrap_content"
@@ -129,63 +129,63 @@
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="위치"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/updateAddress"
-                    app:layout_constraintStart_toStartOf="@+id/updateAddress" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="위치"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/updateAddress"
+                        app:layout_constraintStart_toStartOf="@+id/updateAddress" />
 
                 <EditText
-                    android:id="@+id/updateAddress"
-                    android:imeOptions="actionDone"
-                    android:layout_width="400dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="50dp"
-                    android:backgroundTint="@color/black"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Address"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                        android:id="@+id/updateAddress"
+                        android:imeOptions="actionDone"
+                        android:layout_width="400dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="50dp"
+                        android:backgroundTint="@color/black"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Address"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
                 <TextView
-                    android:id="@+id/updateShopNameT"
-                    android:layout_width="339dp"
-                    android:layout_height="36dp"
-                    android:text="Shop Name"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="@+id/updateAddress"
-                    app:layout_constraintTop_toBottomOf="@+id/updateAddress" />
+                        android:id="@+id/updateShopNameT"
+                        android:layout_width="339dp"
+                        android:layout_height="36dp"
+                        android:text="Shop Name"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/updateAddress"
+                        app:layout_constraintTop_toBottomOf="@+id/updateAddress" />
 
                 <Button
-                    android:id="@+id/update_addressBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/black"
-                    android:text="찾기"
-                    app:layout_constraintBottom_toBottomOf="@+id/updateAddress"
-                    app:layout_constraintStart_toEndOf="@+id/updateAddress"
-                    app:layout_constraintTop_toTopOf="@+id/updateAddress" />
+                        android:id="@+id/update_addressBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:text="찾기"
+                        app:layout_constraintBottom_toBottomOf="@+id/updateAddress"
+                        app:layout_constraintStart_toEndOf="@+id/updateAddress"
+                        app:layout_constraintTop_toTopOf="@+id/updateAddress" />
 
                 <HorizontalScrollView
-                    android:id="@+id/horizontalScrollView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:fillViewport="true"
-                    app:layout_constraintTop_toBottomOf="@+id/updateShopNameT"
-                    tools:layout_editor_absoluteX="0dp">
+                        android:id="@+id/horizontalScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fillViewport="true"
+                        app:layout_constraintTop_toBottomOf="@+id/updateShopNameT"
+                        tools:layout_editor_absoluteX="0dp">
 
                     <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
                         <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/updateRecyclerview"
@@ -214,104 +214,104 @@
                 </HorizontalScrollView>
 
                 <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/black"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/black"
+                        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
 
                 </FrameLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="소개글"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/update_content"
-                    app:layout_constraintStart_toStartOf="@+id/update_content" />
-
-                <EditText
-                    android:id="@+id/update_content"
-                    android:imeOptions="actionDone"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="60dp"
-                    android:backgroundTint="@color/black"
-                    android:ems="10"
-                    android:hint="Content"
-                    android:inputType="textUri|textShortMessage|textLongMessage|textMultiLine|textPersonName|text"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
-
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="60dp"
-                    android:background="@color/black"
-                    android:orientation="vertical"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/update_content">
-
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="해시태그"
-                        android:textColor="@color/white"
+                        android:text="소개글"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/update_content"
+                        app:layout_constraintStart_toStartOf="@+id/update_content" />
 
-                    <EditText
-                        android:id="@+id/updateHashtag"
+                <EditText
+                        android:id="@+id/update_content"
                         android:imeOptions="actionDone"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/white"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="60dp"
+                        android:backgroundTint="@color/black"
                         android:ems="10"
-                        android:hint="Tag"
-                        android:inputType="textPersonName"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white"
-                        android:textSize="20sp" />
+                        android:hint="Content"
+                        android:inputType="textUri|textShortMessage|textLongMessage|textMultiLine|textPersonName|text"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+                <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:background="@color/black"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/update_content">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="해시태그"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    <EditText
+                            android:id="@+id/updateHashtag"
+                            android:imeOptions="actionDone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:ems="10"
+                            android:hint="Tag"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
 
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="80dp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="80dp">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/updateCancleBtn"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_weight="5"
-                android:layout_margin="0dp"
-                android:background="#C1C1C1"
-                android:text="취소"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/updateCancleBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="5"
+                        android:layout_margin="0dp"
+                        android:background="#C1C1C1"
+                        android:text="취소"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/updateBtn"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_margin="0dp"
-                android:layout_weight="5"
-                android:background="@color/black"
-                android:text="수정"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/updateBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="5"
+                        android:background="@color/black"
+                        android:text="수정"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>

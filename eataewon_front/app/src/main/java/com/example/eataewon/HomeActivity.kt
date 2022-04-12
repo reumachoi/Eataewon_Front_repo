@@ -15,16 +15,18 @@ class HomeActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
+        val writeActivity = WriteActivity()
         val bookmarkFragment = BookmarkFragment()
         val mypageFragment = MypageFragment(this)
         setCurrentFragment(homeFragment)
-        
+
         //로그인 데이터 가져오기
         val intent = intent
         val user = intent.getParcelableExtra<MemberDto>("user")
         val bundle = Bundle()
         bundle.putParcelable("user",user)
         mypageFragment.arguments = bundle
+        bookmarkFragment.arguments = bundle
 
         bottomNavi.setOnNavigationItemSelectedListener {
             when(it.itemId) {

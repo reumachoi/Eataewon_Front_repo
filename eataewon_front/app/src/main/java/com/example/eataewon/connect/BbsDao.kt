@@ -7,7 +7,7 @@ import retrofit2.http.*
 interface BbsService {
 
     @Headers("Content-Type: application/json")
-    @POST("/getBbsListApp")
+    @GET("/getBbsListApp")
     fun getBbsListApp(@Body seq:Int): Call<BbsDto>
 
     @POST("/bbswriteApp")
@@ -16,21 +16,12 @@ interface BbsService {
     @POST("/bbsupdateApp")
     fun bbsUpdate(@Body dto:BbsDto) : Call<Boolean>
 
-    @Headers("Content-Type: application/json")
     @POST("/bbsdeleteApp")
     fun bbsDelete(@Body seq:Int) : Call<Boolean>
 
     @Headers("Content-Type: application/json")
     @POST("/plustReadcntApp")
     fun updateReadcnt(@Body seq:Int) : Call<String>
-
-    @Headers("Content-Type: application/json")
-    @POST("/likecntPlus")
-    fun likecntPlus(@Body seq:Int) : Call<Boolean>
-
-    @Headers("Content-Type: application/json")
-    @POST("/likecntMinus")
-    fun likecntMinus(@Body seq:Int) : Call<Boolean>
 
     @POST("/bbsScrapApp")
     fun insertScrap(@Body dto:ScrapDto) : Call<Boolean>
@@ -82,6 +73,17 @@ interface BbsService {
 
     @POST("/findMyBbs")
     fun findMyBbs(@Body id:String):Call<List<BbsDto>>
+
+    @POST("/findBookmark")
+    fun findBookmark(@Body id:String) : Call <List<BbsDto>>
+
+    @Headers("Content-Type: application/json")
+    @POST("/likecntPlus")
+    fun likecntPlus(@Body seq:Int) : Call<Boolean>
+
+    @Headers("Content-Type: application/json")
+    @POST("/likecntMinus")
+    fun likecntMinus(@Body seq:Int) : Call<Boolean>
 
     //카카오 로컬 검색
     @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
@@ -162,34 +164,6 @@ class BbsDao {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
             val call = service?.bbsUpdate(dto)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun likecntPlus(seq:Int) : Boolean?{
-        var response: Response<Boolean>?
-        println("SEQ: ${seq}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.likecntPlus(seq)
-            response = call?.execute()
-        }catch(e:Exception){
-            response = null
-        }
-        return response?.body()
-    }
-
-    fun likecntMinus(seq:Int) : Boolean?{
-        var response: Response<Boolean>?
-        println("SEQ: ${seq}")
-        try {
-            val retrofit = RetrofitClient.getInstance()
-            val service = retrofit?.create(BbsService::class.java)
-            val call = service?.likecntMinus(seq)
             response = call?.execute()
         }catch(e:Exception){
             response = null
@@ -282,9 +256,37 @@ class BbsDao {
         return response?.body()
     }
 
+    fun likecntPlus(seq:Int) : Boolean?{
+        var response: Response<Boolean>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.likecntPlus(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun likecntMinus(seq:Int) : Boolean?{
+        var response: Response<Boolean>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.likecntMinus(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
     fun LikePWriteUp(id:String):Boolean?{
         var response : Response<Boolean>?
-        println("글쓰기 하고난 후에 작성자 호감도 증가 LikePWriteUp Id: ${id}")
+        println("LikePWriteUp Id: ${id}")
         try {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
@@ -406,5 +408,19 @@ class BbsDao {
         //    response = null
         //}
         return response?.body() as List<BbsDto>
+    }
+
+    fun findBookmark(id:String):List<BbsDto>?{
+        var response : Response<List<BbsDto>>?
+        println("findBookmark id: ${id}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.findBookmark(id)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
     }
 }

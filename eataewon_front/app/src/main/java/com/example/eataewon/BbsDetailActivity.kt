@@ -30,8 +30,6 @@ import com.kakao.sdk.template.LocationTemplate
 import com.kakao.sdk.template.Social
 
 
-//import com.kakao.sdk.template.model.*
-
 class BbsDetailActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityBbsDetailBinding.inflate(layoutInflater) }
