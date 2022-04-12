@@ -43,10 +43,8 @@ class HomeUpperAdapter(private val context: Context, private val datatList: Arra
 
         fun bind(bbsDto: BbsDto, position: Int) {
 
-            //val dto = BbsDto("", "", null, "", "", 0, "", "", "", "", "", "", 0.0, 0.0, 0, 0, "")
-
             // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
-            val picArray = bbsDto.testurl!!.split(" ")
+            val picArray = bbsDto.picture!!.split(" ")
 
             curationPhoto.setImageURI(Uri.parse(picArray[0]))
             curationTitle.text = bbsDto.title
@@ -61,6 +59,8 @@ class HomeUpperAdapter(private val context: Context, private val datatList: Arra
                 }
 
                 Intent(context, BbsDetailActivity::class.java).apply {
+
+                    println("${bbsDto.seq}")
                     // 짐싸!
                     putExtra("clickBbs", bbsDto)
 

@@ -119,8 +119,8 @@ class WriteActivity : AppCompatActivity() {
             }else{
 
 
-                val dto = BbsDto(id,nickname,null,title,content,0,hashtag,LocalDate.now().toString(),
-                    shopname,address,shopphnum,shopurl,latitude, longitude,0,0,uriPath)
+                val dto = BbsDto(id,nickname,null,title,content,uriPath,hashtag,LocalDate.now().toString(),
+                    shopname,address,shopphnum,shopurl,latitude, longitude,0,0)
 
                 println("writeactivity dto확인 ${dto}")
                 val seq = BbsDao.getInstance().bbswrite(dto)

@@ -1,10 +1,12 @@
 package com.example.eataewon.Adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.graphics.Rect
 import android.net.Uri
 import android.view.*
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -14,8 +16,12 @@ import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 
 class SearchBbsAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
-        RecyclerView.Adapter<SearchBbsAdapter.ItemViewHolder>()
+        RecyclerView.Adapter<SearchBbsAdapter.ItemViewHolder>(), Filterable
 {
+
+    var filteredPersons = ArrayList<BbsDto>()
+    var itemFilter = ItemFilter()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(context).inflate(
             R.layout.search_view_layout,
@@ -44,7 +50,7 @@ class SearchBbsAdapter (private val context: Context, private val dataList: Arra
             //val dto = BbsDto("", "", null, "", "", 0, "", "", "", "", "", "", 0.0, 0.0, 0, 0, "")
 
             // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
-            val picArray = bbsDto.testurl!!.split(" ")
+            val picArray = bbsDto.picture!!.split(" ")
 
             shopPhoto.setImageURI(Uri.parse(picArray[0]))
             shopName.text = bbsDto.shopname
@@ -68,5 +74,51 @@ class SearchBbsAdapter (private val context: Context, private val dataList: Arra
         }
     }
 
+    override fun getFilter(): Filter {
+        return itemFilter
+    }
+
+    inner class ItemFilter : Filter() {
+        override fun performFiltering(charSequence: CharSequence): FilterResults {
+            val filterString = charSequence.toString()
+            val results = FilterResults()
+
+
+            //검색이 필요없을 경우를 위해 원본 배열을 복제
+            val filteredList: ArrayList<BbsDto> = ArrayList<BbsDto>()
+            //공백제외 아무런 값이 없을 경우 -> 원본 배열
+            if (filterString.trim { it <= ' ' }.isEmpty()) {
+                results.values = dataList
+                results.count = dataList.size
+
+                return results
+                //공백제외 2글자 이인 경우 -> 이름으로만 검색
+            } else if (filterString.trim { it <= ' ' }.length <= 2) {
+                for (shop in dataList) {
+                    if (shop.shopname!!.contains(filterString)) {
+                        filteredList.add(shop)
+                    }
+                }
+                //그 외의 경우(공백제외 2글자 초과) -> 이름/전화번호로 검색
+            } else {
+                for (shop in dataList) {
+                    if (shop.shopname!!.contains(filterString) || shop.address!!.contains(filterString)) {
+                        filteredList.add(shop)
+                    }
+                }
+            }
+            results.values = filteredList
+            results.count = filteredList.size
+
+            return results
+        }
+
+        @SuppressLint("NotifyDataSetChanged")
+        override fun publishResults(charSequence: CharSequence?, filterResults: FilterResults) {
+            filteredPersons.clear()
+            filteredPersons.addAll(filterResults.values as ArrayList<BbsDto>)
+            notifyDataSetChanged()
+        }
+    }
 }
 

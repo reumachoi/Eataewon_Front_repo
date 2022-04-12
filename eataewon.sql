@@ -9,7 +9,7 @@ create table eataewonMember(
     pwd varchar(50) not null,
     email varchar(100) not null,
     nickname varchar(50) not null,
-    profilpic varchar(100),
+    profilpic varchar(1000),
     likepoint int,
     profilmsg varchar(500),
     del int,
@@ -28,7 +28,7 @@ create table eataewonBbs(
     seq int ,
     title varchar(500) not null,
     content varchar(4000) not null,
-    picture int,
+    picture varchar(4000),
     hashtag varchar(500),
     wdate timestamp,
     shopname varchar(100),
@@ -38,8 +38,7 @@ create table eataewonBbs(
     latitude number(12,8),
     longitude number(12,8),
     readcnt int,
-    likecnt int,
-    testurl varchar(4000),
+    likecnt int,    
     constraint pk_eataewonBbs primary key(seq)
 );
 
@@ -78,10 +77,13 @@ ALTER TABLE eataewonLike ADD CONSTRAINT FK_likeId FOREIGN KEY(id) REFERENCES eat
 ALTER TABLE eataewonLike ADD CONSTRAINT FK_likeSeq FOREIGN KEY(bbsseq) REFERENCES eataewonBbs(seq);
 
 Insert into eataewonMember (name, id, pwd, email, nickname,profilpic,likepoint,profilmsg)
-values('name','id','pwd','email','nickname',1010,1,'profilmsg');
+values('name','id','pwd','email','nickname','/storage/emulated/0/Download/다운로드.jpeg-1.jpg',1,'profilmsg');
 
-Insert into eataewonBbs (seq, id, title, content, picture, hashtag, wdate, shopname, address, latitude, longtitude,readcnt,likecnt)
-values(bbsseq.NEXTVAL,'id','title','content',1010,'hashtag',SYSDATE,'mulcam', 'seoul',37.503624 ,127.042391 , 1,1);
+Insert into eataewonMember (name, id, pwd, email, nickname,profilpic,likepoint,profilmsg)
+values('aaa','aaa','111','aa@aa.com','misik','/storage/emulated/0/Download/다운로드.jpeg-1.jpg',1,'profilmsg');
+
+Insert into eataewonBbs (seq, id, title, content, picture, hashtag, wdate, shopname, address, latitude, longitude, readcnt, likecnt)
+values(bbsseq.NEXTVAL, 'id', 'title', 'content', '/storage/emulated/0/Download/다운로드.jpeg-4.jpg /storage/emulated/0/Download/다운로드.jpeg-1.jpg /storage/emulated/0/Pictures/4bcbc84e-5095-45c4-a255-b6a4dede152b.jpeg /storage/emulated/0/Pictures/image_4938315241509144191037.jpg /storage/emulated/0/Download/다운로드.jpeg-4.jpg /storage/emulated/0/Download/다운로드.jpeg-1.jpg /storage/emulated/0/Pictures/4bcbc84e-5095-45c4-a255-b6a4dede152b.jpeg /storage/emulated/0/Pictures/image_4938315241509144191037.jpg', 'hashtag', SYSDATE, 'mulcam', 'seoul', 37.503624 , 127.042391 , 1, 1);
 
 
 

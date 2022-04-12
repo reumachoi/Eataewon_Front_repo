@@ -6,14 +6,25 @@ import retrofit2.http.*
 
 interface BbsService {
 
+
+
+    @GET("/getBbsListSearchApp")
+    fun getBbsListSearchApp(@Body parameterName: ParameterName)
+
+    @GET("/getMarkerListApp")
+    fun getMarkerListApp(): Call<BbsDto>
+
+    @GET("/getBbsList")
+    fun getBbsListApp(@Body seq:Int): Call<BbsDto>
+
     @GET("/getUpperBbsListApp")
     fun getUpperBbsList(): Call<ArrayList<BbsDto>>
 
     @GET("/getLowerBbsListApp")
-    fun getLowerBbsList(): Call<ArrayList<BbsDto>>
+    fun getLowerBbsList(): Call<ArrayList<MemberBbsDto>>
 
-    @GET("/getBbsListApp")
-    fun getBbsListApp(): Call<ArrayList<BbsDto>>
+    @GET("/getSearchListApp")
+    fun getSearchListApp(): Call<ArrayList<BbsDto>>
 
     @POST("/bbswriteApp")
     fun bbswrite(@Body dto:BbsDto) : Call<Int>
@@ -75,6 +86,10 @@ interface BbsService {
 
     @POST("/checkUserLike")
     fun checkUserLike(@Body dto:LikeDto) : Call<Boolean>
+
+    @POST("/findMyBbs")
+    fun findMyBbs(@Body id:String):Call<List<BbsDto>>
+
     //카카오 로컬 검색
     @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
     fun getSearchKeyword(
@@ -101,6 +116,21 @@ class BbsDao {
             return bbsDao!!
         }
     }
+
+    fun getBbsListApp(seq:Int):BbsDto?{
+        var response: Response<BbsDto>?
+        println("SEQ: ${seq}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.getBbsListApp(seq)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
     fun bbswrite(dto:BbsDto) : Int?{
         var response: Response<Int>?
         println("DTO: ${dto}")
@@ -341,17 +371,14 @@ class BbsDao {
         return response?.body()
     }
 
-    fun getBbsListApp() : ArrayList<BbsDto>? {
-        //var response: Response<BbsDto>?
-        println("~~~~~getBbsList()")
-        //try {
+    fun getSearchListApp() : ArrayList<BbsDto>? {
+
+        println("~~~~~getSearchListApp()")
+
         val retrofit = RetrofitClient.getInstance()
         val service = retrofit?.create(BbsService::class.java)
-        val call = service?.getBbsListApp()
+        val call = service?.getSearchListApp()
         val response = call?.execute()
-        //}catch(e:Exception){
-        //  response = null
-        //}
 
         return response?.body()
     }
@@ -367,7 +394,7 @@ class BbsDao {
         return response?.body()
     }
 
-    fun getLowerBbsList() : ArrayList<BbsDto>? {
+    fun getLowerBbsList() : ArrayList<MemberBbsDto>? {
         println("~~~~getLowerBbsList()")
 
         val retrofit = RetrofitClient.getInstance()
@@ -375,6 +402,42 @@ class BbsDao {
         val call = service?.getLowerBbsList()
         val response = call?.execute()
 
-        return response?.body() as ArrayList<BbsDto>
+        return response?.body()
     }
+
+    fun getMarkerListApp() : BbsDto? {
+        println("~~~~getMarkerListApp()")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getMarkerListApp()
+        val response = call?.execute()
+
+        return response?.body()
+    }
+
+    fun findMyBbs(id:String):List<BbsDto>?{
+        //var response: Response<List<BbsDto>>?
+        println("Id: ${id}")
+        //try {
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.findMyBbs(id);
+        val response = call?.execute()
+        //}catch(e:Exception){
+        //    response = null
+        //}
+        return response?.body() as List<BbsDto>
+    }
+
+    /*fun getBbsListSearchApp() : BbsDto? {
+        println("~~~getBbsListSearchApp")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getBbsListSearchApp(param)
+        val response = call?.execute()
+
+        return response?.body()
+    }*/
 }

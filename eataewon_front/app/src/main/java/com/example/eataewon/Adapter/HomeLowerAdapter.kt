@@ -17,7 +17,7 @@ import com.example.eataewon.connect.MemberBbsDto
 import com.example.eataewon.connect.MemberDto
 
 
-class HomeLowerAdapter (private val context: Context, private val dataList: ArrayList<BbsDto>) :
+class HomeLowerAdapter (private val context: Context, private val dataList: ArrayList<MemberBbsDto>) :
     RecyclerView.Adapter<HomeLowerAdapter.ItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -49,34 +49,31 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
         private val userNickname = itemView.findViewById<TextView>(R.id.UserNickName)
         private val bbsContent = itemView.findViewById<TextView>(R.id.BbsContent)
 
-        fun bind(bbsDto: BbsDto, context: Context) {
-
-            //val dto = BbsDto("", "", null, "", "", 0, "", "", "", "", "", "", 0.0, 0.0, 0, 0, "")
+        fun bind(memberBbsDto: MemberBbsDto, context: Context) {
 
             // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
-            val picArray = bbsDto.testurl!!.split(" ")
+            val picArray = memberBbsDto.picture!!.split(" ")
 
-            shopName.text = bbsDto.shopname
-            shopLocation.text = bbsDto.address
+            shopName.text = memberBbsDto.shopname
+            shopLocation.text = memberBbsDto.address
             bbsPhotoView1.setImageURI(Uri.parse(picArray[0]))
             bbsPhotoView2.setImageURI(Uri.parse(picArray[1]))
             bbsPhotoView3.setImageURI(Uri.parse(picArray[2]))
             bbsPhotoView4.setImageURI(Uri.parse(picArray[3]))
-            // profile은 MemberBbsDto로 수정 예정
-            //userProfilePic.setImageURI(Uri.parse(picArray[0]))
-            userNickname.text = bbsDto.nickname
-            bbsContent.text = bbsDto.content
+            userProfilePic.setImageURI(Uri.parse(memberBbsDto.profilpic))
+            userNickname.text = memberBbsDto.nickname
+            bbsContent.text = memberBbsDto.content
 
             // 게시물 클릭시 BbsDetailActivity로 이동
             itemView.setOnClickListener {
-                var result = BbsDao.getInstance().updateReadcnt(bbsDto.seq!!)    //조회수 증가
+                var result = BbsDao.getInstance().updateReadcnt(memberBbsDto.seq!!)    //조회수 증가
                 if(result.equals("Success")) {
-                    println("글번호 ${bbsDto.seq} 조회수증가~~~~~~~~~~~~~~~")
+                    println("글번호 ${memberBbsDto.seq} 조회수증가~~~~~~~~~~~~~~~")
                 }
 
                 Intent(context, BbsDetailActivity::class.java).apply {
                     // 짐싸!
-                    putExtra("clickBbs", bbsDto)
+                    putExtra("clickBbs", memberBbsDto)
 
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }.run { context.startActivity(this) }

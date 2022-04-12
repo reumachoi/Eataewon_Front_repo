@@ -116,8 +116,8 @@ class UpdateBbsActivity : AppCompatActivity() {
             var tag = binding.updateHashtag.text.toString()
 
 
-            val dto = BbsDto(data?.id, data?.nickname,data?.seq, title, content,0, tag, LocalDate.now().toString(),
-                shopname,addr,shopphnum,shopurl, latitude!!,longitude!!,0,0,uriPath)
+            val dto = BbsDto(data?.id, data?.nickname,data?.seq, title, content,uriPath, tag, LocalDate.now().toString(),
+                shopname,addr,shopphnum,shopurl, latitude!!,longitude!!,0,0)
             println("writeactivity dto확인 ${dto}")
 
             val checkUpdate = BbsDao.getInstance().bbsUpdate(dto)

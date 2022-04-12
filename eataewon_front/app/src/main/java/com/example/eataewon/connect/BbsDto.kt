@@ -9,7 +9,7 @@ class BbsDto(
     var seq: Int?,
     var title:String?,
     var content:String?,
-    var picture:Int,
+    var picture:String?,
     var hashtag:String?,
     var wdate:String?,
     var shopname:String?,
@@ -20,7 +20,7 @@ class BbsDto(
     var longitude:Double,
     var readcnt:Int,
     var likecnt:Int,
-    var testurl:String?
+
     ):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -28,7 +28,7 @@ class BbsDto(
         parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readString(),
         parcel.readString(),
-        parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -38,8 +38,8 @@ class BbsDto(
         parcel.readDouble(),
         parcel.readDouble(),
         parcel.readInt(),
-        parcel.readInt(),
-        parcel.readString()
+        parcel.readInt()
+
     ) {
     }
 
@@ -49,7 +49,7 @@ class BbsDto(
         parcel.writeValue(seq)
         parcel.writeString(title)
         parcel.writeString(content)
-        parcel.writeInt(picture)
+        parcel.writeString(picture)
         parcel.writeString(hashtag)
         parcel.writeString(wdate)
         parcel.writeString(shopname)
@@ -60,7 +60,7 @@ class BbsDto(
         parcel.writeDouble(longitude)
         parcel.writeInt(readcnt)
         parcel.writeInt(likecnt)
-        parcel.writeString(testurl)
+
     }
 
     override fun describeContents(): Int {
@@ -68,7 +68,7 @@ class BbsDto(
     }
 
     override fun toString(): String {
-        return "BbsDto(id=$id, nickname=$nickname, seq=$seq, title=$title, content=$content, picture=$picture, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, shopphnum=$shopphnum, shopurl=$shopurl, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt, testurl=$testurl)"
+        return "BbsDto(id=$id, nickname=$nickname, seq=$seq, title=$title, content=$content, picture=$picture, hashtag=$hashtag, wdate=$wdate, shopname=$shopname, address=$address, shopphnum=$shopphnum, shopurl=$shopurl, latitude=$latitude, longitude=$longitude, readcnt=$readcnt, likecnt=$likecnt)"
     }
 
     companion object CREATOR : Parcelable.Creator<BbsDto> {

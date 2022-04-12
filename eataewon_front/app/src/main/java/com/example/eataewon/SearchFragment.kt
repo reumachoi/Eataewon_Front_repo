@@ -1,5 +1,6 @@
 package com.example.eataewon
 
+import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.*
@@ -13,6 +14,7 @@ import com.example.eataewon.Adapter.SearchBbsAdapter
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.fragment_maps.*
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment: Fragment(R.layout.fragment_search) {
@@ -25,10 +27,9 @@ class SearchFragment: Fragment(R.layout.fragment_search) {
 
         //return super.onCreateView(inflater, container, savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_search, container, false)
-        val searchview = view.findViewById<SearchView>(R.id.SearchView)
 
         // 리사이클러뷰 db 데이터와 접함
-        val list = BbsDao.getInstance().getBbsListApp() as ArrayList<BbsDto>
+        val list = BbsDao.getInstance().getSearchListApp() as ArrayList<BbsDto>
 
         val bbsAdapter = SearchBbsAdapter(requireActivity(), list)
         var recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
@@ -39,45 +40,22 @@ class SearchFragment: Fragment(R.layout.fragment_search) {
         recyclerView.layoutManager = layout
         recyclerView.setHasFixedSize(true)
 
+        // SearchActivity로 이동하는 검색 버튼
+        val searchBtn = view.findViewById<Button>(R.id.SearchBtn)
+        searchBtn.setOnClickListener {
+
+           val i = Intent(context, SearchActivity::class.java)
+            startActivity(i)
+        }
 
         val mapBtn = view.findViewById<Button>(R.id.mapBtn)
         // 구글맵 뷰
         mapBtn.setOnClickListener {
-            val mapsFragment = MapsFragment()
+            val mapsFragment = MapsFragment(requireActivity())
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.main_frame, mapsFragment)
             transaction.commit()
         }
         return view
     }
-
-    // 검색기능 구현
-    /*override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.search_menu, menu)
-
-        val search = menu.findItem(R.id.SearchView)
-        val searchView = search?.actionView as? SearchView
-        searchView?.isSubmitButtonEnabled = true
-        searchView?.setOnQueryTextListener(this)
-
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-    override fun onQueryTextSubmit(query: String?): Boolean {
-        if (query != null) {
-            searchDatabase(query)
-        }
-        return true
-    }
-
-    override fun onQueryTextChange(query: String?): Boolean {
-        if (query != null) {
-            searchDatabase(query)
-        }
-        return true
-    }
-
-    private  fun searchDatabase(query: String?) {
-        val searchQuery = "%$query%"
-    }*/
 }
