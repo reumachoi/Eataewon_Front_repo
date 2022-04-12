@@ -9,10 +9,10 @@ interface BbsService {
 
 
     @GET("/getBbsListSearchApp")
-    fun getBbsListSearchApp(@Body parameterName: ParameterName)
+    fun getBbsListSearchApp(@Body param: BbsParam): Call<BbsDto>
 
     @GET("/getMarkerListApp")
-    fun getMarkerListApp(): Call<BbsDto>
+    fun getMarkerListApp(): Call<ArrayList<BbsDto>>
 
     @GET("/getBbsList")
     fun getBbsListApp(@Body seq:Int): Call<BbsDto>
@@ -405,7 +405,7 @@ class BbsDao {
         return response?.body()
     }
 
-    fun getMarkerListApp() : BbsDto? {
+    fun getMarkerListApp() : ArrayList<BbsDto>? {
         println("~~~~getMarkerListApp()")
 
         val retrofit = RetrofitClient.getInstance()
@@ -413,7 +413,9 @@ class BbsDao {
         val call = service?.getMarkerListApp()
         val response = call?.execute()
 
+        println("~~~~~~~~~~${response?.body()}~~~~~~~~~~~")
         return response?.body()
+
     }
 
     fun findMyBbs(id:String):List<BbsDto>?{
@@ -430,7 +432,7 @@ class BbsDao {
         return response?.body() as List<BbsDto>
     }
 
-    /*fun getBbsListSearchApp() : BbsDto? {
+    fun getBbsListSearchApp(param: BbsParam) : BbsDto? {
         println("~~~getBbsListSearchApp")
 
         val retrofit = RetrofitClient.getInstance()
@@ -439,5 +441,5 @@ class BbsDao {
         val response = call?.execute()
 
         return response?.body()
-    }*/
+    }
 }

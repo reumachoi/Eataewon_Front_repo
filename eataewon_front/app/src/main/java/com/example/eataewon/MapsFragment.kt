@@ -37,13 +37,6 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
 
     private var markerShop : Marker? = null
 
-    //test
-    var test1 = LatLng(37.50048758, 126.91052292)
-    var test2 = LatLng(37.54508163, 126.94579747)
-    var test3 = LatLng(37.54233409, 126.97374272)
-    var test4 = LatLng(37.51224875, 126.89256994)
-
-    private var locationArrayList: ArrayList<LatLng>? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -66,13 +59,6 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
                 Manifest.permission.ACCESS_FINE_LOCATION)
         )
 
-        /*locationArrayList = ArrayList()
-
-        locationArrayList!!.add(test1)
-        locationArrayList!!.add(test2)
-        locationArrayList!!.add(test3)
-        locationArrayList!!.add(test4) */
-
         return inflater.inflate(R.layout.fragment_maps, container, false)
     }
 
@@ -90,20 +76,11 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
         //updateLocation()
+        
 
-        /*for (i in locationArrayList!!.indices) {
+        val addressData = BbsDao.getInstance().getMarkerListApp() as ArrayList<BbsDto>
 
-            mMap.addMarker(MarkerOptions().position(locationArrayList!![i]).title("Marker"))
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(15.0f))
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(locationArrayList!![i]))
-        }*/
-        val markerData = arguments?.getParcelable<BbsDto>("MarkerData")
-        var addressList: BbsDto? = null
-        if (markerData != null) {
-            addressList = BbsDao.getInstance().getMarkerListApp()
-        }
-
-        for (shop in addressList) {
+        for (shop in addressData) {
             val shopPosition = LatLng(shop.latitude, shop.longitude)
             val shopMarker = MarkerOptions().position(shopPosition).title(shop.shopname)
             mMap.addMarker(shopMarker)
