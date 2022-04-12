@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.eataewon.Adapter.ViewPagerAdapter
 import com.example.eataewon.connect.*
@@ -31,8 +30,6 @@ import com.kakao.sdk.template.LocationTemplate
 import com.kakao.sdk.template.Social
 
 
-//import com.kakao.sdk.template.model.*
-
 class BbsDetailActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityBbsDetailBinding.inflate(layoutInflater) }
@@ -41,12 +38,12 @@ class BbsDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val writeData = intent.getParcelableExtra<BbsDto>("writeData")
-        println("글쓰기하고 넘어온  seq 확인 ${writeData?.seq.toString()}~~~~~~~")
+        val writeSeq = intent.getIntExtra("writeSeq",0)
+        println("글쓰기하고 넘어온  seq 확인 ${writeSeq}~~~~~~~")
 
         var getBbsList: BbsDto? = null
-        if(writeData!=null){
-            getBbsList = BbsDao.getInstance().getBbsListApp(writeData.seq!!)
+        if(writeSeq!=null){
+            getBbsList = BbsDao.getInstance().getBbsListApp(writeSeq)
             println("getBbsList == writeData")
             println("getBbsList 출력 !!!! ${getBbsList.toString()}")
         }
@@ -56,10 +53,6 @@ class BbsDetailActivity : AppCompatActivity() {
         val loginUserId = prefs.getString("loginUserId","로그인유저 정보없음")
         val loginUserNickname = prefs.getString("loginUserNickname","로그인유저 정보없음")
         println("${loginUserId}  ${loginUserNickname} ~~~~~~~~~~~~~")
-
- /*       //툴바 생성_안도현
-        val toolbar = binding.bbsdetailToolbar
-        setSupportActionBar(toolbar)*/
 
 
         //어댑터에서 싼 짐 푸르기 (메인에서 디테일로 넘어온 데이터)
@@ -91,11 +84,12 @@ class BbsDetailActivity : AppCompatActivity() {
         //글쓴이 프로필사진 가져오기
         println("글쓴이 아이디 : ${data?.id}")
         val profilPic = MemberDao.getInstance().getProfilPic(data?.id.toString()!!)
-        val picture = data?.picture.toString().split(" ")
+        val picture = data?.picture?.split(" ")
+        println(picture.toString() + "사진사진~~~~~~~")
 
         //툴바 타이틀에 넣기_안도현
-        toolbar.title=data?.title
-        binding.profilPicture.setImageURI(Uri.parse(profilPic!![0].toString()))
+        binding.bbsdetailToolbar.title=data?.title
+        binding.profilPicture.setImageURI(Uri.parse(profilPic?.trim()))
         binding.DeBbsUserT.text = data?.nickname
         binding.DeBbsLikePoT.text = "${data?.likecnt.toString()}명 좋아요"
         binding.DeBbsWdateT.text = data?.wdate
@@ -112,36 +106,49 @@ class BbsDetailActivity : AppCompatActivity() {
         val vPager2 = findViewById<ViewPager2>(R.id.vPager2)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
 
-        val frag1 = Fragment1()
-        val frag2 = Fragment2()
-        val frag3 = Fragment3()
-        val frag4 = Fragment4()
+        var fragList: List<Fragment>
 
-        val fragList = listOf<Fragment>(frag1,frag2,frag3,frag4)
+        if(picture?.size!!-1 == 1){
+            val frag1 = Fragment1(picture!![0])
+            fragList = listOf(frag1)
+
+        }else if(picture?.size!! -1 == 2){
+            val frag1 = Fragment1(picture!![0])
+            val frag2 = Fragment2(picture!![1])
+            fragList = listOf(frag1,frag2)
+
+        }else if(picture.size-1 == 3){
+            val frag1 = Fragment1(picture!![0])
+            val frag2 = Fragment2(picture!![1])
+            val frag3 = Fragment3(picture!![2])
+            fragList = listOf(frag1,frag2,frag3)
+
+        }else{
+            val frag1 = Fragment1(picture!![0])
+            val frag2 = Fragment2(picture!![1])
+            val frag3 = Fragment3(picture!![2])
+            val frag4 = Fragment4(picture!![3])
+            fragList = listOf(frag1,frag2,frag3,frag4)
+
+        }
         val adapter = ViewPagerAdapter(this)
         adapter.fList = fragList
         vPager2.adapter = adapter
+
 
         //인디케이터
         TabLayoutMediator(tabLayout, vPager2) { tab, position ->
             //Some implementation...
         }.attach()
 
-        //등록된 사진 수만큼 보여주기
-        if(picture[0]!=null){
-            frag1.setImg(picture[0])
-        }else if(picture[1]!=null){
-            frag2.setImg(picture[1])
-        }else if(picture[2]!=null){
-            frag3.setImg(picture[2])
-        }else if(picture[3]!=null){
-            frag4.setImg(picture[3])
-        }
-
-
-
         //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
         //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
+
+        //기본으로는 좋아요,스크랩 안한상태
+        binding.HeartBtn.isSelected = false
+        binding.ScrapBtn.isSelected = false
+
+
         var id = loginUserId
         var bbsseq = data?.seq
 
@@ -194,6 +201,9 @@ class BbsDetailActivity : AppCompatActivity() {
             if(binding.HeartBtn.isSelected != true){
                 binding.HeartBtn.isSelected = true  //좋아요 누르기
 
+                val plusBbsLikecnt = BbsDao.getInstance().likecntPlus(data?.seq!!)
+                println("현재 글 번호 : ${data?.seq} 좋아요수 상승결과 ${plusBbsLikecnt}")
+
                 //이태원라이크 테이블에 유저값 넣어주기
                 val id = loginUserId
                 val bbsseq = data?.seq
@@ -214,6 +224,9 @@ class BbsDetailActivity : AppCompatActivity() {
 
             }else{
                 binding.HeartBtn.isSelected = false //좋아요 누른거 취소
+
+                val minusBbsLikecnt = BbsDao.getInstance().likecntMinus(data?.seq!!)
+                println("현재 글 번호 : ${data?.seq} 좋아요수 하락결과 ${minusBbsLikecnt}")
 
                 //+이태원라이크 테이블에 유저값 삭제하기
                 val id = loginUserId

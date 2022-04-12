@@ -60,7 +60,7 @@ class WriteActivity : AppCompatActivity() {
 
         val userProfilPic = MemberDao.getInstance().getProfilPic(loginUserId!!)
         println("글쓴이 프로필 사진 가져오기 ${userProfilPic}")
-        binding.writeProfilPic.setImageURI(Uri.parse(userProfilPic))
+        // binding.writeProfilPic.setImageURI(Uri.parse(userProfilPic))
 
         val recyclerView = findViewById<RecyclerView>(R.id.write_recyclerview)
 
@@ -138,7 +138,7 @@ class WriteActivity : AppCompatActivity() {
                 val seq = BbsDao.getInstance().bbswrite(dto)
                 println("글쓰기 통신결과 넘어온 seq값 ${seq}!!!!!!!!!!!")
 
-                val checkLikeP = BbsDao.getInstance().LikePWriteUp(dto.id!!)
+                val checkLikeP = BbsDao.getInstance().LikePWriteUp(id!!)
                 if(checkLikeP==true){
                     println("글쓰기로 ${dto.id}의 호감도가 상승했습니다")
                 }else{
@@ -147,7 +147,7 @@ class WriteActivity : AppCompatActivity() {
 
                 if(seq!! >0){
                     Toast.makeText(this,"글쓰기가 완료되었습니다",Toast.LENGTH_SHORT).show()
-                    var i = Intent(this,HomeActivity::class.java)
+                    var i = Intent(this,BbsDetailActivity::class.java)
                     i.putExtra("writeSeq",seq)
                     startActivity(i)
                 }else{

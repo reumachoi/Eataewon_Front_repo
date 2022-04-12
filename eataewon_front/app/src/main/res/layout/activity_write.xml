@@ -14,7 +14,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Write"
-            android:fontFamily="@font/font"
             android:textColor="@color/black"
             android:textSize="50sp"
             android:textStyle="bold" />
@@ -36,31 +35,29 @@
                     android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="제목"
-                    android:fontFamily="@font/font"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/write_title"
-                    app:layout_constraintStart_toStartOf="@+id/write_title" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="제목"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/write_title"
+                        app:layout_constraintStart_toStartOf="@+id/write_title" />
 
                 <EditText
-                    android:id="@+id/write_title"
-                    android:imeOptions="actionDone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:backgroundTint="@color/black"
-                    android:ems="10"
-                    android:hint="Title"
-                    android:fontFamily="@font/font"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                        android:id="@+id/write_title"
+                        android:imeOptions="actionDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="48dp"
+                        android:backgroundTint="@color/black"
+                        android:ems="10"
+                        android:hint="Title"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
                         android:id="@+id/linearLayout"
@@ -71,7 +68,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/writeProfilPic"
+                            android:id="@+id/ImageView2"
                             android:layout_width="66dp"
                             android:layout_height="66dp"
                             app:srcCompat="@drawable/ic_baseline_account_circle_24" />

@@ -39,6 +39,9 @@ interface MemberService{
 
     @POST("getProfilPicApp")
     fun getProfilPic(@Body id:String):Call<String>
+
+    @POST("/updateUserProfilPic")
+    fun  updateUserProfilPic(@Body dto: MemberDto): Call<Boolean>
 }
 
 class MemberDao {
@@ -204,6 +207,21 @@ class MemberDao {
             response = null
         }
         println("이메일 변경 결과?? ${response?.body()}")
+        return response?.body()
+    }
+
+    fun updateUserProfilPic(dto: MemberDto ): Boolean?{
+        var response: Response<Boolean>?
+        println("updateUserProfilPic !${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java) /// 이쪽을 변경 해야 될듯
+            val call = service?.updateUserProfilPic(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+
         return response?.body()
     }
 }
