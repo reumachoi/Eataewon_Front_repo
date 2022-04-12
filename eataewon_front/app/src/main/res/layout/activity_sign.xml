@@ -244,24 +244,13 @@
                     android:id="@+id/signUp_profilpic"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="25dp"
                     android:background="@drawable/style_profil_img"
                     android:src="@drawable/imgeview_sample"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="ImageContrastCheck" />
-
-            <TextView
-                    android:id="@+id/signUp_profilpic_uri"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="@+id/signUp_profilpic"
-                    app:layout_constraintStart_toStartOf="@+id/signUp_profilpic"
-                    app:layout_constraintTop_toBottomOf="@+id/signUp_profilpic" />
-
+                    tools:ignore="ImageContrastCheck"/>
             <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/signUp_imageBtn"
                     android:layout_width="100dp"

@@ -70,6 +70,8 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
 
         //텍스트뷰에 값 입력
+        println("${user?.profilpic} 유저 프로필사진 마이페이지")
+        mypageProfilpic.setImageURI(Uri.parse(user?.profilpic))
         mypageId.text = user?.id
         mypageName.text = user?.name
         mypageLikepoint.text = user?.likepoint.toString()
