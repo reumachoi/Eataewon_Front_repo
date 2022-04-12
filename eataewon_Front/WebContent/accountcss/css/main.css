@@ -2,16 +2,19 @@
 /* ==========================================================================
    #FONT
    ========================================================================== */
+   
+   
+   
 .font-robo {
-  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-poppins {
-  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-opensans {
-  font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ==========================================================================
@@ -102,6 +105,7 @@
   .form-row .value {
     display: block;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
   }
   .form-row .name {
     margin-top: 0;
@@ -190,7 +194,7 @@ button {
 }
 
 body {
-  font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
@@ -426,7 +430,7 @@ input[type="date" i] {
 
 .table-condensed td, .table-condensed th {
   font-size: 14px;
-  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -612,6 +616,7 @@ textarea {
    #TITLE
    ========================================================================== */
 .title {
+  font-family: 'Montserrat', sans-serif;
   font-size: 36px;
   font-weight: 700;
   text-align: left;
@@ -629,6 +634,7 @@ textarea {
    #CARD
    ========================================================================== */
 .card {
+	
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;

@@ -14,9 +14,6 @@
 
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
 
     <!-- Main CSS-->
     <link href="accountcss/css/main.css" rel="stylesheet" media="all">
@@ -46,7 +43,7 @@
                         </div>
                         
                               <div class="form-row">
-                            <div class="name">Available ID</div>
+                            <div class="name">사용 가능 ID</div>
                             <div class="value">
                                 <input class="input--style-6" id="id" name="id" type="text" readonly="readonly">
                             </div>
@@ -60,7 +57,7 @@
                         </div>
                         
                         <div class="form-row">
-                            <div class="name">Name</div>
+                            <div class="name">이름</div>
                             <div class="value">
                                 <input class="input--style-6" type="text" id="name" name="name" type="text">
                             </div>
@@ -87,22 +84,31 @@
                         
                         
                             <div class="form-row">
-                            <div class="name">Profile Photo</div>
+                            <div class="name">프로필 사진</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                	
-                               	<div class="imgs_wrap"> 
-                                    <input  type="file" name="uploadFiles" multiple id="input_imgs">
-                                    </div> 
-                                    <div class="imgs_wrap1"></div>                              
+                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <label class="label--file" for="file">프로필 사진 등록</label>
+                                    <span class="input-file__info">나중에 등록</span>
                                 </div>
                                 <div class="label--desc">50 MB 이하의 사진을 등록해주세요.</div>
                             </div>
                         </div>
                         
                         
+                       <div class="form-row">
+                            <div class="name">임시 프로필 사진 항목</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" id="profilpic" name="profilpic">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
                         <div class="form-row">
-                            <div class="name">Profile Message</div>
+                            <div class="name">프로필 메세지</div>
                             <div class="value">
                                 <div class="input-group">
                                     <textarea class="textarea--style-6" type="text" id="profilmsg" name="profilmsg"></textarea>
@@ -127,7 +133,6 @@
     <!-- Main JS-->
     <script src="accountcss/js/global.js"></script>
 <script type="text/javascript">
-
 	$(document).ready(function() {
 		
 		$("#idcheckBtn").click(function() {
@@ -154,49 +159,19 @@
 			
 		});
 		
-		//파일 첨부시 미리보기
-
-		var sel_files = [];
-
-		$("#input_imgs").on("change", handleImgsFilesSelect);
-
-		function handleImgsFilesSelect(e) {
-			var files = e.target.files;
-			var filesArr = Array.prototype.slice.call(files);
-
-			filesArr.forEach(function(f) {
-
-				sel_files.push(f);
-				
-				$(".imgs_wrap1").html("");
-
-				var reader = new FileReader();
-				reader.onload = function(e) {
-					var img_html = "<img src=\""+e.target.result+"\" width='300' height='300'  />";
-					$(".imgs_wrap1").append(img_html);
-				}
-				reader.readAsDataURL(f);
-			});
-		}
-
-		//첨부파일 미리보기 코드 끝
-		
-		
-		
 		$("#account").on("click",function(){
 			
-			let formData = new FormData( $("#frm")[0] );				
+			let params = $("#frm").serialize();
+		//	alert(params);
 			
 			$.ajax({
-				url : 'http://localhost:3000/uploadAjaxRegi',
-				processData : false,
-				contentType : false,
-				data : formData,
-				type : 'POST',
-				enctype:'multipart/form-data',
-				cashe:false,
-				success : function(result) { 
-					if(result=="YES"){
+				url:"http://localhost:3000/addmember",
+				type:"post",
+				//data:{id:$("#id").val(), pwd:$("#pwd").val(), name:$("name").val(), email:$("email").val() }, //id로 보낸것
+				data:params,//name으로 보낸것
+				success:function(data){
+					//alert('success')
+					if(data=="YES"){
 						alert('가입 되었습니다.');
 						location.href="bbslist.html";
 					}else{
@@ -205,14 +180,10 @@
 				},
 				error:function(){
 					alert('error');
-				
-				},
-				error : function() {
-					alert('error');
-				}			
+				}
+			});
+			
 		});
-		
-	});
 		
 	});
 	
@@ -223,6 +194,7 @@
 
 
 
-</body>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
+<!-- end document-->

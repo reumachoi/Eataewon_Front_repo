@@ -116,9 +116,8 @@ text-align:center;
 	<th><span>User ID</span></th><td id="id"></td>
 </tr>
 <tr>
- <th><span>Nickname</span></th><td id="nickname"></td>
+ <th><span>Nickname</span></th><td id="nickname"><div id="profilPic"></div></td>
 </tr>
-
 <tr>
 	<th><span>Date of Posting</span></th><td id="wdate"></td>
 </tr>
@@ -213,6 +212,10 @@ text-align:center;
 <br><br><br><br><br><br>
 
 <script type="text/javascript">
+$(document).ready(function () {
+	
+	
+
 let str = sessionStorage.getItem("login");	
 let json = JSON.parse(str);
 let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
@@ -224,6 +227,46 @@ let seq = urlParams.get("seq");
 //주소창에 있는 seq 값 가져오기
 //alert(seq);
 
+
+//프로필 사진 가져오기~~~~~~~~~~~~~~~~안나온다
+$.ajax({
+	url:"http://localhost:3000/detailMem",
+	type:"get",
+	data:{ "id":id },
+	success:function(pic){
+		
+		strFileName = pic.profilpic.substring(43);
+		
+		console.log("strFileName:"+strFileName);
+		var divArea = $("#profilPic");
+	    var str = "";
+	    
+
+		if(strFileName != null){
+						
+            str += "<div class='col' readonly='readonly'>";
+            str += "<img src='"+strFileName+"'/> &nbsp;&nbsp;"; 
+            str += "</div>"
+            
+		}else{
+            str += "<input type='text' class='form-control' size='50px' readonly='readonly' placeholder='No Attached Image'>";		
+		}
+        divArea.append(str);
+
+		
+	},
+	error:function(){
+		alert('error');
+	}
+	
+});
+
+
+
+
+
+
+//본문 내용 가져오기
 $.ajax({
 	url:"http://localhost:3000/bbsFileDetail",
 	type:"get",
@@ -362,7 +405,7 @@ $("#btnLike").click(function(){
 	
 	
 	
-
+});
 
 
 

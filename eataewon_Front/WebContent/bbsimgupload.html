@@ -262,7 +262,7 @@ function handleImgsFilesSelect(e) {
 	});
 }
 
-//미리보기 코드 끝
+//첨부파일 미리보기 코드 끝
 
 		$.ajax({
 			url : "http://localhost:3000/getnickname",
@@ -295,8 +295,7 @@ function handleImgsFilesSelect(e) {
 								formData.append("uploadFiles", files[i]);
 							}
 
-							$
-									.ajax({
+							$.ajax({
 										url : 'http://localhost:3000/uploadAjax',
 										processData : false,
 										contentType : false,
@@ -350,8 +349,7 @@ function handleImgsFilesSelect(e) {
 												shopurl : $("#shopurl").val()
 											};
 
-											$
-													.ajax({
+											$.ajax({
 														url : "http://localhost:3000/bbswriteImgup",
 														type : "get",
 														data : params,
