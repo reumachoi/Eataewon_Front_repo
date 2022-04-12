@@ -60,7 +60,7 @@ class WriteActivity : AppCompatActivity() {
 
         val userProfilPic = MemberDao.getInstance().getProfilPic(loginUserId!!)
         println("글쓴이 프로필 사진 가져오기 ${userProfilPic}")
-        binding.writeProfilPic.setImageURI(Uri.parse(userProfilPic))
+       // binding.writeProfilPic.setImageURI(Uri.parse(userProfilPic))
 
         val recyclerView = findViewById<RecyclerView>(R.id.write_recyclerview)
 

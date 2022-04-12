@@ -21,7 +21,7 @@ class RetrofitClient {
                     .create()
 
                 instance = Retrofit.Builder()
-                    .baseUrl("http://172.30.1.17:3000")//최아름 ip(172.30.1.17:3000), 연결 안도현(61.98.39.123:3010)  윤동호(192.168.1.139:3000) 58.123.143.34:3010
+                    .baseUrl("http://172.30.1.19:3000")//최아름 ip(172.30.1.17:3000), 연결 안도현(61.98.39.123:3010)  윤동호(192.168.1.139:3000) 58.123.143.34:3010
                     .addConverterFactory(ScalarsConverterFactory.create())      // 문자열 리턴받는 경우
                     .addConverterFactory(GsonConverterFactory.create(gson))     // object, integer
                     .build()

@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.eataewon.Adapter.ViewPagerAdapter
 import com.example.eataewon.connect.*
@@ -87,7 +86,7 @@ class BbsDetailActivity : AppCompatActivity() {
         //글쓴이 프로필사진 가져오기
         println("글쓴이 아이디 : ${data?.id}")
         val profilPic = MemberDao.getInstance().getProfilPic(data?.id.toString()!!)
-        val picture = data?.picture.toString().split(" ")
+        val picture = data?.picture?.split(" ")
         println(picture.toString() + "사진사진~~~~~~~")
 
         //툴바 타이틀에 넣기_안도현
@@ -109,50 +108,35 @@ class BbsDetailActivity : AppCompatActivity() {
         val vPager2 = findViewById<ViewPager2>(R.id.vPager2)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
 
-        val frag1 = Fragment1()
-        val frag2 = Fragment2()
-        val frag3 = Fragment3()
-        val frag4 = Fragment4()
+        var fragList: List<Fragment>
 
-        //등록된 사진 수만큼 보여주기
-        if(picture.size == 1){
-            val fragList = listOf<Fragment>(frag1)
-            val adapter = ViewPagerAdapter(this)
-            adapter.fList = fragList
-            vPager2.adapter = adapter
+        if(picture?.size!!-1 == 1){
+            val frag1 = Fragment1(picture!![0])
+            fragList = listOf(frag1)
 
-            frag1.setImg(picture[0])
+        }else if(picture?.size!! -1 == 2){
+            val frag1 = Fragment1(picture!![0])
+            val frag2 = Fragment2(picture!![1])
+            fragList = listOf(frag1,frag2)
 
-        }else if(picture.size == 2){
-            val fragList = listOf<Fragment>(frag1,frag2)
-            val adapter = ViewPagerAdapter(this)
-            adapter.fList = fragList
-            vPager2.adapter = adapter
-
-            frag1.setImg(picture[0])
-            frag2.setImg(picture[1])
-
-        }else if(picture.size == 3){
-            val fragList = listOf<Fragment>(frag1,frag2, frag3)
-            val adapter = ViewPagerAdapter(this)
-            adapter.fList = fragList
-            vPager2.adapter = adapter
-
-            frag1.setImg(picture[0])
-            frag2.setImg(picture[1])
-            frag3.setImg(picture[2])
+        }else if(picture.size-1 == 3){
+            val frag1 = Fragment1(picture!![0])
+            val frag2 = Fragment2(picture!![1])
+            val frag3 = Fragment3(picture!![2])
+            fragList = listOf(frag1,frag2,frag3)
 
         }else{
-            val fragList = listOf<Fragment>(frag1,frag2, frag3, frag4)
-            val adapter = ViewPagerAdapter(this)
-            adapter.fList = fragList
-            vPager2.adapter = adapter
+            val frag1 = Fragment1(picture!![0])
+            val frag2 = Fragment2(picture!![1])
+            val frag3 = Fragment3(picture!![2])
+            val frag4 = Fragment4(picture!![3])
+            fragList = listOf(frag1,frag2,frag3,frag4)
 
-            frag1.setImg(picture[0])
-            frag2.setImg(picture[1])
-            frag3.setImg(picture[2])
-            frag4.setImg(picture[3])
         }
+        val adapter = ViewPagerAdapter(this)
+        adapter.fList = fragList
+        vPager2.adapter = adapter
+
 
         //인디케이터
         TabLayoutMediator(tabLayout, vPager2) { tab, position ->

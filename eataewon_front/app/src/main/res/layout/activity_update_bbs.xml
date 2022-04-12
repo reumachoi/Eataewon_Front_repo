@@ -100,7 +100,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
                     <ImageView
-                        android:id="@+id/writeProfilPic"
+                        android:id="@+id/ImageView2"
                         android:layout_width="66dp"
                         android:layout_height="66dp"
                         app:srcCompat="@drawable/ic_baseline_account_circle_24" />
@@ -188,10 +188,10 @@
                         android:orientation="horizontal">
 
                         <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/updateRecyclerview"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                                android:id="@+id/updateRecyclerview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
 
                         </androidx.recyclerview.widget.RecyclerView>
 

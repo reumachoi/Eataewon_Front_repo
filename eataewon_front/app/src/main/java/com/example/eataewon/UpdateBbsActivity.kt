@@ -87,6 +87,8 @@ class UpdateBbsActivity : AppCompatActivity() {
             }
         }
 
+        val recyclerView = findViewById<RecyclerView>(R.id.updateRecyclerview)
+
         // 이미지 사진 간격 맞추기
         recyclerView.addItemDecoration(RecyclerViewDecoration(5))
 
