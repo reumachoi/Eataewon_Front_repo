@@ -237,5 +237,19 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 }
             }
     } //firebaseAuthWithGoogle
+
+
+    var backTime: Long =0
+    override fun onBackPressed() {
+        if (System.currentTimeMillis()> backTime + 2500) {
+            backTime = System.currentTimeMillis();
+            return;
+        }
+        if(System.currentTimeMillis() <= backTime +2500){
+            finishAffinity()
+        }
+    }
+
+
 }
 
