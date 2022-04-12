@@ -59,7 +59,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         mypageProfilpicuri = v.findViewById(R.id.mypage_profilpic_uri)
 
         //버튼
-        val updateBtn = v.findViewById<Button>(R.id.mypage_updateBtn)
+
         val imageBtn = v.findViewById<Button>(R.id.mypageProfilpicBtn)
 
         //텍스트뷰에 값 입력

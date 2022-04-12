@@ -42,6 +42,10 @@ class SearchKakaoMapActivity : AppCompatActivity() {
         setContentView(binding.root)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
 
+        val searchKeyword = intent.getStringExtra("editAddr")
+        if(searchKeyword!=null){
+            binding.etSearchField.setText(searchKeyword)
+        }
 
         // 리사이클러 뷰
         binding.rvList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

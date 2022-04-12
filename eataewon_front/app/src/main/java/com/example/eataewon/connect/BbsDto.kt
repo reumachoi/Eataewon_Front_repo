@@ -3,13 +3,14 @@ package com.example.eataewon.connect
 import android.os.Parcel
 import android.os.Parcelable
 
+
 class BbsDto(
     var id:String?,
     var nickname:String?,
-    var seq:Int,
+    var seq: Int?,
     var title:String?,
     var content:String?,
-    var picture:Int,
+    var picture:String?,
     var hashtag:String?,
     var wdate:String?,
     var shopname:String?,
@@ -19,15 +20,16 @@ class BbsDto(
     var latitude:Double,
     var longitude:Double,
     var readcnt:Int,
-    var likecnt:Int
-    ):Parcelable {
+    var likecnt:Int,
+
+):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
-        parcel.readInt(),
+        parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readString(),
         parcel.readString(),
-        parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -44,10 +46,10 @@ class BbsDto(
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
         parcel.writeString(nickname)
-        parcel.writeInt(seq)
+        parcel.writeValue(seq)
         parcel.writeString(title)
         parcel.writeString(content)
-        parcel.writeInt(picture)
+        parcel.writeString(picture)
         parcel.writeString(hashtag)
         parcel.writeString(wdate)
         parcel.writeString(shopname)
@@ -78,5 +80,6 @@ class BbsDto(
         }
     }
 
-
 }
+
+

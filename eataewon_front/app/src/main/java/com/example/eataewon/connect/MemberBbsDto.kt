@@ -8,7 +8,7 @@ class MemberBbsDto ( var id:String?,
                      var seq:Int,
                      var title:String?,
                      var content:String?,
-                     var picture:Int,
+                     var picture:String?,
                      var hashtag:String?,
                      var wdate:String?,
                      var shopname:String?,
@@ -24,7 +24,7 @@ class MemberBbsDto ( var id:String?,
                      val pwd:String?,
                      val email:String?,
                      val nickname:String?,
-                     val profilpic:Int,
+                     val profilpic:String?,
                      val likepoint:Int,
                      val profilmsg:String?
 ): Parcelable {
@@ -33,7 +33,7 @@ class MemberBbsDto ( var id:String?,
         parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -48,7 +48,7 @@ class MemberBbsDto ( var id:String?,
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readInt(),
+        parcel.readString(),
         parcel.readInt(),
         parcel.readString()
     ) {
@@ -59,7 +59,7 @@ class MemberBbsDto ( var id:String?,
         parcel.writeInt(seq)
         parcel.writeString(title)
         parcel.writeString(content)
-        parcel.writeInt(picture)
+        parcel.writeString(picture)
         parcel.writeString(hashtag)
         parcel.writeString(wdate)
         parcel.writeString(shopname)
@@ -74,7 +74,7 @@ class MemberBbsDto ( var id:String?,
         parcel.writeString(pwd)
         parcel.writeString(email)
         parcel.writeString(nickname)
-        parcel.writeInt(profilpic)
+        parcel.writeString(profilpic)
         parcel.writeInt(likepoint)
         parcel.writeString(profilmsg)
     }

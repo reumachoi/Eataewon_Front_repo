@@ -21,7 +21,7 @@ class HomePagerAdapter(private val context: Context, private val datatList: Arra
         private val curaterId = itemView.findViewById<TextView>(R.id.CuratorId)
 
         fun bind(bbsDto: BbsDto, position: Int) {
-            curationPhoto.setImageResource(bbsDto.picture)
+            //curationPhoto.setImageResource(bbsDto.picture)
             curationTitle.text = bbsDto.title
             curaterId.text = (bbsDto.id + " 큐레이션")
 

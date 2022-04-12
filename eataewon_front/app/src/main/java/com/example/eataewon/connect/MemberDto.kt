@@ -15,6 +15,7 @@ class MemberDto(
     val profilmsg:String?,
     val del:Int
 ): Parcelable{
+
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -57,6 +58,5 @@ class MemberDto(
             return arrayOfNulls(size)
         }
     }
-
-
 }
+

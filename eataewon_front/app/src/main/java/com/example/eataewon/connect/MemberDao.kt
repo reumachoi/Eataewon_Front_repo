@@ -15,6 +15,9 @@ interface MemberService{
     @POST("/getIdApp")
     fun getId(@Body id:String?=null): Call<String>
 
+    @POST("/getEmailApp")
+    fun getEmail(@Body email:String) : Call<String>
+
     @POST("/addmemberApp")
     fun signup(@Body dto:MemberDto): Call<String>
 
@@ -28,13 +31,17 @@ interface MemberService{
     @POST("/updateUserData")
     fun updateUserData(@Body dto: MemberDto):Call<Boolean>
 
-    @POST("/deleteMem")
+    @POST("/deleteMemApp")
     fun deleteMem(@Body dto:MemberDto): Call<String>
+
+    @POST("/resetPwd")
+    fun resetPwd(@Body dto:MemberDto):Call<Boolean>
+
+    @POST("getProfilPicApp")
+    fun getProfilPic(@Body id:String):Call<String>
 
     @POST("/updateUserProfilPic")
     fun  updateUserProfilPic(@Body dto: MemberDto): Call<Boolean>
-
-
 }
 
 class MemberDao {
@@ -84,6 +91,22 @@ class MemberDao {
         println("아이디 중복확인 결과 ${response?.body()}")
         return response?.body()
     }
+
+    fun getEmail(email:String) : String?{
+        var response: Response<String>?
+        println("email: ${email}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.getEmail(email)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        println("이메일로 계정찾기결과 찾은 아이디는: ${response?.body()}")
+        return response?.body()
+    }
+
 
     fun signup(dto: MemberDto) : String?{
         var response: Response<String>?
@@ -158,6 +181,35 @@ class MemberDao {
 
         return response?.body()
     }
+    fun getProfilPic(id:String):String?{
+        var response : Response<String>?
+        println("getProfilPic Id: ${id}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.getProfilPic(id)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun resetPwd(dto: MemberDto):Boolean?{
+        var response : Response<Boolean>?
+        println("resetPwd dto: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(MemberService::class.java)
+            val call = service?.resetPwd(dto)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        println("이메일 변경 결과?? ${response?.body()}")
+        return response?.body()
+    }
+
 
     fun updateUserProfilPic(dto: MemberDto ): Boolean?{
         var response: Response<Boolean>?
@@ -173,5 +225,6 @@ class MemberDao {
 
         return response?.body()
     }
+
 
 }
