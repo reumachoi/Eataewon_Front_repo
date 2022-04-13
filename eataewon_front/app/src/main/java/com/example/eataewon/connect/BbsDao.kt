@@ -74,6 +74,9 @@ interface BbsService {
     @POST("/findMyBbs")
     fun findMyBbs(@Body id:String):Call<List<BbsDto>>
 
+    @POST("/findBookmark")
+    fun findBookmark(@Body id:String) : Call <List<BbsDto>>
+
     @Headers("Content-Type: application/json")
     @POST("/likecntPlus")
     fun likecntPlus(@Body seq:Int) : Call<Boolean>
@@ -405,5 +408,19 @@ class BbsDao {
         //    response = null
         //}
         return response?.body() as List<BbsDto>
+    }
+
+    fun findBookmark(id:String):List<BbsDto>?{
+        var response : Response<List<BbsDto>>?
+        println("findBookmark id: ${id}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.findBookmark(id)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
     }
 }

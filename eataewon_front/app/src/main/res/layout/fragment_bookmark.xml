@@ -5,4 +5,21 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"/>
+        android:orientation="vertical">
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="400dp"
+            android:layout_height="487dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.454" app:layout_constraintVertical_bias="0.796"
+            android:id="@+id/bookmarkRecycler"/>
+    <TextView
+            android:text="스크랩 게시물 확인"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:layout_width="236dp"
+            android:layout_height="50dp" android:id="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="48dp"
+            app:layout_constraintHorizontal_bias="0.498"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

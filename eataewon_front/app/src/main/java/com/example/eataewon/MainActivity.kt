@@ -174,6 +174,12 @@ class MainActivity : AppCompatActivity(),View.OnClickListener{
                 //백엔드 접속후 id pw값을 찾아 login값에 dto값 넣기
                 val login = MemberDao.getInstance().login(dto)
 
+                //user데이터 넘겨주기
+                var bookmarkFragment =BookmarkFragment()
+                var bundle = Bundle(1)
+                bundle.putString("loginUserIdToBookmark",login?.id)
+                bookmarkFragment.arguments=bundle
+
                 if (login != null) {
                     Toast.makeText(this, "환영합니다. ${login.id}님", Toast.LENGTH_SHORT).show()
 
