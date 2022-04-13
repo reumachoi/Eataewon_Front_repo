@@ -163,19 +163,16 @@
 
                 itemEl.onmouseover =  function () {
                     displayInfowindow(marker, title);
+                    clickMarker(marker);
                 };
 
                 itemEl.onmouseout =  function () {
                     infowindow.close();
                 };
 
-                itemEl.click(function () {
-                    marker.x
-                    marker.y
-                    marker.shopname
-                    marker.shopphnum
-                    marker.address
-                });
+                itemEl.onclick =  function () {
+                    clickMarker(marker);
+                };
 
             })(marker, places[i].place_name);
 
@@ -245,6 +242,28 @@
             markers[i].setMap(null);
         }
         markers = [];
+    }
+
+    function clickMarker(marker){
+
+        let shopname = marker.shopname
+
+        $.ajax({
+            url:"http://localhost:3000/bbsChoicePlace",
+            type:"get",
+            data:{ "shopname":shopname },
+            success:function(msg){
+                if(msg != null){
+                    alert('장소가 선택되었습니다');
+                    location.href = "bbswrite.html";
+                }else{
+                    alert('장소가 선택되지않았습니다');
+                }
+            },
+            error:function(){
+                alert('error');
+            }
+        })
     }
 
     // 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
