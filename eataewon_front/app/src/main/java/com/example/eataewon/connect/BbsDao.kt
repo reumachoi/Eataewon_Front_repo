@@ -8,8 +8,8 @@ interface BbsService {
 
 
 
-    @GET("/getBbsListSearchApp")
-    fun getBbsListSearchApp(@Body param: BbsParam): Call<BbsDto>
+    @POST("/getBbsListSearchApp")
+    fun getBbsListSearchApp(@Body search: String?): Call<ArrayList<BbsDto>>
 
     @GET("/getMarkerListApp")
     fun getMarkerListApp(): Call<ArrayList<BbsDto>>
@@ -432,12 +432,12 @@ class BbsDao {
         return response?.body() as List<BbsDto>
     }
 
-    fun getBbsListSearchApp(param: BbsParam) : BbsDto? {
+    fun getBbsListSearchApp(search: String?) : ArrayList<BbsDto>? {
         println("~~~getBbsListSearchApp")
 
         val retrofit = RetrofitClient.getInstance()
         val service = retrofit?.create(BbsService::class.java)
-        val call = service?.getBbsListSearchApp(param)
+        val call = service?.getBbsListSearchApp(search)
         val response = call?.execute()
 
         return response?.body()

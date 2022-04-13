@@ -28,7 +28,6 @@ class HomeFragment: Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         // Home Lower BBS Data View
-        //val upperDto = arrayListOf<BbsDto>()
         val list = BbsDao.getInstance().getLowerBbsList()
 
         val lowerAdapter = HomeLowerAdapter(requireActivity(), list!!)
@@ -38,9 +37,6 @@ class HomeFragment: Fragment() {
         lowerRecyclerView.layoutManager = layout
         lowerRecyclerView.setHasFixedSize(true)
 
-
-
-        //return inflater.inflate(R.layout.fragment_home, container, false)
         return view
     }
 
@@ -53,9 +49,5 @@ class HomeFragment: Fragment() {
         CurationPager.adapter = HomeUpperAdapter(requireActivity(), list!!)
         // ViewPager Paging 방향은 Horizontal
         CurationPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-
-        // HOME BBS VIEW
-        //BbsPager.adapter = BbsPagerAdapter(requireActivity(), testList)
-        //BbsPager.orientation = ViewPager2.ORIENTATION_VERTICAL
     }
 }

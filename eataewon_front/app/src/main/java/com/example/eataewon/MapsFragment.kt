@@ -5,8 +5,6 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.location.Location
 import android.os.Bundle
-import android.os.Looper
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,10 +15,7 @@ import androidx.fragment.app.Fragment
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.google.android.gms.location.*
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.*
 
 class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
@@ -32,11 +27,8 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
     lateinit var locationPermission: ActivityResultLauncher<Array<String>>
     // GPS를 사용해서 위치를 확인
     lateinit var fusedLocationClient: FusedLocationProviderClient
-    // 위치값 요청에 대한 갱신 정보를 받는 변수
-    lateinit var locationCallback: LocationCallback
 
     private var markerShop : Marker? = null
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -75,14 +67,15 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
         mMap.setOnMyLocationClickListener(this)         // 내 위치 정보 표기
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
-        //updateLocation()
-        
 
         val addressData = BbsDao.getInstance().getMarkerListApp() as ArrayList<BbsDto>
 
         for (shop in addressData) {
             val shopPosition = LatLng(shop.latitude, shop.longitude)
-            val shopMarker = MarkerOptions().position(shopPosition).title(shop.shopname)
+            val shopMarker = MarkerOptions()
+                                .position(shopPosition)
+                                .title(shop.shopname)
+                                //.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker))
             mMap.addMarker(shopMarker)
 
             val latLngBounds = LatLngBounds.builder()
@@ -105,57 +98,16 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
         return false
     }
 
-
-
-    /*@SuppressLint("MissingPermission")
-    fun updateLocation() {
-        val locationRequest = LocationRequest.create()
-        locationRequest.run {
-            priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        }
-
-        locationCallback = object: LocationCallback() {
-            override fun onLocationResult(locationResult: LocationResult?) {
-                println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~onLocationResult")
-                locationResult?.let {
-                    for ((i, location) in it.locations.withIndex()){
-                        Log.d("Location", "위도: $i ${location.latitude}), 경도: 경도: ${location.longitude}")
-                        setLastLocation(location)
-                    }
-                }
-            }
-        }
-        fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper())
-    }
-
     fun setLastLocation(lastLocation: Location) {
         val LATLNG = LatLng(lastLocation.latitude, lastLocation.longitude)
-
-        //val markerOptions = MarkerOptions().position(LATLNG).title("Here!")
 
         val cameraPosition = CameraPosition.Builder()
             .target(LATLNG)
             .zoom(15.0f)
             .build()
         mMap.clear()
-        //mMap.addMarker(markerOptions)
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
-
-        // Google Map Marker Code
-*//*        var bitmapDrawable: BitmapDrawable
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            bitmapDrawable = getDrawable(R.drawable.marker) as BitmapDrawable
-        } else {
-            bitmapDrawable = resources.getDrawable(R.drawable.marker) as BitmapDrawable
-        }
-
-        var discriptor = BitmapDescriptorFactory.fromBitmap(bitmapDrawable.bitmap)*//*
-
-        // Google Map Marker Code
-
-        //var markerImg = BitmapFactory.decodeFile("drawable/marker.png")
-        //var scaledBitmap = Bitmap.createScaledBitmap(markerImg, 50, 50, false)
-    }*/
+    }
 
     override fun onMarkerClick(marker: Marker): Boolean {
         // Retrieve the data from the marker.

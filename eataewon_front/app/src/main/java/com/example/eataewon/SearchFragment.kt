@@ -25,7 +25,6 @@ class SearchFragment: Fragment(R.layout.fragment_search) {
         savedInstanceState: Bundle?
     ): View? {
 
-        //return super.onCreateView(inflater, container, savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_search, container, false)
 
         // 리사이클러뷰 db 데이터와 접함
