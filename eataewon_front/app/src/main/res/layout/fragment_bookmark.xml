@@ -20,6 +20,20 @@
             android:layout_width="236dp"
             android:layout_height="50dp" android:id="@+id/textView16"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="48dp"
-            app:layout_constraintHorizontal_bias="0.498"/>
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="36dp"
+            app:layout_constraintHorizontal_bias="0.497"/>
+    <Button
+            android:text="스크랩수정"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/showBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintBottom_toTopOf="@+id/bookmarkRecycler"
+            app:layout_constraintEnd_toStartOf="@+id/delBtn"/>
+    <Button
+            android:text="스크랩삭제"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/delBtn"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.981" app:layout_constraintBottom_toTopOf="@+id/bookmarkRecycler"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

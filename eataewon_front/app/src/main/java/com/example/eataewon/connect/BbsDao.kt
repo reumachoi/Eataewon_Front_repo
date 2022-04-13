@@ -85,6 +85,9 @@ interface BbsService {
     @POST("/likecntMinus")
     fun likecntMinus(@Body seq:Int) : Call<Boolean>
 
+    @POST("/scrapDelete")
+    fun scrapDelete(@Body dto:ArrayList<ScrapDto>) : Call<Boolean>
+
     //카카오 로컬 검색
     @GET("v2/local/search/keyword.json")    // Keyword.json의 정보를 받아옴
     fun getSearchKeyword(
@@ -417,6 +420,20 @@ class BbsDao {
             val retrofit = RetrofitClient.getInstance()
             val service = retrofit?.create(BbsService::class.java)
             val call = service?.findBookmark(id)
+            response = call?.execute()
+        }catch(e:Exception){
+            response = null
+        }
+        return response?.body()
+    }
+
+    fun scrapDelete(dto:ArrayList<ScrapDto>):Boolean?{
+        var response : Response<Boolean>?
+        println("scrapDelete dto: ${dto}")
+        try {
+            val retrofit = RetrofitClient.getInstance()
+            val service = retrofit?.create(BbsService::class.java)
+            val call = service?.scrapDelete(dto)
             response = call?.execute()
         }catch(e:Exception){
             response = null

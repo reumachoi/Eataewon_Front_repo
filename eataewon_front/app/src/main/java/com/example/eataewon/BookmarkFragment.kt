@@ -4,18 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
+import android.widget.CheckBox
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
 import com.example.eataewon.Adapter.BookmarkBbsAdapter
-import com.example.eataewon.Adapter.MypageBbsAdapter
+import com.example.eataewon.Adapter.checkboxData
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
-import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.connect.MemberDto
-import kotlinx.android.synthetic.main.fragment_bookmark.*
+import com.example.eataewon.connect.ScrapDto
+import kotlinx.android.synthetic.main.fragment_bookmark.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class BookmarkFragment : Fragment() {
@@ -31,6 +36,7 @@ class BookmarkFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_bookmark, container, false)
 
+
         //임시 테스트
         val user = arguments?.getParcelable<MemberDto>("user")
 
@@ -38,19 +44,77 @@ class BookmarkFragment : Fragment() {
         var bookmarkList = BbsDao.getInstance().findBookmark(user?.id!!)
         println("북마크 페이지 : ${bookmarkList.toString()}")
 
+        val bookAdapter = BookmarkBbsAdapter(requireActivity(), bookmarkList as ArrayList<BbsDto>)
+
+        var recyclerView = view?.findViewById<RecyclerView>(R.id.bookmarkRecycler)
+
         if (bookmarkList != null) {
-            val bookAdapter = BookmarkBbsAdapter(requireActivity(), bookmarkList as ArrayList<BbsDto>)
-
-            var recyclerView = view?.findViewById<RecyclerView>(R.id.bookmarkRecycler)
-
             recyclerView?.layoutManager = GridLayoutManager(activity, 2)
             recyclerView?.adapter = bookAdapter
             recyclerView?.setHasFixedSize(true)
-        }else{
+        }
+
+        val showBtn = view?.findViewById<Button>(R.id.showBtn)
+        val delBtn = view?.findViewById<Button>(R.id.delBtn)
+
+        view.showBtn.setOnClickListener {
+            val radioBtn = recyclerView?.findViewById<CheckBox>(R.id.bm_checkBtn)
+
+            //두번째부터는 여기서 시작하는듯??
+            radioBtn?.isVisible = true
+
+            delBtn?.isVisible = true
+            showBtn?.isVisible = false
+
+            //처음에는 숫자로 시작하고
+            bookAdapter.updateRadioBtn(1)
+            bookAdapter.notifyDataSetChanged()
+        }
+
+        view.delBtn.setOnClickListener {
+            val radioBtn = recyclerView?.findViewById<CheckBox>(R.id.bm_checkBtn)
+            //radioBtn?.isVisible = false
+
+            showBtn?.isVisible = true
+            delBtn?.isVisible = false
+
+            val list:List<checkboxData> = bookAdapter.checkboxResult()
+            bookAdapter.notifyDataSetChanged()
+
+            val listDto = arrayListOf<ScrapDto>()
+
+            for (i in list){
+                if(i.checked){
+                    println("${i.seq} seqseq~~~~")
+                    val id = user.id
+                    val bbsseq = i.seq
+                    listDto.add(ScrapDto(id,bbsseq,0))
+                }
+            }
+            println("${listDto}!!!!!")
+
+
+            val result = BbsDao.getInstance().scrapDelete(listDto!!)
+
+            if(result==true){
+                println("스크랩 취소가 완료되었습니다")
+
+                var bookmarkList = BbsDao.getInstance().findBookmark(user?.id!!)
+                recyclerView?.adapter = BookmarkBbsAdapter(requireActivity(), bookmarkList as ArrayList<BbsDto>)
+
+            }else{
+                println("스크랩 취소를 실패했습니다")
+            }
+
+            bookAdapter.updateRadioBtn(0)
+            bookAdapter.notifyDataSetChanged()
 
         }
 
+
+
         return view
     }
+
 
 }
