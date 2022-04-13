@@ -141,8 +141,7 @@ class BbsDetailActivity : AppCompatActivity() {
             //Some implementation...
         }.attach()
 
-        //이미 스크랩을 눌렀던 글인지 확인하는 조건문 필요 (스크랩 눌러놨으면 노란리본으로 표시해주기)
-        //이미 좋아요를 눌렀던 글인지 확인하는 조건문 필요 (좋아요 눌러놨으면 하트빨간색으로 표시해주기)
+
 
         //기본으로는 좋아요,스크랩 안한상태
         binding.HeartBtn.isSelected = false
@@ -152,22 +151,27 @@ class BbsDetailActivity : AppCompatActivity() {
         var id = loginUserId
         var bbsseq = data?.seq
 
+
+
+        //스크랩 해둔 상태인지?
         var sdto = ScrapDto(id,bbsseq,null)
         var checkScrap = BbsDao.getInstance().checkUserScrap(sdto)
 
         if(checkScrap==true){
-            binding.HeartBtn.isSelected = true  //좋아요 누른상태
-        }else{
-            binding.HeartBtn.isSelected = false  //좋아요 안누른상태
-        }
-
-        var ldto = LikeDto(id,bbsseq,null)
-        var checkLike = BbsDao.getInstance().checkUserLike(ldto)
-
-        if(checkLike==true){
             binding.ScrapBtn.isSelected = true  //스크랩 누른상태
         }else{
             binding.ScrapBtn.isSelected = false //스크랩 안누른상태
+        }
+
+        //좋아요 해둔 상태인지?
+        var ldto = LikeDto(id,bbsseq,null)
+        var checkLike = BbsDao.getInstance().checkUserLike(ldto)
+        println(checkLike)
+        if(checkLike==true){
+            binding.HeartBtn.isSelected = true  //좋아요 누른상태
+
+        }else{
+            binding.HeartBtn.isSelected = false  //좋아요 안누른상태
         }
 
 
