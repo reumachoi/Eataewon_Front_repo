@@ -1,109 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:background="@color/white"
-    >
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+>
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/bbsdetail_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/white"
-            android:minHeight="?attr/actionBarSize"
-            app:title="제목"
-            app:titleTextColor="@color/black"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-
-        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            tools:context=".BbsDetailActivity"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/bbsdetail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                app:title="제목"
+                app:titleTextColor="@color/black"
+                android:theme="@style/Theme.Design.Light.NoActionBar"/>
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                tools:context=".BbsDetailActivity"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@color/black">
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@color/black">
 
                     <Button
-                        android:id="@+id/deleteBtn"
-                        android:layout_width="79dp"
-                        android:layout_height="37dp"
-                        android:layout_marginEnd="25dp"
-                        android:layout_weight="1"
-                        android:text="삭제"
-                        android:textColor="@color/black"
-                        android:backgroundTint="@color/white"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.521" />
+                            android:id="@+id/deleteBtn"
+                            android:layout_width="79dp"
+                            android:layout_height="37dp"
+                            android:layout_marginEnd="25dp"
+                            android:layout_weight="1"
+                            android:text="삭제"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.521" />
 
                     <Button
-                        android:id="@+id/updateBtn"
-                        android:layout_width="79dp"
-                        android:layout_height="37dp"
-                        android:layout_weight="1"
-                        android:text="수정"
-                        android:textColor="@color/black"
-                        android:backgroundTint="@color/white"
-                        app:layout_constraintBottom_toBottomOf="@+id/deleteBtn"
-                        app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
-                        app:layout_constraintTop_toTopOf="@+id/deleteBtn" />
+                            android:id="@+id/updateBtn"
+                            android:layout_width="79dp"
+                            android:layout_height="37dp"
+                            android:layout_weight="1"
+                            android:text="수정"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@+id/deleteBtn"
+                            app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
+                            app:layout_constraintTop_toTopOf="@+id/deleteBtn" />
 
                     <TextView
-                        android:id="@+id/DeBbsWdateT"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="36dp"
-                        android:text="2010-10-20"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.698" />
+                            android:id="@+id/DeBbsWdateT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:text="2010-10-20"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.698" />
 
                     <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Date"
-                        android:textColor="@color/white"
-                        app:layout_constraintBottom_toTopOf="@+id/DeBbsWdateT"
-                        app:layout_constraintStart_toStartOf="@+id/DeBbsWdateT" />
+                            android:id="@+id/textView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toTopOf="@+id/DeBbsWdateT"
+                            app:layout_constraintStart_toStartOf="@+id/DeBbsWdateT" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp">
 
-                    <ImageView
-                        android:id="@+id/profilPicture"
-                        android:layout_width="66dp"
-                        android:layout_height="64dp"
-                        android:layout_marginStart="32dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profilPicture"
+                            android:layout_width="66dp"
+                            android:layout_height="64dp"
+                            android:layout_marginStart="32dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
                     <TextView
 
@@ -117,41 +117,41 @@
                             app:layout_constraintTop_toTopOf="@+id/profilPicture"/>
 
                     <TextView
-                        android:id="@+id/DeBbsLikePoT"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="176dp"
-                        android:layout_weight="1"
-                        android:text="11명 좋아요"
-                        android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/DeBbsUserT"
-                        app:layout_constraintStart_toEndOf="@+id/DeBbsUserT"
-                        app:layout_constraintTop_toTopOf="@+id/DeBbsUserT"
-                        app:layout_constraintVertical_bias="0.857" />
+                            android:id="@+id/DeBbsLikePoT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_weight="1"
+                            android:text="11명 좋아요"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/DeBbsUserT"
+                            app:layout_constraintStart_toEndOf="@+id/DeBbsUserT"
+                            app:layout_constraintTop_toTopOf="@+id/DeBbsUserT"
+                            app:layout_constraintVertical_bias="0.857" />
 
                     <TextView
-                        android:id="@+id/DeBbsUserT"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:text="UserID"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/profilPicture"
-                        app:layout_constraintStart_toEndOf="@+id/profilPicture" />
+                            android:id="@+id/DeBbsUserT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:text="UserID"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/profilPicture"
+                            app:layout_constraintStart_toEndOf="@+id/profilPicture" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Like Point"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@+id/DeBbsLikePoT"
-                        app:layout_constraintTop_toTopOf="@+id/profilPicture" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Like Point"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/DeBbsLikePoT"
+                            app:layout_constraintTop_toTopOf="@+id/profilPicture" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -173,18 +173,18 @@
                         app:layout_constraintHorizontal_bias="0.0"/>
 
                 <TextView
-                    android:id="@+id/DeTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:text="큐레이션 제목"
-                    android:textColor="@color/black" />
+                        android:id="@+id/DeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="큐레이션 제목"
+                        android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/DeContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="165dp"
-                    android:text="큐레이션 내용"
-                    android:textColor="@color/black" />
+                        android:id="@+id/DeContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp"
+                        android:text="큐레이션 내용"
+                        android:textColor="@color/black" />
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -193,102 +193,96 @@
                         android:background="@color/black"/>
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="핵시태그"
-                    android:textColor="@color/white"
-                    android:background="@color/black"/>
-
-                <TextView
-                    android:id="@+id/DeHashtag"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:text="#장소"
-                    android:textColor="@color/white"
-                    android:background="@color/black"/>
+                        android:id="@+id/DeHashtag"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="#장소"
+                        android:textColor="@color/white"
+                        android:background="@color/black"/>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/DeShopName"
-                        android:layout_width="279dp"
-                        android:layout_height="match_parent"
-                        android:text="가게이름"
-                        android:textColor="@color/black" />
+                            android:id="@+id/DeShopName"
+                            android:layout_width="279dp"
+                            android:layout_height="match_parent"
+                            android:text="가게이름"
+                            android:textColor="@color/black" />
 
                     <Button
-                        android:id="@+id/showDetailShop"
-                        android:layout_width="127dp"
-                        android:layout_height="match_parent"
-                        android:text="더보기" />
+                            android:id="@+id/showDetailShop"
+                            android:layout_width="127dp"
+                            android:layout_height="match_parent"
+                            android:text="더보기" />
 
                 </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/showDetailShopField"
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:visibility="gone">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/showDetailShopField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
 
                     <TextView
-                        android:id="@+id/DeBbsShopLocaT"
-                        android:layout_width="67dp"
-                        android:layout_height="27dp"
-                        android:layout_marginTop="16dp"
-                        android:text="가게주소"
-                        android:textColor="@color/black"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.047"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                            android:id="@+id/DeBbsShopLocaT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="가게주소"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.047"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
 
                     <TextView
-                        android:id="@+id/DeBbsShopPhT"
-                        android:layout_width="100dp"
-                        android:layout_height="28dp"
-                        android:layout_marginTop="20dp"
-                        android:text="가게전호번호"
-                        android:textColor="@color/black"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.051"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/DeBbsShopLocaT" />
+                            android:id="@+id/DeBbsShopPhT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="가게전화번호"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.047"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
                     <TextView
                             android:id="@+id/DeBbsShopUrlT"
-                            android:layout_width="100dp"
-                            android:layout_height="28dp"
-                            android:layout_marginTop="20dp"
-                            android:text="가게전호번호"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="가게url"
                             android:textColor="@color/black"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.051"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/DeBbsShopLocaT"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
                 <FrameLayout
-                    android:id="@+id/mapContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="337dp"
-                    android:layout_marginTop="16dp"
-                    android:visibility="gone"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/detailDateText"></FrameLayout>
+                        android:id="@+id/mapContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/detailDateText"></FrameLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:layout_below="@+id/HeartBtn"
-        android:layout_alignRight="@+id/HeartBtn"
-        android:src="@drawable/click_scrapbtn"
-        android:id="@+id/ScrapBtn" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_below="@+id/HeartBtn"
+            android:layout_alignRight="@+id/HeartBtn"
+            android:src="@drawable/click_scrapbtn"
+            android:id="@+id/ScrapBtn" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="match_parent"
@@ -300,11 +294,11 @@
             android:id="@+id/floShareBtn"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/click_likebtn"
-        android:id="@+id/HeartBtn" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/click_likebtn"
+            android:id="@+id/HeartBtn" />
 </RelativeLayout>

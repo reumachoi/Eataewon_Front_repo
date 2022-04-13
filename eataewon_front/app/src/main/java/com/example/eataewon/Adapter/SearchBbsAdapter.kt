@@ -33,9 +33,9 @@ class SearchBbsAdapter (private val context: Context, private val dataList: Arra
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val shopPhoto = itemView.findViewById<ImageView>(R.id.shopPhotoView)
-        private val shopName = itemView.findViewById<TextView>(R.id.shopNameView)
-        private val address = itemView.findViewById<TextView>(R.id.addressView)
-        private val hashtag = itemView.findViewById<TextView>(R.id.hashtagView)
+        private val shopName = itemView.findViewById<TextView>(R.id.bm_titleT)
+        private val address = itemView.findViewById<TextView>(R.id.bm_shopnameT)
+        private val hashtag = itemView.findViewById<TextView>(R.id.bm_addrT)
 
         fun bind(bbsDto: BbsDto, context: Context) {
 

@@ -6,28 +6,32 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import com.example.eataewon.R
 import kotlinx.android.synthetic.main.fragment_1.view.*
+import kotlinx.android.synthetic.main.fragment_3.*
 
-class Fragment3 : Fragment() {
 
+class Fragment3(var uri:String) : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    var v : View? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_3, container, false)
 
-        return view
+        v = inflater.inflate(R.layout.fragment_3, container, false)
+
+        setImg(uri)
+
+        return v
+
     }
 
     fun setImg(uri:String){
-        view?.imageView?.setImageURI(Uri.parse(uri))
+        var dePic3 = v?.findViewById<ImageView>(R.id.dePic3)
+
+        dePic3?.setImageURI(Uri.parse(uri))
     }
 }

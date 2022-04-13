@@ -52,20 +52,20 @@ class HomeFragment: Fragment() {
         // 테스트 데이터
         val testList = arrayListOf<BbsDto>(
             BbsDto(
-                "id","닉네임1", 1, "가장 사랑받는 공간인데 두 줄 테스트를 위한 장문 작성을 시도 추가로 작성해야 두 줄로 보임", "플랫화이트가 맛있는 카페",
-                "R.drawable.cafe1", "#카페", "2022-03-22",
+                "a","a", 106, "가장 사랑받는 공간인데 두 줄 테스트를 위한 장문 작성을 시도 추가로 작성해야 두 줄로 보임", "플랫화이트가 맛있는 카페",
+                "/storage/emulated/0/Download/ljkjv5ut04vlxr.jpg /storage/emulated/0/Download/SE-e6e58ad3-0128-4081-923a-99f0214426b6.jpg /storage/emulated/0/Download/ljkjv5ut04vlxr.jpg /storage/emulated/0/Download/SE-e6e58ad3-0128-4081-923a-99f0214426b6.jpg ", "#카페", "2022-03-22",
                 "폰트커피", "서울 영등포구 경인로77가길 6 1층", "02-123-1234","https://naver.com",37.512218, 126.8925455,
                 0, 0
             ),
             BbsDto(
-                "id","닉네임2", 2, "두 번째로 사랑받는 공간", "플랫화이트가 맛있는 카페",
-                "R.drawable.cafe2", "#카페", "2022-03-22",
+                "a","a", 89, "두 번째로 사랑받는 공간", "플랫화이트가 맛있는 카페",
+                "/storage/emulated/0/Download/ljkjv5ut04vlxr.jpg /storage/emulated/0/Download/SE-e6e58ad3-0128-4081-923a-99f0214426b6.jpg ", "#카페", "2022-03-22",
                 "프릳츠커피", "서울 영등포구 경인로77가길 6 1층","02-123-1234","https://naver.com", 37.512218, 126.8925455,
                 0, 0
             ),
             BbsDto(
-                "id","닉네임3", 3, "세 번째로 사랑받는 공간", "플랫화이트가 맛있는 카페",
-               " R.drawable.cafe3", "#카페", "2022-03-22",
+                "a","닉네임3", 107, "세 번째로 사랑받는 공간", "플랫화이트가 맛있는 카페",
+                "/storage/emulated/0/Download/ljkjv5ut04vlxr.jpg ", "#카페", "2022-03-22",
                 "스타벅스", "서울 영등포구 경인로77가길 6 1층","02-123-1234","https://naver.com", 37.512218, 126.8925455,
                 0, 0
             ),

@@ -51,6 +51,7 @@ class FindUserIdActivity : AppCompatActivity() {
 
             //안도현 변경 레이아웃으로 합병
             if(idcheck.equals("NO")){
+
                 binding.findResultText.text = "입력하신 정보와 일치하는 계정을 찾았습니다 \n 비밀번호를 재설정해주세요"
                 binding.findResultText.isVisible = true
                 binding.findResultText.setTextColor(Color.BLUE)

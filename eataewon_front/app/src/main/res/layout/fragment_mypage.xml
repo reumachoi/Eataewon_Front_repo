@@ -46,7 +46,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/mypage_likepoint"
             app:layout_constraintStart_toStartOf="@+id/mypage_likepoint"/>
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/mypage_profil_image"
             android:layout_width="131dp"
             android:layout_height="130dp"
@@ -96,12 +96,13 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/mypage_likepoint"
             app:layout_constraintTop_toTopOf="@+id/mypage_profil_image"/>
+
     <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="4dp"
             android:fontFamily="@font/font"
             android:text="프로필 사진"
             android:textColor="@color/black"
@@ -111,16 +112,27 @@
             app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"/>
     <Button
             android:id="@+id/mypageProfilpicBtn"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/black"
+            android:text="사진선택"
+            android:fontFamily="@font/font"
+            app:layout_constraintEnd_toEndOf="@+id/mypage_profil_image"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"
+            tools:ignore="TouchTargetSizeCheck" app:layout_constraintTop_toBottomOf="@+id/mypage_profil_image"/>
+    <Button
+            android:id="@+id/profilPicUpdateBtn"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:backgroundTint="@color/black"
             android:text="사진변경"
             android:fontFamily="@font/font"
             app:layout_constraintEnd_toEndOf="@+id/mypage_profil_image"
-            app:layout_constraintHorizontal_bias="0.431"
+            app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"
-            tools:ignore="TouchTargetSizeCheck" app:layout_constraintTop_toBottomOf="@+id/mypage_profil_image"/>
-
+            tools:ignore="TouchTargetSizeCheck" app:layout_constraintTop_toBottomOf="@+id/mypageProfilpicBtn"
+    />
     <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
@@ -168,9 +180,9 @@
             android:layout_height="413dp"
             android:id="@+id/inMypageFragment"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" android:layout_marginTop="296dp"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_likepoint"
             app:layout_constraintHorizontal_bias="0.504" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.308"/>
+            app:layout_constraintVertical_bias="0.731"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
