@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mypage</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="cssHeader/css/style.css">
+
+
+	<div id ="logout"><a href="login.html" class="nav-link">Logout</a>
+	<a href="withdrawal.html" class="nav-link">Withdrawal</a></div>
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"><!-- <img src="./imagesrc/coffee.jpg"> --></h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-between">
+				<div class="col-md-8 order-md-last">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="navbar-brand" href="bbslist.html">Eataewon Class <span>Go To Explore Your Place</span></a>
+						</div>
+						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="social-media">
+	<!-- 	    		<p class="mb-0 d-flex">
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+		    		</p> -->
+	        </div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid">
+	    
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item active"><a href="#" class="nav-link">About Us</a></li>
+	        
+	        	<li class="nav-item"><a href="bbslist.html" class="nav-link">Places</a></li>
+	        		<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="bbslikelistfile.html">Like</a>
+                <a class="dropdown-item" href="bbsscraplistfile.html">Scrap</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="mypage.html" class="nav-link">My Page</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+	
+
+	<script src="cssHeader/js/jquery.min.js"></script>
+  <script src="cssHeader/js/popper.js"></script>
+  <script src="cssHeader/js/bootstrap.min.js"></script>
+  <script src="cssHeader/js/main.js"></script>
+
+
+
+
+	<!--  기존 navibar
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="bbslist.html">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mypage.html">mypage</a>
+        </li>
+      </ul>
+          <a class="nav-link" href="login.html">log-out</a>
+          <button type="button" id="withdrawal" class="btn btn-outline-light">Withdrawal
+          </button>
+   
+    </div>
+  </div>
+</nav> -->
+</head>
+<body>
+
+
+<div class="card border-primary mb-3" style="max-width: 30rem;">
+  <div class="card-header">회원 정보 조회 및 수정</div>
+  <div class="card-body">
+    <h4 class="card-title">당신의 호감도</h4>
+    <h4 class="card-title" id="likepoint"></h4>
+    <p class="card-text">글을 작성하여 누적된 호감도가 표시됩니다.</p>
+  </div>
+  
+  <br><br>
+	<button type="button" class="btn btn-outline-primary" id="mybbslist">내가 작성한 글 보기</button>  
+<form id="memfrm"> 
+<table class="table table-hover" border="1">
+	<tr>
+			<td>아이디</td>
+			<td>
+			<input type="text" class="form-control" id="id" name="id" readonly="readonly" size="20" >
+			</td>
+	</tr>
+	<tr>
+			<td>이름</td>
+			<td>
+			<input type="text" class="form-control" id="name" name="name" readonly="readonly" size="20" >
+			</td>
+	</tr>
+		<tr>
+			<td>이메일</td>
+			<td>
+			<input type="text" class="form-control" id="email" name="email" placeholder="이메일" size="20" >
+			</td>
+	</tr>
+<!-- 	<tr>
+			<td>호감도</td>
+			<td>
+			<input type="text" id="likepoint2" readonly="readonly" size="20" >
+			</td>
+	</tr> -->
+	<tr>
+			<td>패스워드 변경</td>
+			<td>
+			<input type="password" class="form-control" id="pwd" name="pwd" placeholder="패스워드 입력" size="20">
+			</td>
+	</tr>
+	<tr>
+			<td>닉네임 변경</td>
+			<td>
+			<input type="text" class="form-control" id="nickname" name="nickname" placeholder="변경 닉네임 입력" size="20">
+			</td>
+	</tr>
+		<tr>
+			<td>프로필 사진</td>
+			<td>
+			<input type="text" class="form-control" id="profilpic" name="profilpic" placeholder="프로필 사진" size="20">
+			</td>
+	</tr>
+		<tr>
+			<td>프로필 메세지 변경</td>
+			<td>
+			<input type="text" class="form-control" id="profilmsg" name="profilmsg" placeholder="변경 메세지 입력" size="20">
+			</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">
+		<p>아이디, 이름은 가입한 당시 정보 그대로 유지됩니다.</p>
+		
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<button type="button" class="btn btn-outline-primary" id="updatemem">변경</button>
+		</td>
+	</tr>
+
+</table>
+</form> 
+</div>
+
+<script type="text/javascript">
+let str = sessionStorage.getItem("login");	
+let json = JSON.parse(str);
+let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
+//alert(id);
+
+//회원탈퇴
+$("#withdrawal").click(function () {
+	location.href = "withdrawal.html";
+	});
+	
+//작성한 글 목록 보기
+$("#mybbslist").click(function () {
+	location.href = "mybbslist.html";
+	});	
+
+//회원정보 불러오기
+	$.ajax({
+		url:"http://localhost:3000/detailMem",
+		type:"get",
+		data:{ "id":id },
+		success:function(mem){
+			//alert('success');
+			$("#id").val(mem.id);
+			$("#name").val(mem.name);	
+			$("#email").val(mem.email);	
+			$("#likepoint").html(mem.likepoint);	
+			$("#pwd").val(mem.pwd);
+			$("#nickname").val(mem.nickname);
+			$("#profilpic").val(mem.profilpic);
+			$("#profilmsg").val(mem.profilmsg);	
+		},
+		error:function(){
+			alert('error');
+		}
+	});
+
+		
+//회원정보 수정하기
+		$("#updatemem").on("click",function(){			
+			$.ajax({
+				url:"http://localhost:3000/updateMem",
+				type:"get",
+				data:{
+					"id":id,
+					"email":$("#email").val(), 
+					"pwd":$("#pwd").val(), 
+					"nickname":$("#nickname").val(),
+					"profilmsg":$("#profilmsg").val(),
+					"profilpic":$("#profilpic").val()					
+				},
+				success:function(data){
+					if(data=="OK"){
+						alert('정보가 성공적으로 변경되었습니다.');
+						location.href="mypage.html";
+					}else{
+						alert('정보 변경에 실패했습니다.');
+					}
+				},
+				error:function(){
+					alert('error');
+				}
+			});
+			
+		});
+		
+		
+	
+	
+	
+
+</script>
+
+
+</body>
+</html>

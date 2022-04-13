@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Detail View</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="bbslist.html">Home
+            <span class="visually-hidden"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mypage.html">mypage</a>
+        </li>
+      </ul>
+       
+   
+    </div>
+     <a class="nav-link" href="login.html">log-out</a>
+  </div>
+</nav>
+
+<style type="text/css">
+th{
+	background-color: #007bff;
+	color: white;
+}
+pre { /* 자동줄바꿈 설정 */
+  	white-space: pre-wrap;
+    word-break: break-all;
+    overflow: auto;
+}
+</style>
+
+
+</head>
+<body>
+
+
+<div id="app" class="container">
+
+<table class="table table-striped">
+<col width="150"><col width="500">
+<tr>
+	<th>작성자 id</th><td id="id"></td>
+</tr>
+<tr>
+ <th>닉네임</th><td id="nickname"></td>
+</tr>
+
+<tr>
+	<th>작성일</th><td id="wdate"></td>
+</tr>
+
+<tr>
+	<th>조회수</th><td id="readcount"></td>
+</tr>
+<tr>
+	<th>이글을 좋아하는 사람들의 수</th><td id="likecnt"></td>
+</tr>
+
+
+<tr>
+	<!-- <th>제목</th> -->
+	<td colspan="2" id="title" style="font-size: 22px; font-weight:bold;"></td>
+</tr>
+
+<tr>
+
+	<!-- <th>내용</th> -->
+	<td colspan="2" style="background-color: white;">
+		<pre id="content" style="font-size: 20px; 
+			font-family: 고딕,arial;background-color: white;"></pre>
+	</td>	
+</tr>
+
+<tr>
+
+
+</tr>
+
+
+</table>
+
+
+<table>
+<col width="1500px"><col width="150">
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">사진</td>
+</tr>
+<tr>
+	<td colspan="2">							
+		<div id="uploadResult" > 
+		</div>
+    </td>
+</tr>
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">hashtag</td>
+</tr>
+<tr>
+<td colspan="2" id="hashtag" style="font-size: 20px;"></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">매장이름</td>
+</tr>
+<tr>
+<td colspan="2" id="shopname" style="font-size: 20px;"></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">위도</td>
+</tr>
+<tr>
+<td colspan="2" id="latitude" style="font-size: 20px;"></td>
+</tr>
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">경도</td>
+</tr>
+<tr>
+<td colspan="2" id="longtitude" style="font-size: 20px;"></td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">주소</td>
+</tr>
+<tr>
+<td colspan="2" id="address" style="font-size: 20px;"></td>
+</tr>
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">매장 번호</td>
+</tr>
+<tr>
+<td colspan="2" id="shopphnum" style="font-size: 20px;"></td>
+</tr>
+
+<tr>
+<td colspan="2" style="font-size: 22px; font-weight:bold;">매장 url</td>
+</tr>
+<tr>
+<td colspan="2" id="shopurl" style="font-size: 20px;"></td>
+</tr>
+
+
+</table>
+<br><br>
+
+<br><br>
+
+
+<button type="button" id="btnLike" class="btn btn-primary">좋아요</button>
+<button type="button" id="btnScrap" class="btn btn-primary">스크랩</button>
+<button type="button" id="bbsupdate" class="btn btn-primary">수정</button>
+<button type="button" id="bbsdelete" class="btn btn-primary">삭제</button>
+
+
+<br><br>
+
+
+<table class="table">
+	<col width="500"><col width="500">
+	<tbody id="tbody">
+	</tbody>
+</table>
+
+
+</div>
+
+<br><br><br><br><br><br>
+
+<script type="text/javascript">
+let str = sessionStorage.getItem("login");	
+let json = JSON.parse(str);
+let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
+
+
+const url = new URL(location.href);
+const urlParams = url.searchParams;
+let seq = urlParams.get("seq");
+//주소창에 있는 seq 값 가져오기
+//alert(seq);
+
+$.ajax({
+	url:"http://localhost:3000/bbsFileDetail",
+	type:"get",
+	data:{ "seq":seq },
+	success:function(bbs){
+		
+		$("#id").text(bbs.id);
+		$("#title").text(bbs.title);
+		$("#nickname").text(bbs.nickname);
+		$("#wdate").text(bbs.wdate);
+		$("#readcount").text(bbs.readcnt);
+		$("#content").text(bbs.content);
+		$("#picture").text(bbs.picture);
+		$("#hashtag").text(bbs.hashtag);
+		$("#shopname").text(bbs.shopname);
+		$("#address").text(bbs.address);
+		$("#latitude").text(bbs.latitude);
+		$("#longtitude").text(bbs.longtitude);
+		$("#likecnt").text(bbs.likecnt);
+		$("#shopphnum").text(bbs.shopphnum);
+		$("#shopurl").text(bbs.shopurl);
+
+		srcFileName = decodeURIComponent(bbs.filepath,"UTF-8").replaceAll("\\", "/");
+		strFileName = bbs.filepath;
+		
+		console.log("srcFileName:"+srcFileName);
+		console.log("strFileName:"+strFileName);
+		var divArea = $("#uploadResult");
+	    var str = "";
+		if(strFileName != null){
+						
+            str += "<div class='col' readonly='readonly'>";
+            str += "<img src='./image/upload/"+srcFileName+"' width='500' height='500'/> &nbsp;&nbsp;"; 
+		/*     str += bbs.filename */
+            str += "</div>"
+            
+		}else{
+            str += "<input type='text' class='form-control' size='50px' readonly='readonly'>";
+            //"<div class='form-control' readonly='readonly'>";				
+		}
+        divArea.append(str);
+
+		
+		let login = JSON.parse(sessionStorage.getItem("login"));
+		if(bbs.id != login.id){
+			$("#bbsupdate").hide();
+			$("#bbsdelete").hide();
+			
+		}else{ //접속한 아이디 = 게시판 아이디 일 경우 스크랩,좋아요 버튼 숨기기
+			$("#btnLike").hide();
+			$("#btnScrap").hide();
+			
+		}
+		
+	},
+	error:function(){
+		alert('error');
+	}
+	
+});
+
+
+
+
+$("#bbsupdate").click(function () {	
+	location.href = "bbsupdatefile.html?seq=" + seq;
+});
+
+$("#bbsdelete").click(function () {	
+	$.ajax({
+		url:"http://localhost:3000/deleteBbsFile",
+		type:"get",
+		data:{ "seq":seq ,"id":id },
+		success:function(msg){
+			if(msg == "OK"){
+				alert("삭제되었습니다");
+				location.href = "bbslist.html";
+			}else{
+				alert("삭제되지 않았습니다");
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+	})
+});
+
+
+$("#btnScrap").click(function(){
+	$.ajax({
+		url:"http://localhost:3000/bbsScrap",
+		type:"get",
+		data:{ "id":id, "bbs_seq":seq, "seq":seq},
+		success:function(msg){
+			if(msg=="YES"){
+				alert("스크랩 되었습니다. 스크랩 게시판에서 확인 가능합니다.");
+				location.href="bbsscraplistfile.html";
+			}else if(msg=="DUP"){
+				alert("이미 스크랩한 게시물입니다.")			
+			}else{
+				alert("좋아요 오류")
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+			
+		})
+	});
+	
+
+$("#btnLike").click(function(){
+	$.ajax({
+		url:"http://localhost:3000/likeBbsFile",
+		type:"get",
+		//bbsseq는 seq는 값은 같지만 xml에서 받는 데이터명이 다르다.
+		data:{ "id":id, "bbsseq":seq, "seq":seq},
+		success:function(msg){
+			if(msg=="YES"){
+				alert("좋아요 완료. 좋아요된 게시물은 좋아요 게시판에서 확인 가능합니다.");
+				location.href="bbslikelistfile.html";
+			}else if(msg=="DUP"){
+				alert("이미 좋아요한 게시물입니다.")			
+			}else{
+				alert("좋아요 오류")
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+			
+		})
+
+		
+	});
+	
+	
+	
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

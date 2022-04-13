@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내가 쓴 글 게시판</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+	src="./jquery/jquery.twbsPagination.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./css/initial.css">
+<link rel="stylesheet" type="text/css" href="./css/table.css">
+<link rel="stylesheet" type="text/css" href="./css/button.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="cssHeader/css/style.css">
+
+	<div id ="logout"><a href="login.html" class="nav-link">Logout</a></div>
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"><!-- <img src="./imagesrc/coffee.jpg"> --></h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-between">
+				<div class="col-md-8 order-md-last">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="navbar-brand" href="bbslist.html">Eataewon Class <span>Go To Explore Your Place</span></a>
+						</div>
+						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="social-media">
+	<!-- 	    		<p class="mb-0 d-flex">
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+		    		</p> -->
+	        </div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid">
+	    
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item active"><a href="#" class="nav-link">About Us</a></li>
+	        
+	        	<li class="nav-item"><a href="bbslist.html" class="nav-link">Places</a></li>
+	        		<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="bbslikelistfile.html">Like</a>
+                <a class="dropdown-item" href="bbsscraplistfile.html">Scrap</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="mypage.html" class="nav-link">My Page</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+	
+
+	<script src="cssHeader/js/jquery.min.js"></script>
+  <script src="cssHeader/js/popper.js"></script>
+  <script src="cssHeader/js/bootstrap.min.js"></script>
+  <script src="cssHeader/js/main.js"></script>	
+	
+	
+	
+<!--기존 navibar <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="bbslist.html">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbslikelistfile.html">like❤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbsscraplistfile.html">scrap🔗</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mypage.html">mypage</a>
+        </li>
+      </ul>
+          <a class="nav-link" href="login.html">log-out</a>
+   
+    </div>
+  </div>
+</nav> -->
+	
+</head>
+<body>
+<br>
+<br>
+<div id="app" class="container">	
+	<table style="margin-left: auto; margin-right: auto; margin-top: 3px; margin-bottom: 3px">
+		<tr>
+				<td style="padding-left: 5px"><select class="custom-select"
+					id="_choice" name="choice">
+						<option selected>선택</option>
+						<option value="title">제목</option>
+						<option value="content">내용</option>
+						<option value="id">작성자 id</option>
+						<option value="nickname">닉네임</option>
+						<option value="hashtag">해쉬태그</option>
+						<option value="address">주소</option>
+						<option value="shopname">가게이름</option>
+				</select></td>
+				
+				<td style="padding-left: 5px" class="align-middle">
+				<input type="text" class="form-control" id="_search" name="search" placeholder="검색어"></td>
+				
+				<td style="padding-left: 5px">
+					<span><button type="button" class="btn btn-primary" id="btnSearch">검색</button></span>
+					
+				</td>
+		</tr>
+	</table>	
+	<br>
+
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+	<!-- 			<th>작성자</th> -->
+	 			<th>닉네임</th> 
+			</tr>
+		</thead>
+
+		<tbody id="tbody">
+		</tbody>
+
+	</table>
+	<br><br>
+
+	<div class="container">
+		<nav aria-label="Page navigation">
+			<ul class="pagination" id="pagination"
+				style="justify-content: center"></ul>
+		</nav>
+	</div>
+	<br><br>
+
+	<div align="center">
+		<!-- <a href="bbswrite.html">글쓰기</a> -->
+		<button type="button" id="writeBtn" class="btn btn-primary">글쓰기</button>
+	</div>
+	<br><br>
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	let str = sessionStorage.getItem("login");	
+	let json = JSON.parse(str);	
+ 	let id = JSON.parse(str).id;
+	
+/*  	$.ajax({
+		url:"http://localhost:3000/getnickname",
+		type:"get",
+		data:{ "id":id },
+		success:function(bbs){	
+		//	alert(bbs.nickname);
+			$("#nickname").text(bbs.nickname);			
+		},
+		error:function(){
+			alert('error');
+		}
+		
+	});   */
+	
+	
+	getBbslist( 0 ); //#1여기 있는 코드나 #btnsearch 안에 있는 코드나 차이 없는데 검색 하지 않은 목록이랑 검색한 목록을 어떻게 다르게 구현함?
+	getBbsCount();
+	
+	$("#btnSearch").click(function () {
+		getBbslist( 0 );
+		getBbsCount();		
+	});
+	 
+	 $("#writeBtn").click(function () {
+		location.href = "bbswrite.html";
+	});
+	 
+	 
+	 $("#btnScraplist").click(function (){
+		location.href = "bbsscraplistfile.html" 
+	 });
+	 
+	 
+	 $("#btnlikelist").click(function (){
+			location.href = "bbslikelistfile.html" 
+		 });
+	
+})
+
+function getBbslist( page ) { //페이지는 도대체 어디서 나오는거? 사용할때마다 0이란 값을 page를 대신해서 넣어주긴 함. 이게 무슨의미?
+	let str = sessionStorage.getItem("login");	
+	let json = JSON.parse(str);	
+ 	let id = JSON.parse(str).id;
+		
+	let choice = $("#_choice").val();
+	let search = $("#_search").val();
+	
+	$("#tbody").html(""); // 테이블 초기화
+	$.ajax({
+		url:"http://localhost:3000/getBbsListFileSearchPage",
+		type:"get",
+		data:{ "choice":choice, "search":search, "page":page },
+		success:function(list){
+			
+			$.each(list, function (i, item) {
+				if(item.id==id){ // 접속 id = 글쓴이 id 같을때만 게시판 구현
+				
+				let str = "<tr>"
+							+ "<th>" + (i + 1) + "</th>";
+	
+			
+					str +=	  "<td>"+ "&nbsp;&nbsp;<a href='bbsdetail.html?seq=" + item.seq + "'>" + item.title + "</a></td>"
+				
+
+					str +=	  "<td>" + item.nickname + "</td>" // null 이 뜬다
+					
+					
+							
+						+ "</tr>";	
+						
+				$("#tbody").append(str);
+				}
+			});
+		},
+		error:function(){
+			alert('error');	
+		}			
+	});
+}
+
+// 글의 총수를 취득
+function getBbsCount() {
+	let choice = $("#_choice").val();
+	let search = $("#_search").val();
+	
+	$.ajax({
+		url:"http://localhost:3000/getBbsFileCount",
+		type:"get",
+		data:{ "choice":choice, "search":search, "page":0 }, //왜 page를 0이라 설정?
+		success:function(count){ //count가 어디서 나오는데? controller에 있는 getBbsCount함수 실행해서 나온 값?
+			//alert(count);
+			loadPage(count); 
+		},
+		error:function(){
+			alert('getBbsCount error');
+		}		
+	});	
+}
+
+function loadPage( totalCount ) { // 글의 총수		 
+	let pageSize = 10;		
+	
+	let _totalPages = totalCount / 10    // 10 10 3
+	if(totalCount % 10 > 0){
+		_totalPages++;
+	}
+	
+	$('#pagination').twbsPagination('destroy');	// 페이지 갱신
+	
+	$('#pagination').twbsPagination({		
+	    totalPages: _totalPages,
+	    visiblePages: 10,
+	    first:'<span sris-hidden="true">«</span>',
+	    last:'<span sris-hidden="true">»</span>',
+	    prev:"이전",
+	    next:"다음",
+	    initiateStartPageClick:false,	// onPageClick 자동호출 방지
+	    onPageClick: function (event, page) {
+	        // alert(page);
+	        getBbslist( page - 1 );
+	    }
+	})
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

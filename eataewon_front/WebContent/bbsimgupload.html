@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<h3>글쓰기</h3>
+
+<div align="center">
+<form id="frm" name="frm" method="post" enctype="multipart/form-data">
+
+<div align="center">
+	<div style="width: 1000px">
+
+
+<table class="table table-bordered">
+<col width="200"><col width="400">
+
+	<tr>
+	<th class="table-primary">작성자</th>
+		<td>
+		<input type="text"  id="id" name="id" size="70px" readonly="readonly">
+		</td>
+	</tr>
+	
+		<tr>
+	<th class="table-primary">닉네임</th>
+		<td>
+		<input type="text" id="nickname" name="nickname" size="70px" readonly="readonly">
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<th class="table-primary">제목</th>
+		<td>
+		<input type="text" class="form-control" id="title" name="title" size="50px">
+		</td>
+		</tr>
+	
+	<tr>
+			<th class="table-primary">내용</th>
+			<td>
+				<textarea class="form-control" rows="10" id="content" name="content"></textarea>
+			</td>
+		</tr>
+		
+		
+	<tr>
+		
+			<th class="table-primary">사진</th>
+			<td>
+				<input name="uploadFiles" type="file" multiple>
+     		</td>		
+		<tr>
+		<th class="table-primary">HashTag#</th>
+		<td>
+		<input type="text" class="form-control" id="hashtag" name="hashtag" size="50px">
+		</td>
+		</tr>
+		
+		<tr>
+		<th class="table-primary">매장이름</th>
+		<td>
+		<input type="text" class="form-control" id="shopname" name="shopname" size="50px">
+		</td>
+		</tr>
+		
+		
+		<th class="table-primary">위도</th>
+		<td>
+		<input type="text" class="form-control" id="latitude" name="latitude" size="50px">
+		</td>
+		</tr>
+		<th class="table-primary">경도</th>
+		<td>
+		<input type="text" class="form-control" id="longtitude" name="longtitude" size="50px">
+		</td>
+		</tr>
+		<th class="table-primary">주소</th>
+		<td>
+		<input type="text" class="form-control" id="address" name="address" size="50px">
+		</td>
+		</tr>
+				<tr>
+		<th class="table-primary">매장 번호</th>
+		<td>
+		<input type="text" class="form-control" id="shopphnum" name="shopphnum" size="50px">
+		</td>
+		</tr>
+		
+		<tr>
+		<th class="table-primary">매장 url</th>
+		<td>
+		<input type="text" class="form-control" id="shopurl" name="shopurl" size="50px">
+		</td>
+		</tr>
+		
+		
+		<tr>
+			<td colspan="2" align="center">
+				<button type="button" id="btn" class="btn btn-secondary">작성완료</button>
+			</td>	
+		</tr>
+		</table>
+		
+	</div>
+</div>
+
+</form>
+</div>
+
+<script type="text/javascript">
+
+let login = sessionStorage.getItem("login");
+let id = JSON.parse(login).id;
+
+$("#id").val(id);
+
+$.ajax({
+	url:"http://localhost:3000/getnickname",
+	type:"get",
+	data:{ "id":id },
+	success:function(bbs){			
+		$("#nickname").val(bbs.nickname);			
+	},
+	error:function(){
+		alert('error');
+	}
+	
+});
+
+
+
+$("#btn").click(function () {
+
+	let aaa = $("#frm").serialize();
+	
+	var formData = new FormData();
+    var inputFile = $("input[type='file']");
+
+    var files = inputFile[0].files;
+
+    for (var i = 0; i < files.length; i++) {
+
+        formData.append("uploadFiles", files[i]);
+    }
+    
+    $.ajax({
+        url: 'http://localhost:3000/uploadAjax',
+        processData: false,
+        contentType: false,
+        data: formData,
+        type: 'POST',
+        dataType:'json',
+        success: function(result){
+            console.log(result);
+            let strfilepath = "";
+            let strfilename = "";
+            if(result != ""){
+            //나중에 화면 처리
+                console.log("Ddddddddddd"+result[0].folderPath+":"+result[0].uuid +":"+ result[0].fileName);
+                
+                strfilepath = encodeURIComponent(result[0].folderPath+"/" +result[0].uuid + result[0].fileName,"UTF-8");
+                strfilename = result[0].fileName;
+                console.log("Dddddspathpathpathpath!!dddddd:~~~"+strfilepath);
+                console.log("result[0].fileName!!dddddd:~~~"+strfilename);
+            }
+                
+        let params = {
+        		id:$("#id").val(), 
+        		nickname:$("#nickname").val(),
+        		title:$("#title").val(), 
+        		content:$("#content").val(), 
+        		filepath:strfilepath, 
+        		filename:strfilename, 
+        		hashtag:$("#hashtag").val(), 
+        		shopname:$("#shopname").val(),
+        		latitude:$("#latitude").val(),
+        		longtitude:$("#longtitude").val(),
+        		address:$("#address").val(),
+        		shopphnum:$("#shopphnum").val(),
+        		shopurl:$("#shopurl").val()
+        		};
+            
+	            
+	 	$.ajax({
+			url:"http://localhost:3000/bbswriteImgup",		
+			type:"get",
+			data:params,
+	 		success:function(msg){	                	
+				if(msg == "YES"){
+					alert('추가되었습니다');
+					location.href = "bbslist.html";	
+				}else{
+					alert('추가되지 않았습니다');
+				}			
+			},
+			error:function(){
+				alert('error');
+			}
+		})
+	        },
+	        error: function(jqXHR, textStatus, errorThrown){
+	            console.log(textStatus);
+	        }
+
+    }); //$.ajax
+});
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="bbslist.html">Home
+            <span class="visually-hidden"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbslikelist.html">like❤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bbsscraplist.html">scrap🔗</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mypage.html">mypage</a>
+        </li>
+      </ul>
+       
+   
+    </div>
+  </div>
+</nav>
+
+</head>
+<body>
+
+<h3>글 수정</h3>
+
+
+<div id="app" class="container">
+
+<form id="frmudt" name="frmudt" method="post" enctype="multipart/form-data">
+<table class="table table-bordered" border="1">
+<col width="200"><col width="500">
+<tr>
+	<th>작성자 id</th>
+	<td>
+		<input type="text" id="id" readonly="readonly">
+	</td>
+</tr>
+
+<tr>
+	<th>제목</th>
+	<td>
+		<input type="text" id="title" size="80px">
+	</td>
+</tr>
+
+<tr>
+	<th>매장이름</th>
+	<td>
+		<input type="text" id="shopname" size="80px">
+	</td>
+</tr>
+
+
+<tr>
+	<th>내용</th>
+	<td>
+		<textarea rows="20" class="form-control" id="content"></textarea>
+	</td>
+</tr>
+
+	<tr>
+		
+			<th class="table-primary">사진</th>
+			<td>
+				<input name="uploadFiles" type="file" multiple>
+     		</td>		
+		<tr>
+
+<tr>
+	<th>HashTag#</th>
+	<td>
+		<input type="text" id="hashtag" size="80px">
+	</td>
+</tr>
+<tr>
+	<th>위도</th>
+	<td>
+		<input type="text" id="latitude" size="80px">
+	</td>
+</tr>
+
+<tr>
+	<th>경도</th>
+	<td>
+		<input type="text" id="longtitude" size="80px">
+	</td>
+</tr>
+
+<tr>
+	<th>주소</th>
+	<td>
+		<input type="text" id="address" size="80px">
+	</td>
+</tr>
+
+<tr>
+	<th>매장 번호</th>
+	<td>
+		<input type="text" id="shopphnum" size="80px">
+	</td>
+</tr>
+
+<tr>
+	<th>매장 url</th>
+	<td>
+		<input type="text" id="shopurl" size="80px">
+	</td>
+</tr>
+
+</table>
+	<button type="button" id="bbsupdate" class="btn btn-secondary">수정완료</button>
+
+</form>
+</div>
+
+
+
+
+<script type="text/javascript">
+let str = sessionStorage.getItem("login");	
+let json = JSON.parse(str);
+
+const url = new URL(location.href);
+const urlParams = url.searchParams;
+let seq = urlParams.get("seq");
+
+$("#id").val(json.id);
+
+$.ajax({
+	url:"http://localhost:3000/bbsFileDetail",
+	type:"get",
+	data:{ "seq":seq },
+	success:function(bbs){
+		//alert('success');
+		$("#id").val(bbs.id);
+		$("#title").val(bbs.title);	
+		$("#shopname").val(bbs.shopname);	
+		$("#content").val(bbs.content);
+		$("#picture").val(bbs.picture);
+		$("#hashtag").val(bbs.hashtag);
+		$("#latitude").val(bbs.latitude);
+		$("#longtitude").val(bbs.longtitude);
+		$("#address").val(bbs.address);
+		$("#shopphnum").val(bbs.shopphnum);
+		$("#shopurl").val(bbs.shopurl);
+	},
+	error:function(){
+		alert('error');
+	}
+});
+
+
+
+$("#bbsupdate").click(function () {
+	
+	
+	let aaa = $("#frmudt").serialize();
+	
+	
+	var formData = new FormData();
+    var inputFile = $("input[type='file']");
+
+    var files = inputFile[0].files;
+
+    for (var i = 0; i < files.length; i++) {
+
+        formData.append("uploadFiles", files[i]);
+    }
+    
+    $.ajax({
+        
+    	url: 'http://localhost:3000/uploadAjax',
+        processData: false,
+        contentType: false,
+        data: formData,
+        type: 'POST',
+        dataType:'json',
+        success: function(result){
+            console.log(result);
+            let strfilepath = "";
+            let strfilename = "";
+            if(result != ""){
+            //나중에 화면 처리
+                console.log("Ddddddddddd"+result[0].folderPath+":"+result[0].uuid +":"+ result[0].fileName);
+                
+                strfilepath = encodeURIComponent(result[0].folderPath+"/" +result[0].uuid + result[0].fileName,"UTF-8");
+                strfilename = result[0].fileName;
+                console.log("Dddddspathpathpathpath!!dddddd:~~~"+strfilepath);
+                console.log("result[0].fileName!!dddddd:~~~"+strfilename);
+            }
+                
+        let params = {
+        		seq:seq,
+        		id:$("#id").val(), 
+        		nickname:$("#nickname").val(),
+        		title:$("#title").val(), 
+        		content:$("#content").val(), 
+        		filepath:strfilepath, 
+        		filename:strfilename, 
+        		hashtag:$("#hashtag").val(), 
+        		shopname:$("#shopname").val(),
+        		latitude:$("#latitude").val(),
+        		longtitude:$("#longtitude").val(),
+        		address:$("#address").val(),
+        		shopphnum:$("#shopphnum").val(),
+        		shopurl:$("#shopurl").val()
+        		};
+        
+        $.ajax({
+    		url:"http://localhost:3000/updateBbsFile",
+    		type:"get",
+    		data: params,
+    		success:function(msg){
+    			if(msg == "OK"){
+    				alert('정상적으로 수정되었습니다');
+    				location.href = "bbslist.html";
+    			}else{
+    				alert('수정되지 않았습니다');
+    			}			
+    		},
+    		error:function(){
+    			alert('error');
+    		}	
+        });
+        
+        }
+    });
+    
+});
+	
+	
+/*	$.ajax({
+		url:"http://localhost:3000/updateBbsFile",
+		type:"get",
+		data:{
+				"seq":seq, "title":$("#title").val(), "content":$("#content").val(), "picture":$("#picture").val(), "shopname":$("#shopname").val(), 
+				"hashtag":$("#hashtag").val(), "address":$("#address").val(), "latitude":$("#latitude").val(), "longtitude":$("#longtitude").val(), 
+				"shopphnum":$("#shopphnum").val(), "shopurl":$("#shopurl").val()
+				},
+		success:function(msg){
+			if(msg == "OK"){
+				alert('정상적으로 수정되었습니다');
+				location.href = "bbslist.html";
+			}else{
+				alert('수정되지 않았습니다');
+			}			
+		},
+		error:function(){
+			alert('error');
+		}	
+	}); 
+	*/
+	
+	
+	
+</script>
+
+</body>
+</html>
