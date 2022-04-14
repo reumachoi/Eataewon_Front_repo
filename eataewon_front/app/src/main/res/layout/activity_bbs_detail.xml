@@ -5,24 +5,22 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:background="@color/white"
->
-
-
+                android:background="@color/white">
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-                android:id="@+id/bbsdetail_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@color/white"
-                android:minHeight="?attr/actionBarSize"
-                app:title="제목"
-                app:titleTextColor="@color/black"
-                android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:id="@+id/bbsdetail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            app:title="제목"
+            app:titleTextColor="@color/black"
+            tools:ignore="MissingClass" />
 
         <ScrollView
                 android:layout_width="match_parent"
@@ -43,30 +41,32 @@
                         android:background="@color/black">
 
                     <Button
-                            android:id="@+id/deleteBtn"
-                            android:layout_width="79dp"
-                            android:layout_height="37dp"
-                            android:layout_marginEnd="25dp"
-                            android:layout_weight="1"
-                            android:text="삭제"
-                            android:textColor="@color/black"
-                            android:backgroundTint="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.521" />
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="79dp"
+                        android:layout_height="37dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:text="삭제"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.521"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <Button
-                            android:id="@+id/updateBtn"
-                            android:layout_width="79dp"
-                            android:layout_height="37dp"
-                            android:layout_weight="1"
-                            android:text="수정"
-                            android:textColor="@color/black"
-                            android:backgroundTint="@color/white"
-                            app:layout_constraintBottom_toBottomOf="@+id/deleteBtn"
-                            app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
-                            app:layout_constraintTop_toTopOf="@+id/deleteBtn" />
+                        android:id="@+id/updateBtn"
+                        android:layout_width="79dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:text="수정"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/deleteBtn"
+                        app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
+                        app:layout_constraintTop_toTopOf="@+id/deleteBtn"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <TextView
                             android:id="@+id/DeBbsWdateT"
@@ -96,17 +96,18 @@
                         android:layout_height="120dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/profilPicture"
-                            android:layout_width="66dp"
-                            android:layout_height="64dp"
-                            android:layout_marginStart="32dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+                        android:id="@+id/profilPicture"
+                        android:layout_width="66dp"
+                        android:layout_height="64dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/style_profil_img"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/imgeview_sample"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
 
                     <TextView
-
                             android:id="@+id/textView17"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -161,16 +162,20 @@
                         app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintHorizontal_bias="0.495" app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.498"/>
+
                 <com.google.android.material.tabs.TabLayout
-                        android:id="@+id/tabLayout"
-                        app:tabBackground="@drawable/tab_selector"
-                        app:tabGravity="center"
-                        app:tabIndicatorHeight="0dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/vPager2" android:layout_marginTop="28dp"
-                        app:layout_constraintHorizontal_bias="0.0"/>
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vPager2"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                         android:id="@+id/DeTitle"
@@ -276,29 +281,32 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:layout_below="@+id/HeartBtn"
-            android:layout_alignRight="@+id/HeartBtn"
-            android:src="@drawable/click_scrapbtn"
-            android:id="@+id/ScrapBtn" />
+        android:id="@+id/ScrapBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/HeartBtn"
+        android:layout_alignRight="@+id/HeartBtn"
+        android:clickable="true"
+        android:src="@drawable/click_scrapbtn"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@android:drawable/ic_menu_share"
-            android:layout_below="@+id/ScrapBtn"
-            android:layout_alignRight="@+id/ScrapBtn"
-            android:id="@+id/floShareBtn"/>
+        android:id="@+id/floShareBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ScrapBtn"
+        android:layout_alignRight="@+id/ScrapBtn"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_share"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/click_likebtn"
-            android:id="@+id/HeartBtn" />
+        android:id="@+id/HeartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:src="@drawable/click_likebtn"
+        tools:ignore="SpeakableTextPresentCheck" />
 </RelativeLayout>
