@@ -7,7 +7,7 @@ import retrofit2.http.*
 interface BbsService {
 
     @Headers("Content-Type: application/json")
-    @GET("/getBbsListApp")
+    @POST("/getBbsListApp")
     fun getBbsListApp(@Body seq:Int): Call<BbsDto>
 
     @GET("/getUpperBbsListApp")
