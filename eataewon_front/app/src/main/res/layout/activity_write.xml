@@ -13,9 +13,11 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Write"
+            android:text="글쓰기"
+            android:layout_marginStart="15dp"
             android:textColor="@color/black"
-            android:textSize="50sp"
+            android:fontFamily="@font/font"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
     <!--가로 리사이클러 뷰-->
@@ -32,7 +34,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp">
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -68,16 +71,17 @@
                         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/writerProfilPic"
-                        android:layout_width="66dp"
-                        android:layout_height="66dp"
-                        android:background="@drawable/style_profil_img"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/imgeview_sample" />
+                            android:id="@+id/writerProfilPic"
+                            android:layout_width="66dp"
+                            android:layout_height="66dp"
+                            android:background="@drawable/style_profil_img"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imgeview_sample" />
 
                     <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
                             android:orientation="vertical">
 
                         <TextView
@@ -104,7 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_marginTop="20dp"
-                        android:background="@color/black"
+                        android:background="#FFFFFF"
                         app:layout_constraintTop_toBottomOf="@+id/write_title"
                         tools:layout_editor_absoluteX="0dp">
 
@@ -112,9 +116,8 @@
                             android:id="@+id/write_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="36dp"
                             android:text="2010-10-20"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="20sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -124,9 +127,10 @@
                     <TextView
                             android:id="@+id/textView15"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="16dp"
                             android:text="Date"
-                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
                             app:layout_constraintBottom_toTopOf="@+id/write_date"
                             app:layout_constraintStart_toStartOf="@+id/write_date" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -147,6 +151,7 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/black"
                         android:text="찾기"
+                        android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="@+id/write_address"
                         app:layout_constraintStart_toEndOf="@+id/write_address"
                         app:layout_constraintTop_toTopOf="@+id/write_address" />
@@ -242,54 +247,52 @@
                         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
 
-                <LinearLayout
-                        android:id="@+id/linearLayout2"
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="해시태그"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                <EditText
+                        android:id="@+id/write_hashtag"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
-                        android:background="@color/black"
-                        android:orientation="vertical"
-                        android:paddingTop="20dp"
-                        android:paddingBottom="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/write_content">
+                        android:backgroundTint="@color/white"
+                        android:ems="10"
+                        android:hint="Tag"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="20sp" />
 
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="해시태그"
-                            android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+            </LinearLayout>
 
-                    <EditText
-                            android:id="@+id/write_hashtag"
-                            android:imeOptions="actionDone"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/white"
-                            android:ems="10"
-                            android:hint="Tag"
-                            android:inputType="textPersonName"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white"
-                            android:textSize="20sp" />
-
-                </LinearLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="80dp">
+                    android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/write_cancleBtn"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:layout_weight="5"
                         android:layout_margin="0dp"
+                        android:layout_weight="5"
                         android:background="#C1C1C1"
                         android:text="취소"
                         android:textSize="20sp"
@@ -299,13 +302,14 @@
                         android:id="@+id/write_writeBtn"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:layout_weight="5"
                         android:layout_margin="0dp"
+                        android:layout_weight="5"
                         android:background="@color/black"
                         android:text="쓰기"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
             </LinearLayout>
         </LinearLayout>
 
