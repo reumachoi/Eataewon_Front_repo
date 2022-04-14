@@ -34,8 +34,8 @@
             android:name="com.example.eataewon.GlobalApplication"
             android:allowBackup="true"
             android:label="@string/app_name"
-            android:icon="@mipmap/ic_launcher"
-            android:roundIcon="@mipmap/ic_launcher_round"
+            android:icon="@mipmap/launcher"
+            android:roundIcon="@mipmap/launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:usesCleartextTraffic="true">

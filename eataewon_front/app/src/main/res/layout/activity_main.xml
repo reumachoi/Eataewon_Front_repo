@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon" />
+        app:srcCompat="@drawable/ic_baseline_soup_kitchen_24" />
 
     <TextView
         android:id="@+id/LoginTitle"
@@ -90,7 +90,7 @@
         android:id="@+id/login_Btn"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="100dp"
         android:background="@color/black"
         android:textColor="@color/white"
         android:fontFamily="@font/font"
