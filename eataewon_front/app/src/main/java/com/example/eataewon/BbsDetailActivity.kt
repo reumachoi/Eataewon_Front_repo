@@ -131,6 +131,7 @@ class BbsDetailActivity : AppCompatActivity() {
             fragList = listOf(frag1,frag2,frag3,frag4)
 
         }
+
         val adapter = ViewPagerAdapter(this)
         adapter.fList = fragList
         vPager2.adapter = adapter

@@ -11,8 +11,7 @@
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="5dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/food1"/>
+            android:scaleType="fitXY"/>
 
     <TextView
             android:id="@+id/CurationTitleView"

@@ -71,7 +71,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
+        <activity android:name=".SearchActivity"
+                  android:exported="true"/>
         <!-- 카카오 로그인 앱키-->
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
                   android:exported="true">

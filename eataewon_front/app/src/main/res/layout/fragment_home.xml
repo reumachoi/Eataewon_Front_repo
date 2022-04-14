@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.core.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -10,27 +10,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-        <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/CurationPager"
+        <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-        />
+                app:title="EATAEWON"/>
 
-        <androidx.viewpager2.widget.ViewPager2
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/CurationPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"/>
+        </RelativeLayout>
+
+        <!--<androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/BbsPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-        />
+        />-->
 
-        <!--<androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/HomeBbsRecyclerView"
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/HomeLowerRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-        </androidx.recyclerview.widget.RecyclerView>-->
+                android:nestedScrollingEnabled="true"
+                android:overScrollMode="always"/>
 
     </LinearLayout>
 
 
-</ScrollView>
+
+
+
+</androidx.core.widget.NestedScrollView>

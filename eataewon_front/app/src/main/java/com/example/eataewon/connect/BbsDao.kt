@@ -10,6 +10,22 @@ interface BbsService {
     @GET("/getBbsListApp")
     fun getBbsListApp(@Body seq:Int): Call<BbsDto>
 
+    @GET("/getUpperBbsListApp")
+    fun getUpperBbsList(): Call<ArrayList<BbsDto>>
+
+    @GET("/getLowerBbsListApp")
+    fun getLowerBbsList(): Call<ArrayList<MemberBbsDto>>
+
+    @GET("/getSearchListApp")
+    fun getSearchListApp(): Call<ArrayList<BbsDto>>
+
+    @POST("/getBbsListSearchApp")
+    fun getBbsListSearchApp(@Body search: String?): Call<ArrayList<BbsDto>>
+
+    @GET("/getMarkerListApp")
+    fun getMarkerListApp(): Call<ArrayList<BbsDto>>
+
+
     @POST("/bbswriteApp")
     fun bbswrite(@Body dto:BbsDto) : Call<Int>
 
@@ -438,6 +454,64 @@ class BbsDao {
         }catch(e:Exception){
             response = null
         }
+        return response?.body()
+    }
+
+    fun getUpperBbsList() : ArrayList<BbsDto>? {
+        println("~~~~getUpperBbsList()")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getUpperBbsList()
+        val response = call?.execute()
+
+        return response?.body()
+    }
+
+    fun getLowerBbsList() : ArrayList<MemberBbsDto>? {
+        println("~~~~getLowerBbsList()")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getLowerBbsList()
+        val response = call?.execute()
+
+        return response?.body()
+    }
+
+    fun getSearchListApp() : ArrayList<BbsDto>? {
+
+        println("~~~~~getSearchListApp()")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getSearchListApp()
+        val response = call?.execute()
+
+        return response?.body()
+    }
+
+    fun getMarkerListApp() : ArrayList<BbsDto>? {
+        println("~~~~getMarkerListApp()")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getMarkerListApp()
+        val response = call?.execute()
+
+        println("~~~~~~~~~~${response?.body()}~~~~~~~~~~~")
+        return response?.body()
+
+    }
+
+    fun getBbsListSearchApp(search: String?) : ArrayList<BbsDto>? {
+        println("~~~getBbsListSearchApp")
+
+        val retrofit = RetrofitClient.getInstance()
+        val service = retrofit?.create(BbsService::class.java)
+        val call = service?.getBbsListSearchApp(search)
+        val response = call?.execute()
+
         return response?.body()
     }
 }

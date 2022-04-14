@@ -18,7 +18,7 @@
             android:text="Shop Name"
             android:layout_marginLeft="10dp"
             android:gravity="center"
-            android:id="@+id/bm_titleT"
+            android:id="@+id/shopNameView"
             android:textSize="20dp"
             android:textStyle="bold"/>
     <TextView
@@ -27,12 +27,12 @@
             android:text="Address"
             android:layout_marginLeft="10dp"
             android:gravity="center"
-            android:id="@+id/bm_shopnameT"/>
+            android:id="@+id/addressView"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hashtag"
-            android:id="@+id/bm_addrT"
+            android:id="@+id/hashtagView"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="25dp"
             android:gravity="center"/>

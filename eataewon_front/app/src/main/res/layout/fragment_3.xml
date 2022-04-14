@@ -5,7 +5,6 @@
                                                    android:layout_height="match_parent"
                                                    tools:context=".vPager.Fragment3">
     <ImageView
-            android:src="@drawable/cafe3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"  android:id="@+id/dePic3"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
