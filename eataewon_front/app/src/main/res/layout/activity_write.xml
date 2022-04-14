@@ -71,8 +71,9 @@
                             android:id="@+id/writerProfilPic"
                             android:layout_width="66dp"
                             android:layout_height="66dp"
-                            app:srcCompat="@drawable/ic_baseline_account_circle_24" />
-
+                            android:background="@drawable/style_profil_img"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imgeview_sample" />
                     <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
