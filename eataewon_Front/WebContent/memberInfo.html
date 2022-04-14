@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MemberInfo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+	
+	<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+	
+<style type="text/css">
+#card{
+	
+	display: flex;
+	margin-top:30px;
+  	justify-content: center;
+  	text-align:center;
+ 	align-items: center;
+  	min-height: 100vh;
+	}
+	
+	button{
+	justify-content: center;
+	align-items: center;
+	font-family: 'Montserrat', sans-serif;
+	}
+	
+	#likepoint{
+	color: "red";
+	}
+	
+	span{
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	}
+	
+	input{
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	
+	}
+	
+.profilImg{
+		width:200px;
+		height:200px;
+    	border-radius: 125px;
+    	object-fit: cover;
+	}
+
+
+</style>
+
+</head>
+<body>
+
+<div id="card">
+
+<div class="card border-secondary mb-3" style="max-width: 30rem;">
+  <div class="card-header">회원 정보 조회</div>
+  <div class="card-body">
+    <h4 class="card-title">호감도</h4>
+   <h4 class="card-title" id="likepoint"></h4>
+    <p class="card-text">글작성, 좋아요, 스크랩을 통해 호감도가 적립됩니다.</p>
+  </div>
+  
+    <!-- 프로필 사진 -->
+			<div id="uploadResult" > 
+			</div>
+			<span class="badge bg-light">Profile Image</span>
+  
+		  
+  <br>
+	<button type="button" class="btn btn-outline-secondary" id="userbbslist">해당 회원의 게시글 보기</button>  
+<form id="memfrm"> 
+<table class="table table-hover" border="1">
+	<tr>
+			<td><span>User ID</span></td>
+			<td>
+			<input type="text" class="form-control" id="id" name="id" readonly="readonly" size="20" >
+			</td>
+	</tr>
+	<tr>
+			<td><span>Nickname</span></td>
+			<td>
+			<input type="text" class="form-control" id="nickname" name="nickname" readonly="readonly" size="20">
+			</td>
+	</tr>
+		
+	<tr>
+			<td><span>Profile Message</span></td>
+			<td>
+			<input type="text" class="form-control" id="profilmsg" name="profilmsg" readonly="readonly" size="20">
+			</td>
+	</tr>
+	
+
+</table>
+
+</form> 
+<button type="button" class="btn btn-outline-secondary" id="updatemem">Close</button>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	
+
+let str = sessionStorage.getItem("login");	
+let json = JSON.parse(str);
+let id = JSON.parse(str).id; //<@@@@@bbslist에서 받은 작성자 id로 바꿔야 한다@@@@@@
+//alert(id);
+
+//회원탈퇴
+$("#withdrawal").click(function () {
+	location.href = "withdrawal.html";
+	});
+	
+//작성한 글 목록 보기
+$("#userbbslist").click(function () {
+	location.href = "userbbslist.html";
+	});	
+
+//회원정보 불러오기
+	$.ajax({
+		url:"http://localhost:3000/detailMem",
+		type:"get",
+		data:{ "id":id },
+		success:function(mem){
+			$("#id").val(mem.id);
+			$("#name").val(mem.name);	
+			$("#email").val(mem.email);	
+			$("#likepoint").html(mem.likepoint);	
+			$("#pwd").val(mem.pwd);
+			$("#nickname").val(mem.nickname);
+			$("#profilmsg").val(mem.profilmsg);	
+			
+			strFileName = mem.profilpic.substring(43);
+	
+			
+			console.log("strFileName:"+strFileName);
+			var divArea = $("#uploadResult"); 
+		    var str = "";
+			
+			
+			
+			if(strFileName != null){
+							
+	            str += "<div class='col' readonly='readonly'>";
+	            str += "<img src='"+strFileName+"' class='profilImg'/> &nbsp;&nbsp;"; 
+	            str += "</div>"
+	            
+			}else{
+	            str += "<input type='text' class='form-control' size='50px' readonly='readonly'>";
+			
+			}
+	        divArea.append(str);
+			
+			
+		},
+		error:function(){
+			alert('error');
+		}
+	});
+	
+
+	
+		
+		
+})	
+
+</script>
+
+
+</body>
+</html>

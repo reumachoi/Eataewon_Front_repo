@@ -4206,10 +4206,10 @@ input[type="button"].btn-block {
 
 .badge-dark {
   color: #fff;
-  background-color: #343a40; }
+  background-color: #cddbeb; }
   a.badge-dark:hover, a.badge-dark:focus {
     color: #fff;
-    background-color: #1d2124; }
+    background-color: #cddbeb; }
   a.badge-dark:focus, a.badge-dark.focus {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
@@ -5413,15 +5413,21 @@ button.bg-danger:focus {
   background-color: #bd2130 !important; }
 
 .bg-light {
-  background-color: #f8f9fa !important; }
+  background-color:#e7ebf0 !important }
 
-a.bg-light:hover, a.bg-light:focus,
+a.bg-light:hover, a.bg-light:focus,a.badge bg-dark
 button.bg-light:hover,
 button.bg-light:focus {
   background-color: #dae0e5 !important; }
 
+<!--적용 안됨-->  
 .bg-dark {
-  background-color: #343a40 !important; }
+  background-color: #cfd9e3 !important; }
+
+<!--적용 안됨-->  
+.badge bg-dark{
+background-color: #cfd9e3 !important;
+}
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
@@ -8162,7 +8168,7 @@ a {
   transition: .3s all ease;
   font-size: 14px;
   font-family: "Poppins", Arial, sans-serif;
-  color: #565656; }
+  color: #6c6c6c; }
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;

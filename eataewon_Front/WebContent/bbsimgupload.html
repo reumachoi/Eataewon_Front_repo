@@ -6,10 +6,10 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<link rel="stylesheet"
+<!-- <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
 
 
@@ -48,6 +48,10 @@ span {
 	width: 300px;
 	height: 300px;
 	margin-top: 50px;
+}
+
+#searchMap{
+font-family: 'Montserrat', sans-serif;
 }
 </style>
 
@@ -130,7 +134,7 @@ span {
 	
 
 	<div align="center">
-		<form id="frm" name="frm" method="post" enctype="multipart/form-data">
+		<form id="frm" name="frm" method="post" target="childwin" enctype="multipart/form-data">
 
 			<div align="center">
 				<div style="width: 1000px">
@@ -186,24 +190,40 @@ span {
 						</tr>
 
 						<tr>
-							<th><span>Shop's Name</span></th>
-							<td><input type="text" class="form-control" id="shopname"
-								name="shopname" size="50px"></td>
+						
+							<th><span>Shop's Name </span></th>
+							<td>
+							<input type="text" class="form-control" id="shopname"
+								name="shopname" size="50px"> 
+								<div id="searchMapdiv">
+									<a id="searchMap" href="javascript:void(0);" 
+									onclick="window.open('searchMap.html', 'pop01', 
+											'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no');">
+									<span class="badge bg-dark">Find Shop</span>
+									</a>
+								</div>
+								</td>
+							
 						</tr>
 
-
+						<tr>
 						<th><span>Latitude</span></th>
 						<td><input type="text" class="form-control" id="latitude"
 							name="latitude" size="50px"></td>
 						</tr>
+						
+						<tr>
 						<th><span>Longitude</span></th>
 						<td><input type="text" class="form-control" id="longtitude"
 							name="longtitude" size="50px"></td>
 						</tr>
+						
+						<tr>
 						<th><span>Address</span></th>
 						<td><input type="text" class="form-control" id="address"
 							name="address" size="50px"></td>
 						</tr>
+						
 						<tr>
 							<th><span>P.H</span></th>
 							<td><input type="text" class="form-control" id="shopphnum"
@@ -264,6 +284,9 @@ function handleImgsFilesSelect(e) {
 
 //첨부파일 미리보기 코드 끝
 
+
+
+//닉네임 가져오기
 		$.ajax({
 			url : "http://localhost:3000/getnickname",
 			type : "get",
@@ -278,6 +301,8 @@ function handleImgsFilesSelect(e) {
 			}
 
 		});
+		
+		
 
 		$("#btn")
 				.click(

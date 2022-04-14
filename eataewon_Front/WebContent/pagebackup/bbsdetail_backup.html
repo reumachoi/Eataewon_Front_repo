@@ -11,16 +11,17 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="cssHeader/css/style.css">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="cssHeader/css/style.css">
-
+<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
 
 
-	<div id ="logout"><a href="login.html" class="nav-link">Logout</a></div>
+<div id ="logout"><a href="login.html" class="nav-link">Logout</a></div>
 
 
 	<section class="ftco-section">
@@ -45,12 +46,6 @@
 				</div>
 				<div class="col-md-4 d-flex">
 					<div class="social-media">
-	<!-- 	    		<p class="mb-0 d-flex">
-		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
-		    		</p> -->
 	        </div>
 				</div>
 			</div>
@@ -78,29 +73,48 @@
 	      </div>
 	    </div>
 	  </nav>
+	  </section>
     <!-- END nav -->
 
 	
 
-	<script src="cssHeader/js/jquery.min.js"></script>
-  <script src="cssHeader/js/popper.js"></script>
-  <script src="cssHeader/js/bootstrap.min.js"></script>
-  <script src="cssHeader/js/main.js"></script>	
+<script src="cssHeader/js/jquery.min.js"></script>
+<script src="cssHeader/js/popper.js"></script>
+<script src="cssHeader/js/bootstrap.min.js"></script>
+<script src="cssHeader/js/main.js"></script>	
 	
 
 
 
 <style type="text/css">
-th{
-	background-color: #007bff;
-	color: white;
+
+span{
+font-size: 12px;
+font-family: 'Montserrat', sans-serif;
 }
-pre { /* 자동줄바꿈 설정 */
-  	white-space: pre-wrap;
-    word-break: break-all;
-    overflow: auto;
+
+#table1{
+font-family: 'Montserrat', sans-serif;
 }
-</style>
+
+#buttons{
+text-align:center;
+}
+
+
+
+.profilImgCss{
+		width:50px;
+		height:50px;
+    	border-radius: 25px;
+    	object-fit: cover;
+    	padding: 5px;
+    	
+	}
+
+
+
+</style> 
 
 
 </head>
@@ -109,133 +123,105 @@ pre { /* 자동줄바꿈 설정 */
 <br><br><br>
 <div id="app" class="container">
 
-<table class="table table-striped">
-<col width="150"><col width="500">
+<table id="table1" class="table table-hover">
+<col width="90"><col width="500">
 <tr>
-	<th>작성자 id</th><td id="id"></td>
+	<th><span>User ID</span></th><td id="id"></td>
 </tr>
 <tr>
- <th>닉네임</th><td id="nickname"></td>
-</tr>
+ <th><span>Nickname</span></th>
+ <td>
+ 	 			 		
+ 			<span style="font-size: 14px" id="nickname"></span>
+ 			<span id="profilImg"></span>
+ 		
+</td>
 
-<tr>
-	<th>작성일</th><td id="wdate"></td>
-</tr>
-
-<tr>
-	<th>조회수</th><td id="readcount"></td>
-</tr>
-<tr>
-	<th>이글을 좋아하는 사람들의 수</th><td id="likecnt"></td>
 </tr>
 
 
+
 <tr>
-	<!-- <th>제목</th> -->
-	<td colspan="2" id="title" style="font-size: 22px; font-weight:bold;"></td>
+	<th><span>Date of Posting</span></th><td id="wdate"></td>
 </tr>
 
 <tr>
+	<th><span>View</span></th><td id="readcount"></td>
+</tr>
+<tr>
+	<th><span>Likes</span></th><td id="likecnt"></td>
+</tr>
 
+
+<tr>
+<!-- <th>제목</th> -->
+<td colspan="2" id="title" style="font-size: 22px; font-weight:bold; font-family: 'Montserrat', sans-serif; "></td>
+</tr>
+
+<tr>
 	<!-- <th>내용</th> -->
-	<td colspan="2" style="background-color: white;">
-		<pre id="content" style="font-size: 20px; 
-			font-family: 고딕,arial;background-color: white;"></pre>
+	<td colspan="2" >
+	<pre id="content" style="font-size: 14px; 
+	font-family:'Montserrat', sans-serif;"></pre>
 	</td>	
 </tr>
-
-<tr>
-
-
-</tr>
-
-
 </table>
 
 
-<table>
-<col width="1500px"><col width="150">
+<table id="table1" class="table table-hover">
+<col width="90"><col width="500">
+
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">사진</td>
-</tr>
-<tr>
-	<td colspan="2">							
+	<td colspan="2" >							
 		<div id="uploadResult" > 
 		</div>
     </td>
 </tr>
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">hashtag</td>
-</tr>
-<tr>
-<td colspan="2" id="hashtag" style="font-size: 20px;"></td>
-</tr>
-<tr><td>&nbsp;</td></tr>
-
-<tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">매장이름</td>
-</tr>
-<tr>
-<td colspan="2" id="shopname" style="font-size: 20px;"></td>
-</tr>
-<tr><td>&nbsp;</td></tr>
-
-
-<tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">위도</td>
-</tr>
-<tr>
-<td colspan="2" id="latitude" style="font-size: 20px;"></td>
+<th><span>hashtag</span></th><td id="hashtag"></td>
 </tr>
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">경도</td>
-</tr>
-<tr>
-<td colspan="2" id="longtitude" style="font-size: 20px;"></td>
-</tr>
-
-
-
-
-<tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">주소</td>
-</tr>
-<tr>
-<td colspan="2" id="address" style="font-size: 20px;"></td>
+<th><span>Shop's name</span></th><td id="shopname"></td>
 </tr>
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">매장 번호</td>
-</tr>
-<tr>
-<td colspan="2" id="shopphnum" style="font-size: 20px;"></td>
+<th><span>Latitude</span></th><td id="latitude"></td>
 </tr>
 
 <tr>
-<td colspan="2" style="font-size: 22px; font-weight:bold;">매장 url</td>
+<th><span>Longitude</span></th><td id="longtitude"></td>
 </tr>
+
 <tr>
-<td colspan="2" id="shopurl" style="font-size: 20px;"></td>
+<th><span>Address</span></th><td id="address"></td>
+</tr>
+
+<tr>
+<th><span>P.H</span></th><td id="shopphnum"></td>
+</tr>
+
+<tr>
+<th><span>URL</span></th><td id="shopurl"></td>
 </tr>
 
 
 </table>
 <br><br>
 
+
+<div id="buttons">
+
+<button type="button" id="btnLike" class="btn btn-dark">좋아요</button>
+<button type="button" id="btnScrap" class="btn btn-dark">스크랩</button>
+<button type="button" id="bbsupdate" class="btn btn-dark">수정</button>
+<button type="button" id="bbsdelete" class="btn btn-dark">삭제</button>
+
+
 <br><br>
-
-
-<button type="button" id="btnLike" class="btn btn-primary">좋아요</button>
-<button type="button" id="btnScrap" class="btn btn-primary">스크랩</button>
-<button type="button" id="bbsupdate" class="btn btn-primary">수정</button>
-<button type="button" id="bbsdelete" class="btn btn-primary">삭제</button>
-
-
-<br><br>
-
+</div>
 
 <table class="table">
 	<col width="500"><col width="500">
@@ -249,6 +235,10 @@ pre { /* 자동줄바꿈 설정 */
 <br><br><br><br><br><br>
 
 <script type="text/javascript">
+$(document).ready(function () {
+	
+	
+
 let str = sessionStorage.getItem("login");	
 let json = JSON.parse(str);
 let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
@@ -260,6 +250,61 @@ let seq = urlParams.get("seq");
 //주소창에 있는 seq 값 가져오기
 //alert(seq);
 
+//seq 통해서 id 가져오기 -> id로 프로필 사진 가져오기
+$.ajax({
+	url:"http://localhost:3000/idForProfile",
+	type:"get",
+	data:{ "seq":seq },
+	success:function(writerId){
+		console.log(writerId)
+		let Userid = writerId;
+		//alert(Userid); 잘 출력된다
+		
+		$.ajax({
+			url:"http://localhost:3000/detailMem",
+			type:"get",
+			data: {id:Userid},
+			success:function(pic){
+				
+				FileName = pic.profilpic.substring(43);
+				//alert(FileName); // image/upload/63da1b0a-8706-4ad1-8156-181047af94bf
+				console.log("FileName:"+FileName);
+				var divArea2 = $("#profilImg");
+			    var strImg = "";
+			    
+
+				if(FileName != null){
+				//	strImg += 	"<a id='memberInfo' href='javascript:void(0);'" 
+				//	strImg +=	"onclick='window.open("+"'memberInfo.html', 'pop01'," 
+				//	strImg += "'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no');'>"
+		
+		            strImg += "<img src='."+FileName+"' class='profilImgCss' /> &nbsp;&nbsp;"; 
+		    
+		           
+				//	strImg +="</a>"
+				}else{
+					strImg += "<input type='text' class='form-control' size='50px' readonly='readonly' placeholder='No Attached Image'>";		
+				}
+				divArea2.append(strImg);
+
+				
+			},
+			error:function(){
+				alert('error');
+			}
+			
+		});
+		
+	},
+	error:function(){
+		alert('error');
+	}
+	
+});
+
+
+
+//본문 내용 가져오기
 $.ajax({
 	url:"http://localhost:3000/bbsFileDetail",
 	type:"get",
@@ -272,7 +317,6 @@ $.ajax({
 		$("#wdate").text(bbs.wdate);
 		$("#readcount").text(bbs.readcnt);
 		$("#content").text(bbs.content);
-		$("#picture").text(bbs.picture);
 		$("#hashtag").text(bbs.hashtag);
 		$("#shopname").text(bbs.shopname);
 		$("#address").text(bbs.address);
@@ -284,7 +328,7 @@ $.ajax({
 
 		srcFileName = decodeURIComponent(bbs.filepath,"UTF-8").replaceAll("\\", "/");
 		strFileName = bbs.filepath;
-		
+	//	alert("strFIlename:"+strFileName);
 		console.log("srcFileName:"+srcFileName);
 		console.log("strFileName:"+strFileName);
 		var divArea = $("#uploadResult");
@@ -297,7 +341,7 @@ $.ajax({
             str += "</div>"
             
 		}else{
-            str += "<input type='text' class='form-control' size='50px' readonly='readonly'>";
+            str += "<input type='text' class='form-control' size='50px' readonly='readonly' placeholder='No Attached Image'>";
             //"<div class='form-control' readonly='readonly'>";				
 		}
         divArea.append(str);
@@ -325,7 +369,7 @@ $.ajax({
 
 
 $("#bbsupdate").click(function () {	
-	location.href = "bbsupdatefiletest.html?seq=" + seq;
+	location.href = "bbsupdatefile.html?seq=" + seq;
 });
 
 $("#bbsdelete").click(function () {	
@@ -350,7 +394,7 @@ $("#bbsdelete").click(function () {
 
 $("#btnScrap").click(function(){
 	$.ajax({
-		url:"http://localhost:3000/bbsScrap",
+		url:"http://localhost:3000/bbsScrapfile",
 		type:"get",
 		data:{ "id":id, "bbs_seq":seq, "seq":seq},
 		success:function(msg){
@@ -398,7 +442,7 @@ $("#btnLike").click(function(){
 	
 	
 	
-
+});
 
 
 

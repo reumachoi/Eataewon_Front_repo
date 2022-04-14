@@ -125,7 +125,7 @@ text-align:center;
 
 <div id="app" class="container">
 
-<form id="frmudt" name="frmudt" method="post" enctype="multipart/form-data">
+<form id="frmudt" name="frmudt" method="post" target="childwin" enctype="multipart/form-data">
 <table class="table table-hover">
 <col width="100"><col width="500">
 <tr>
@@ -149,12 +149,22 @@ text-align:center;
 	</td>
 </tr>
 
-<tr>
-	<th><span>Shop's Name</span></th>
+	<tr>
+	
+	<th><span>Shop's Name </span></th>
 	<td>
-		<input class="form-control form-control-sm" type="text" id="shopname" size="80px">
-	</td>
-</tr>
+		<input type="text" class="form-control" id="shopname"
+		name="shopname" size="50px"> 
+			<div id="searchMapdiv">
+			<a id="searchMap" href="javascript:void(0);" 
+				onclick="window.open('searchMapMod.html', 'pop01', 
+				'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no');">
+				<span class="badge bg-dark">Find Shop</span>
+						</a>
+						</div>
+						</td>
+							
+						</tr>
 
 
 <tr>
@@ -182,38 +192,42 @@ text-align:center;
 		<input class="form-control form-control-sm" type="text" id="hashtag" size="80px">
 	</td>
 </tr>
+
+<tr>
+	<th><span>주소</span></th>
+	<td>
+		<input class="form-control form-control-sm" type="text" id="address" name="address" size="80px">
+	</td>
+</tr>
+
+
 <tr>
 	<th><span>Latitude</span></th>
 	<td>
-		<input class="form-control form-control-sm" type="text" id="latitude" size="80px">
+		<input class="form-control form-control-sm" type="text" id="latitude" name="latitude" size="80px">
 	</td>
 </tr>
 
 <tr>
 	<th><span>Longitude</span></th>
 	<td>
-		<input class="form-control form-control-sm" type="text" id="longtitude" size="80px">
+		<input class="form-control form-control-sm" type="text" id="longtitude" name="longtitude" size="80px">
 	</td>
 </tr>
 
-<tr>
-	<th><span>주소</span></th>
-	<td>
-		<input class="form-control form-control-sm" type="text" id="address" size="80px">
-	</td>
-</tr>
+
 
 <tr>
 	<th><span>P.H</span></th>
 	<td>
-		<input class="form-control form-control-sm" type="text" id="shopphnum" size="80px">
+		<input class="form-control form-control-sm" type="text" id="shopphnum" name="shopphnum" size="80px">
 	</td>
 </tr>
 
 <tr>
 	<th><span>URL</span></th>
 	<td>
-		<input class="form-control form-control-sm" type="text" id="shopurl" size="80px">
+		<input class="form-control form-control-sm" type="text" id="shopurl" name="shopurl" size="80px">
 	</td>
 </tr>
 
