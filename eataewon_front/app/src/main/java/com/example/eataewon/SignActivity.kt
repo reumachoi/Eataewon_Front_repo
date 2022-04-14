@@ -65,12 +65,12 @@ class SignActivity : AppCompatActivity() {
 
         binding.signUPBtn.setOnClickListener{
 
-            val id = binding.signUpId.text.toString()
-            val pwd = binding.signUpPw.text.toString()
-            val name = binding.signUpName.text.toString()
-            val email = binding.signUpEmail.text.toString()
-            val nickname = binding.signUpNickname.text.toString()
-            val profilmsg = binding.signUpProfilmsg.text.toString()
+            val id = binding.signUpId.text.toString().trim()
+            val pwd = binding.signUpPw.text.toString().trim()
+            val name = binding.signUpName.text.toString().trim()
+            val email = binding.signUpEmail.text.toString().trim()
+            val nickname = binding.signUpNickname.text.toString().trim()
+            val profilmsg = binding.signUpProfilmsg.text.toString().trim()
             var profilpic: String? = null
 
             if(id==""){

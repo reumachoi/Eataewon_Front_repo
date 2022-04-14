@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.eataewon.connect.BbsService
 import com.example.eataewon.connect.KakaoSearchDto
+import com.example.eataewon.connect.MapListAdapter
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.databinding.ActivityKakaoMapBinding
 import net.daum.mf.map.api.MapPOIItem
