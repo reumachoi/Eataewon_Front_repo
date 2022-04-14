@@ -7,18 +7,18 @@
         android:layout_height="match_parent"
         tools:context=".SearchActivity">
 
+
     <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="520dp"
+            android:layout_height="50dp"
             android:layout_margin="8dp"
             android:background="@drawable/searchview_background"
             app:queryHint="매장 또는 지역을 입력하세요"
             app:iconifiedByDefault="false"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_marginStart="15dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/searchRecyclerView"
@@ -30,4 +30,19 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchView"
             android:layout_marginTop="8dp"/>
+
+    <TextView
+            android:id="@+id/cancelBtn"
+            android:text="취소"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/searchView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/searchRecyclerView"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

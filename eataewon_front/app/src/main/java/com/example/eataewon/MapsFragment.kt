@@ -3,6 +3,7 @@ package com.example.eataewon
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
@@ -27,6 +29,8 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
     lateinit var locationPermission: ActivityResultLauncher<Array<String>>
     // GPS를 사용해서 위치를 확인
     lateinit var fusedLocationClient: FusedLocationProviderClient
+
+    private lateinit var lastLocation: Location
 
     private var markerShop : Marker? = null
 
@@ -62,9 +66,13 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
     @SuppressLint("MissingPermission")
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        mMap.isMyLocationEnabled = true     // 내 현재 위치 표기
+        //mMap.isMyLocationEnabled = true     // 내 현재 위치 표기
         mMap.setOnMyLocationButtonClickListener(this)      // 버튼 클릭 시, 내 위치로 맵 이동
         mMap.setOnMyLocationClickListener(this)         // 내 위치 정보 표기
+
+        with(googleMap) {
+            uiSettings.isZoomControlsEnabled = true
+        }
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
 
@@ -77,14 +85,7 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
                                 .title(shop.shopname)
                                 //.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker))
             mMap.addMarker(shopMarker)
-
-            val latLngBounds = LatLngBounds.builder()
-            latLngBounds.include(shopMarker.position)
-            val bounds = latLngBounds.build()
-            val padding = 0
-            val update = CameraUpdateFactory.newLatLngBounds(bounds, padding)
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(15.0f))
-            mMap.moveCamera(update)
+            getCurrentLocation()
         }
 
         markerShop?.tag = 0     // marker가 클릭되면 클릭수를 저장
@@ -98,15 +99,26 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
         return false
     }
 
-    fun setLastLocation(lastLocation: Location) {
-        val LATLNG = LatLng(lastLocation.latitude, lastLocation.longitude)
+    fun getCurrentLocation() {
+        if (ActivityCompat.checkSelfPermission(
+                activity,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                activity,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            return
+        }
+        mMap.isMyLocationEnabled = true
+        fusedLocationClient.lastLocation.addOnSuccessListener(activity) { location ->
 
-        val cameraPosition = CameraPosition.Builder()
-            .target(LATLNG)
-            .zoom(15.0f)
-            .build()
-        mMap.clear()
-        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
+            if (location != null) {
+                lastLocation = location
+                val currentLatLng = LatLng(location.latitude, location.longitude)
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 13.5f))
+            }
+        }
     }
 
     override fun onMarkerClick(marker: Marker): Boolean {
@@ -129,6 +141,4 @@ class MapsFragment(val activity: Activity) : Fragment(), OnMapReadyCallback,
         // marker is centered and for the marker's info window to open, if it has one).
         return false
     }
-
-
 }
