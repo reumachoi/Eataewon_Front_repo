@@ -26,10 +26,11 @@ class checkboxData(
     var checked: Boolean
 )
 
-class BookmarkBbsAdapter(private val context: Context, private val dataList: ArrayList<BbsDto>) :
+class BookmarkBbsAdapter(private val context: Context, private var dataList: ArrayList<BbsDto>) :
     RecyclerView.Adapter<BookmarkBbsAdapter.ItemViewHolder>()
 {
-    var ck: Int? = null
+
+    var ck: Int = 0
     var checkBoxList = arrayListOf<checkboxData>()
 
     fun updateRadioBtn(n:Int){
@@ -66,6 +67,9 @@ class BookmarkBbsAdapter(private val context: Context, private val dataList: Arr
         private val checkBtn = itemView.findViewById<CheckBox>(R.id.bm_checkBtn)
 
         fun bind(bbsDto: BbsDto, context: Context, position: Int) {
+            println("bind ~~~~~~~~!~!!~!~!~!~!~!~!~!~!!")
+
+
             // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
             val picArray = bbsDto.picture!!.split(" ")
 
@@ -117,6 +121,8 @@ class BookmarkBbsAdapter(private val context: Context, private val dataList: Arr
         }
     }
 
-
+    fun setData(list: ArrayList<BbsDto>) {
+        dataList = list
+    }
 
 }

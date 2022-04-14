@@ -58,28 +58,31 @@ class BookmarkFragment : Fragment() {
         val delBtn = view?.findViewById<Button>(R.id.delBtn)
 
         view.showBtn.setOnClickListener {
-            val radioBtn = recyclerView?.findViewById<CheckBox>(R.id.bm_checkBtn)
+            val checkBtn = recyclerView?.findViewById<CheckBox>(R.id.bm_checkBtn)
 
             //두번째부터는 여기서 시작하는듯??
-            radioBtn?.isVisible = true
+            //checkBtn?.isVisible = true
 
-            delBtn?.isVisible = true
-            showBtn?.isVisible = false
+           /* delBtn?.isVisible = true
+            showBtn?.isVisible = false*/
 
             //처음에는 숫자로 시작하고
+
             bookAdapter.updateRadioBtn(1)
             bookAdapter.notifyDataSetChanged()
         }
 
         view.delBtn.setOnClickListener {
-            val radioBtn = recyclerView?.findViewById<CheckBox>(R.id.bm_checkBtn)
-            //radioBtn?.isVisible = false
+            val checkBtn = recyclerView?.findViewById<CheckBox>(R.id.bm_checkBtn)
+            //checkBtn?.isVisible = false
 
-            showBtn?.isVisible = true
-            delBtn?.isVisible = false
+           /* showBtn?.isVisible = true
+            delBtn?.isVisible = false*/
+
+            bookAdapter.updateRadioBtn(0)
+            bookAdapter.notifyDataSetChanged()
 
             val list:List<checkboxData> = bookAdapter.checkboxResult()
-            bookAdapter.notifyDataSetChanged()
 
             val listDto = arrayListOf<ScrapDto>()
 
@@ -99,21 +102,24 @@ class BookmarkFragment : Fragment() {
             if(result==true){
                 println("스크랩 취소가 완료되었습니다")
 
-                var bookmarkList = BbsDao.getInstance().findBookmark(user?.id!!)
-                recyclerView?.adapter = BookmarkBbsAdapter(requireActivity(), bookmarkList as ArrayList<BbsDto>)
-
+                bookmarkList = BbsDao.getInstance().findBookmark(user?.id!!)
+                bookAdapter.setData(bookmarkList as ArrayList<BbsDto>)
+                getFragmentManager()?.let { it1 -> refreshFragment(this, it1) }
             }else{
                 println("스크랩 취소를 실패했습니다")
             }
 
-            bookAdapter.updateRadioBtn(0)
-            bookAdapter.notifyDataSetChanged()
 
         }
 
 
 
         return view
+    }
+
+    fun refreshFragment(fragment: Fragment, fragmentManager: FragmentManager) {
+        var ft: FragmentTransaction = fragmentManager.beginTransaction()
+        ft.detach(fragment).attach(fragment).commit()
     }
 
 

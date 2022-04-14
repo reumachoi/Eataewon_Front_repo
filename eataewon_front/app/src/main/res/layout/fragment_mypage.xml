@@ -240,15 +240,5 @@
 
         </LinearLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-            android:layout_width="487dp"
-            android:layout_height="413dp"
-            android:id="@+id/inMypageFragment"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_likepoint"
-            app:layout_constraintHorizontal_bias="0.504" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.731"/>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
