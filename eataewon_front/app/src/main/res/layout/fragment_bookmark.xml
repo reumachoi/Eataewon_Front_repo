@@ -1,38 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bookmark_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="북마크"
+        app:titleTextColor="@color/black" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C8C8C8"
+        app:layout_constraintTop_toBottomOf="@+id/bookmark_toolbar"
+        tools:layout_editor_absoluteX="16dp">
+
+    </FrameLayout>
+
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="400dp"
-            android:layout_height="487dp"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.454" app:layout_constraintVertical_bias="0.796"
-            android:id="@+id/bookmarkRecycler"/>
-    <TextView
-            android:text="스크랩 게시물 확인"
-            android:textAlignment="center"
-            android:textSize="25dp"
-            android:layout_width="236dp"
-            android:layout_height="50dp" android:id="@+id/textView16"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="36dp"
-            app:layout_constraintHorizontal_bias="0.497"/>
-    <Button
-            android:text="스크랩수정"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/showBtn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintBottom_toTopOf="@+id/bookmarkRecycler"
-            app:layout_constraintEnd_toStartOf="@+id/delBtn"/>
-    <Button
-            android:text="스크랩삭제"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/delBtn"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.981" app:layout_constraintBottom_toTopOf="@+id/bookmarkRecycler"/>
+        android:id="@+id/bookmarkRecycler"
+        android:layout_width="400dp"
+        android:layout_height="487dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookmark_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/showBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:drawableLeft="@drawable/ic_navi_bookmark"
+        android:drawableTint="@color/white"
+        android:text="수정"
+        android:textColor="@color/white"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bookmark_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/delBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/black"
+        android:drawableLeft="@drawable/ic_navi_bookmark"
+        android:drawableTint="@color/white"
+        android:fontFamily="@font/font"
+        android:text="삭제"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/bookmark_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bookmark_toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
