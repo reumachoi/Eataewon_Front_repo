@@ -335,20 +335,14 @@ class BbsDetailActivity : AppCompatActivity() {
                 content = Content(
                     title = data?.title!!,
                     description = data?.content!!.substring(0,20),
-                    imageUrl = "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220301_56%2F1646125809470g3mRx_JPEG%2Fupload_8734af74cb52984491186a224aa2a66e.jpeg",
+                    imageUrl = picture!![0],
                     link = Link(
 //                        webUrl = "https://developers.com",
                         mobileWebUrl = "https://developers.kakao.com"
                     )
-                ),
-                social = Social(
-                    likeCount = 286,
-                    commentCount = 45,
-                    sharedCount = 845
                 )
             )
-            // 사용자 정의 메시지 ID
-            //  * 만들기 가이드: https://developers.kakao.com/docs/latest/ko/message/message-template
+
 
             // 카카오톡 설치여부 확인
             if (LinkClient.instance.isKakaoLinkAvailable(this)) {

@@ -25,6 +25,10 @@ class ScrapDto (
         return 0
     }
 
+    override fun toString(): String {
+        return "ScrapDto(id=$id, bbsseq=$bbsseq, seq=$seq)"
+    }
+
     companion object CREATOR : Parcelable.Creator<ScrapDto> {
         override fun createFromParcel(parcel: Parcel): ScrapDto {
             return ScrapDto(parcel)
