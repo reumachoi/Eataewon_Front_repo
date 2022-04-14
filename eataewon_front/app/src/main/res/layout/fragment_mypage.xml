@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:background="@color/white"
-                                                   android:orientation="vertical">
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,159 +26,219 @@
             app:titleTextColor="@color/black"
             tools:ignore="MissingConstraints">
 
-    </androidx.appcompat.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-            android:id="@+id/mypage_likepoint"
+        <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="108dp"
-            android:text="TextView"
-            android:fontFamily="@font/font"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/mypageProfilpicBtn"
-            app:layout_constraintStart_toEndOf="@+id/mypageProfilpicBtn" android:layout_marginBottom="4dp"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="호감도"
-            android:fontFamily="@font/font"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_likepoint"
-            app:layout_constraintStart_toStartOf="@+id/mypage_likepoint"/>
-    <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/mypage_profil_image"
-            android:layout_width="131dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="64dp"
-            android:background="@drawable/style_profil_img"
-            android:scaleType="centerCrop"
-            android:src="@drawable/imgeview_sample"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:background="#5A5A5A"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
-    <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="아이디"
-            android:fontFamily="@font/font"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_id"
-            app:layout_constraintStart_toStartOf="@+id/mypage_id"/>
-    <TextView
-            android:id="@+id/mypage_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:gravity="center"
-            android:text="TextView"
-            android:fontFamily="@font/font"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/mypage_id"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/mypage_id"
-            app:layout_constraintTop_toBottomOf="@+id/mypage_id"/>
-    <TextView
-            android:id="@+id/mypage_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:fontFamily="@font/font"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/mypage_likepoint"
-            app:layout_constraintTop_toTopOf="@+id/mypage_profil_image"/>
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-    <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/font"
+                        android:text="프로필 사진"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mypage_profil_image"
+                        android:layout_width="131dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/style_profil_img"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/imgeview_sample" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/mypageProfilpicBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/black"
+                        android:fontFamily="@font/font"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="사진선택"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/profilPicUpdateBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/black"
+                        android:fontFamily="@font/font"
+                        android:text="사진변경"
+                        android:textColor="@color/white"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="35dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font"
+                        android:text="아이디"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mypage_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="@font/font"
+                        android:text="TextView"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font"
+                        android:text="이름"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mypage_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="@font/font"
+                        android:gravity="center"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font"
+                        android:text="호감도"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mypage_likepoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font"
+                        android:text="TextView"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/font"
-            android:text="프로필 사진"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_profil_image"
-            app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"/>
-    <Button
-            android:id="@+id/mypageProfilpicBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/black"
-            android:text="사진선택"
-            android:fontFamily="@font/font"
-            app:layout_constraintEnd_toEndOf="@+id/mypage_profil_image"
-            app:layout_constraintHorizontal_bias="0.529"
-            app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"
-            tools:ignore="TouchTargetSizeCheck" app:layout_constraintTop_toBottomOf="@+id/mypage_profil_image"/>
-    <Button
-            android:id="@+id/profilPicUpdateBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/black"
-            android:text="사진변경"
-            android:fontFamily="@font/font"
-            app:layout_constraintEnd_toEndOf="@+id/mypage_profil_image"
-            app:layout_constraintHorizontal_bias="0.529"
-            app:layout_constraintStart_toStartOf="@+id/mypage_profil_image"
-            tools:ignore="TouchTargetSizeCheck" app:layout_constraintTop_toBottomOf="@+id/mypageProfilpicBtn"
-    />
-    <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="이름"
-            android:fontFamily="@font/font"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/mypage_name"
-            app:layout_constraintStart_toStartOf="@+id/mypage_name"/>
-    <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@+id/inMypageFragment"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/inMypageFragment"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0">
-        <RadioButton
-                android:text="내가 쓴 글 보기"
-                android:gravity="center"
-                android:padding="15dp"
-                android:checked="true"
-                android:fontFamily="@font/font"
-                android:background="@drawable/radiobtn_left_selector"
-                android:button="@null"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/lookMyBbsBtn"
-        />
-        <RadioButton
-                android:text="내정보 수정하기"
-                android:gravity="center"
-                android:padding="15dp"
-                android:fontFamily="@font/font"
-                android:background="@drawable/radiobtn_right_selector"
-                android:button="@null"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/lookMeBtn"
-        />
-    </RadioGroup>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/lookMyBbsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:background="@drawable/find_user_radiobtn"
+                        android:button="@null"
+                        android:checked="true"
+                        android:fontFamily="@font/font"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="내가 쓴 글 보기"
+                        android:textColor="@drawable/find_user_radiobtn_text"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/lookMeBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:background="@drawable/find_user_radiobtn"
+                        android:button="@null"
+                        android:fontFamily="@font/font"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="내정보 수정하기"
+                        android:textColor="@drawable/find_user_radiobtn_text"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#5A5A5A"
+                    android:orientation="vertical">
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/inMypageFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
             android:layout_width="487dp"
@@ -185,4 +250,5 @@
             app:layout_constraintVertical_bias="0.731"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
