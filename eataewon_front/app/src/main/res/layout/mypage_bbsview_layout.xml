@@ -5,8 +5,8 @@
               android:orientation="vertical">
 
     <ImageView
-            android:layout_width="296dp"
-            android:layout_height="330dp"
+            android:layout_width="260dp"
+            android:layout_height="243dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="5dp"

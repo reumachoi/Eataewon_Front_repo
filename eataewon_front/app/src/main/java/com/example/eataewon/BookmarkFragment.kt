@@ -60,13 +60,8 @@ class BookmarkFragment : Fragment() {
         view.showBtn.setOnClickListener {
             val checkBtn = recyclerView?.findViewById<CheckBox>(R.id.bm_checkBtn)
 
-            //두번째부터는 여기서 시작하는듯??
-            //checkBtn?.isVisible = true
-
-           /* delBtn?.isVisible = true
-            showBtn?.isVisible = false*/
-
-            //처음에는 숫자로 시작하고
+            delBtn?.isVisible = true
+            showBtn?.isVisible = false
 
             bookAdapter.updateRadioBtn(1)
             bookAdapter.notifyDataSetChanged()
@@ -76,8 +71,8 @@ class BookmarkFragment : Fragment() {
             val checkBtn = recyclerView?.findViewById<CheckBox>(R.id.bm_checkBtn)
             //checkBtn?.isVisible = false
 
-           /* showBtn?.isVisible = true
-            delBtn?.isVisible = false*/
+            showBtn?.isVisible = true
+            delBtn?.isVisible = false
 
             bookAdapter.updateRadioBtn(0)
             bookAdapter.notifyDataSetChanged()
@@ -108,11 +103,7 @@ class BookmarkFragment : Fragment() {
             }else{
                 println("스크랩 취소를 실패했습니다")
             }
-
-
         }
-
-
 
         return view
     }

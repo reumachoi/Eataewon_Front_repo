@@ -34,7 +34,7 @@ class mypageGetBbsFragment : Fragment() {
             val bbsAdapter = (myBbsList as ArrayList<BbsDto>?)?.let { MypageBbsAdapter(requireActivity(), it) }
             var recyclerView = view?.findViewById<RecyclerView>(R.id.mypageBbsRecycler)
 
-            recyclerView?.layoutManager = GridLayoutManager(activity, 3)
+            recyclerView?.layoutManager = GridLayoutManager(activity, 2)
             recyclerView?.adapter = bbsAdapter
             recyclerView?.setHasFixedSize(true)
         }else{

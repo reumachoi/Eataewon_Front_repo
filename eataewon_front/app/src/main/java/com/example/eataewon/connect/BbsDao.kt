@@ -32,6 +32,7 @@ interface BbsService {
     @POST("/bbsupdateApp")
     fun bbsUpdate(@Body dto:BbsDto) : Call<Boolean>
 
+    @Headers("Content-Type: application/json")
     @POST("/bbsdeleteApp")
     fun bbsDelete(@Body seq:Int) : Call<Boolean>
 
