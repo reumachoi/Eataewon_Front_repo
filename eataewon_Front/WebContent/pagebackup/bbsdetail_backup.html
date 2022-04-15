@@ -6,6 +6,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<!-- 카카오맵스 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c91c66fb42c8ccf209ed95fbc26a41abc91c66fb42c8ccf209ed95fbc26a41ab"></script>
+<!-- 카카오맵스 라이브러리 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c91c66fb42c8ccf209ed95fbc26a41ab&libraries=services,clusterer,drawing"></script>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -207,6 +212,11 @@ text-align:center;
 <th><span>URL</span></th><td id="shopurl"></td>
 </tr>
 
+<tr>
+<td colspan="2" >	
+<div id="map" style="width:500px;height:400px;"></div>
+</td>
+</tr>
 
 </table>
 <br><br>
@@ -274,14 +284,14 @@ $.ajax({
 			    
 
 				if(FileName != null){
-				//	strImg += 	"<a id='memberInfo' href='javascript:void(0);'" 
-				//	strImg +=	"onclick='window.open("+"'memberInfo.html', 'pop01'," 
-				//	strImg += "'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no');'>"
+					strImg += 	"<a id='memberInfo' href='javascript:void(0);'" 
+					strImg +=	"onclick='window.open"+"("+ "'" +"memberInfo.html"+ "'" + "," + "'" + "pop01" + "'" + "," 
+					strImg += "'"+"top=10,"+"left=10,"+"width=500,"+"height=600,"+"status=no,"+"menubar=no,"+"toolbar=no,"+"resizable=no"+"'"+ ")"+";'>"
 		
 		            strImg += "<img src='."+FileName+"' class='profilImgCss' /> &nbsp;&nbsp;"; 
 		    
 		           
-				//	strImg +="</a>"
+					strImg +="</a>"
 				}else{
 					strImg += "<input type='text' class='form-control' size='50px' readonly='readonly' placeholder='No Attached Image'>";		
 				}
@@ -324,10 +334,22 @@ $.ajax({
 		$("#longtitude").text(bbs.longtitude);
 		$("#likecnt").text(bbs.likecnt);
 		$("#shopphnum").text(bbs.shopphnum);
-		$("#shopurl").text(bbs.shopurl);
+		$("#shopurl").text(bbs.shopurl); //이걸 a태그로 바꾸는 방법?
+		
+	
+ 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var options = { //지도를 생성할 때 필요한 기본 옵션
+			center: new kakao.maps.LatLng(bbs.latitude, bbs.longtitude), //지도의 중심좌표.
+			level: 3 //지도의 레벨(확대, 축소 정도)
+			};
 
+		var map = new kakao.maps.Map(container, options); 
+		
+	
 		srcFileName = decodeURIComponent(bbs.filepath,"UTF-8").replaceAll("\\", "/");
 		strFileName = bbs.filepath;
+		
+		
 	//	alert("strFIlename:"+strFileName);
 		console.log("srcFileName:"+srcFileName);
 		console.log("strFileName:"+strFileName);
@@ -357,6 +379,9 @@ $.ajax({
 			$("#btnScrap").hide();
 			
 		}
+		
+		
+
 		
 	},
 	error:function(){

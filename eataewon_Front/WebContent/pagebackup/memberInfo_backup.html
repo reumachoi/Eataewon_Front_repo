@@ -62,7 +62,6 @@
 <body>
 
 <div id="card">
-<div class="modal-header" id="testModal">
 
 <div class="card border-secondary mb-3" style="max-width: 30rem;">
   <div class="card-header">회원 정보 조회</div>
@@ -79,14 +78,7 @@
   
 		  
   <br>
-
-
-
-
-
-
-
-
+	<button type="button" class="btn btn-outline-secondary" id="userbbslist">해당 회원의 게시글 보기</button>  
 <form id="memfrm"> 
 <table class="table table-hover" border="1">
 	<tr>
@@ -113,34 +105,33 @@
 </table>
 
 </form> 
-<input type="button" value="CLOSE" class="btn btn-outline-secondary" onclick="javascript()">
-</div>
-</div>
-
+<button type="button" class="btn btn-outline-secondary" id="updatemem">Close</button>
 </div>
 
 
-
-
-<script language="javascript">
-//버튼클릭시 javascript 호출합니다.
-function javascript(){
-    self.close();   //자기자신창을 닫습니다.
-}
-</script>
-
-
+</div>
 
 <script type="text/javascript">
 $(document).ready(function () {
+	
 
-const url = new URL(location.href);
-const urlParams = url.searchParams;
-let id = urlParams.get("Userid");
+ let str = sessionStorage.getItem("login");	
+let json = JSON.parse(str);
+let id = JSON.parse(str).id; //<@@@@@bbslist에서 받은 작성자 id로 바꿔야 한다@@@@@@ 
+//alert(id);
+
+$('#testModal').on('show.bs.modal', function(event) {          
+    var id = $(event.relatedTarget).data('id');
+});
 
 
 
 
+	
+//작성한 글 목록 보기
+$("#userbbslist").click(function () {
+	location.href = "userbbslist.html";
+	});	
 
 //회원정보 불러오기
 	$.ajax({
@@ -185,9 +176,7 @@ let id = urlParams.get("Userid");
 	});
 	
 
-
-
-
+	
 		
 		
 })	

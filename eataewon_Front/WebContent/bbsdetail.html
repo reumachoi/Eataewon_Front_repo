@@ -242,6 +242,8 @@ text-align:center;
 
 </div>
 
+
+
 <br><br><br><br><br><br>
 
 <script type="text/javascript">
@@ -284,18 +286,21 @@ $.ajax({
 			    
 
 				if(FileName != null){
-					strImg += 	"<a id='memberInfo' href='javascript:void(0);'" 
-					strImg +=	"onclick='window.open"+"("+ "'" +"memberInfo.html"+ "'" + "," + "'" + "pop01" + "'" + "," 
-					strImg += "'"+"top=10,"+"left=10,"+"width=500,"+"height=600,"+"status=no,"+"menubar=no,"+"toolbar=no,"+"resizable=no"+"'"+ ")"+";'>"
+					
+							
 		
-		            strImg += "<img src='."+FileName+"' class='profilImgCss' /> &nbsp;&nbsp;"; 
-		    
-		           
-					strImg +="</a>"
+				strImg += 	"<a id='memberModal' href='javascript:void(0);' onclick=\"window.open('memberInfo.html?Userid="+Userid+"','pop01', 'top=10', 'left=10', 'width=500', 'height=600', 'status=no', 'menubar=no','toolbar=no', 'resizable=no')\">";
+				strImg += "<img src='."+FileName+"' class='profilImgCss' />"; 
+				strImg +="</a>"
 				}else{
 					strImg += "<input type='text' class='form-control' size='50px' readonly='readonly' placeholder='No Attached Image'>";		
 				}
 				divArea2.append(strImg);
+				
+				
+				
+		
+
 
 				
 			},
@@ -334,17 +339,31 @@ $.ajax({
 		$("#longtitude").text(bbs.longtitude);
 		$("#likecnt").text(bbs.likecnt);
 		$("#shopphnum").text(bbs.shopphnum);
-		$("#shopurl").text(bbs.shopurl); //이걸 a태그로 바꾸는 방법?
+	
+		$("#shopurl").append("<a href='"+bbs.shopurl+"'" + "'>"+bbs.shopurl+"</a>")		
 		
 	
- 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-		var options = { //지도를 생성할 때 필요한 기본 옵션
+ 		var mapContainer = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var mapOption = { //지도를 생성할 때 필요한 기본 옵션
 			center: new kakao.maps.LatLng(bbs.latitude, bbs.longtitude), //지도의 중심좌표.
 			level: 3 //지도의 레벨(확대, 축소 정도)
 			};
-
-		var map = new kakao.maps.Map(container, options); 
+ 		
+ 		
+		//지도 생성
+		var map = new kakao.maps.Map(mapContainer, mapOption);
 		
+ 		//마커 표시위치
+ 		var markerPosition  = new kakao.maps.LatLng(bbs.latitude, bbs.longtitude); 
+ 		
+ 		//마커 생성
+ 		var marker = new kakao.maps.Marker({
+   		 position: markerPosition
+		});
+ 		
+ 		//마커가 지도 위에 표시되도록 설정
+ 		marker.setMap(map); 
+ 		
 	
 		srcFileName = decodeURIComponent(bbs.filepath,"UTF-8").replaceAll("\\", "/");
 		strFileName = bbs.filepath;
@@ -465,16 +484,19 @@ $("#btnLike").click(function(){
 		
 	});
 	
+
+
+
+
+
+	
 	
 	
 });
 
 
 
+	</script>
 
-
-
-</script>
-
-</body>
+	</body>
 </html>
