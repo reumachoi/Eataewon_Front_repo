@@ -67,8 +67,6 @@ class BookmarkBbsAdapter(private val context: Context, private var dataList: Arr
         private val checkBtn = itemView.findViewById<CheckBox>(R.id.bm_checkBtn)
 
         fun bind(bbsDto: BbsDto, context: Context, position: Int) {
-            println("bind ~~~~~~~~!~!!~!~!~!~!~!~!~!~!!")
-
 
             // 매장 사진을 공백 간격일 때마다 잘라서 배열에 저장
             val picArray = bbsDto.picture!!.split(" ")

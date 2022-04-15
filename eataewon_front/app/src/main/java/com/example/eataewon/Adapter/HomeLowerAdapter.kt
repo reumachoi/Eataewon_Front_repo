@@ -6,15 +6,13 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eataewon.BbsDetailActivity
 import com.example.eataewon.R
 import com.example.eataewon.connect.BbsDao
 import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MemberBbsDto
-import com.example.eataewon.connect.MemberDto
 
 
 class HomeLowerAdapter (private val context: Context, private val dataList: ArrayList<MemberBbsDto>) :
@@ -41,10 +39,9 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
         private val shopName = itemView.findViewById<TextView>(R.id.ShopName)
         private val shopLocation = itemView.findViewById<TextView>(R.id.ShopLocation)
         private val bbsPhotoView1 = itemView.findViewById<ImageView>(R.id.BbsPhotoView1)
-        private val bbsPhotoView2 = itemView.findViewById<ImageView>(R.id.BbsPhotoView2)
+        /*private val bbsPhotoView2 = itemView.findViewById<ImageView>(R.id.BbsPhotoView2)
         private val bbsPhotoView3 = itemView.findViewById<ImageView>(R.id.BbsPhotoView3)
-        private val bbsPhotoView4 = itemView.findViewById<ImageView>(R.id.BbsPhotoView4)
-
+        private val bbsPhotoView4 = itemView.findViewById<ImageView>(R.id.BbsPhotoView4)*/
         private val userProfilePic = itemView.findViewById<ImageView>(R.id.UserProfilePic)
         private val userNickname = itemView.findViewById<TextView>(R.id.UserNickName)
         private val bbsContent = itemView.findViewById<TextView>(R.id.BbsContent)
@@ -57,7 +54,6 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
             shopName.text = memberBbsDto.shopname
             shopLocation.text = memberBbsDto.address
 
-
             bbsPhotoView1.setImageURI(Uri.parse(picArray[0]))
             /*bbsPhotoView2.setImageURI(Uri.parse(picArray[1]))
             bbsPhotoView3.setImageURI(Uri.parse(picArray[2]))
@@ -66,22 +62,39 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
             userNickname.text = memberBbsDto.nickname
             bbsContent.text = memberBbsDto.content
 
-            // 게시물 클릭시 BbsDetailActivity로 이동
-            itemView.setOnClickListener {
-                var result = BbsDao.getInstance().updateReadcnt(memberBbsDto.seq!!)    //조회수 증가
-                if(result.equals("Success")) {
-                    println("글번호 ${memberBbsDto.seq} 조회수증가~~~~~~~~~~~~~~~")
+            val bbsdto = BbsDto(memberBbsDto.id, memberBbsDto.nickname, memberBbsDto.seq, memberBbsDto.title,memberBbsDto.content,
+                memberBbsDto.picture, memberBbsDto.hashtag, memberBbsDto.wdate, memberBbsDto.shopname, memberBbsDto.address,
+                memberBbsDto.shopphnum, memberBbsDto.shopurl, memberBbsDto.latitude,memberBbsDto.longitude, memberBbsDto.readcnt, memberBbsDto.likecnt)
+
+
+                bbsPhotoView1.setOnClickListener {
+                    println("bbsPhotoView1 click~!~!~!~!~!~!~!~!~!~!~!~!~!~!")
+                    itemClick(memberBbsDto.seq, bbsdto)
                 }
 
-                Intent(context, BbsDetailActivity::class.java).apply {
-                    // 짐싸!
-                    putExtra("clickBbs", memberBbsDto)
-
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                }.run { context.startActivity(this) }
-            }
+                // 게시물 클릭시 BbsDetailActivity로 이동
+                itemView.setOnClickListener {
+                    println("itemview click~!~!~!~!~!~!~!~!~!~!~!~!~!~!")
+                   itemClick(memberBbsDto.seq, bbsdto)
+                }
 
             }
+        }
+
+        fun itemClick(seq:Int, bbsdto:BbsDto){
+            println("아이템뷰 클릭클릭")
+            var result = BbsDao.getInstance().updateReadcnt(seq)    //조회수 증가
+            if(result.equals("Success")) {
+                println("글번호 ${seq} 조회수증가~~~~~~~~~~~~~~~")
+            }
+
+            Intent(context, BbsDetailActivity::class.java).apply {
+                // 짐싸!
+
+                putExtra("clickBbs", bbsdto)
+
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            }.run { context.startActivity(this) }
         }
     }
 
