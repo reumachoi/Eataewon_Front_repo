@@ -100,7 +100,6 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
 
                     val intent = Intent(homeActivity,DeleteActivity::class.java)
                     startActivity(intent)
-                    Toast.makeText(context,"회원탈퇴",Toast.LENGTH_SHORT).show()
                     true
                 }
                 else->false

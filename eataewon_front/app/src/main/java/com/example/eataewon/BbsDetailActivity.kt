@@ -28,6 +28,7 @@ import com.kakao.sdk.template.Content
 import com.kakao.sdk.template.Link
 import com.kakao.sdk.template.LocationTemplate
 import com.kakao.sdk.template.Social
+import kotlinx.android.synthetic.main.fragment_mypage.*
 
 
 class BbsDetailActivity : AppCompatActivity() {
@@ -37,6 +38,9 @@ class BbsDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        val toolbar = binding.bbsdetailToolbar
+        setSupportActionBar(toolbar)
 
         val writeSeq = intent.getIntExtra("writeSeq",0)
         println("글쓰기하고 넘어온  seq 확인 ${writeSeq}~~~~~~~")
@@ -256,18 +260,19 @@ class BbsDetailActivity : AppCompatActivity() {
             }
         }
 
-        /*//툴바아이템 클릭
+        //툴바아이템 클릭
         toolbar.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.bbsdetail_exitBtn->{
 
-                    Toast.makeText(this,"취소",Toast.LENGTH_SHORT).show()
+                    val i = Intent(this, HomeActivity::class.java)
+                    startActivity(i)
                     true
                 }
 
                 else->false
             }
-        }*/
+        }
 
 //      스크랩 버튼 클릭효과
         binding.ScrapBtn.setOnClickListener {
@@ -335,7 +340,7 @@ class BbsDetailActivity : AppCompatActivity() {
                 addressTitle = data?.shopname!!,
                 content = Content(
                     title = data?.title!!,
-                    description = data?.content!!.substring(0,20),
+                    description = data?.content!!,
                     imageUrl = picture!![0],
                     link = Link(
 //                        webUrl = "https://developers.com",

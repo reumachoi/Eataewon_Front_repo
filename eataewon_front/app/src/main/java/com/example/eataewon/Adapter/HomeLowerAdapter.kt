@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eataewon.BbsDetailActivity
 import com.example.eataewon.R
@@ -39,9 +40,9 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
         private val shopName = itemView.findViewById<TextView>(R.id.ShopName)
         private val shopLocation = itemView.findViewById<TextView>(R.id.ShopLocation)
         private val bbsPhotoView1 = itemView.findViewById<ImageView>(R.id.BbsPhotoView1)
-        /*private val bbsPhotoView2 = itemView.findViewById<ImageView>(R.id.BbsPhotoView2)
+        private val bbsPhotoView2 = itemView.findViewById<ImageView>(R.id.BbsPhotoView2)
         private val bbsPhotoView3 = itemView.findViewById<ImageView>(R.id.BbsPhotoView3)
-        private val bbsPhotoView4 = itemView.findViewById<ImageView>(R.id.BbsPhotoView4)*/
+        private val bbsPhotoView4 = itemView.findViewById<ImageView>(R.id.BbsPhotoView4)
         private val userProfilePic = itemView.findViewById<ImageView>(R.id.UserProfilePic)
         private val userNickname = itemView.findViewById<TextView>(R.id.UserNickName)
         private val bbsContent = itemView.findViewById<TextView>(R.id.BbsContent)
@@ -54,10 +55,29 @@ class HomeLowerAdapter (private val context: Context, private val dataList: Arra
             shopName.text = memberBbsDto.shopname
             shopLocation.text = memberBbsDto.address
 
-            bbsPhotoView1.setImageURI(Uri.parse(picArray[0]))
-            /*bbsPhotoView2.setImageURI(Uri.parse(picArray[1]))
-            bbsPhotoView3.setImageURI(Uri.parse(picArray[2]))
-            bbsPhotoView4.setImageURI(Uri.parse(picArray[3]))*/
+            if (picArray.size-1 == 1) {
+                bbsPhotoView1.setImageURI(Uri.parse(picArray[0]))
+            } else if (picArray.size-1 == 2) {
+                bbsPhotoView2.isVisible = true
+                bbsPhotoView1.setImageURI(Uri.parse(picArray[0]))
+                bbsPhotoView2.setImageURI(Uri.parse(picArray[1]))
+            } else if (picArray.size-1 == 3) {
+                bbsPhotoView2.isVisible = true
+                bbsPhotoView3.isVisible = true
+                bbsPhotoView1.setImageURI(Uri.parse(picArray[0]))
+                bbsPhotoView2.setImageURI(Uri.parse(picArray[1]))
+                bbsPhotoView3.setImageURI(Uri.parse(picArray[2]))
+            } else {
+                bbsPhotoView2.isVisible = true
+                bbsPhotoView3.isVisible = true
+                bbsPhotoView4.isVisible = true
+                bbsPhotoView1.setImageURI(Uri.parse(picArray[0]))
+                bbsPhotoView2.setImageURI(Uri.parse(picArray[1]))
+                bbsPhotoView3.setImageURI(Uri.parse(picArray[2]))
+                bbsPhotoView4.setImageURI(Uri.parse(picArray[3]))
+            }
+
+
             userProfilePic.setImageURI(Uri.parse(memberBbsDto.profilpic))
             userNickname.text = memberBbsDto.nickname
             bbsContent.text = memberBbsDto.content

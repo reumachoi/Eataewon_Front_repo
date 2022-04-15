@@ -7,7 +7,7 @@
     <ImageView
             android:id="@+id/CurationPhotoView"
             android:layout_width="match_parent"
-            android:layout_height="600dp"
+            android:layout_height="472dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="5dp"

@@ -59,10 +59,6 @@ class UpdateBbsActivity : AppCompatActivity() {
         binding.updateContent.setText(data?.content)
         binding.updateHashtag.setText(data?.hashtag)
 
-        /*list = data?.picture?.split(" ") as ArrayList<Uri>
-        MultiImageAdapter(list,this)*/
-
-
         //주소 버튼
         binding.updateAddressBtn.setOnClickListener {
             var i = Intent(this, SearchKakaoMapActivity::class.java)
