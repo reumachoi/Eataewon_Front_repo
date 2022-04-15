@@ -59,8 +59,8 @@ class UpdateBbsActivity : AppCompatActivity() {
         binding.updateContent.setText(data?.content)
         binding.updateHashtag.setText(data?.hashtag)
 
-        list = data?.picture?.split(" ") as ArrayList<Uri>
-        MultiImageAdapter(list,this)
+        /*list = data?.picture?.split(" ") as ArrayList<Uri>
+        MultiImageAdapter(list,this)*/
 
 
         //주소 버튼
@@ -109,9 +109,9 @@ class UpdateBbsActivity : AppCompatActivity() {
             var shopurl = searchData?.place_url
             var latitude = searchData?.y.toString().toDouble()
             var longitude = searchData?.x.toString().toDouble()
-            var id = data.id
-            var nickname = data.nickname
-            var wdate = data.wdate
+            var id = data?.id
+            var nickname = data?.nickname
+            var wdate = data?.wdate
 
             for (i in 0 until list.size) {
                 uriPath += getPath(list.get(i))+" "
@@ -141,7 +141,7 @@ class UpdateBbsActivity : AppCompatActivity() {
                 if(result==true){
                     Toast.makeText(this,"글수정이 완료되었습니다",Toast.LENGTH_SHORT).show()
                     var i = Intent(this,HomeActivity::class.java)
-                    i.putExtra("writeSeq",data.seq)
+                    i.putExtra("writeSeq",data?.seq)
                     startActivity(i)
                 }else{
                     Toast.makeText(this,"글수정을 실패했습니다",Toast.LENGTH_SHORT).show()

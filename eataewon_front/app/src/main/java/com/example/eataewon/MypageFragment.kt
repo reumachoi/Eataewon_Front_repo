@@ -18,7 +18,6 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
@@ -32,7 +31,6 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
 
     val STORAGE_CODE = 99
 
-    lateinit var mypageProfilpicuri:TextView
     lateinit var mypageProfilpic: ImageView
 
     var profilUri:String? = null
@@ -76,8 +74,16 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         mypageName.text = user?.name
         mypageLikepoint.text = user?.likepoint.toString()
 
-        //사진
-        imageBtn.setOnClickListener { GetAlbum() }
+        //사진선택 버튼 클릭
+        imageBtn.setOnClickListener {
+            if(checkPermission(STORAGE, STORAGE_CODE)) {
+                var intent = Intent(Intent.ACTION_PICK)
+                intent.type = MediaStore.Images.Media.CONTENT_TYPE
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+                intent.data = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                GetAlbum()
+            }
+        }
 
         //툴바 메뉴 클릭
         v.toolbar.setOnMenuItemClickListener{
@@ -108,7 +114,7 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
             val dto = MemberDto(id,"","","","",profilpic,0,"",0)
             val result = MemberDao.getInstance().updateUserProfilPic(dto)
             if (result==true){
-                println("성공적으로 프로필 사진이 변경 되셨습니다.")
+                Toast.makeText(context,"성공적으로 프로필 사진이 변경 되셨습니다.",Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -137,7 +143,6 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
             when(requestCode){
                 STORAGE_CODE -> {
                     val uri = data?.data
-                    mypageProfilpicuri.text = uri.toString()
                     mypageProfilpic.setImageURI(uri)
                     profilUri =  getPath(uri)
                     println("${profilUri}~~~~~~~~~~~~~~~")
@@ -154,7 +159,6 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
         cursor.moveToFirst()
         return cursor.getString(columnIndex)
     }
-
 
     // 갤러리 취득
     fun GetAlbum(){
