@@ -5,12 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
+import android.graphics.BitmapFactory
 import android.graphics.Rect
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +29,7 @@ import com.example.eataewon.connect.BbsDto
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.databinding.ActivityUpdateBbsBinding
 import kotlinx.android.synthetic.main.fragment_search.*
+import java.io.File
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -41,7 +44,7 @@ class UpdateBbsActivity : AppCompatActivity() {
     )
     var uriPath = ""    //사진절대경로
     val STORAGE_CODE = 99
-    var list = ArrayList<Uri>()
+    var list = ArrayList<String>()
     val adapter = MultiImageAdapter(list, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +53,11 @@ class UpdateBbsActivity : AppCompatActivity() {
 
         val data = intent.getParcelableExtra<BbsDto>("passUpdate")
         println("글상세페이지에서 수정페이지로 넘어온 데이터: ${data.toString()}")
+
+        val trim = data?.picture?.split(" ")
+        for(i in 0 until trim!!.size-1){
+            list.add(trim[i])
+        }
 
         binding.updateTitle.setText(data?.title)
         binding.updateDate.text = data?.wdate
@@ -110,7 +118,7 @@ class UpdateBbsActivity : AppCompatActivity() {
             var wdate = data?.wdate
 
             for (i in 0 until list.size) {
-                uriPath += getPath(list.get(i))+" "
+                uriPath += list.get(i)+" "
             }
 
             println("uriPath 결과 ${uriPath}")
@@ -167,14 +175,15 @@ class UpdateBbsActivity : AppCompatActivity() {
                 }
                 for (i in 0 until count) {
                     val imageUri = data.clipData!!.getItemAt(i).uri
-                    list.add(imageUri)
+
+                    list.add(imageUri.toString())
                 }
 
             } else { // 단일 선택
                 data?.data?.let { uri ->
                     val imageUri : Uri? = data?.data
                     if (imageUri != null) {
-                        list.add(imageUri)
+                        list.add(imageUri.toString())
                     }
                 }
             }
@@ -192,7 +201,7 @@ class UpdateBbsActivity : AppCompatActivity() {
     }
 
     //리사이클러 뷰 업데터
-    class MultiImageAdapter(private val items: ArrayList<Uri>, val context: UpdateBbsActivity) :
+    class MultiImageAdapter(private val items: ArrayList<String>, val context: UpdateBbsActivity) :
         RecyclerView.Adapter<MultiImageAdapter.ViewHolder>() {
 
         override fun getItemCount(): Int = items.size
@@ -220,7 +229,23 @@ class UpdateBbsActivity : AppCompatActivity() {
             var xButton = v.findViewById<ImageButton>(R.id.imgDeleteBtn)
             var pos: Int? = null
 
-            fun bind(item: Uri, context: Context, items: ArrayList<Uri>, adapter: MultiImageAdapter) {
+            fun bind(item: String, context: Context, items: ArrayList<String>, adapter: MultiImageAdapter) {
+                val resourceId = context.resources.getIdentifier(item, "drawable", context.packageName)
+
+                if (resourceId > 0) {
+                    image.setImageResource(resourceId)
+                }else {
+                    val file: File = File(item)
+                    val bExist = file.exists()
+                    if (bExist) {
+                        Log.d("", "이미지 파일 있음")
+                        val bitmap = BitmapFactory.decodeFile(item)
+                        image.setImageBitmap(bitmap)
+                    } else {
+                        Log.d("", "${item} 이미지 파일 없음")
+                    }
+                }
+
                 xButton.setOnClickListener {
                     println(items.toString())
                     if (items.contains(item)) {
