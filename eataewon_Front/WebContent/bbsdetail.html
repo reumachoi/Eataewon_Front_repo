@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Detail View</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- 카카오맵스 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c91c66fb42c8ccf209ed95fbc26a41abc91c66fb42c8ccf209ed95fbc26a41ab"></script>
+<!-- 카카오맵스 라이브러리 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c91c66fb42c8ccf209ed95fbc26a41ab&libraries=services,clusterer,drawing"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="cssHeader/css/style.css">
+
+<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+
+
+<div id ="logout"><a href="login.html" class="nav-link">Logout</a></div>
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"><!-- <img src="./imagesrc/coffee.jpg"> --></h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-between">
+				<div class="col-md-8 order-md-last">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="navbar-brand" href="bbslist.html">Eataewon Class <span>Go To Explore Your Place</span></a>
+						</div>
+						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="social-media">
+	        </div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid">
+	    
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item active"><a href="aboutus.html" class="nav-link">About Us</a></li>
+	        
+	        	<li class="nav-item"><a href="bbslist.html" class="nav-link">Places</a></li>
+	        		<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="bbslikelistfile.html">Like</a>
+                <a class="dropdown-item" href="bbsscraplistfile.html">Scrap</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="mypage.html" class="nav-link">My Page</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  </section>
+    <!-- END nav -->
+
+	
+
+<script src="cssHeader/js/jquery.min.js"></script>
+<script src="cssHeader/js/popper.js"></script>
+<script src="cssHeader/js/bootstrap.min.js"></script>
+<script src="cssHeader/js/main.js"></script>	
+	
+
+
+
+<style type="text/css">
+
+span{
+font-size: 12px;
+font-family: 'Montserrat', sans-serif;
+}
+
+#table1{
+font-family: 'Montserrat', sans-serif;
+}
+
+#buttons{
+text-align:center;
+}
+
+
+
+.profilImgCss{
+		width:50px;
+		height:50px;
+    	border-radius: 25px;
+    	object-fit: cover;
+    	padding: 5px;
+    	
+	}
+
+
+
+</style> 
+
+
+</head>
+<body>
+
+<br><br><br>
+<div id="app" class="container">
+
+<table id="table1" class="table table-hover">
+<col width="90"><col width="500">
+<tr>
+	<th><span>User ID</span></th><td id="id"></td>
+</tr>
+<tr>
+ <th><span>Nickname</span></th>
+ <td>
+ 	 			 		
+ 			<span style="font-size: 14px" id="nickname"></span>
+ 			<span id="profilImg"></span>
+ 		
+</td>
+
+</tr>
+
+
+
+<tr>
+	<th><span>Date of Posting</span></th><td id="wdate"></td>
+</tr>
+
+<tr>
+	<th><span>View</span></th><td id="readcount"></td>
+</tr>
+<tr>
+	<th><span>Likes</span></th><td id="likecnt"></td>
+</tr>
+
+
+<tr>
+<!-- <th>제목</th> -->
+<td colspan="2" id="title" style="font-size: 22px; font-weight:bold; font-family: 'Montserrat', sans-serif; "></td>
+</tr>
+
+<tr>
+	<!-- <th>내용</th> -->
+	<td colspan="2" >
+	<pre id="content" style="font-size: 14px; 
+	font-family:'Montserrat', sans-serif;"></pre>
+	</td>	
+</tr>
+</table>
+
+
+<table id="table1" class="table table-hover">
+<col width="90"><col width="500">
+
+
+<tr>
+	<td colspan="2" >							
+		<div id="uploadResult" > 
+		</div>
+    </td>
+</tr>
+
+<tr>
+<th><span>hashtag</span></th><td id="hashtag"></td>
+</tr>
+
+<tr>
+<th><span>Shop's name</span></th><td id="shopname"></td>
+</tr>
+
+<tr>
+<th><span>Latitude</span></th><td id="latitude"></td>
+</tr>
+
+<tr>
+<th><span>Longitude</span></th><td id="longtitude"></td>
+</tr>
+
+<tr>
+<th><span>Address</span></th><td id="address"></td>
+</tr>
+
+<tr>
+<th><span>P.H</span></th><td id="shopphnum"></td>
+</tr>
+
+<tr>
+<th><span>URL</span></th><td id="shopurl"></td>
+</tr>
+
+<tr>
+<td colspan="2" >	
+<div id="map" style="width:500px;height:400px;"></div>
+</td>
+</tr>
+
+</table>
+<br><br>
+
+
+<div id="buttons">
+
+<button type="button" id="btnLike" class="btn btn-dark">좋아요</button>
+<button type="button" id="btnScrap" class="btn btn-dark">스크랩</button>
+<button type="button" id="bbsupdate" class="btn btn-dark">수정</button>
+<button type="button" id="bbsdelete" class="btn btn-dark">삭제</button>
+
+
+<br><br>
+</div>
+
+<table class="table">
+	<col width="500"><col width="500">
+	<tbody id="tbody">
+	</tbody>
+</table>
+
+
+</div>
+
+
+
+<br><br><br><br><br><br>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	
+	
+
+let str = sessionStorage.getItem("login");	
+let json = JSON.parse(str);
+let id = JSON.parse(str).id; //로그인 했을때 아이디 정보
+
+
+const url = new URL(location.href);
+const urlParams = url.searchParams;
+let seq = urlParams.get("seq");
+//주소창에 있는 seq 값 가져오기
+//alert(seq);
+
+//seq 통해서 id 가져오기 -> id로 프로필 사진 가져오기
+$.ajax({
+	url:"http://localhost:3000/idForProfile",
+	type:"get",
+	data:{ "seq":seq },
+	success:function(writerId){
+		console.log(writerId)
+		let Userid = writerId;
+		//alert(Userid); 잘 출력된다
+		
+		$.ajax({
+			url:"http://localhost:3000/detailMem",
+			type:"get",
+			data: {id:Userid},
+			success:function(pic){
+				
+				FileName = pic.profilpic.substring(43);
+				//alert(FileName); // image/upload/63da1b0a-8706-4ad1-8156-181047af94bf
+				console.log("FileName:"+FileName);
+				var divArea2 = $("#profilImg");
+			    var strImg = "";
+			    
+
+				if(FileName != null){
+					
+							
+		
+				strImg += 	"<a id='memberModal' href='javascript:void(0);' onclick=\"window.open('memberInfo.html?Userid="+Userid+"','pop01', 'top=10', 'left=10', 'width=500', 'height=600', 'status=no', 'menubar=no','toolbar=no', 'resizable=no')\">";
+				strImg += "<img src='."+FileName+"' class='profilImgCss' />"; 
+				strImg +="</a>"
+				}else{
+					strImg += "<input type='text' class='form-control' size='50px' readonly='readonly' placeholder='No Attached Image'>";		
+				}
+				divArea2.append(strImg);
+				
+				
+				
+		
+
+
+				
+			},
+			error:function(){
+				alert('error');
+			}
+			
+		});
+		
+	},
+	error:function(){
+		alert('error');
+	}
+	
+});
+
+
+
+//본문 내용 가져오기
+$.ajax({
+	url:"http://localhost:3000/bbsFileDetail",
+	type:"get",
+	data:{ "seq":seq },
+	success:function(bbs){
+		
+		$("#id").text(bbs.id);
+		$("#title").text(bbs.title);
+		$("#nickname").text(bbs.nickname);
+		$("#wdate").text(bbs.wdate);
+		$("#readcount").text(bbs.readcnt);
+		$("#content").text(bbs.content);
+		$("#hashtag").text(bbs.hashtag);
+		$("#shopname").text(bbs.shopname);
+		$("#address").text(bbs.address);
+		$("#latitude").text(bbs.latitude);
+		$("#longtitude").text(bbs.longtitude);
+		$("#likecnt").text(bbs.likecnt);
+		$("#shopphnum").text(bbs.shopphnum);
+	
+		$("#shopurl").append("<a href='"+bbs.shopurl+"'" + "'>"+bbs.shopurl+"</a>")		
+		
+	
+ 		var mapContainer = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var mapOption = { //지도를 생성할 때 필요한 기본 옵션
+			center: new kakao.maps.LatLng(bbs.latitude, bbs.longtitude), //지도의 중심좌표.
+			level: 3 //지도의 레벨(확대, 축소 정도)
+			};
+ 		
+ 		
+		//지도 생성
+		var map = new kakao.maps.Map(mapContainer, mapOption);
+		
+ 		//마커 표시위치
+ 		var markerPosition  = new kakao.maps.LatLng(bbs.latitude, bbs.longtitude); 
+ 		
+ 		//마커 생성
+ 		var marker = new kakao.maps.Marker({
+   		 position: markerPosition
+		});
+ 		
+ 		//마커가 지도 위에 표시되도록 설정
+ 		marker.setMap(map); 
+ 		
+	
+		srcFileName = decodeURIComponent(bbs.filepath,"UTF-8").replaceAll("\\", "/");
+		strFileName = bbs.filepath;
+		
+		
+	//	alert("strFIlename:"+strFileName);
+		console.log("srcFileName:"+srcFileName);
+		console.log("strFileName:"+strFileName);
+		var divArea = $("#uploadResult");
+	    var str = "";
+		if(strFileName != null){
+						
+            str += "<div class='col' readonly='readonly'>";
+            str += "<img src='./image/upload/"+srcFileName+"' width='500' height='500'/> &nbsp;&nbsp;"; 
+		/*     str += bbs.filename */
+            str += "</div>"
+            
+		}else{
+            str += "<input type='text' class='form-control' size='50px' readonly='readonly' placeholder='No Attached Image'>";
+            //"<div class='form-control' readonly='readonly'>";				
+		}
+        divArea.append(str);
+
+		
+		let login = JSON.parse(sessionStorage.getItem("login"));
+		if(bbs.id != login.id){
+			$("#bbsupdate").hide();
+			$("#bbsdelete").hide();
+			
+		}else{ //접속한 아이디 = 게시판 아이디 일 경우 스크랩,좋아요 버튼 숨기기
+			$("#btnLike").hide();
+			$("#btnScrap").hide();
+			
+		}
+		
+		
+
+		
+	},
+	error:function(){
+		alert('error');
+	}
+	
+});
+
+
+
+
+$("#bbsupdate").click(function () {	
+	location.href = "bbsupdatefile.html?seq=" + seq;
+});
+
+$("#bbsdelete").click(function () {	
+	$.ajax({
+		url:"http://localhost:3000/deleteBbsFile",
+		type:"get",
+		data:{ "seq":seq ,"id":id },
+		success:function(msg){
+			if(msg == "OK"){
+				alert("삭제되었습니다");
+				location.href = "bbslist.html";
+			}else{
+				alert("삭제되지 않았습니다");
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+	})
+});
+
+
+$("#btnScrap").click(function(){
+	$.ajax({
+		url:"http://localhost:3000/bbsScrapfile",
+		type:"get",
+		data:{ "id":id, "bbs_seq":seq, "seq":seq},
+		success:function(msg){
+			if(msg=="YES"){
+				alert("스크랩 되었습니다. 스크랩 게시판에서 확인 가능합니다.");
+				location.href="bbsscraplistfile.html";
+			}else if(msg=="DUP"){
+				alert("이미 스크랩한 게시물입니다.")			
+			}else{
+				alert("좋아요 오류")
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+			
+		})
+	});
+	
+
+$("#btnLike").click(function(){
+	$.ajax({
+		url:"http://localhost:3000/likeBbsFile",
+		type:"get",
+		//bbsseq는 seq는 값은 같지만 xml에서 받는 데이터명이 다르다.
+		data:{ "id":id, "bbsseq":seq, "seq":seq},
+		success:function(msg){
+			if(msg=="YES"){
+				alert("좋아요 완료. 좋아요된 게시물은 좋아요 게시판에서 확인 가능합니다.");
+				location.href="bbslikelistfile.html";
+			}else if(msg=="DUP"){
+				alert("이미 좋아요한 게시물입니다.")			
+			}else{
+				alert("좋아요 오류")
+			}
+		},
+		error:function(){
+			alert('error');
+		}
+			
+		})
+
+		
+	});
+	
+
+
+
+
+
+	
+	
+	
+});
+
+
+
+	</script>
+
+	</body>
+</html>

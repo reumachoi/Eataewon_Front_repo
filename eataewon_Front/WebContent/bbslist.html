@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+<meta charset="UTF-8">
+<title>게시판</title>
+
+<style>
+
+.container {
+  padding: 2rem 0rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.titlefont{
+ font-family: 'Montserrat', sans-serif;
+}
+
+.atag {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 1.2em;
+ font-weight: bold; 
+ 
+}
+
+.btn btn-outline-secondary{
+ font-family: 'Montserrat', sans-serif;
+
+}
+
+#paginationBox{
+  font-family: 'Montserrat', sans-serif;
+}
+
+</style>
+
+
+<script src="cssHeader/js/jquery.min.js"></script>
+<script src="cssHeader/js/popper.js"></script>
+<script src="cssHeader/js/bootstrap.min.js"></script>
+<script src="cssHeader/js/main.js"></script>
+	
+<!-- <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript"	src="./jquery/jquery.twbsPagination.min.js"></script>
+                                     
+
+<link rel="stylesheet" type="text/css" href="./css/initial.css">
+<link rel="stylesheet" type="text/css" href="./css/table.css">
+<link rel="stylesheet" type="text/css" href="./css/button.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<link rel="stylesheet" href="cssHeader/css/style.css">
+
+
+<!-- @@로그아웃@@ -->
+<div id ="logout"><a href="login.html" class="nav-link">Logout</a></div>
+
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"><!-- <img src="./imagesrc/coffee.jpg"> --></h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-between">
+				<div class="col-md-8 order-md-last">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="navbar-brand" href="bbslist.html">Eataewon Class <span>Go To Explore Your Place</span></a>
+						</div>
+						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="social-media">
+	<!-- 	    		<p class="mb-0 d-flex">
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+		    		</p> -->
+	        </div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid">
+	    
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item active"><a href="aboutus.html" class="nav-link">About Us</a></li>
+	        
+	        	<li class="nav-item"><a href="bbslist.html" class="nav-link">Places</a></li>
+	        		<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="bbslikelistfile.html">Like</a>
+                <a class="dropdown-item" href="bbsscraplistfile.html">Scrap</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="mypage.html" class="nav-link">My Page</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+		
+</head>
+<body>
+<br>
+<br>
+<div id="app" class="container">	
+	<table style="margin-left: auto; margin-right: auto; margin-top: 3px; margin-bottom: 3px">
+		<tr>
+				<td style="padding-left: 5px"><select class="custom-select"
+					id="_choice" name="choice">
+						<option selected>Choice</option>
+						<option value="title">Title</option>
+						<option value="content">Contents</option>
+						<option value="id">User ID</option>
+						<option value="nickname">Nickname</option>
+						<option value="hashtag">HashTag</option>
+						<option value="address">Address</option>
+						<option value="shopname">Shopname</option>
+				</select></td>
+				
+				<td style="padding-left: 5px" class="align-middle">
+				<input type="text" class="form-control form-control-lg" id="_search" name="search" placeholder="Find Keyword">
+				
+				</td>
+				
+				<td style="padding-left: 5px">
+					<span>&nbsp; &nbsp;
+					<button type="button" class="btn btn-outline-secondary" id="btnSearch">Find</button></span>
+
+				</td>
+				<td>&nbsp; &nbsp;</td>
+				<td>
+						<div>
+		<button type="button" id="writeBtn" class="btn btn-outline-secondary">Post</button>
+		</div>
+				</td>
+		</tr>
+	</table>	
+	<br>
+
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@썸네일@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-image">
+        <thead>
+          <tr>
+            <th scope="col" width="35">no</th>
+            <th scope="col" width="110">Image</th>
+            <th scope="col" width="295">Title</th>
+            <th scope="col" width="35">&nbsp&nbsp&nbsp&nbsp&nbspNickname</th>
+            <th scope="col" width="35">#hashtag</th>
+            <th scope="col" width="35">View</th>
+          </tr>
+        </thead>
+        <tbody id="imgtbody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@썸네일 끝@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+	<br><br>
+
+	<div class="container" id="paginationBox">
+		<nav aria-label="Page navigation">
+			<ul class="pagination" id="pagination" style="justify-content: center"></ul>
+		</nav>
+	</div>
+	<br><br>
+
+
+	
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	let str = sessionStorage.getItem("login");	
+	let json = JSON.parse(str);	
+ 	let id = JSON.parse(str).id;
+		
+
+	getBbslistimg(0); //이미지 게시판 구현
+	getBbsCount();
+	
+
+	
+	$("#btnSearch").click(function () {
+		getBbslistimg( 0 );
+		getBbsCount();		
+	});
+	 
+	 $("#writeBtn").click(function () {
+		location.href = "bbsimgupload.html";
+	});
+	 
+	 
+	 $("#btnScraplist").click(function (){
+		location.href = "bbsscraplist.html" 
+	 });
+	 
+	 
+	 $("#btnlikelist").click(function (){
+			location.href = "bbslikelistfile.html" 
+		 });
+	
+})
+
+
+
+//이미지 게시판
+function getBbslistimg( page ) { //페이지는 도대체 어디서 나오는거? 사용할때마다 0이란 값을 page를 대신해서 넣어주긴 함. 이게 무슨의미?
+	let choice = $("#_choice").val();
+	let search = $("#_search").val();
+	
+	$("#imgtbody").html(""); // 테이블 초기화
+	$.ajax({
+		url:"http://localhost:3000/getBbsListFileSearchPageImg",
+		type:"get",
+		data:{ "choice":choice, "search":search, "page":page },
+		success:function(list){
+			
+			$.each(list, function (i, item) {
+				
+				srcFileName = decodeURIComponent(item.filepath,"UTF-8").replaceAll("\\", "/");
+				strFileName = item.filepath;	
+				
+				console.log("srcFileName:"+srcFileName);
+				console.log("strFileName:"+strFileName);
+				
+			    var strImg = "";
+				if(strFileName != null){
+								
+		            strImg += "<div class='col' readonly='readonly'>";
+		            strImg += "<img src='./image/upload/"+srcFileName+"' width='100' height='100'/>"; 
+		            strImg += "</div>"
+		            
+				}else{
+		            strImg += "No Image In Here";			
+				}
+				
+				
+				let str = "<tr>"
+							+ "<th>" + (i + 1) + "</th>";
+			
+					//이미지		
+					str +=	  "<td>"+ "<a href='bbsdetail.html?seq=" + item.seq + "'>" + strImg + "</a></td>"
+					
+					//글제목		
+					str +=	  "<td>"+ "<a href='bbsdetail.html?seq=" + item.seq + "' class='atag'>" + item.title + "</a></td>"						
+					
+					str +=	  "<td>" +"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+ item.nickname + "</td>" 
+					
+					str +=	  "<td>" + item.hashtag + "</td>" 
+					
+					str +=	  "<td>" + item.readcnt + "</td>" 
+																	
+						+ "</tr>";	
+						
+				$("#imgtbody").append(str);
+			});
+		},
+		error:function(){
+			alert('error');	
+		}			
+	});
+}
+
+
+
+// 글의 총수를 취득
+function getBbsCount() {
+	let choice = $("#_choice").val();
+	let search = $("#_search").val();
+	
+	$.ajax({
+		url:"http://localhost:3000/getBbsCount",
+		type:"get",
+		data:{ "choice":choice, "search":search, "page":0 }, //왜 page를 0이라 설정?
+		success:function(count){ //count가 어디서 나오는데? controller에 있는 getBbsCount함수 실행해서 나온 값?
+		//	alert(count);
+			loadPage(count); 
+		},
+		error:function(){
+			alert('getBbsCount error');
+		}		
+	});	
+}
+
+function loadPage( totalCount ) { // 글의 총수		 
+	let pageSize = 10;		
+	
+	let _totalPages = totalCount / 10    // 10 10 3
+	if(totalCount % 10 > 0){
+		_totalPages++;
+	}
+	
+	$('#pagination').twbsPagination('destroy');	// 페이지 갱신
+	
+	window.pageObj = $('#pagination').twbsPagination({	
+		startPage:1, 
+	    totalPages: _totalPages,
+	    visiblePages: 10,
+	    first:'<span aris-hidden="true">«</span>',
+	    last:'<span aris-hidden="true">»</span>',
+	    prev:"Previouse",
+	    next:"Next",
+	    initiateStartPageClick:false,	// onPageClick 자동호출 방지
+	    onPageClick: function (event, page) {
+	     //   alert(page);
+	        getBbslistimg( page - 1 );
+	    }
+	})
+	
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

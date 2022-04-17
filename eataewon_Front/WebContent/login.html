@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+<style type="text/css">
+#aap{
+	margin:auto;
+	margin-top:60px;
+	width: 60%;
+	border: 3px solid #8ac007;
+	padding: 10px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+
+.selector img{
+position: absolute; top:0; left: 0;
+width: 100%;
+height: 100%;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Login</h1>
+
+<div class="sidenav">
+ 
+         <div class="login-main-text">
+      
+         	<p>Find Your Own Places,</p>
+            <h2>Eataewon Class<br><br> Login Page</h2>
+            <p>로그인 이후 서비스 이용 가능합니다.</p>
+<!--                <img src="imagesrc/coffee.jpg">  -->
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form>
+                  <div class="form-group">
+                     <label>ID</label>
+                     <input type="text" id="id" class="form-control" placeholder="User Name">
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input id="pwd" type="password" class="form-control" placeholder="Password">
+                  </div>
+                  <button type="button" id="login" class="btn btn-black">Login</button>
+                  <button type="button" id="register" class="btn btn-secondary">Register</button>
+               </form>
+            </div>
+         </div>
+      </div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$("#login").click(function(){
+		
+		$.ajax({
+			url:"http://localhost:3000/login",
+			type:"post",
+			data:{ id:$("#id").val(), pwd:$("#pwd").val() },
+			
+			//백엔드에서 넘겨주는 데이터가 dto라는 객체이므로 json으로 받는다
+			success:function(json){
+			//	alert('success');
+			//	alert(JSON.stringify(json));
+				if(json==""){
+					alert("id나 비밀번호를 확인하세요.")
+					$("#id").val("");
+					$("#pwd").val("")
+				}else{
+					sessionStorage.setItem("login",JSON.stringify(json));
+					alert(json.name+"님 환영합니다.")
+					location.href="bbslist.html"
+				}
+				
+			},
+			error:function(){
+				alert('error');
+			}
+			
+		});
+		
+		
+	});
+	
+	
+	$("#register").click(function(){
+		location.href = "account.html";
+});	
+	
+	
+});
+</script>
+
+</body>
+</html>
