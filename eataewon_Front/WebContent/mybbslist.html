@@ -37,20 +37,28 @@ h4 {
 }
 
 </style>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script type="text/javascript"
-	src="./jquery/jquery.twbsPagination.min.js"></script>
+<script src="cssHeader/js/jquery.min.js"></script>
+ <script src="cssHeader/js/popper.js"></script>
+ <script src="cssHeader/js/bootstrap.min.js"></script>
+ <script src="cssHeader/js/main.js"></script>
+	
+
+
+<!-- <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./jquery/jquery.twbsPagination.min.js"></script>
+
 
 <link rel="stylesheet" type="text/css" href="./css/initial.css">
 <link rel="stylesheet" type="text/css" href="./css/table.css">
 <link rel="stylesheet" type="text/css" href="./css/button.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,15 +129,11 @@ h4 {
 	      </div>
 	    </div>
 	  </nav>
+	  </section>
     <!-- END nav -->
 
 	
 
-	<script src="cssHeader/js/jquery.min.js"></script>
-  <script src="cssHeader/js/popper.js"></script>
-  <script src="cssHeader/js/bootstrap.min.js"></script>
-  <script src="cssHeader/js/main.js"></script>
-	
 
 		
 </head>
@@ -245,6 +249,56 @@ $(document).ready(function () {
 		 });
 	
 
+	 
+	// 글의 총수를 취득
+	 function getBbsCount() {
+	 	let choice = $("#_choice").val();
+	 	let search = $("#_search").val();
+	 	
+	 	$.ajax({
+	 		url:"http://localhost:3000/getBbsCount",
+	 		type:"get",
+	 		data:{ "choice":choice, "search":search, "page":0 }, //왜 page를 0이라 설정?
+	 		success:function(count){ //count가 어디서 나오는데? controller에 있는 getBbsCount함수 실행해서 나온 값?
+	 			//alert(count);
+	 			loadPage(count); 
+	 		},
+	 		error:function(){
+	 			alert('getBbsCount error');
+	 		}		
+	 	});	
+	 }
+	 
+	 
+	 
+	 
+	 function loadPage( totalCount ) { // 글의 총수		 
+			let pageSize = 10;		
+			
+			let _totalPages = totalCount / 10    // 10 10 3
+			if(totalCount % 10 > 0){
+				_totalPages++;
+			}
+			
+			$('#pagination').twbsPagination('destroy');	// 페이지 갱신
+			
+				   
+				window.pageObj = $('#pagination').twbsPagination({	
+					startPage:1, 
+				    totalPages: _totalPages,
+				    visiblePages: 10,
+				    first:'<span aris-hidden="true">«</span>',
+				    last:'<span aris-hidden="true">»</span>',
+				    prev:"Previouse",
+				    next:"Next",
+				    initiateStartPageClick:false,	// onPageClick 자동호출 방지
+				    onPageClick: function (event, page) {
+				     //   alert(page);
+				        getBbslistimg( page - 1 );
+			    }
+			})
+		}
+
 
 
 
@@ -317,49 +371,6 @@ function getBbslistimg( page ) { //페이지는 도대체 어디서 나오는거
 })
 
 
-// 글의 총수를 취득
-function getBbsCount() {
-	let choice = $("#_choice").val();
-	let search = $("#_search").val();
-	
-	$.ajax({
-		url:"http://localhost:3000/getBbsCount",
-		type:"get",
-		data:{ "choice":choice, "search":search, "page":0 }, //왜 page를 0이라 설정?
-		success:function(count){ //count가 어디서 나오는데? controller에 있는 getBbsCount함수 실행해서 나온 값?
-			//alert(count);
-			loadPage(count); 
-		},
-		error:function(){
-			alert('getBbsCount error');
-		}		
-	});	
-}
-
-function loadPage( totalCount ) { // 글의 총수		 
-	let pageSize = 10;		
-	
-	let _totalPages = totalCount / 10    // 10 10 3
-	if(totalCount % 10 > 0){
-		_totalPages++;
-	}
-	
-	$('#pagination').twbsPagination('destroy');	// 페이지 갱신
-	
-	$('#pagination').twbsPagination({		
-	    totalPages: _totalPages,
-	    visiblePages: 10,
-	    first:'<span sris-hidden="true">«</span>',
-	    last:'<span sris-hidden="true">»</span>',
-	    prev:"이전",
-	    next:"다음",
-	    initiateStartPageClick:false,	// onPageClick 자동호출 방지
-	    onPageClick: function (event, page) {
-	        // alert(page);
-	        getBbslist( page - 1 );
-	    }
-	})
-}
 
 
 </script>
