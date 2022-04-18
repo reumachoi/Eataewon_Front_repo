@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>탈퇴</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="cssHeader/css/style.css">
+
+
+	<div id ="logout"><a href="login.html" class="nav-link">Logout</a>
+	<a href="withdrawal.html" class="nav-link">Withdrawal</a></div>
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"><!-- <img src="./imagesrc/coffee.jpg"> --></h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-between">
+				<div class="col-md-8 order-md-last">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="navbar-brand" href="bbslist.html">Eataewon Class <span>Go To Explore Your Place</span></a>
+						</div>
+						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="social-media">
+	<!-- 	    		<p class="mb-0 d-flex">
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+		    		</p> -->
+	        </div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid">
+	    
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item active"><a href="aboutus.html" class="nav-link">About Us</a></li>
+	        
+	        	<li class="nav-item"><a href="bbslist.html" class="nav-link">Places</a></li>
+	        		<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="bbslikelistfile.html">Like</a>
+                <a class="dropdown-item" href="bbsscraplistfile.html">Scrap</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="mypage.html" class="nav-link">My Page</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+	
+
+	<script src="cssHeader/js/jquery.min.js"></script>
+  <script src="cssHeader/js/popper.js"></script>
+  <script src="cssHeader/js/bootstrap.min.js"></script>
+  <script src="cssHeader/js/main.js"></script>
+	
+	
+</head>
+<body>
+
+  
+<table class="table table-hover" border="1">
+		<tr class="table-light">
+		<td colspan="2">
+		<p>회원 탈퇴를 진행을 위한 아이디와 비밀 번호를 입력하십시오.</p>
+		<p>아이디와 비밀번호가 일치 하지 않을시 탈퇴 처리 되지 않습니다.</p>
+		<p>탈퇴 전 삭제되지 않은 글들은 탈퇴 이후에도 타회원이 열람 가능합니다.</p>
+		
+		</td>
+	</tr>	
+	<tr class="table-light"><td></td><td></td></tr>
+	<tr class="table-light">
+			<td>아이디</td>
+			<td>
+			<input class="form-control form-control-sm" type="text" id="deleteId" size="20" />
+			<!-- <input type="text" class="form-control" id="deleteId" name="deleteId" size="20" /> -->
+			</td>
+	</tr>
+	
+	<tr class="table-light">
+			<td>패스워드</td>
+			<td>
+			<input type="password" class="form-control form-control-sm" id="deletePwd" name="deletePwd" placeholder="패스워드 입력" size="20"/>
+			</td>
+	</tr>
+	
+
+	<tr class="table-light">
+		<td>&nbsp;</td>
+		<td>
+		<button type="button" class="btn btn-outline-secondary" id="deleteMem">탈퇴</button>
+		</td>
+	</tr>
+
+</table>
+
+<script type="text/javascript">
+
+
+	//회원탈퇴
+	$("#deleteMem").click(function(){
+			
+	//	alert("id: "+ $("#deleteId").val());
+	//	alert("pwd: "+ $("#deletePwd").val());
+		
+		$.ajax({
+			url:"http://localhost:3000/deleteMem",
+			type:"get",
+			data:{
+					"id":$("#deleteId").val(), 
+					"pwd":$("#deletePwd").val()				
+				},
+			success:function(data){
+				if(data=="OK"){
+					alert('탈퇴 처리 되었습니다.');
+					location.href="login.html";
+				}else{
+					alert('아이디 혹은 비밀번호를 확인하세요.');
+				}
+			},
+			error:function(){
+				alert('error');
+			}
+		});
+	});
+
+	
+			
+	
+
+</script>
+
+
+</body>
+</html>

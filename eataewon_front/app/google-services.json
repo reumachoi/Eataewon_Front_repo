@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "32578359584",
-    "project_id": "eataewon-691f2",
-    "storage_bucket": "eataewon-691f2.appspot.com"
+    "project_number": "147227189570",
+    "project_id": "eattaewon",
+    "storage_bucket": "eattaewon.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:32578359584:android:fcaeb219cd86f1ebbdc745",
+        "mobilesdk_app_id": "1:147227189570:android:8c65e0345b3d92a30268db",
         "android_client_info": {
-          "package_name": "com.example.eataewon"
+          "package_name": "com.example.eattaewon"
         }
       },
       "oauth_client": [
         {
-          "client_id": "32578359584-cunsudbue9rc3t326k3s0bq0f04uoj7f.apps.googleusercontent.com",
+          "client_id": "147227189570-j8fiusl7ghknt1t9jk140g8rholeonpe.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.eataewon",
+            "package_name": "com.example.eattaewon",
             "certificate_hash": "ec46c50a5e0f1970b8b8dba6218f4795d1f3e8d9"
           }
         },
         {
-          "client_id": "32578359584-lgb05195k1cpfs9as83ejpqhugo1i53p.apps.googleusercontent.com",
+          "client_id": "147227189570-tkkno0jtrhq7jihur7bd4nhpe9d88u1d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA11VQFr8w36DzPYVWSQ9acg6Aqa62-AvU"
+          "current_key": "AIzaSyCVa0Aihrl8ypBWHhqsCjvDjcpmXWfuaok"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "32578359584-lgb05195k1cpfs9as83ejpqhugo1i53p.apps.googleusercontent.com",
+              "client_id": "147227189570-tkkno0jtrhq7jihur7bd4nhpe9d88u1d.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
