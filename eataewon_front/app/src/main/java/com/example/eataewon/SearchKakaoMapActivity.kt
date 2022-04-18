@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.eataewon.connect.BbsService
 import com.example.eataewon.connect.KakaoSearchDto
+import com.example.eataewon.connect.MapListAdapter
 import com.example.eataewon.connect.MapSearchListDto
 import com.example.eataewon.databinding.ActivityKakaoMapBinding
 import net.daum.mf.map.api.MapPOIItem
@@ -23,6 +24,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 class SearchKakaoMapActivity : AppCompatActivity() {
+
+    companion object {
+        const val BASE_URL = "https://dapi.kakao.com/"
+        const val API_KEY = "KakaoAK 972c845305000d5dfa3b3581cd061aa2"  // REST API 키
+    }
 
     val binding by lazy { ActivityKakaoMapBinding.inflate(layoutInflater) }
     private val listItems = arrayListOf<MapSearchListDto>()   // 리사이클러 뷰 아이템
@@ -37,10 +43,10 @@ class SearchKakaoMapActivity : AppCompatActivity() {
         setContentView(binding.root)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?;
 
-        // 중심점 변경 + 줌 레벨 변경
-        //binding.mapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.41, 126.52), 9, true);
-
-        binding.mapView.setZoomLevel(6,true)
+        val searchKeyword = intent.getStringExtra("editAddr")
+        if(searchKeyword!=null){
+            binding.etSearchField.setText(searchKeyword)
+        }
 
         // 리사이클러 뷰
         binding.rvList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
@@ -74,7 +80,7 @@ class SearchKakaoMapActivity : AppCompatActivity() {
 
         // 이전 페이지 버튼
         binding.btnPrevPage.setOnClickListener {
-            var i = Intent(this,HomeActivity::class.java)
+            var i = Intent(this,WriteActivity::class.java)
             startActivity(i)
         }
 
@@ -91,11 +97,11 @@ class SearchKakaoMapActivity : AppCompatActivity() {
     // 키워드 검색 함수
     private fun searchKeyword(keyword: String) {
         val retrofit = Retrofit.Builder()   // Retrofit 구성
-            .baseUrl("https://dapi.kakao.com/")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val api = retrofit.create(BbsService::class.java)   // 통신 인터페이스를 객체로 생성
-        val call = api.getSearchKeyword("KakaoAK bfda88c797ef4ba2149a3de3e2909e4f", keyword)   // 검색 조건 입력
+        val call = api.getSearchKeyword(API_KEY, keyword)   // 검색 조건 입력
 
         // API 서버에 요청
         call.enqueue(object: Callback<KakaoSearchDto> {

@@ -11,10 +11,11 @@ import com.naver.maps.map.*
 import com.naver.maps.map.overlay.Marker
 
 
-class NaverMapFragment : Fragment(), OnMapReadyCallback {
+class  NaverMapFragment : Fragment(), OnMapReadyCallback {
 
     //지도 객체 변수
     private lateinit var mapView: MapView
+    private var nMap: NaverMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +37,7 @@ class NaverMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(naverMap: NaverMap) {
+        nMap = naverMap
         val options = NaverMapOptions()
             .camera(CameraPosition(LatLng(37.566, 126.978),  10.0))  // 카메라 위치 (위도,경도,줌)
             .mapType(NaverMap.MapType.Basic)    //지도 유형
@@ -46,6 +48,16 @@ class NaverMapFragment : Fragment(), OnMapReadyCallback {
         val marker = Marker()
         marker.position = LatLng(37.566, 126.978)
         marker.map = naverMap
+    }
+
+
+    fun setLocation(lati: Double, longi: Double) {
+        val cameraUpdate = CameraUpdate.scrollTo(LatLng(lati, longi))
+        nMap?.moveCamera(cameraUpdate)
+        val marker = Marker()
+        marker.position = LatLng(lati, longi)
+        marker.map = nMap
+        println("네이버 맵 마커,카메라 이동")
     }
 
     override fun onStart() {
