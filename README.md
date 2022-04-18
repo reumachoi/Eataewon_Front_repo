@@ -9,7 +9,5 @@ multicampus final project team5 repository
 <br/>
 WEB-eataewon_Front 
 <br/>
-APP-eataewon_front
-<br/>
 <br/>
 노션 : https://rowan-donut-722.notion.site/5-fb9f93dcc563484fa7a61cc24d18b26b
