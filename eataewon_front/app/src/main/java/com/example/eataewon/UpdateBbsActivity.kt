@@ -138,12 +138,16 @@ class UpdateBbsActivity : AppCompatActivity() {
             var nickname = data?.nickname
             var wdate = data?.wdate
 
-
+            println("${list}출력출력 list상태보기")
+            for (i in 0 until list.size-picList.size){
+                uriPath += list[i]+" "
+            }
+            println("${uriPath}출력출력 list추가하고 uriPath 상태보기")
             for (i in 0 until picList.size) {
                 uriPath += getPath(picList[i])+" "
             }
-
             println("uriPath 결과 ${uriPath}")
+
             var picture = uriPath
 
             if(title==""){
