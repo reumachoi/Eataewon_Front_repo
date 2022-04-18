@@ -139,8 +139,8 @@ class UpdateBbsActivity : AppCompatActivity() {
             var wdate = data?.wdate
 
 
-            for (i in 0 until list.size) {
-                uriPath += getPath(picList.get(i))+" "
+            for (i in 0 until picList.size) {
+                uriPath += getPath(picList[i])+" "
             }
 
             println("uriPath 결과 ${uriPath}")

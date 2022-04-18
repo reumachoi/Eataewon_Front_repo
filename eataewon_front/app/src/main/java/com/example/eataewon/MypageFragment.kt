@@ -22,7 +22,7 @@ import com.example.eataewon.connect.MemberDao
 import com.example.eataewon.connect.MemberDto
 import kotlinx.android.synthetic.main.fragment_mypage.view.*
 
-class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.fragment_mypage){
+class MypageFragment(): Fragment(R.layout.fragment_mypage){
 
     // storage 권한
     val STORAGE = arrayOf(
@@ -34,6 +34,8 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
     lateinit var mypageProfilpic: ImageView
 
     var profilUri:String? = null
+
+    var homeActivity: HomeActivity? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_mypage, container, false)
@@ -152,8 +154,8 @@ class MypageFragment(private val homeActivity: HomeActivity): Fragment(R.layout.
 
     fun getPath(uri: Uri?): String {
         val projection = arrayOf<String>(MediaStore.Images.Media.DATA)
-        val cursor: Cursor = homeActivity.managedQuery(uri, projection, null, null, null)
-        homeActivity.startManagingCursor(cursor)
+        val cursor: Cursor = homeActivity!!.managedQuery(uri, projection, null, null, null)
+        homeActivity!!.startManagingCursor(cursor)
         val columnIndex: Int = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
         cursor.moveToFirst()
         return cursor.getString(columnIndex)

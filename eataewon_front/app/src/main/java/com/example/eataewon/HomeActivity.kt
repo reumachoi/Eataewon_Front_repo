@@ -27,7 +27,8 @@ class HomeActivity : AppCompatActivity() {
         val searchFragment = SearchFragment()
         val writeActivity = WriteActivity()
         val bookmarkFragment = BookmarkFragment()
-        val mypageFragment = MypageFragment(this)
+        val mypageFragment = MypageFragment()
+        mypageFragment.homeActivity = this
         setCurrentFragment(homeFragment)
 
         //로그인 데이터 가져오기
