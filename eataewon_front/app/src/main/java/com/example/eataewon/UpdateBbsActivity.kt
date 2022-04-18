@@ -44,8 +44,9 @@ class UpdateBbsActivity : AppCompatActivity() {
     )
     var uriPath = ""    //사진절대경로
     val STORAGE_CODE = 99
-    var list = ArrayList<String>()
+    var list = ArrayList<String>()  //기존 글에 있던 사진 보여주기
     val adapter = MultiImageAdapter(list, this)
+    val picList = ArrayList<Uri>()  //새로 수정된 사진 리스트
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +55,7 @@ class UpdateBbsActivity : AppCompatActivity() {
         val data = intent.getParcelableExtra<BbsDto>("passUpdate")
         println("글상세페이지에서 수정페이지로 넘어온 데이터: ${data.toString()}")
 
+        //기존 사진
         val trim = data?.picture?.split(" ")
         for(i in 0 until trim!!.size-1){
             list.add(trim[i])
@@ -104,21 +106,41 @@ class UpdateBbsActivity : AppCompatActivity() {
 
         //글쓰기 버튼
         binding.updateBtn.setOnClickListener {
+            var seq = data?.seq
             var title = binding.updateTitle.text.toString()
             var content = binding.updateContent.text.toString()
             var hashtag = binding.updateHashtag.text.toString()
-            var shopname = searchData?.name
-            var address = searchData?.road
-            var shopphnum = searchData?.phone
-            var shopurl = searchData?.place_url
-            var latitude = searchData?.y.toString().toDouble()
-            var longitude = searchData?.x.toString().toDouble()
+
+            var shopname: String? = null
+            var address: String? = null
+            var shopphnum: String? = null
+            var shopurl: String? = null
+            var latitude: Double? = null
+            var longitude: Double? =null
+
+            if(searchData!=null){   //기존장소가 아닌 다른장소 선택했을때
+                shopname = searchData?.name
+                address = searchData?.road
+                shopphnum = searchData?.phone
+                shopurl = searchData?.place_url
+                latitude = searchData?.y.toString().toDouble()
+                longitude = searchData?.x.toString().toDouble()
+            }else{  //기존장소 그대로 사용할때
+                shopname = data?.shopname
+                address = data?.address
+                shopphnum = data?.shopphnum
+                shopurl = data?.shopurl
+                latitude = data?.latitude
+                longitude = data?.longitude
+            }
+
             var id = data?.id
             var nickname = data?.nickname
             var wdate = data?.wdate
 
+
             for (i in 0 until list.size) {
-                uriPath += list.get(i)+" "
+                uriPath += getPath(picList.get(i))+" "
             }
 
             println("uriPath 결과 ${uriPath}")
@@ -135,7 +157,7 @@ class UpdateBbsActivity : AppCompatActivity() {
             }else{
 
 
-                val dto = BbsDto(id,nickname,null,title,content,picture,hashtag,wdate,
+                val dto = BbsDto(id,nickname,seq,title,content,picture,hashtag,wdate,
                     shopname,address,shopphnum,shopurl,latitude, longitude,0,0)
 
                 println("writeactivity dto확인 ${dto}")
@@ -175,8 +197,8 @@ class UpdateBbsActivity : AppCompatActivity() {
                 }
                 for (i in 0 until count) {
                     val imageUri = data.clipData!!.getItemAt(i).uri
-
                     list.add(imageUri.toString())
+                    picList.add(imageUri)
                 }
 
             } else { // 단일 선택
@@ -184,6 +206,7 @@ class UpdateBbsActivity : AppCompatActivity() {
                     val imageUri : Uri? = data?.data
                     if (imageUri != null) {
                         list.add(imageUri.toString())
+                        picList.add(imageUri)
                     }
                 }
             }
@@ -232,20 +255,24 @@ class UpdateBbsActivity : AppCompatActivity() {
             fun bind(item: String, context: Context, items: ArrayList<String>, adapter: MultiImageAdapter) {
                 val resourceId = context.resources.getIdentifier(item, "drawable", context.packageName)
 
+                //기존사진 리스트에 보여주기
                 if (resourceId > 0) {
                     image.setImageResource(resourceId)
                 }else {
                     val file: File = File(item)
                     val bExist = file.exists()
+
                     if (bExist) {
                         Log.d("", "이미지 파일 있음")
                         val bitmap = BitmapFactory.decodeFile(item)
                         image.setImageBitmap(bitmap)
+                        println("이미지파일있음~!~!~!~!~!")
                     } else {
                         Log.d("", "${item} 이미지 파일 없음")
+                        println("이미지파일 없음~!~!~!~!~!")
                     }
-                }
 
+                }
                 xButton.setOnClickListener {
                     println(items.toString())
                     if (items.contains(item)) {

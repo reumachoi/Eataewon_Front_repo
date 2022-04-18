@@ -20,7 +20,6 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
-                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/42aa72c7a5d7b7034fba0b01b42d6fc7/transformed/jetified-libDaumMapAndroid.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/708ab93f2c06974c10f5ded451270cdf/transformed/jetified-viewbinding-7.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/af0907a162e796ad1f7cd5216d438dfa/transformed/jetified-kotlin-stdlib-jdk8-1.6.10.jar</arg>
