@@ -1,10 +1,11 @@
 # EAT태원 클라쓰
 (* APP: main 브랜치 / WEB: main2 브랜치)
+<br/>
+멀티캠퍼스 시큐어코딩을 적용한 앱 개발자 양성과정 파이널 프로젝트 
 
 ## 프로젝트 진행 기간
 `2022.03.14 ~ 04.18` 
-<br/>
-멀티캠퍼스 시큐어코딩을 적용한 앱 개발자 양성과정 파이널 프로젝트 
+
 
 ## 팀원 
 - 김나현, 김민기, 안도현, 윤동호, 최아름, 한정혁
@@ -13,7 +14,7 @@
 ## 사용 기술
 
 - HTML, CSS, JavaScript, Kolin
-- Spring Boot, Oracle, MyBatis
+- Java, Spring Boot, Oracle, MyBatis
 - Naver API, Kakao API, Google API
 
 ## 서비스 개요
